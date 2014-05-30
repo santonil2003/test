@@ -1,0 +1,44 @@
+<?
+include("useractions.php");
+session_start();
+$id = checkOrderId(true);
+
+function insertItem(){
+	global $id, $colours;
+	if($_POST["text2"]=="Ph:" || $_POST["text2"]=="Ph: "){
+		$text2="";
+	}else{
+		$text2=$_POST["text2"];
+	}
+	$query = "INSERT INTO basket_items (ordernumber, price, quantdesc, type, pic, text1, text2, text3, text4, text5, colours, font, picon, gift, split)"
+	." VALUES (".$id.", ".$_POST["price"].", '".$_POST["quantdesc"]."', ".$_POST["type"].", ".$_POST["pic"].", '".$_POST["text1"]."', '"
+	.$text2."', '".$_POST["text3"]."', '".$_POST["text4"]."', '".$_POST["text5"]."', '".$colours."', ".$_POST["font"].", ".$_POST["picon"].", ".$_POST["gift"].", ".$_POST["split"].")";
+	
+	$result = mysql_query($query);
+	if(!$result) error_message(sql_error());
+}
+
+if($_POST["type"]==7){
+	
+	if($_POST["pack1"]==1){
+		$colours = 2;
+		insertItem();
+	}
+	if($_POST["pack2"]==1){
+		$colours = 1;
+		insertItem();
+	}
+}else{
+	$colours = $_POST["colours"];
+	insertItem();
+}
+
+
+
+$query = "UPDATE orders SET finished='".date("Y-m-d H:i:s")."' WHERE id=".$id;
+$result = mysql_query($query);
+if(!$result) error_message(sql_error());
+
+header("location: item_added.php");
+exit;
+?>

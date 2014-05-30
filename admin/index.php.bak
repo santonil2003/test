@@ -1,0 +1,113 @@
+<?php
+/*
+file: admin/index.php
+purpose: main index page for admin. Sets up error handling, header, db, action, page then performs action and/or renders page. Then closes db & includes footer
+
+description: This page is the entry point for the application & all pages that do not load in a new window are rendered thru this page - the page 
+			 is effectively the controller (in context of the application's design as MVC app & simplified implementation of that design): it manages
+			 the control flow, session state maintenance etc...
+			 The page functions as such:
+			 	- begins by implementing session (session_start()) & setting cache control HTTP header to allow form values to be retained when browser back
+			 	  button or javascript back link are used.
+				- defines error handling functions - these are used to report system erros & forms that have not had all compulsory fields completed
+				- the performAction function is then defined. The app uses the command pattern, with each command represented as an action class in the action
+				  directory. Each action has an execute method - the action is defined as a hidden form field (occasionally as a querystring for delete links mainly)
+				  and the appropriate action class is then searched for by the ActionFactory (_factories/_ActionFactory.php) class (factory pattern), instantiated and executed. The render page function
+				  is also defined in this section of the script - again a factory class (_factories/_PageFactory.php) is utilised to instantiate the correct page class from its id (?page=);
+				  the render page function then attempts to include the page from its filename
+				- the header is then included (before anyhting that may cause an error so errors are handled gracefully)
+				- database connection created and instantiated
+				- the page id is then looked for and the PageFactory used to instanitate the appropriate page class
+				- any required action is then looked for from HTTP POST or GET and performed as appropriate
+				- page then rendered
+				- db connection closed
+				- footer included
+				  
+*/
+
+session_start();
+header("Cache-control: private");
+
+require_once('../_common/_constants.php');
+
+//this is the error handler for all errors that occur anywhere. It will render the warning
+function default_error_handler($errno, $errstr, $errfile, $errline)
+{
+	if($errno == E_USER_ERROR || $errno == E_ERROR)
+	{
+		if(isset($db))$db->closeDb();	
+		include(SITE_DIR.'_pages/_error.php');
+		include('footer_new.php');
+		exit;
+	}
+	elseif($errno == E_USER_NOTICE)
+	{
+		if(isset($db))$db->closeDb();
+		include(SITE_DIR.'_pages/_notice.php');
+		include('footer_new.php');
+		exit;
+	}
+}
+set_error_handler('default_error_handler');
+//end error handler setup
+
+//functions used on page
+function performAction($action)
+{
+	require_once(SITE_DIR.'_classes/_factory/_ActionFactory.php');
+	$action = ActionFactory::createAction($action);
+	$result = $action->execute();
+}
+
+function renderPage(& $page)
+{
+	if(!include($page->filename)) trigger_error('Page not found', E_USER_ERROR);
+}
+//end functions used on page
+
+//header - include at top so always seen, in case error occurs
+include("header_new.php"); 
+//end header
+
+//db setup - configure & set up db connection
+require_once(SITE_DIR.'_common/_connection.php');
+$cfg = new Config();
+$db = new DbConnect($cfg);
+$db->connectDb();
+//end db setup
+
+//This is the main part of the page - here the page object is created by page factory
+//set up page object for use thruout
+$pageid = 0;
+if(isset($_GET['page'])) $pageid = $_GET['page'];
+require_once(SITE_DIR.'_classes/_factory/_PageFactory.php');
+global $page;	//set $page as global variable
+$page = & PageFactory::createPage($pageid); 
+
+//end set up page
+
+//check for then perform any action
+if(isset($_POST['form_action']))
+{
+	$act = $_POST['form_action'];
+}	
+elseif(isset($_GET['form_action']))
+{
+	$act = $_GET['form_action'];
+}	
+if(isset($act)) performAction($act);
+//end perform action
+
+//content 
+renderPage($page);
+// end content 
+
+
+//close db
+if(isset($db))$db->closeDb();
+//end close db
+
+//footer
+include("footer_new.php"); 
+//end footer
+?>

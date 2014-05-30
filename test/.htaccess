@@ -1,0 +1,12 @@
+AuthType Basic
+AuthName "MySQL Member Page"
+
+Auth_MYSQLhost www.identikid.com.au
+Auth_MYSQLusername identiki
+Auth_MYSQLpassword id4$cTe
+Auth_MYSQLdatabase identiki_data
+Auth_MYSQLpwd_table user
+Auth_MYSQLuid_field user_name
+Auth_MYSQLpwd_field user_password
+Auth_MYSQL_EncryptedPasswords off
+require valid-user

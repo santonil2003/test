@@ -1,0 +1,1 @@
+<BR><BR>* You MUST put your reference number in the description field (and your name too if there's room). <BR>Without this reference number, we can't match your payment to your order, and this can cause delays in your order being sent out <BR><BR>Thank you,<BR><BR>

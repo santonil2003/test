@@ -1,0 +1,1 @@
+<td background="images/templates/contact_left_1_tile.gif" valign="top" width="153"><img src="images/templates/contact_left_1.gif" alt="" width="153" height="178" border="0"><br></td>

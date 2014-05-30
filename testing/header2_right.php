@@ -1,0 +1,1 @@
+images/templates/prod1_right_1_tile.gif

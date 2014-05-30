@@ -1,0 +1,10 @@
+<TABLE cellSpacing=0 cellPadding=0 width=890 border=0>
+<TBODY>
+<TR>
+<TD>
+<P align=center>Thank you for taking time to visit identikid. </P>
+<P align=center>identikid, born in 2001, was designed around a product that is practical, high quality, innovative and fun...<BR>It was designed to save you time and money, and even better put a smile on your face!<BR>Our bright and happy colours and designs quickly grew in popularity and range and before long we have evolved into the brand identikid which all parents, kids and schools love! <BR>We started with a simple line of products and with our incredible feedback, have continued to develop a range of fun and high quality products that will help you with everyday living. These practical products are useful yet stimulate the senses and create a feeling of positivity to the user. Great for nurturing a childs self-esteem....make them proud of themselves...name everything.<BR>The quality of all our products has been exhaustively tested and has proved durable for everyday use. Each product goes through exhaustive testing before released to ensure it will deliver the goods.<BR>Turnaround is 3-5 days depending on the product ordered(Usually even quicker on average)<BR>We endeavour to provide a personalised, individual service and above all, we care about what we do. Our customers ARE very important and service is what we pride ourself on. <BR>Reputation is our biggest asset. Our product is 100% guaranteed and we are building a successful business on what we, as mothers would want ourselves in terms of availability, quality, service and pricing and ease of use. <BR>So add some brightness and colour to a kids life and watch their face light up when they open their parcel from identikid!<BR>Thankyou for choosing&nbsp; identi Kid. We know you will love our products as much as we do. <BR>Give us a call or check us out online, feel free to call if you need any Assistance.</P>
+<P align=center><BR>Have a Great Day</P>
+<P align=center><BR>Anne Whealing, Staff&nbsp;and family.<BR>identikid Australia!</P>
+<P align=center><BR>&nbsp;</P>
+<P>&nbsp;</P></TD></TR></TBODY></TABLE>

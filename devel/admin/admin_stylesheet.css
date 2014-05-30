@@ -1,0 +1,161 @@
+.MainTable {
+	border: 1px solid #CCCCCC;
+}
+.redBg {
+	background-color: #CC0000;
+}
+.LoginShadow {
+	background-image: url(images/logged_in_bottom_shadow.jpg);
+	background-repeat: repeat-x;
+}
+.JettyBg {
+	background-color: #ECE6E8;
+}
+.redBgLeftBorder {
+	background-color: #CC0000;
+	background-image: url(images/login_stretcher.gif);
+	background-repeat: repeat-y;
+	border: none;
+}
+.headerShadow {
+	background-image: url(images/shadow_stretcher.jpg);
+	background-repeat: repeat-x;
+}
+.rightBg {
+	background-image: url(images/right_Bg.gif);
+	background-repeat: repeat-y;
+	background-color: #F2F2F2;
+}
+.redBgBorders {
+	background-color: #CC0000;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+
+
+}
+.footerText {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: none;
+
+}
+a.footerText:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-decoration: underline;
+
+}.advertBorders {
+	border: 1px solid #CCCCCC;
+}
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+}
+.contentTable {
+	padding-right: 20px;
+	padding-bottom: 10px;
+}
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #CC0000;
+}
+a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #DD0000;
+	text-decoration: none;
+}
+a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #DD0000;
+	text-decoration: underline;
+}
+a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #DD0000;
+	text-decoration: none;
+}
+.TestimonialBorders {
+	border-top: none;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: none;
+	border-left: 1px solid #CCCCCC;
+
+}
+.TestimonialBordersBottom {
+	border-top: none;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	border-left: 1px solid #CCCCCC;
+
+}
+h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	font-weight: bold;
+	text-decoration: none;
+
+
+}
+ul {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	list-style-type: square;
+	list-style-position: outside;
+
+
+}
+.LoginShadowInternal {
+
+	background-image: url(images/logged_in_bottom_shadow_stretch.jpg);
+	background-repeat: repeat-x;
+}
+.RandomImage {
+	border: none;
+}
+.loginBoxPadding {
+	padding-top: 2px;
+	padding-right: 10px;
+	padding-bottom: 2px;
+	padding-left: 10px;
+}
+a.programmerLinks {
+	color: #CCCCCC;
+	text-decoration: blink;
+}
+a.programmerLinks:hover {
+	color: #CCCCCC;
+	text-decoration: underline blink;
+}.HeaderBG {
+	background-image: url(images/admin_stretcher.gif);
+	background-repeat: repeat-x;
+}
+a.grey {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	text-decoration: none;
+
+}
+a.grey:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+	text-decoration: underline;
+
+}

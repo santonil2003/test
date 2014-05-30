@@ -1,0 +1,282 @@
+<?
+session_start();
+if(!isset($_COOKIE["currency"])){
+	header("location:products_home.php?error=nocurrency&returnurl=".$PHP_SELF);
+	exit;
+}
+?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>identi Kid - Contact Us</title>
+<script Language="JavaScript" src="/ezytrack.js"></script> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="javascript" src="javascript.js"></script>
+<link href="css/identikid.css" rel="stylesheet" type="text/css">
+<meta name="keywords" content="Label,labels,labelling,personalised,labels,name,identikid,identi,kid,sticker,stickers,vinyl,iron,iron-on,tag,shoes,pencil,pack,fabric,bag,child,kidcards,kid,cards,clothing,lost,property,school">
+<meta name="description" content="Personalised name labels that really work.  Includes microwave dishwasher safe vinyl stickers, iron-on clothing labels, shoe labels, pencil labels and lots more.  Design your own labels online, with your choice of fun fonts and pictures.  All products are high quality, attractive and easy to use.
+"></head>
+
+<body bgcolor="d4d0c8" background="images/bg_pattern.gif" onLoad="MM_preloadImages('images/button_back_mo.gif')">
+<table width="740" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="740" valign="top"> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="181" valign="top" background="images/bg_left_column.gif"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td><a href="http://www.identikid.com.au"><img src="images/logo_top_products.gif" alt="Identi Kid" width="181" height="62" border="0"></a></td>
+              </tr>
+              <tr> 
+                <td><a href="http://www.identikid.com.au"><img src="images/logo_middle_products.gif" alt="Identi Kid" width="181" height="90" border="0"></a></td>
+              </tr>
+              <tr> 
+                <td><a href="http://www.identikid.com.au"><img src="images/logo_bottom_products.gif" alt="Identi Kid" width="181" height="43" border="0"></a></td>
+              </tr>
+            </table></td>
+          <td width="418" valign="top" bgcolor="#6FFF6F"> 
+            <table width="418" border="0" cellpadding="0" cellspacing="0" bgcolor="#6FFF6F">
+              <tr valign="top"> 
+                <td width="60" background="images/bg_blue_heading.gif"><img src="images/spacer_trans.gif" width="60" height="10"></td>
+                <td width="304"><img src="images/heading_labels_for_littlies.gif" alt="name labels for school,kindy and life" width="304" height="62"></td>
+                <td width="54" background="images/bg_blue_heading.gif"><img src="images/spacer_trans.gif" width="54" height="10"></td>
+              </tr>
+              <tr valign="top"> 
+                <td colspan="3"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr valign="top"> 
+                      <td colspan="2" bgcolor="6FFF6F"><img src="images/spacer_trans.gif" width="10" height="10"></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td bgcolor="6FFF6F"><div align="right"><img src="images/heading_contact_us.gif" alt="Contact Us" width="169" height="45"></div></td>
+                      <td bgcolor="6FFF6F"><img src="images/spacer_trans.gif" width="50" height="10"></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td colspan="2" bgcolor="6FFF6F"><img src="images/spacer_trans.gif" width="10" height="10"></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr valign="top" bgcolor="#66FF66"> 
+                <td colspan="3" bgcolor="#6FFF6F"> 
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="FFFFFF">
+                    <tr> 
+                      <td width="10" rowspan="3" valign="top" bgcolor="#FFFFFF"><img src="images/spacer_trans.gif" width="20" height="10"></td>
+                      <td width="397" valign="top" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr> 
+                            <td colspan="3"><img src="images/spacer_trans.gif" width="10" height="20"></td>
+                          </tr>
+                          <? if($_COOKIE["currency"]==1){ ?>
+                          <tr> 
+                            <td width="9%" valign="top"><img src="images/pic_envelope_transp_bg.gif" alt="Mail" width="32" height="22"></td>
+                            <td width="2%"><img src="images/spacer_trans.gif" width="10" height="10"></td>
+                            <td width="89%"> <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr> 
+                                  <td width="20" rowspan="4"><strong><img src="images/spacer_trans.gif" width="10" height="10"></strong></td>
+                                  <td width="165" valign="top"> <div class="maintext"><strong> 
+                                      NSW</strong></div></td>
+                                  <td width="18" rowspan="5" valign="top"><img src="images/spacer_trans.gif" width="19" height="57"></td>
+                                </tr>
+                                <tr> 
+                                  <td valign="top"><strong><img src="images/spacer_trans.gif" width="10" height="10"></strong></td>
+                                </tr>
+                                <tr> 
+                                  <td valign="top" class="smalltext">PO Box 8775</td>
+                                </tr>
+                                <tr> 
+                                  <td valign="top" class="smalltext"> WAGGA WAGGA 
+                                    NSW 2650</td>
+                                </tr>
+                                <tr> 
+                                  <td>&nbsp;</td>
+                                  <td valign="top" class="smalltext">Australia</td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <? } ?>
+                          <tr> 
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td> <div align="center"><img src="images/pic_phone_transp_bg.gif" alt="Phone" width="30" height="20"></div></td>
+                            <td>&nbsp;</td>
+                            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr> 
+                                  <td colspan="2" class="smalltext"><img src="images/spacer_trans.gif" width="10" height="10">Phone</td>
+                                  <td width="85%" class="smalltext"> 
+                                    <? if($_COOKIE["currency"]==1){ ?>
+                                    1300 133 949 
+                                    <? }else{?>
+                                    +61 2 6971 0969 
+                                    <? }?>
+                                  </td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <tr> 
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td> <div align="center"><img src="images/pic_fax_transp_bg.gif" alt="Fax" width="30" height="28"></div></td>
+                            <td>&nbsp;</td>
+                            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr> 
+                                  <td colspan="2" class="smalltext"><img src="images/spacer_trans.gif" width="10" height="10">Fax 
+                                  </td>
+                                  <td width="85%" class="smalltext"> 
+                                    <? if($_COOKIE["currency"]==1){ ?>
+                                    1300 551 578 
+                                    <? }else{?>
+                                    +61 2 6971 0492 
+                                    <? }?>
+                                  </td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <tr> 
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td valign="top"> <div align="center"><img src="images/pic_email_transp_bg.gif" alt="Email" width="32" height="28"></div></td>
+                            <td>&nbsp;</td>
+                            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr> 
+                                  <td width="16%" class="smalltext"><img src="images/spacer_trans.gif" width="10" height="10">Email</td>
+                                  <td width="84%" class="smalltext"><a href="mailto:leanne@identikid.com.au" class="type1">leanne@identikid.com.au</a></td>
+                                </tr>
+                                           </table></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3"><img src="images/spacer_trans.gif" width="15" height="15"></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3"><img src="images/seperator_black_line.gif" width="100%" height="1"></td>
+                          </tr>
+                          <tr> 
+                            <td valign="top"> <div align="center"><img src="images/spacer_trans.gif" width="10" height="15"><br>
+                                <img src="images/pic_brochure.gif" alt="Brochure" width="30" height="50"></div></td>
+                            <td>&nbsp;</td>
+                            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr> 
+                                  <td width="26%" class="smalltext">&nbsp;</td>
+                                  <td width="74%" class="smalltext">&nbsp;</td>
+                                </tr>
+                                <tr class="smalltext"> 
+<td colspan="2"> 
+<p><span class="maintext"><strong><img src="images/spacer_trans.gif" width="10" height="10">Would 
+                                      you like a brochure?</strong></span><br>
+                                      <br>
+                                    </p></td>
+                                </tr>
+                                <tr valign="top" class="smalltext"> 
+<td><strong><img src="images/spacer_trans.gif" width="10" height="10">Option 
+                                    1:</strong></td>
+                                  <td><a href="pdf/colourbrochure.pdf" target="_blank" class="type1">Click 
+                                    here</a> for printable brochure.</td>
+                                </tr>
+                                <tr valign="top" class="smalltext"> 
+<td><strong><img src="images/spacer_trans.gif" width="10" height="10">Option 
+                                    2:</strong></td>
+                                  <td><a href="brochureform.php" class="type1">Click 
+                                    here</a> to have a brochure mailed to you.</td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3">&nbsp;</td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3"><img src="images/seperator_black_line.gif" width="100%" height="1"></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3"><img src="images/spacer_trans.gif" width="10" height="15"></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="3"><img src="images/spacer_trans.gif" width="10" height="15"></td>
+                          </tr>
+                          <tr> 
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr valign="top"> 
+                                  <td width="7%"><strong><img src="images/spacer_trans.gif" width="10" height="10"></strong></td>
+                                  <td width="92%" class="smalltext">Website Design 
+                                    By </td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td colspan="2"><img src="images/spacer_trans.gif" width="10" height="10"></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td>&nbsp;</td>
+                                  <td class="smalltext"><a href="http://www.echidnaweb.com.au" target="_blank" class="type1">Echidna 
+                                    Web Design</a></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td colspan="2"><img src="images/spacer_trans.gif" width="10" height="10"></td>
+                                </tr>
+                                <tr valign="top"> 
+                                  <td>&nbsp;</td>
+                                  <td class="smalltext"><a href="http://www.echidnaweb.com.au" target="_blank"><img src="images/logo_echidna_long.gif" alt="Visit Echidna Web Design" width="187" height="27" border="0"></a></td>
+                                </tr>
+                              </table>
+                              <p>&nbsp;</p>
+                              <p></p></td>
+                          </tr>
+                        </table></td>
+                      <td width="10" rowspan="3" valign="top" bgcolor="#FFFFFF" class="smalltext"><img src="images/spacer_trans.gif" width="15" height="10"></td>
+                    </tr>
+                    <tr valign="top" bgcolor="#FFFFFF"> 
+                      <td><img src="images/spacer_trans.gif" width="10" height="10"></td>
+                    </tr>
+                    <tr valign="top"> 
+                      <td bgcolor="#FFFFFF"><table width="198" border="0" align="right" cellpadding="0" cellspacing="0">
+                          <tr> 
+                            <td width="44%">&nbsp;</td>
+                            <td width="4%"><img src="images/spacer_trans.gif" width="10" height="10"></td>
+                            <td width="52%"><a href="javascript:history.go(-1)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('back','','images/button_back_mo.gif',1)"><img src="images/button_back.gif" alt="Go back to previous page" name="back" width="94" height="22" border="0"></a></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr> 
+                      <td colspan="3" valign="top"><img src="images/spacer_trans.gif" width="10" height="10"></td>
+                    </tr>
+                    <tr bgcolor="#6FFF6F"> 
+                      <td colspan="3" valign="top"><br> </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table></td>
+          <td valign="top" bgcolor="FF9900"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td><img src="images/image_phone_heading.gif" alt="Ph: +61 2 6971 0969" width="141" height="62"></td>
+              </tr>
+              <tr> 
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td valign="top"> 
+                        <?php include("navigation.php"); ?>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td> 
+                        <?php include "orders.php" ?>
+                      </td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr> 
+          <td height="30" colspan="3" valign="top"> 
+            <?php include "footer.php" ?>
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<script Language="JavaScript" src="http://www.ezytrack.com/returns.js?ezaccount=439"></script>
+</body>
+</html>

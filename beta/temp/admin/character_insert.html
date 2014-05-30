@@ -1,0 +1,134 @@
+<html>
+<head>
+<title>Character help</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" href="../style.css" type="text/css">
+<script language="JavaScript">
+<!--
+
+var current = "";
+function set_text(code){
+	current = document.form1.copy.value;
+	document.form1.copy.value = current + code;
+}
+//-->
+</script>
+<script language="JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<link href="../css/identi kid.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="400" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="77%" valign="top"> <h1 align="left" class="headings">Help with 
+        formatting text</h1></td>
+    <td width="23%" align="right" valign="top"> <div align="right"> 
+        <p class="maintext"><a href="javascript:close();" class="type1">close</a> 
+        </p>
+      </div></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top" class="maintext">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td colspan="2" valign="top" class="maintext"> 
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" class="maintext">
+        <tr valign="top"> 
+          <td width="9%"><strong>NB</strong>: </td>
+          <td width="91%">To type text in bold you must click on <strong>'Start 
+            Bold'</strong> and to end bold click on <strong>'Stop bold'</strong>. 
+          </td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr> 
+    <td height="43" colspan="2" valign="top" class="maintext"> <table width="100%" border="0" cellpadding="0" cellspacing="0" class="maintext">
+        <tr> 
+          <td width="42%"><a href="#" class="type1" onClick="set_text('&lt;b&gt;')">Start 
+            bold</a></td>
+          <td width="5%">-</td>
+          <td width="53%"><a href="#" class="type1" onClick="set_text('&lt;/b&gt;')">Stop 
+            bold</a></td>
+        </tr>
+        <tr> 
+          <td><a href="#" class="type1" onClick="set_text('&lt;b style=&quot;font-size: 14px&quot;&gt;')">Start 
+            larger and bold</a></td>
+          <td>-</td>
+          <td><a href="#" class="type1" onClick="set_text('&lt;/b&gt;')">End larger 
+            and bold</a><a href="#" class="type1" onClick="set_text('&lt;i&gt;')"> 
+            </a></td>
+        </tr>
+        <tr> 
+          <td><a href="#" class="type1" onClick="set_text('&lt;i&gt;')">Start 
+            itallic</a></td>
+          <td>-</td>
+          <td><a href="#" class="type1" onClick="set_text('&lt;/i&gt;')">Stop 
+            itallic</a></td>
+        </tr>
+        <tr> 
+          <td><a href="#" class="type1" onClick="set_text('&lt;br&gt;')">newline</a></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td><a href="#" class="type1" onClick="set_text('\&nb\s\p\;')">extra 
+            space</a> <a href="make_link.php" class="type1"></a></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td><a href="make_link.php" class="type1">create a link</a></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td><a href="make_link_count.php" class="type1">create a link that counts</a></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr valign="top"> 
+    <td colspan="2" class="maintext"> <form name="form1" method="post" action="">
+        <div align="left">
+          <textarea name="copy" cols="30" rows="4" wrap="VIRTUAL" class="maintext"></textarea>
+          <br>
+          cut and paste this text into the administration form<br>
+          <br>
+          <a href="javascript:close();" class="type1">close</a> </div>
+      </form></td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteBase /beta/
+RewriteCond %{REQUEST_FILENAME} -f [NC,OR]
+RewriteCond %{REQUEST_FILENAME} -d [NC]
+RewriteRule .* - [L]
+RewriteRule ^([A-Za-z0-9-_\s~><?&!()\@\=\|\*\"\:\|\;\,\+\'\/]+)$ content.php?page_name={$1} [L]
+php_value date.timezone "Australia/NSW"

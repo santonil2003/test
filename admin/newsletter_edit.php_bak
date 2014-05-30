@@ -1,0 +1,111 @@
+<?php
+
+require_once('page_start.php');
+
+// this part determines the physical root of your website
+// it's up to you how to do this
+
+
+if (!ereg('/$', $HTTP_SERVER_VARS['DOCUMENT_ROOT']))
+  $_root = $HTTP_SERVER_VARS['DOCUMENT_ROOT'].'/';
+else
+  $_root = $HTTP_SERVER_VARS['DOCUMENT_ROOT'];
+
+$_root = SITE_DIR;
+define('DR', $_root);
+unset($_root);
+
+
+$spaw_root = DR.'admin/spaw/';
+
+// include the control file
+require $spaw_root.'spaw_control.class.php';
+
+if(isset($_GET['id'])) $id = $_GET['id'];
+elseif(isset($_POST['id'])) $id = $_POST['id'];
+
+if(!isset($id)||$id=='new')
+{
+  $title='Add Newsletter';
+}
+else
+{
+
+  $title='Edit Newsletter';
+  $sql = "SELECT * FROM site_newsletters WHERE id = '".$id."' LIMIT 1 ";
+  $result = mysql_query($sql);
+  if($result) {
+    $row = mysql_fetch_array($result);
+    $heading = $row['title'];
+    $page_contents = $row['content'];
+  } else {
+    $row = false;
+    $id='new';
+  }
+
+}
+
+?><body bgcolor="#4C4C4C">
+
+<form name="new_page" method="post" action="newsletter_manage.php">
+          <td width="100%" valign="top">
+		  
+				<!-- Spacer table -->
+				<table width="100%" border="0" cellpadding="0"><tr><td height="5" bgcolor="#ffffff"></td></tr></table>
+				
+                
+    <table width="100%" border="0" cellpadding="5">
+      <tr bgcolor="#b8b6b6"> 
+        <td colspan="2" bgcolor="#b8b6b6"> 
+<p align="left" ><strong><font color="#FFFFFF"> 
+            <?=$title?>
+        </font></strong></p></td>
+      </tr>
+                
+      <tr bgcolor="#CCCCCC"> 
+        <td width="16%" bgcolor="#CCCCCC"> 
+<p align="left" ><strong>Title</strong> </p></td>
+                  
+        <td width="84%" bgcolor="#CCCCCC"> 
+          <p align="left" >
+                      
+            <input name="title" type="text" size="60" value="<? echo $heading; ?>">
+        </p></td>
+      </tr>
+                
+      <tr bgcolor="#CCCCCC"> 
+        <td valign="top" bgcolor="#CCCCCC"> 
+<p><strong>Content</strong></p></td>
+                  
+        <td bgcolor="#CCCCCC"> 
+          <table width="745" border="1" cellspacing="0" cellpadding="0">
+                       <tr> 
+                        <td>
+						<?
+							$content = '<p> enter text here </p>';
+							if(isset($page_contents))$content = $page_contents;
+							$sw = new SPAW_Wysiwyg('spaw1' /*name*/,$content /*value*/,'en' /*language*/, 'full' /*toolbar mode*/, 'default' /*theme*/,
+                       								'745px' /*width*/, '450px' /*height*/, SPAW_STYLESHEET /*stylesheet file*/);
+							$sw->show();						
+
+ 
+
+						?>
+						</td>
+                      </tr>
+          </table>
+        </td>
+      </tr>
+                
+      <tr bgcolor="#CCCCCC"> 
+        <td bgcolor="#CCCCCC">&nbsp;</td>
+<input name="id" type="hidden" value="<?=$id?>">         
+        <td bgcolor="#CCCCCC"> &nbsp; 
+<input name="Submit" type="submit" value="Update">
+        </td>
+      </tr>
+            </table>
+</td>
+</form>
+<? require_once('page_start.php'); ?>
+<?PHP include('footer_new.php'); ?>

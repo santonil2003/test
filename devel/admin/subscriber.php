@@ -1,0 +1,239 @@
+<?php
+	session_start();
+
+/*
+	28.1.2005 modified
+		mysql_query($__STRING__, $link)
+		TO
+		mysql_query($__STRING__)
+
+		Also added useractions.php include to include the database connection files etc.
+
+*/
+
+if(!isset($useractions)){
+	$includeabove = true;
+	include("../useractions.php");
+}
+
+linkme();
+session_start();
+$user_section_id = 4;
+require_once("./security.php");
+check_access($user_section_id);
+
+	if ((isset($_POST['file'])) AND ($_POST['file'] != '')){
+		$file = $_POST['file'];
+	}elseif ((isset($_GET['file'])) AND ($_GET['file'] != '')){
+		$file = $_GET['file'];
+	}
+	
+	if ((isset($_POST['id'])) AND ($_POST['id'] != '')){
+		$id = $_POST['id'];
+	}elseif ((isset($_GET['id'])) AND ($_GET['id'] != '')){
+		$id = $_GET['id'];
+	}
+	
+	if ((isset($_POST['subscriber_id'])) AND ($_POST['subscriber_id'] != '')){
+		$subscriber_id = $_POST['subscriber_id'];
+	}elseif ((isset($_GET['subscriber_id'])) AND ($_GET['subscriber_id'] != '')){
+		$subscriber_id = $_GET['subscriber_id'];
+	}
+	
+//echo '<pre>';
+//print_r($subscriber_id);
+//print_r($_POST);
+//echo '</pre>';
+	
+	if ((isset($_POST['category'])) AND ($_POST['category'] != '')){
+		$category = $_POST['category'];
+	}elseif ((isset($_GET['category'])) AND ($_GET['category'] != '')){
+		$category = $_GET['category'];
+	}
+	
+	if ($category == "all"){
+		$category = "";
+	}elseif ((!isset($category)) OR (strlen($category) > 1)){
+		$category = 'a';
+	}
+	
+	if ((isset($_POST['subscriber_action'])) AND ($_POST['subscriber_action'] != '')){
+		$subscriber_action = $_POST['subscriber_action'];
+	}elseif ((isset($_GET['subscriber_action'])) AND ($_GET['subscriber_action'] != '')){
+		$subscriber_action = $_GET['subscriber_action'];
+	}
+
+	if ((isset($_POST['subscriber_number'])) AND ($_POST['subscriber_number'] != '')){
+		$subscriber_number = $_POST['subscriber_number'];
+	}elseif ((isset($_GET['subscriber_number'])) AND ($_GET['subscriber_number'] != '')){
+		$subscriber_number = $_GET['subscriber_number'];
+	}
+
+	if ((isset($_POST['subscriber_status'])) AND ($_POST['subscriber_status'] != '')){
+		$subscriber_status = $_POST['subscriber_status'];
+	}elseif ((isset($_GET['subscriber_status'])) AND ($_GET['subscriber_status'] != '')){
+		$subscriber_status = $_GET['subscriber_status'];
+	}
+
+	//$link = mysql_connect('localhost','root','') or exit(mysql_error());
+//	$link = mysql_connect('localhost','identiki_user','IdentiK1') or exit(mysql_error());
+//	mysql_select_db('identiki_data', $link) or exit(mysql_error());
+	
+	if (($subscriber_action == "update subscriber") AND ($subscriber_number != "") AND ($subscriber_status != "")){
+		$update_sql = "UPDATE customers SET customers.subscriber = '" . $subscriber_status . "' WHERE customers.id = " . $subscriber_number;
+		//echo $update_sql . '<br>';
+		mysql_query($update_sql) or exit(mysql_error());
+	}
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>identi Kid - Admin Home</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="admin_stylesheet.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function UpdateSubscriber(obj){
+	var id = obj.value;
+	var status = "";
+	if (obj.checked){
+		status = "Yes";
+	}else{
+		status = "No";
+	}
+	//window.status = id + " " + status;
+	document.forms.form1.subscriber_action.value = "update subscriber";
+	document.forms.form1.subscriber_number.value = id;
+	document.forms.form1.subscriber_status.value = status;
+	document.forms.form1.submit();
+}
+function SendNewsletter(){
+	if (window.confirm("Are you certain you would like to send a newsletter to every currently subscribed customer now?")){
+		//window.status = "Sending newsletters now...";
+		//document.forms.form1.subscriber_action.value = "send newsletter";
+		//document.forms.form1.submit();
+		window_handler = window.open("email_newsletter.php", "SendNewsletters", "top=200, left=25, height=300, width=925, scrollbars");
+		window_handler.focus();
+	}
+}
+//-->
+</script>
+</head>
+
+<body>
+<table width="100%" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table cellpadding="0" cellspacing="0" border="0">
+        <tr bgcolor="#FFFFFF"> 
+          <td><img src="../images/spacer_trans.gif" height="1" width="10" border="0"></td>
+        </tr>
+        <tr> 
+          <td><img src="../images/admin_header.gif" height="38" width="884" border="0"></td>
+        </tr>
+        <tr> 
+          <td class="maintext"><img src="../images/spacer_trans.gif" height="10" width="1" border="0"></td>
+        </tr>
+        <tr> 
+          <td valign="top" class="maintext"> <table width="100%" height="100%" cellpadding="0" cellspacing="0">
+              <tr> 
+                <td width="99%" height="22" valign="top" class="maintext"><table width="100%" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td width="89%"><a href="index.php" class="type1">Administration Home</a> | <a class="type1">Subscriber</a></td>
+					  <td width="11%" title="Click here to send a newsletter to all currenly subscribed customers."><div align="right"><a class="type1" id="update_subscriber" onMouseOver="JavaScript: document.all('update_subscriber').style.cursor='hand';" onClick="JavaScript: SendNewsletter();">Send Newsletter</a></div></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr> 
+                <td valign="top" class="whitetext"><form name="form1" method="post" action="subscriber.php">
+					<input type="hidden" name="subscriber_action" value="">
+					<input type="hidden" name="category" value="<?= $category ?>">
+					<input type="hidden" name="subscriber_number" value="">
+					<input type="hidden" name="subscriber_status" value="">
+                    <table width="100%" border="0" cellpadding="5">
+                      <tr bgcolor="#EE007B"> 
+                        <td> <p><strong><font color="#FFFFFF"> Subscriber Administration</font></strong></p></td>
+                      </tr>
+
+
+
+                      <tr title="Clicking a letter will display only the customers whose last names begin with that letter."> 
+                        <td><div align="center"><a href="subscriber.php?category=a">A</a> - <a href="subscriber.php?category=b">B</a> - <a href="subscriber.php?category=c">C</a> - <a href="subscriber.php?category=d">D</a> - <a href="subscriber.php?category=e">E</a> - <a href="subscriber.php?category=f">F</a> - <a href="subscriber.php?category=g">G</a> - <a href="subscriber.php?category=h">H</a> - <a href="subscriber.php?category=i">I</a> - <a href="subscriber.php?category=j">J</a> - <a href="subscriber.php?category=k">K</a> - <a href="subscriber.php?category=l">L</a> - <a href="subscriber.php?category=m">M</a> - <a href="subscriber.php?category=n">N</a> - <a href="subscriber.php?category=o">O</a> - <a href="subscriber.php?category=p">P</a> - <a href="subscriber.php?category=q">Q</a> - <a href="subscriber.php?category=r">R</a> - <a href="subscriber.php?category=s">S</a> - <a href="subscriber.php?category=t">T</a> - <a href="subscriber.php?category=u">U</a> - <a href="subscriber.php?category=v">V</a> - <a href="subscriber.php?category=w">W</a> - <a href="subscriber.php?category=x">X</a> - <a href="subscriber.php?category=y">Y</a> - <a href="subscriber.php?category=z">Z</a> - <a href="subscriber.php?category=all">All</a></div></td>
+                      </tr>
+
+                      <tr> 
+                        <td align=center class=maintext><p><strong>Search</strong> <input type=text name=keywords value="<?=$_POST['keywords']?>"><input type=submit name=submit value="Search"></p></td>
+                      </tr>
+
+
+                      <tr> 
+                        <td>
+							<table width="100%" border="0" cellpadding="5">
+										  <tr bgcolor="#E5E5E5">
+										    <td width="25%"><div align="center"><strong><a class="grey">Last Name</a></strong></div></td> 
+											<td width="25%"><div align="center"><strong><a class="grey">First Name</a></strong></div></td>
+											<td width="39%"><div align="center"><strong><a class="grey">Email
+											        Address</a></strong></div></td>
+											<td width="11%"><div align="center"><strong><a class="grey">Subscriber</a></strong></div>
+										    </td>
+										  </tr>
+										  <?php
+											$index = 0;
+
+// add search fields.
+if(!empty($_POST['keywords'])){
+	$search = " AND ( customers.firstname like '%{$_POST['keywords']}%' OR  customers.surname like '%{$_POST['keywords']}%' OR  customers.emailadd like '%{$_POST['keywords']}%' ) ";
+}
+else {
+	// when no search field, only display category letter;
+
+	$search = " AND (customers.surname LIKE '" . $category . "%')  ";
+}
+
+
+										  	$sql = "SELECT DISTINCT id, firstname, surname, emailadd, subscriber FROM customers WHERE (customers.emailadd <> '' )  {$search} ORDER BY customers.surname ASC";
+											//echo $sql;
+
+											$result = mysql_query($sql) or mysql_error("sql error: ".mysql_error());
+											while ($rs = mysql_fetch_assoc($result)){
+	
+										  ?>
+                          							
+											  <tr bgcolor="#E5E5E5">
+												<td><div align="center"><strong>
+												  <?=$rs['surname']?>
+												  </strong></div></td> 
+												<td><div align="center">
+												  <?=$rs['firstname']?>
+												</div></td>
+												<td><div align="center">
+												  <?=$rs['emailadd']?>
+												</div></td>
+												<td>
+													<div align="center">
+														<input type="checkbox" name="subscriber_id[<?= $rs['id'] ?>]" value="<?= $rs['id'] ?>" <?php if ($rs['subscriber'] == 'Yes'){ ?>checked<?php } ?> onClick="JavaScript: UpdateSubscriber(this);">
+													</div>
+												</td>
+											  </tr>
+										  <?php
+										  		$index++;
+										  	}
+											mysql_close();
+											mysql_free_result($result);
+											?>
+						  </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </form></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>

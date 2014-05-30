@@ -1,0 +1,106 @@
+/* Page Structure
+----------------------------------------------- */
+body	{
+	margin: 0 0 0 0;
+	padding:0px;
+	background-color: #ffffff;
+	background: url(../images/bg/b_main.jpg) repeat-x;
+	font:15px verdana, arial, helvetica, sans-serif;
+	line-height:19px;
+	color: #636466;
+	}
+	
+p {	font:15px verdana, arial, helvetica, sans-serif;	color: #636466; line-height:20px; margin:0; padding:20px 0 0 0;}
+td {font:15px verdana, arial, helvetica, sans-serif;	color: #636466; line-height:20px;}
+h1 {font-family: verdana, Arial, Helvetica, sans-serif; font-size:28px; margin:0; padding:4px 0 17px 0; color: #005aa9; font-weight:normal;}
+h2 {font-family: verdana, Arial, Helvetica, sans-serif; font-size:28px; margin:0; padding:4px 0 0 0; color: #005aa9; font-weight:normal;}
+h3 {font-family: verdana, Trebuchet MS, Arial, Helvetica, sans-serif; font-size:13px; margin:0; padding:10px 0 7px 0; color: #231f20; font-weight:bold;}
+h4 {font-family: verdana, Trebuchet MS, Arial, Helvetica, sans-serif; font-size:11px; display: inline-block; line-height: 12px; margin:0; padding:5px 0 0 0; color: #313130;}
+h5 {font-family: verdana, Trebuchet MS, Arial, Helvetica, sans-serif; font-size:16px; margin:0; padding:12px 0 0 0; color: #005aa9; font-weight:bold;}
+h6 {font-family: verdana, Trebuchet MS, Arial, Helvetica, sans-serif; font-size:13px; margin:0; padding:0 0 4px 0; color: #231f20; font-weight:bold;}
+a { font-family: verdana, Arial, sans-serif; color:#5c80ba; text-decoration:none; font-weight:normal; font-size:11px; line-height:11pt;}
+a:hover { color:#5c80ba; text-decoration:underline;}
+
+.breadlink a { font-family: verdana, Arial, sans-serif; color:#636466; text-decoration:none; font-weight:normal; font-size:11px; line-height:11pt;}
+.breadlink a:hover { color:#5c80ba; text-decoration:underline;}
+
+.footer {font:11px verdana, verdana, arial, helvetica, sans-serif; font-weight:normal; color: #9fb4d7; line-height:12px; text-align: center;}
+.footer A { font-family: verdana, Arial, sans-serif; color:#ffffff; text-decoration:none; font-weight:normal; font-size:11px; line-height:11pt;}
+.footer A:hover { color:#ffffff; text-decoration:underline;}
+
+/* Links and Forms
+----------------------------------------------- */
+
+A { font-family: trebuchet ms, Arial, sans-serif; color:#018dcf; text-decoration:none; font-weight:normal; font-size:15px; line-height:20px;}
+A:hover { color:#005aa9; text-decoration:underline;}
+
+A.newslink { font-family: trebuchet ms, Arial, sans-serif; color:#669dcd; text-decoration:underline; font-weight:bold; font-size:11px; line-height:13px;}
+A.newslink:hover { color:#0074d9; text-decoration:underline;}
+A.newslink:active { color:#0074d9; text-decoration:underline;}
+A.newslink:visited { color:#669dcd; text-decoration:underline;}
+A.newslink:visited:hover { color:#0074d9; text-decoration:underline;}
+
+A.clicklink { font-family: trebuchet ms, Arial, sans-serif; color:#494948; text-decoration:underline; font-weight:normal; font-size:11px; line-height:13px;}
+A.clicklink:hover { color:#2c2c27; text-decoration:underline;}
+A.clicklink:active { color:#2c2c27; text-decoration:underline;}
+A.clicklink:visited { color:#494948; text-decoration:underline;}
+A.clicklink:visited:hover { color:#2c2c27; text-decoration:underline;}
+
+
+.form {
+	height: 20px;
+	font-size: 11px;
+	background-color: #fff;
+	color: #27557c;
+	border: 1px solid #9bb8d8;
+	font-family: Trebuchet MS, Arial, sans-serif;
+}
+
+.form2 {
+	font-size: 11px;
+	background-color: #005aa9;
+	color: #ffffff;
+	border: 1px solid #549ad8;
+	font-family: Trebuchet MS, Arial, sans-serif;
+}
+
+/* Lightbox CSS Stuff */
+
+#lightbox{	position: absolute;	left: 0; width: 100%; z-index: 100; text-align: center; line-height: 0;}
+#lightbox img{ width: auto; height: auto;}
+#lightbox a img{ border: none; }
+
+#outerImageContainer{ position: relative; background-color: #fff; width: 250px; height: 250px; margin: 0 auto; }
+#imageContainer{ padding: 10px; }
+
+#loading{ position: absolute; top: 40%; left: 0%; height: 25%; width: 100%; text-align: center; line-height: 0; }
+#hoverNav{ position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10; }
+#imageContainer>#hoverNav{ left: 0;}
+#hoverNav a{ outline: none;}
+
+#prevLink, #nextLink{ width: 49%; height: 100%; background-image: url(data:image/gif;base64,AAAA); /* Trick IE into showing hover */ display: block; }
+#prevLink { left: 0; float: left;}
+#nextLink { right: 0; float: right;}
+#prevLink:hover, #prevLink:visited:hover { background: url(../images/gen/prevlabel.gif) left 15% no-repeat; }
+#nextLink:hover, #nextLink:visited:hover { background: url(../images/gen/nextlabel.gif) right 15% no-repeat; }
+
+#imageDataContainer{ font: 10px Verdana, Helvetica, sans-serif; background-color: #fff; margin: 0 auto; line-height: 1.4em; overflow: auto; width: 100%	; }
+
+#imageData{	padding:0 10px; color: #666; }
+#imageData #imageDetails{ width: 70%; float: left; text-align: left; }	
+#imageData #caption{ font-weight: bold;	}
+#imageData #numberDisplay{ display: block; clear: left; padding-bottom: 1.0em;	}			
+#imageData #bottomNavClose{ width: 66px; float: right;  padding-bottom: 0.7em; outline: none;}	 	
+
+#overlay{ position: absolute; top: 0; left: 0; z-index: 90; width: 100%; height: 500px; background-color: #000; }
+
+.shoppingCartText {
+  font-size: 10px;
+  color:#FFFFFF;
+}
+
+.ordertext {
+  font-size: 12px;
+}
+
+ul.srchresult li{list-style:none}

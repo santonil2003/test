@@ -1,0 +1,76 @@
+<div id="blockBox" style="background-color:#ffffff;display:none;cursor:default;text-align:center"> 
+  <br><div style="font-weight: bold; font-family: Arial, Helvetica, sans-serif; font-size:14px; color: #676767;" id="blockBoxContents"></div><br>
+  <table border="0" width="100%" align="center"><tr align="center" ><td align="center">
+  <table border="0" cellspacing="0" cellpadding="0" >
+    <tr>
+      <td align="center">
+        <div id="okButton" style="background-color:#ffffff;display:none;cursor:default;"><input type="image" src="../images/nav/n_ok_o.gif" alt="OK" style="cursor: pointer;" class="ok"id="ok" value="OK" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('ok','','../images/nav/n_ok_x.gif',1)"/></div>
+      </td>
+      <td align="center">
+        <div id="yesButton" style="background-color:#ffffff;display:none;cursor:default;"><input type="image" src="../images/nav/n_yes_o.gif" alt="YES" style="cursor: pointer;" class="yes"id="yes" value="YES" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('yes','','../images/nav/n_yes_x.gif',1)"/></div>
+      </td>
+      <td align="center">
+        <div id="noButton" style="background-color:#ffffff;display:none;cursor:default;"><input type="image" src="../images/nav/n_no_o.gif" alt="NO" style="cursor: pointer;" class="no"id="no" value="NO" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('no','','../images/nav/n_no_x.gif',1)"/></div>
+      <td>
+    </tr>
+   </table>
+   </td></tr></table>
+  <br>
+</div>
+
+<script type="text/javascript">
+
+  var blockBox = '';
+  
+  $(document).ready(
+    function(){
+      blockBox = $("#blockBox")[0];
+      $('.ok').click($.unblockUI);
+      $('.yes').click($.unblockUI);
+      $('.no').click($.unblockUI);
+    }
+  );
+  
+  var msg = {
+  
+    width:325,
+    ok:false,
+    yes:false,
+    no:false,
+    
+    load : function() {
+  
+      $.blockUI(blockBox, { width: msg.width+'px' });
+    
+      $("#blockBoxContents").html('');
+    
+      for (var i = 0; i < msg.load.arguments.length; i++) {
+        switch(msg.load.arguments[i]) {
+          case 'ok':msg.ok=true;break;
+          case 'yes':msg.yes=true;break;
+          case 'no':msg.no=true;break;
+        }
+      }   
+     
+      if(msg.ok==true)$("#okButton").css("display", "inline");
+      else $("#okButton").css("display", "none");
+    
+      if(msg.yes==true)$("#yesButton").css("display", "inline");
+      else $("#yesButton").css("display", "none");
+      
+      if(msg.no==true)$("#noButton").css("display", "inline");
+      else $("#noButton").css("display", "none");
+
+    }
+    ,
+    content: function(blockBoxHTML) {
+      $("#blockBoxContents").html(blockBoxHTML);
+    },
+    
+    click: function(button, action) { 
+      $('.'+button).click(function(){ eval(action); });    
+    }
+  }
+    
+    
+</script>

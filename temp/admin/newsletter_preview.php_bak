@@ -1,0 +1,31 @@
+<?PHP
+	require_once('../_common/_connection.php');
+	require_once('../_common/_constants.php');
+	require_once('../_common/_database.php');
+	require_once('../_common/_functions.php');
+	$cfg = new Config();
+	$db = new DbConnect($cfg);
+	$db->connectDb();
+	
+	if(isset($_GET['id']) && $_GET['id'] != '' ) {
+	  $id = $_GET['id'];
+	  $sql = "SELECT * FROM site_newsletters WHERE id = '".$id."' LIMIT 1 ";
+     $result = mysql_query($sql);
+     if($result) {
+      $row = mysql_fetch_array($result);
+      $heading = $row['title'];
+      $page_contents = $row['content'];
+      include('../newsletter/header.php');
+      //echo "Dear Subscriber<br>";
+      echo $page_contents;
+      include('../newsletter/footer.php');
+     } else {
+       header('location: newsletter_manage.php');
+       exit;
+     }
+   } else {
+     header('location: newsletter_manage.php');
+     exit;
+   }
+   
+   

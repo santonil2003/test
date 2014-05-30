@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>identi Kid - Secure Transactions</title>
+<script Language="JavaScript" src="/ezytrack.js"></script> 
+<link href="css/identikid.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="keywords" content="Label,labels,labelling,personalised,labels,name,identikid,identi,kid,sticker,stickers,vinyl,iron,iron-on,tag,shoes,pencil,pack,fabric,bag,child,kidcards,kid,cards,clothing,lost,property,school">
+<meta name="description" content="Personalised name labels that really work.  Includes microwave dishwasher safe vinyl stickers, iron-on clothing labels, shoe labels, pencil labels and lots more.  Design your own labels online, with your choice of fun fonts and pictures.  All products are high quality, attractive and easy to use.">
+<body  background="images/bg_pattern.gif"> 
+<form name="toSecure" action="<?=$_LINKS['secure']?>" method="post"> 
+	<input type="hidden" name="invoiceNumber" value="<? echo $id+1000;?>"> 
+	<input type="hidden" name="paymentAmount" value="<? echo $_AUTotal;?>"> 
+	<input type="hidden" name="custid" value="<?=$customer?>">
+	<!input type="hidden" name="ContactEmail" value="<? echo $_POST["emailadd"];?>"> 
+	<!input type="hidden" name="ContactName" value="<? echo $_POST["firstname"]." ".$_POST["surname"];?>"> 
+	<input type="hidden" name="section" value="getcc">
+
+</form> 
+<script language="javascript" src="javascript.js"></script>
+<table width="740" border="0" align="center" cellpadding="0" cellspacing="0"> 
+	<tr> 
+		<td width="740" valign="top"> 
+			<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+				<tr> 
+					<td width="181" valign="top" background="images/bg_left_column.gif"> 
+						<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+							<tr> 
+								<td><a href="http://www.identikid.com.au"><img src="images/logo_top_products.gif" alt="Identi Kid" width="181" height="62" border="0"></a></td> 
+							</tr> 
+							<tr> 
+								<td><a href="http://www.identikid.com.au"><img src="images/logo_middle_products.gif" alt="Identi Kid" width="181" height="90" border="0"></a></td> 
+							</tr> 
+							<tr> 
+								<td><a href="http://www.identikid.com.au"><img src="images/logo_bottom_products.gif" alt="Identi Kid" width="181" height="43" border="0"></a></td> 
+							</tr> 
+						</table> 
+					</td> 
+					<td width="418" valign="top" bgcolor="#6FFF6F"> 
+						<table width="418" border="0" cellpadding="0" cellspacing="0" bgcolor="#6FFF6F"> 
+							<tr valign="top"> 
+								<td width="60" background="images/bg_blue_heading.gif"><img src="images/spacer_trans.gif" width="60" height="10"></td> 
+								<td width="304" bgcolor="5d7eb9"><img src="images/heading_labels_for_littlies.gif" alt="name labels for school,kindy and life" width="304" height="62"></td> 
+								<td width="54" background="images/bg_blue_heading.gif"><img src="images/spacer_trans.gif" width="54" height="10"></td> 
+							</tr>
+							<tr valign="top" bgcolor="#66FF66"> 
+								<td colspan="3" bgcolor="#6FFF6F"> 
+									<table width="418" border="0" cellpadding="0" cellspacing="0" bgcolor="FFFFFF">
+										<tr valign="top" bgcolor="#FFFFFF"> 
+											<td><img src="images/spacer_trans.gif" width="10" height="10"></td> 
+										</tr>
+										<tr>
+											<td>
+												<table width="418" border="0" cellpadding="0" cellspacing="0" bgcolor="FFFFFF">	
+
+													<tr>
+														<td><img src="images/spacer_trans.gif" width="1" height="1"></td> 
+														<td colspan="3" class="maintext">
+<h1><span class="headings">Secure Transactions</span></h1>
+
+<p><strong>You have been redirected to the secure server.</strong></p>
+<p>If a window did not pop up requesting your Credit Card details your browser may not be allowing it to.</p>
+<p>Go <a href="javascript:history.back();" class="type1">Back</a> and try holding down the left control button when clicking on Continue.</p>
+<p>If a window is still not popping up you may need to consult the browsers Help manual or try another method of payment.</p>
+
+<a href="javascript:history.go(-1)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('back','','../images/button_back_mo.gif',1)"><img src="images/button_back.gif" alt="Back" name="back" border="0"></a>
+
+														</td> 
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+													</tr>
+													<tr>
+														<td>&nbsp;</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table> 
+								</td> 
+							</tr> 
+						</table> 
+					</td> 
+					<td valign="top" bgcolor="FF9900"> 
+						<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+							<tr> 
+								<td><img src="images/image_phone_heading.gif" alt="Ph: +61 2 6971 0969" width="141" height="62"></td> 
+							</tr>
+						</table> 
+					</td> 
+				</tr> 
+				<tr> 
+					<td height="30" colspan="3" valign="top"> 
+						<?php include "footer.php" ?> 
+					</td> 
+				</tr> 
+			</table> 
+		</td> 
+	</tr> 
+</table>
+<script Language="JavaScript" src="http://www.ezytrack.com/returns.js?ezaccount=439"></script>
+</body>
+</html>

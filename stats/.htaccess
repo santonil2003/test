@@ -1,0 +1,9 @@
+AuthzLDAPAuthoritative off
+AuthLDAPURL ldap://ro.ldap.global.net.au:389/ou=users,dc=globaldial,dc=com?uid?sub?(&(|(objectClass=globaldialStaff)(uid=identiki@hosting.globaldial.com))(globaldialStatus=active))
+AuthName "Web Statistics (FTP username/password)"
+AuthBasicProvider ldap
+AuthType Basic
+
+<Limit GET POST>
+    Require valid-user
+</Limit>

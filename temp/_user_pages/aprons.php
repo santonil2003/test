@@ -1,0 +1,3 @@
+<P align=center><IMG style="WIDTH: 738px; HEIGHT: 443px" src="http://identikid.com.au/images/bg/waist-and-full.gif" width=878 height=523></P>
+<P align=center><IMG src="http://identikid.com.au/images/bg/waist-button.gif" width=250 height=60>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <IMG src="http://identikid.com.au/images/bg/full-button.gif" width=250 height=60></P>
+<P align=center>&nbsp;</P>

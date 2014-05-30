@@ -1,0 +1,1 @@
+<img src="images/templates/order_right_1.gif" alt="" width="29" height="144" border="0">

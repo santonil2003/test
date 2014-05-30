@@ -1,0 +1,1 @@
+<img src="images/templates/contact_right_1.gif" alt="" width="29" height="178" border="0">

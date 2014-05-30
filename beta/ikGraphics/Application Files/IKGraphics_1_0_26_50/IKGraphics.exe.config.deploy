@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="IKGraphics.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="IKGraphics.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <applicationSettings>
+        <IKGraphics.Properties.Settings>
+            <setting name="IKGraphics_au_com_identikid_devel_IKGraphics"
+                serializeAs="String">
+                <value>http://www.identikid.com.au/ws/IKGraphics.php</value>
+            </setting>
+        </IKGraphics.Properties.Settings>
+    </applicationSettings>
+    <userSettings>
+        <IKGraphics.Properties.Settings>
+            <setting name="OutputPath" serializeAs="String">
+                <value>c:\</value>
+            </setting>
+        </IKGraphics.Properties.Settings>
+    </userSettings>
+</configuration>

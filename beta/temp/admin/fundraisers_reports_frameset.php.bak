@@ -1,0 +1,24 @@
+<?
+include("fundraisers_functions.php");
+$type=$_GET["type"];
+$items = split(";",$_GET["id"]);
+$sendString = getSendString();
+
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Identikid Admin - View Report Detail</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<frameset frameborder="0" rows="90,*">
+	<frame name="controller" src="fundraisers_reports_control.php?id=<? echo $_GET["id"]."&type=".$_GET["type"]."&".$sendString."&returnIds=".$_GET["returnIds"]."&qandy=".$_GET["qandy"];?>">
+	<frame name="viewer" src="fundraisers_reports_detail.php?id=<? echo $items[0]."&".$sendString;?>">
+</frameset>
+<noframes></noframes>
+
+<body marginheight="0" marginwidth="0" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0">
+</body>
+</html>

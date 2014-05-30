@@ -1,0 +1,1 @@
+<img src="images/templates/prod2_right_1.gif" alt="" width="29" height="119" border="0">

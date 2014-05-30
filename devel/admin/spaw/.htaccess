@@ -1,0 +1,9 @@
+
+AuthType Basic
+
+AuthName "Identkid Admin"
+
+AuthUserFile "/var/www/hosting/users/identiki@hosting.globaldial.com/.htpasswds/passwd"
+
+require valid-user
+

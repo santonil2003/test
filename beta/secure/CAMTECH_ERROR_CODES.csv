@@ -1,0 +1,101 @@
+0,00 Approved or completed successfully
+1,01 Refer to card issuer
+2,02 Refer to card issuers special conditions
+3,03 Invalid merchant
+4,04 Pick-up card
+5,05 Do not honour
+6,06 Error
+7,"07 Pick-up card, special condition"
+8,08 Honour with identification
+9,09 Request in progress
+10,10 Approved for partial amount
+11,11 Approved VIP
+12,12 Invalid transaction
+13,13 Invalid Amount
+14,14 Invalid Card number (no such number)
+15,15 No such issuer
+16,"16 Approved, update Track"
+17,17 Customer Cancellation
+18,18 Customer dispute
+19,19 Re-enter transaction
+20,20 Invalid response
+21,21 No action taken
+22,22 Suspected malfunction
+23,23 Unacceptable transaction fee
+24,24 File update not supported by receiver
+25,25 Unable to locate record on file
+26,"26 Duplicate file update record, old record replaced"
+27,27 File update field edit error
+28,28 File update file locked out
+29,"29 File update not successful, contact acquirer"
+30,30 Format error 
+31,31 Bank not supported by switch
+32,32 Completed partially
+33,33 Expired card
+34,34 Suspected fraud
+35,35 Card acceptor contact acquirer
+36,36 Restricted card
+37,37 Card acceptor call acquirer security 
+38,38 Allowable PIN tries exceeded 
+39,39 No credit account 
+40,40 Requested function not supported 
+41,41 Lost card 
+42,42 No universal account 
+43,"43 Stolen card, pick up "
+44,44 No investment account 
+45,45 Reserved for ISO use 
+46,46 Reserved for ISO use 
+47,47 Reserved for ISO use 
+48,48 Reserved for ISO use 
+49,49 Reserved for ISO use 
+50,50 Reserved for ISO use 
+51,51 Not sufficient funds 
+52,52 No cheque account 
+53,53 No savings account 
+54,54 Expired card 
+55,55 Incorrect PIN 
+56,56 No card record 
+57,57 Transaction not permitted to cardholder 
+58,58 Transaction not permitted to terminal 
+59,59 Suspected fraud 
+60,60 Card acceptor contact acquirer 
+61,61 Exceeds withdrawal amount limits 
+62,62 Restricted card 
+63,63 Security violation 
+64,64 Original amount incorrect 
+65,65 Exceeds withdrawal frequency limit 
+66,66 Card acceptor call acquirers security department 
+67,67 Hard capture (requires that card be picked up at ATM) 
+68,68 Response received too late 
+69,69-74 Reserved for ISO use 
+75,75 Allowable number of PIN tries exceeded 
+76,76 Reserved for private use 
+77,77 Reserved for private use
+78,78 Reserved for private use 
+79,79 Reserved for private use 
+80,80 Reserved for private use 
+81,81 Reserved for private use 
+82,82 Reserved for private use 
+83,83 Reserved for private use 
+84,84 Reserved for private use 
+85,85 Reserved for private use 
+86,86 Reserved for private use 
+87,87 Reserved for private use 
+88,88 Reserved for private use 
+89,89 Reserved for private use 
+90,90 Cutoff is in process ( Switch ending a day's business and started the next. The transaction can be sent again in a few minutes)
+91,91 Issuer or switch is inoperative 
+92,92 Financial institution or intermediate network facility cannot be found for routing 
+93,93 Transaction cannot be completed. Violation of law 
+94,94 Duplicated transmission 
+95,95 Reconcile error 
+96,96 System malfunction 
+97,97 Advises that reconciliation totals have been reset 
+98,98 MAC error 
+99,99 Reserved for national use 
+EM,EM Error at the Merchant Server level 
+RM,RM Rejected at the Merchant Server level 
+EG,EG Errored at Gateway - response text varies depending on reason 
+RG,RG Rejected at Gateway - response text varies depending on reason 
+EA,EA Errored at Acquirer - response text varies depending on reason 
+RA,RA Rejected at Acquirer - response text varies depending on reason 

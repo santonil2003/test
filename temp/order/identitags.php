@@ -1,0 +1,327 @@
+<?php 
+
+
+$query = "SELECT * FROM currencies WHERE id=".$_COOKIE["currency"];
+$result = mysql_query($query);
+if(!$result) error_message(sql_error());
+
+$cur = mysql_fetch_assoc($result);
+
+
+$query = "SELECT * FROM prices_identitags WHERE currencyInt=".$_COOKIE["currency"]." ORDER BY multiplier";
+$result = mysql_query($query);
+if(!$result) error_message(sql_error());
+
+$k=0;
+while($qdata = mysql_fetch_array($result)){
+	$k++;
+	$prices[$k] = $qdata['price'];
+}
+
+$mysql = "SELECT * FROM prices_reverse_text WHERE prod_id = 14";
+$resulte = mysql_query($mysql) or die ("sql error");
+$rowe = mysql_fetch_assoc($resulte) or die ("sql error");
+$reverseprice = $rowe["reverse_text_price"];
+
+?>
+<script language="JavaScript">
+
+
+var currSymbol = '<?=$cur['symbol'];?>';
+
+var picturesAr = new Array(
+					   "none",
+					   "A",
+					   "C",
+					   "H",
+					   "M",
+					   "N",
+					   "Q",
+					   "R",
+					   "S",
+					   "T",
+					   "U",
+					   "V",
+					   "W",
+					   "X",
+					   "V",
+					   "Y",
+					   "C1",
+					   "D1",
+					   "Z",
+					   "P",
+					   "E",
+					   "J",
+					   "F1",
+					   "U2",
+					   "I",
+					   "E1",
+					   "A1",
+					   "G1",
+					   "H1",
+					   "I1",
+					   "J1",
+					   "K1",
+					   "L1",
+					   "M1",
+					   "N1"
+);
+
+$(document).ready(
+  function(){
+    updateCost();
+  });
+
+function chkForm(theForm) {
+
+  var currTag = '';
+  var currId = '';
+  var currFL = '';
+  var currSL = '';
+  var currRev = '';
+  numTags = $(".tag").size();
+  $(".outputVar").val('');
+  
+  for(var i=1;i<=numTags;i++){
+    currId = $("#text_"+i).val();
+    currFL = $("#firstLine_"+i).val();
+    currSL = $("#secondLine_"+i).val();
+    currRev = $("#reverse_"+i).attr("checked")?'1':'0';
+    if(currRev == '1' && currFL =="" && currSL ==""){
+      alert("You have selected text to be printed on the back of a tag but have not entered the text, Please enter the text or untick the 'Text' box");
+      $("#firstLine_"+currId).focus();
+      return false;
+    } else {    
+      $("#text"+i).val(currId);
+      $("#firstLine"+i).val(currFL); 
+      $("#secondLine"+i).val(currSL);  
+      $("#reverse"+i).val(currRev);
+    }
+    
+  }
+  
+  submitform();
+  return false;
+}
+
+
+function submitform()
+{
+  document.form1.submit();
+}
+
+var numTags = 0;
+var numReverse = 0;
+
+function addTag(obj){
+  numTags = $(".tag").size();
+  var tagID = $(obj).attr('href').toUpperCase();
+
+  if(numTags<4) {
+
+     var tag_Content = '<div class="tag" id="tag_'+(numTags+1)+'"><table><tr><td align="right">';                       
+        tag_Content+= '<font size="2" face="Comic Sans MS"><strong>Tag:</strong></font></td>';
+        tag_Content+= '<td align="left" colspan="2">'+tagID+'<input class="tag_id" name="text_'+(numTags+1)+'" type="hidden" id="text_'+(numTags+1)+'" size="5" value="'+tagID+'" >';
+        tag_Content+= '&nbsp;&nbsp;&nbsp;<img src="images/nav/n_remove.gif" onclick="removeTag('+(numTags+1)+');" border="0" />';
+        tag_Content+= '</td></tr><tr><td><font  size="2"  face="Comic Sans MS"><strong>Line 1:</strong></font><br>';
+        tag_Content+= '<font size="2" face="Comic Sans MS"><strong>Line 2:</strong></font></td><td>';
+		  tag_Content+= '<input disabled="true" class="firstline" name="firstLine_'+(numTags+1)+'" type="text" id="firstLine_'+(numTags+1)+'" size="20"><br>';
+        tag_Content+= '<input disabled="true" class="secondLine" name="secondLine_'+(numTags+1)+'" type="text" id="secondLine_'+(numTags+1)+'" size="20" ></td>';
+        tag_Content+= '<td style="vertical-align:middle" > ';
+        tag_Content+= '<input class="reverse_text" id="reverse_'+(numTags+1)+'" name="reverse_'+(numTags+1)+'" type="checkbox" value="'+(numTags+1)+'">';
+        tag_Content+= '<strong><font size="2">Text**</font></strong></font><br></td></tr></table></div>';
+
+   $("#tags_conatainer").append(tag_Content);
+    
+   $("#reverse_"+(numTags+1)).click(
+      function(){
+       var currentTagID = $(this).val();
+        if($(this).attr("checked") == true) { 
+          $("#firstLine_"+currentTagID).removeAttr('disabled');
+          $("#secondLine_"+currentTagID).removeAttr('disabled');
+        } else {
+          $("#firstLine_"+currentTagID).attr('disabled', true);
+          $("#secondLine_"+currentTagID).attr('disabled', true);
+        }
+        updateCost();
+        return true;
+      }
+    ); 
+    
+    updateCost();
+    
+  }
+ 
+  
+  return false;
+  
+}
+
+function removeTag(remTagID) {
+  $("#reverse"+remTagID).val('0');
+  $("#tag_"+remTagID).remove();
+  updateCost();
+}
+
+function updateCost(){
+  numTags = $(".tag").size();
+  numReverse = $(".reverse_text:checked").size();
+  var totalPrice = 0; 
+  if(numTags>0){
+   totalPrice = parseInt($("#price"+numTags).val());  
+  }
+  if(numReverse>0){
+   totalPrice+= parseInt($("#reversePrice").val())*numReverse;  
+  }
+  $("#total_display").html(currSymbol+totalPrice.toFixed(2));
+  return true;
+}
+
+</script>
+<style type="text/css">
+<!--
+.style3 {
+	font-size: 12px;
+	color: #EF65A8;
+	font-weight: bold;
+}
+-->
+</style>
+<table width="84%" border="0" cellpadding="0" cellspacing="0" bgcolor="FFFFFF">
+                          <tr bgcolor="#FFFFFF"> 
+                            <td width="10" rowspan="5" valign="top"><img src="images/gen/spacer.gif" width="10" height="10"></td>
+                            <td width="244" valign="top" class="smalltext"><table width="178" border="0" cellspacing="0" cellpadding="0">
+                                <tr> 
+                                  <td width="10" class="smalltext"><img src="images/gen/spacer.gif" width="10" height="10"></td>
+                                  <td width="168" class="smalltext"><div align="left"><font size="3" color="#FF0000"><b><?php echo $_GET['error']; ?></b></font></div></td>
+                                </tr>
+                              </table></td>
+                            <td width="10" valign="top" class="smalltext"><img src="images/gen/spacer.gif" width="10" height="10"></td>
+                            <td width="87" valign="top" class="smalltext">&nbsp;</td>
+                            <td width="67" rowspan="5" valign="top" class="smalltext"><img src="images/gen/spacer.gif" width="10" height="10"></td>
+                          </tr>
+                          <tr valign="top" bgcolor="#FFFFFF"> 
+                            <td colspan="3"><img src="images/gen/spacer.gif" width="10" height="10"></td>
+                          </tr>
+                          <tr valign="top"> 
+                            <td colspan="3" bgcolor="#FFFFFF" align="center" >
+                              <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr> 
+                                  <td valign="top" align="center" > 
+                                    <table width="400" border="0" cellspacing="2" cellpadding="2">
+                                      <form name="form1" action="addtoorder.php" method="post">
+                                      <tr> 
+                                        <td width="90%" colspan="2">
+                                          <strong><font size="2" face="Comic Sans MS">Select up to 4 tags by clicking the tag picture below:</font></strong>
+                                        </td>                                      
+                                      </tr>
+                                      <tr> 
+                                        <td width="90%" colspan="2">
+                                          <img src="images/identi_tags_choose.gif" width="340" height="380" border="0" usemap="#map" />
+
+<map name="map">
+<area shape="rect" coords="71,3,144,47" href="a" onclick="addTag(this);return false;" />
+<area shape="rect" coords="145,4,207,48" href="c" onclick="addTag(this);return false;" />
+<area shape="rect" coords="208,6,271,48" href="j" onclick="addTag(this);return false;" />
+<area shape="rect" coords="274,6,335,47" href="i" onclick="addTag(this);return false;" />
+<area shape="rect" coords="70,50,143,88" href="m" onclick="addTag(this);return false;" />
+<area shape="rect" coords="144,48,209,88" href="n" onclick="addTag(this);return false;" />
+<area shape="rect" coords="210,48,271,88" href="e" onclick="addTag(this);return false;" />
+<area shape="rect" coords="272,50,336,87" href="h" onclick="addTag(this);return false;" />
+<area shape="rect" coords="68,89,141,128" href="r" onclick="addTag(this);return false;" />
+<area shape="rect" coords="144,89,207,127" href="s" onclick="addTag(this);return false;" />
+<area shape="rect" coords="209,89,271,128" href="p" onclick="addTag(this);return false;" />
+<area shape="rect" coords="271,89,338,130" href="q" onclick="addTag(this);return false;" />
+<area shape="rect" coords="70,128,141,169" href="v" onclick="addTag(this);return false;" />
+<area shape="rect" coords="142,128,208,169" href="w" onclick="addTag(this);return false;" />
+<area shape="rect" coords="208,130,271,169" href="t" onclick="addTag(this);return false;" />
+<area shape="rect" coords="271,130,337,172" href="u" onclick="addTag(this);return false;" />
+<area shape="rect" coords="70,170,140,211" href="z" onclick="addTag(this);return false;" />
+<area shape="rect" coords="140,168,205,212" href="c1" onclick="addTag(this);return false;" />
+<area shape="rect" coords="208,169,271,212" href="x" onclick="addTag(this);return false;" />
+<area shape="rect" coords="271,168,337,214" href="y" onclick="addTag(this);return false;" />
+<area shape="rect" coords="70,212,136,253" href="f1" onclick="addTag(this);return false;" />
+<area shape="rect" coords="138,216,205,255" href="u2" onclick="addTag(this);return false;"  />
+<area shape="rect" coords="206,216,269,255" href="d1" onclick="addTag(this);return false;" />
+<area shape="rect" coords="269,216,333,254" href="e1" onclick="addTag(this);return false;" />
+<area shape="rect" coords="69,252,136,297" href="a1" onclick="addTag(this);return false;" />
+<area shape="rect" coords="138,255,204,298" href="g1" onclick="addTag(this);return false;" />
+<area shape="rect" coords="205,256,271,297" href="h1" onclick="addTag(this);return false;" />
+<area shape="rect" coords="271,256,332,297" href="i1" onclick="addTag(this);return false;" />
+<area shape="rect" coords="69,299,138,339" href="j1" onclick="addTag(this);return false;" />
+<area shape="rect" coords="138,298,205,339" href="k1" onclick="addTag(this);return false;" />
+<area shape="rect" coords="205,298,267,340" href="l1" onclick="addTag(this);return false;" />
+<area shape="rect" coords="267,299,331,340" href="m1" onclick="addTag(this);return false;"  />
+<area shape="rect" coords="69,339,138,379" href="n1" onclick="addTag(this);return false;" />
+</map>
+
+                                        </td>
+                                      </tr>
+                                      <tr> 
+                                        <td colspan="2">
+                                          <p align="center">
+                                          <span class="style3"><font face="Comic Sans MS">**extra <?=$cur['symbol'].$reverseprice?> charge for every IdentiTag with text </font>
+                                          </span>
+                                          </p>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td colspan="2" align="center" >
+                                          <input name="type" type="hidden" value="14">
+                                            <input name="symbol" type="hidden" value="<?=$cur['symbol']?>">
+                                            <input name="reversePrice" id="reversePrice" type="hidden" value="<?=$reverseprice;?>">
+                                            <input name="price1" id="price1" type="hidden" value="<?=$prices[1]?>">
+                                            <input name="price2" id="price2" type="hidden" value="<?=$prices[2]?>">
+                                            <input name="price3" id="price3" type="hidden" value="<?=$prices[3]?>">
+                                            <input name="price4" id="price4" type="hidden" value="<?=$prices[4]?>">
+                                            <input class="outputVar" name="reverse1" id="reverse1" type="hidden" value="0">
+                                            <input class="outputVar" name="reverse2" id="reverse2" type="hidden" value="0">
+                                            <input class="outputVar" name="reverse3" id="reverse3" type="hidden" value="0">
+                                            <input class="outputVar" name="reverse4" id="reverse4" type="hidden" value="0">
+                                            <input class="outputVar" name="text1" id="text1" type="hidden" value="">
+                                            <input class="outputVar" name="text2" id="text2" type="hidden" value="">
+														  <input class="outputVar" name="text3" id="text3" type="hidden" value="">
+                                            <input class="outputVar" name="text4" id="text4" type="hidden" value="">
+                                            <input class="outputVar" name="firstLine1" id="firstLine1" type="hidden" value="">
+                                            <input class="outputVar" name="secondLine1" id="secondLine1" type="hidden" value="">
+                                            <input class="outputVar" name="firstLine2" id="firstLine2" type="hidden" value="">
+                                            <input class="outputVar" name="secondLine2" id="secondLine2" type="hidden" value="">
+                                            <input class="outputVar" name="firstLine3" id="firstLine3" type="hidden" value="">
+                                            <input class="outputVar" name="secondLine3" id="secondLine3" type="hidden" value="">
+                                            <input class="outputVar" name="firstLine4" id="firstLine4" type="hidden" value="">
+                                            <input class="outputVar" name="secondLine4" id="secondLine4" type="hidden" value="">
+                                            </td>
+                                      </tr>
+                                      <tr> 
+                                        <td colspan="2" align="center">
+                                          <div id="tags_conatainer">                                       
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      
+
+                                      <tr> 
+                                        <td colspan="2">
+                                          <img src="images/gen/spacer.gif" width="10" height="15">
+                                        </td>
+                                      </tr>
+                                      <tr> 
+                                        <td align="right" width="47px"><strong>Total:</strong></td>
+                                        <td><div id="total_display"></div></td>
+                                      </tr>
+                                      <tr> 
+                                        <td colspan="2">
+                                          <img src="images/gen/spacer.gif" width="10" height="15">
+                                        </td>
+                                      </tr>
+                                      <tr> 
+                                        <td colspan="2" ><div align="center"><a href="javascript: history.go(-1);" ><img src="images/nav/n_back.gif" name="back" width="58" height="22" border="0"></a> 
+                                            &nbsp;&nbsp;<a href="Add To Order" onclick="chkForm(document.form1); return false;" ><img src="images/nav/n_continue_x.gif" name="Image28" width="80" height="22" border="0"></a> 
+                                          </div></table></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <tr> 
+                            <td colspan="5" valign="top"><img src="images/gen/spacer.gif" width="10" height="10"></td>
+                          </tr>
+                        </table>

@@ -1,0 +1,15 @@
+<P align=center><FONT style="BACKGROUND-COLOR: #ffffff" color=#ff0056 size=6><STRONG></STRONG></FONT>&nbsp;</P>
+<P align=center><FONT style="BACKGROUND-COLOR: #ffffff" color=#ff0056 size=6><STRONG></STRONG></FONT>&nbsp;</P>
+<P align=center><FONT style="BACKGROUND-COLOR: #ffffff" color=#ff0056 size=6><STRONG></STRONG></FONT>&nbsp;</P>
+<P align=center><FONT style="BACKGROUND-COLOR: #ffffff" color=#ff0056 size=6><STRONG></STRONG></FONT>&nbsp;</P>
+<P align=center><FONT style="BACKGROUND-COLOR: #ffffff" color=#ff0056 size=6><STRONG></STRONG></FONT>&nbsp;</P>
+<P align=center><FONT style="BACKGROUND-COLOR: #ffffff" color=#ff0056 size=6><STRONG></STRONG></FONT>&nbsp;</P>
+<P align=center><FONT style="BACKGROUND-COLOR: #ffffff" color=#ff0056 size=6><STRONG></STRONG></FONT>&nbsp;</P>
+<P align=center><FONT style="BACKGROUND-COLOR: #ffffff" color=#ff0056 size=6><STRONG>IF THIS PAGE APPEARS BLANK </STRONG></FONT></P>
+<P align=center><FONT style="BACKGROUND-COLOR: #ffffff" color=#ff0056><STRONG>AND THE LABEL CREATOR&nbsp;HAS NOT LOADED ABOVE- give it a little time to load.</STRONG></FONT></P>
+<P align=center><FONT style="BACKGROUND-COLOR: #ffffff" color=#ff0056><STRONG>&nbsp;</STRONG></FONT><A href="/pages/IDENTIKID_ORDER_FORM-PAY_BY_PHONE"><FONT style="BACKGROUND-COLOR: #ffffff" color=#ff0056><STRONG>CLICK ON HERE ( YOU WILL BE REDIRECTED TO A BACK UP ORDER FORM)</STRONG></FONT></A></P>
+<P align=center>PLEASE READ DISCLAIMER BELOW ALSO.</P>
+<P align=center>The label creator is a representation of your picture and font only,&nbsp;the font and layout is&nbsp;tweeked&nbsp;prior to printing to improve the overall balance and look of the label, dependant on name length.&nbsp;Feel free to put any extra info about label in special instructions when filling out address details on completion, such as special characters or&nbsp;special needs- we will&nbsp;contact you if there is any problem with the request or send an email on completion of your order. Delivery details if not home on express orders would be great also.<BR><FONT color=#ff00d7><STRONG>IMPORTANT the font, picture and spelling and phone numbers must be&nbsp;CHECKED prior to hitting confirm at the end of the ordering process</STRONG>. </FONT>Pay attention to if you want it in Regular, all upper or all lower case. As the label creator sends through information as TYPED. We will print your order as imputted including case style. <STRONG>Double check</STRONG> these as once sent exactly what you have typed is done!</P>
+<P align=center>&nbsp;No refunds are given on orders entered incorrectly. <STRONG>Orders are processed very&nbsp;quickly</STRONG>&nbsp; ie next business day starting at 9 am so if any errors you must&nbsp;notify us<STRONG> </STRONG><FONT color=#ff00ac><STRONG>immediately</STRONG> via email</FONT> <A href="mailto:info@identikid.com.au"><FONT size=4>info@identikid.com.au</FONT></A>&nbsp;for us to action the change prior to printing templates or phone if in business hours. If we are not notified prior to printing we cannot accept responsibilitly for the error.&nbsp; Thanks ! </P>
+<P align=center>&nbsp;</P>
+<P>&nbsp;</P>

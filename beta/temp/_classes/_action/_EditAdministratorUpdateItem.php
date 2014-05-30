@@ -1,0 +1,25 @@
+<?php
+class EditAdministratorUpdateItem
+{
+	function execute()
+	{
+		if($_POST['title'] && $_POST['spaw1'])
+		{
+			require_once(SITE_DIR.'_classes/_entity/_AdministratorUpdateItem.php');
+			$item = new AdministratorUpdateItem();
+			$item->id = $_POST['id'];
+			$item->findById();			
+			$item->createDate = $_POST['date_year'].'-'.$_POST['date_month'].'-'.$_POST['date_day'];
+			$item->title = $_POST['title'];
+			$item->content = $_POST['spaw1'];
+			$item->active = ACTIVE;
+			$item->update();
+		}
+		else
+		{
+			trigger_error('All details must be filled in', E_USER_NOTICE);
+		}
+		return 1;
+	}
+}
+?>
