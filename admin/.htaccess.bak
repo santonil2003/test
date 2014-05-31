@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Identkid Admin"
+AuthUserFile "/var/www/.htpasswds/passwd"
+require valid-user
