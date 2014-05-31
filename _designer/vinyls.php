@@ -1,9 +1,18 @@
 <?php
 
-$dbhost='localhost';
-$dbuser='identiki';
-$dbpass='id4$cTe';
-$dbname='identikid';
+
+
+ if (isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
+            $dbhost='localhost';
+            $dbuser='root';
+            $dbpass='';
+            $dbname='identikid';
+        } else {
+            $dbhost='localhost';
+            $dbuser='identiki';
+            $dbpass='id4$cTe';
+            $dbname='identikid';
+        }
 
 
 
