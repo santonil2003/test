@@ -893,7 +893,7 @@ padding:0;
                     
                         foreach( $fonts as $fontName=>$fontFile ){
                             if($fontFile=='3'){
-                                echo "<li class='".$fontFile."' style='font-size:26px;font-family:".$fontName.";line-height:0.5;'>Ginger Meggs</li>";
+                                echo "<li class='".$fontFile."' style='font-size:24px;font-family:".$fontName.";line-height:1;padding-bottom:20px;'>Ginger Meggs</li>";
                                 
                             }else if($fontFile=='5'){
                               echo "<li class='".$fontFile."' style='font-family:".$fontName.";line-height:1;padding-bottom:10px'>Ginger Meggs</li>";
