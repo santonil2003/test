@@ -28,7 +28,9 @@ mysql_select_db($dbname);
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript">
+           
         $(document).ready(function(){
+            
            var _colourArray = new Array();
            <?php
                 
@@ -88,7 +90,7 @@ mysql_select_db($dbname);
                $(".preview_image_set").css("background-image","url(images/"+imgfol+"/"+_bwImage+".png)");
          }
          $(".font_colour_white").addClass("selected");
-         <? //echo $_SERVER['HTTP_USER_AGENT']; ?>
+     
          <?php $ver = $_SERVER['HTTP_USER_AGENT'];
          if(strpos($ver,'Chrome') || strpos($ver,'Firefox')){
              
@@ -946,8 +948,10 @@ padding:0;
                                     
                                     echo "</div><input style='float:left' type='radio' name='colour[]' value='".$colourName."' class='".$colourName."'>";
                                 $colours = explode(",",$colourSet);
+                                
                                 foreach($colours as $colour){
-                                    echo "<span style='background:".$colour."' class='".$colour."'></span>";
+                                    $class = str_replace('#','',$colour);
+                                    echo "<span style='background:".$colour."' class='".$class."'></span>";
                                 }
                             echo "</li>";
                             
@@ -1089,3 +1093,19 @@ padding:0;
             </div>
         </div>
         
+<script>            
+            $('document').ready(function(){
+                $('#designer_options_font_colour span.font_colour_white').addClass('selected');    
+                
+                $('#designer_options_font_colour span.font_colour_white, .Individual .ffffff').click(function() {
+                    font_color_chk = $('#designer_options_font_colour span.font_colour_white').hasClass('selected');
+                    back_ground_chk = $('.Individual .ffffff').hasClass('selected');
+                    
+                    if(font_color_chk === back_ground_chk) {
+                        alert('Font color and background color can not be same!');
+                    }
+                });
+        
+    
+            });
+</script>
