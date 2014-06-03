@@ -1415,7 +1415,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 			   $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Print&nbsp;Reverse:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata['text7']=='1'?"Yes":"No")."</font></td></tr>";
 			   $content.="<tr><td align='right' valign='top' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>IronOn&nbsp;Type:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".((int)$qdata['text6'] == 2?"Permanent":"Semi-permanent");
 	         if ($qdata['text6'] == 2){
-				  db_get_field("SELECT data_colour_name FROM data_colour WHERE data_colour_id=". ((int)$qdata['text4']), $colour_name);
+				  @db_get_field("SELECT data_colour_name FROM data_colour WHERE data_colour_id=". ((int)$qdata['text4']), &$colour_name);
 				  if ((int)$qdata['text5'] != 1) {
 					 $content.="<br>Colour: $colour_name<br>Font Colour: White";
 				  }
