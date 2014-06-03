@@ -938,7 +938,7 @@ padding:0;
                     
                         foreach( $colourSets as $colourName => $colourSet ){
                             $colourName = str_replace(" ", "_", $colourName);
-                            
+                            $id = uniqid();
                             echo "<li class='".$colourName."'><div>";
                             if($colourName=='Individual'){
                                 echo "Individual (choose a colour by clicking on it)";
@@ -946,12 +946,12 @@ padding:0;
                                echo str_replace("_"," ",$colourName); 
                             }
                                     
-                                    echo "</div><input style='float:left' type='radio' name='colour[]' value='".$colourName."' class='".$colourName."'>";
+                                    echo "</div><input id ='".$id."' style='float:left' type='radio' name='colour[]' value='".$colourName."' class='".$colourName."'>";
                                 $colours = explode(",",$colourSet);
                                 
                                 foreach($colours as $colour){
                                     $class = str_replace('#','',$colour);
-                                    echo "<span style='background:".$colour."' class='".$class."'></span>";
+                                    echo "<span style='background:".$colour."' class='".$class."' onclick=checkradio('".$id."')></span>";
                                 }
                             echo "</li>";
                             
@@ -1093,7 +1093,11 @@ padding:0;
             </div>
         </div>
         
-<script>            
+<script>           
+            function checkradio($id) {
+                $('#'+$id).trigger('click');
+            }
+            
             $('document').ready(function(){
                 $('#designer_options_font_colour span.font_colour_white').addClass('selected');    
                 
