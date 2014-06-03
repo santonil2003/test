@@ -832,8 +832,8 @@ padding:0;
                     <span><input type="checkbox" checked="checked" name="details_checkbox_pic" class="details_checkbox_pic" /> Pic</span>
                 </p>
                 <p>
-                    <strong>Name:</strong> <input type="text" class="details_text_name" /> 
-                    <strong>Phone:</strong> <input type="text" class="details_text_phone" /> 
+                    <strong>Line 1:</strong> <input type="text" class="details_text_name" /> 
+                    <strong>Line 2:</strong> <input type="text" class="details_text_phone" /> 
                 </p>
             </div>
 </div>
@@ -950,8 +950,10 @@ padding:0;
                                 $colours = explode(",",$colourSet);
                                 
                                 foreach($colours as $colour){
-                                    $class = str_replace('#','',$colour);
-                                    echo "<span style='background:".$colour."' class='".$class."' onclick=checkradio('".$id."')></span>";
+                                    $class = str_replace('#','',$colour).'id';
+                                    
+                                    
+                                    echo "<span id='$class' style='background:".$colour."' class='".$colour."' onclick=checkradio('".$id."')></span>";
                                 }
                             echo "</li>";
                             
@@ -1101,9 +1103,9 @@ padding:0;
             $('document').ready(function(){
                 $('#designer_options_font_colour span.font_colour_white').addClass('selected');    
                 
-                $('#designer_options_font_colour span.font_colour_white, .Individual .ffffff').click(function() {
+                $('#designer_options_font_colour span.font_colour_white, .Individual #ffffffid').click(function() {
                     font_color_chk = $('#designer_options_font_colour span.font_colour_white').hasClass('selected');
-                    back_ground_chk = $('.Individual .ffffff').hasClass('selected');
+                    back_ground_chk = $('.Individual #ffffffid').hasClass('selected');
                     
                     if(font_color_chk === back_ground_chk) {
                         alert('Font color and background color can not be same!');
