@@ -213,7 +213,7 @@ mysql_select_db($dbname);
                     $('.preview_text').css('font-size','26px');
                     $('.preview_phone').css('font-size','18px');
                 }else if(_font==4){
-                    $('.preview_text').css('top','10px');
+                    $('.preview_text').css('top','8px');
                    $('.preview_text').css('left','0px');
                     $('.preview_phone').css('top','55px');
                     $('.preview_phone').css('left','0px');
@@ -225,6 +225,7 @@ mysql_select_db($dbname);
                     $('.preview_phone').css('top','55px');
                     $('.preview_phone').css('left','0px');
                     $('.preview_text').css('font-size','26px');
+                    $('.preview_text').css('font-weight','bold');
                     $('.preview_phone').css('font-size','18px');
                     }
                  if( $(".details_checkbox_phone").prop("checked") ){
