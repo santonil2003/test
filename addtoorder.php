@@ -960,6 +960,8 @@ break;
 				}
 				
 				$thequantdesc = "Address Labels ".$_POST["quantdesc"];
+                                
+                                $_POST["pic"] = isset($_POST["pic"])?$_POST["pic"]:0;
 			
 				$query = "INSERT INTO basket_items (ordernumber, price, quantdesc, type, text1, text2, text3, text4, pic, colours)"
 				." VALUES (".$id.", ".$_POST["price"].",
