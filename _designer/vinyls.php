@@ -90,16 +90,15 @@ if (strpos($ver, 'Chrome') || strpos($ver, 'Firefox')) {
             $(".1", "#designer_options_font").css('padding', '5px 0 5px 0');
             $(".4", "#designer_options_font").css('padding', '5px 0 5px 0');
             $(".3", "#designer_options_font").css('padding-bottom', '20px');
-    <? }else{ 
-    //echo "//msie";
-    ?>
-        $(".3", "#designer_options_font").css('padding', '10px 0 10px 0');
+    < ? } else{
+        //echo "//msie";
+        ? >
+                $(".3", "#designer_options_font").css('padding', '10px 0 10px 0');
         $(".3", "#designer_options_font").css('margin-top', '5px');
         $(".1", "#designer_options_font").css('padding-bottom', '20px');
         $(".4", "#designer_options_font").css('padding', '0px');
-    <? } ?>
-
-        if (_font == 4) {
+    < ? } ? >
+                if (_font == 4) {
 
 
             $(".4", "#designer_options_font").addClass('selected');
@@ -475,7 +474,9 @@ if (strpos($ver, 'Chrome') || strpos($ver, 'Firefox')) {
                 o.setAttribute('name', "picon");
                 o.setAttribute('id', "picon-id");
 
-                if (_bwImage) {
+
+                ischecked = $('.details_checkbox_pic').is(':checked');
+                if (ischecked) {
                     valpicon = '1';
                 } else {
                     valpicon = '0';
