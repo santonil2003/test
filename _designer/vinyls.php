@@ -166,7 +166,7 @@ mysql_select_db($dbname);
                }else{
                    $(".preview_image_set").hide();
                    _showImage = 0;
-                   _bwImage = "";
+                   _bwImage = "0";
                }
            });
            
