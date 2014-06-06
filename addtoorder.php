@@ -9,6 +9,7 @@ $id = checkOrderId(true);
 foreach(array_keys($_POST) as $key)
 {
 	$_POST[$key] = mysql_escape_string(trim($_POST[$key]));
+        $_POST[$key] = isset($tmp) ? $tmp : "NULL";
 }
 
 //debug_showvar($_POST);
