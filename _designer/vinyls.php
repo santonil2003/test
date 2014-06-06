@@ -901,6 +901,8 @@ padding:0;
                                 
                             }else if($fontFile=='5'){
                               echo "<li class='".$fontFile."' style='font-family:".$fontName.";line-height:1;padding-bottom:10px'>Ginger Meggs</li>";
+                            }else if($fontFile=='2'){
+                              echo "<li class='".$fontFile."' style='font-family:".$fontName.";font-weight:bold;'>Ginger Meggs</li>";
                             }
                             else{
                                 echo "<li class='".$fontFile."' style='font-family:".$fontName.";'>Ginger Meggs</li>";
