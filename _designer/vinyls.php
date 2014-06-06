@@ -1,8 +1,5 @@
 <?php
-
-
-
- if (isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
+if (isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
             $dbhost='localhost';
             $dbuser='root';
             $dbpass='';
@@ -30,7 +27,7 @@ mysql_select_db($dbname);
         <script type="text/javascript">
            
         $(document).ready(function(){
-            
+            $('.44').hide();
            var _colourArray = new Array();
            <?php
                 
@@ -98,11 +95,7 @@ mysql_select_db($dbname);
          ?>
         $(".1","#designer_options_font").css('padding','5px 0 5px 0');
         $(".4","#designer_options_font").css('padding','5px 0 5px 0');
-        
         $(".3","#designer_options_font").css('padding-bottom','20px');
-        
-        
-             
     <? }else{ 
         //echo "//msie";
         ?>
