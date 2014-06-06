@@ -958,7 +958,7 @@ break;
 						$varArray[$i] = '';
 				}
                                 
-                                $_POST["pic"] = (isset($_POST["pic"]) && $_POST["pic"]) ? $_POST["pic"] : "NULL";
+                                $_POST["pic"] = (isset($_POST["pic"]) && $_POST["pic"]) ? $_POST["pic"] : '0';
 				
 				$thequantdesc = "Address Labels ".$_POST["quantdesc"];
 			
