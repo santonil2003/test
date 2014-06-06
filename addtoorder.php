@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors', '1');
+
 include("useractions.php");
 session_start();
 
@@ -9,7 +9,6 @@ $id = checkOrderId(true);
 foreach(array_keys($_POST) as $key)
 {
 	$_POST[$key] = mysql_escape_string(trim($_POST[$key]));
-        $_POST[$key] = isset($tmp) ? $tmp : "NULL";
 }
 
 //debug_showvar($_POST);
@@ -958,10 +957,10 @@ break;
 					if ($varArray[$i] == 'undefined')
 						$varArray[$i] = '';
 				}
+                                
+                                $_POST["pic"] = (isset($_POST["pic"]) && $_POST["pic"]) ? $_POST["pic"] : '0';
 				
 				$thequantdesc = "Address Labels ".$_POST["quantdesc"];
-                                
-                                $_POST["pic"] = isset($_POST["pic"])?$_POST["pic"]:0;
 			
 				$query = "INSERT INTO basket_items (ordernumber, price, quantdesc, type, text1, text2, text3, text4, pic, colours)"
 				." VALUES (".$id.", ".$_POST["price"].",
