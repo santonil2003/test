@@ -1007,6 +1007,8 @@ padding:0;
                     
                     echo "</ul>";
                     ?>
+                
+                 <p id="validation-msg" style="color:red;padding-left:40px;"></p>
             </div>
             
             
@@ -1137,7 +1139,7 @@ padding:0;
                 <button id="back">< Back</button>
                 <button id="submit">Continue ></button>
             </div>
-            <p id="validation-msg" style="color:red;padding:5px;"></p>
+           
             </div>
         </div>
         

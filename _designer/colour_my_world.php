@@ -720,6 +720,7 @@ document.getElementsByTagName('form')[0].submit();
                 float:left;
                 margin:2px;
                 border:solid 2px #666;
+                cursor:pointer;
             }
             .selected{border:solid 2px #00B0E0 !important};
             
@@ -788,7 +789,7 @@ right:0;
 width:320px;
 }
 
-#designer_options_ironon_colour ul li span{width:20px;height:20px;display:inline-block;border:solid 2px #666;}
+#designer_options_ironon_colour ul li span{width:20px;height:20px;display:inline-block;border:solid 2px #666; cursor:pointer;}
 
 button{
     color:#ffffff;
@@ -946,11 +947,11 @@ padding:0;
                             }else{
                                echo str_replace("_"," ",$colourName); 
                             }
-                                    
-                                    echo "</div><input style='float:left' type='radio' name='colour[]' value='".$colourName."' class='".$colourName."'>";
+                                    $id = uniqid();
+                                    echo "</div><input style='float:left' type='radio' name='colour[]' value='".$colourName."' class='".$colourName."' id='$id'>";
                                 $colours = explode(",",$colourSet);
                                 foreach($colours as $colour){
-                                    echo "<span style='background:".$colour."' class='".$colour."'></span>";
+                                    echo "<span style='background:".$colour."' class='".$colour."' onclick=checkradio('$id')></span>";
                                 }
                             echo "</li>";
                             
@@ -1015,10 +1016,10 @@ padding:0;
                     echo "<ul>";
                     
                         foreach( $ironOncolour as $colourName => $colour ){
-                            
-                            echo "<li class='".$colourName."'><input type='radio' name='iron_on_colour[]' value='".$colourName."' class='".$colourName."'>";
+                            $uniqueid = uniqid();
+                            echo "<li class='".$colourName."'><input type='radio' name='iron_on_colour[]' value='".$colourName."' class='".$colourName."' id='$uniqueid'/>";
                                 
-                                    echo "<span style='background:".$colour."'></span>";
+                                    echo "<label for='$uniqueid'><span style='background:".$colour."'></span></label>";
                                 
                             echo "</li>";
                             
@@ -1093,7 +1094,13 @@ padding:0;
         </div>
         
         <script>
+            
+             function checkradio($id) {
+                $('#'+$id).trigger('click');
+               }
+               
             $(document).ready(function(){
+              
                 $('#selected_identitag, ul.tags li').click(function(){
                         tmp = $('#selected_identitag').val();
 
@@ -1104,7 +1111,7 @@ padding:0;
                             $('.error-identitag').html('Please select Identi tag from above grid');
                         }
                 
-            });
+                });
             
             });
             </script>
