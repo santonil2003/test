@@ -97,16 +97,16 @@ mysql_select_db($dbname);
              
          
          ?>
-        $(".1","#designer_options_font").css('padding','5px 0 5px 0');
-        $(".4","#designer_options_font").css('padding','5px 0 5px 0');
-        $(".3","#designer_options_font").css('padding-bottom','20px');
+       // $(".1","#designer_options_font").css('padding','5px 0 5px 0');
+        //$(".4","#designer_options_font").css('padding','5px 0 5px 0');
+        //$(".3","#designer_options_font").css('padding-bottom','20px');
     <? }else{ 
         //echo "//msie";
         ?>
-        $(".3","#designer_options_font").css('padding','10px 0 10px 0');
-             $(".3","#designer_options_font").css('margin-top','5px');
-        $(".1","#designer_options_font").css('padding-bottom','20px');
-        $(".4","#designer_options_font").css('padding','0px');
+        //$(".3","#designer_options_font").css('padding','10px 0 10px 0');
+          //   $(".3","#designer_options_font").css('margin-top','5px');
+       // $(".1","#designer_options_font").css('padding-bottom','20px');
+       // $(".4","#designer_options_font").css('padding','0px');
     <? } ?>
          
          if(_font==4){
@@ -773,8 +773,13 @@ width:275px;
 text-align:left;
 }
 #designer_options_font li {
-    font-size:28px;
+    font-size:25px;
     float:none;
+    cursor: pointer;
+}
+
+#designer_options_font li table tr td {
+    font-size:25px;
 }
 
 #designer_options_font_colour{
@@ -912,6 +917,7 @@ padding:0;
                     if(mysql_num_rows($query)>0){
                         while($val = mysql_fetch_array($query)){
                             $fonts[$val['fontName']]=$val['fontValue'];
+                            $style[$val['fontName']] = $val['style'];
                         }
                     }                
                 /* designer_fonts
@@ -922,18 +928,17 @@ padding:0;
                  * 
                  */
                     echo "<ol>";
-                    
+                   
                         foreach( $fonts as $fontName=>$fontFile ){
                             if($fontFile=='3'){
-                                echo "<li class='".$fontFile."' style='font-size:24px;font-family:".$fontName.";line-height:1;padding-bottom:20px;'>Ginger Meggs</li>";
-                                
+                                echo "<li class='".$fontFile."' style='font-size:24px;font-family:".$fontName.";'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle'>Ginger Meggs</td></tr></table></li>";
                             }else if($fontFile=='2'){
-                              echo "<li class='".$fontFile."' style='font-family:".$fontName.";line-height:1;padding-bottom:10px'>Ginger Meggs</li>";
+                              echo "<li class='".$fontFile."' style='font-family:".$fontName.";'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle'>Ginger Meggs</td></tr></table></li>";
                             }else if($fontFile=='5'){
-                              echo "<li class='".$fontFile."' style='font-family:".$fontName.";font-weight:bold;'>Ginger Meggs</li>";
+                              echo "<li class='".$fontFile."' style='font-family:".$fontName.";'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle' style='font-weight:bold;'>Ginger Meggs</td></tr></table></li>";
                             }
                             else{
-                                echo "<li class='".$fontFile."' style='font-family:".$fontName.";'>Ginger Meggs</li>";
+                                echo "<li class='".$fontFile."' style='font-family:".$fontName.";'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle'>Ginger Meggs</td></tr></table></li>";
                             }
                             
                             
