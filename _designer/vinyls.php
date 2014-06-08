@@ -495,19 +495,19 @@ s.setAttribute('type',"submit");
 s.setAttribute('value',"Submit");
 
 
-var o = document.createElement("input"); //input element, text
-o.setAttribute('type',"text");
-o.setAttribute('name',"picon");
-o.setAttribute('id',"picon-id");
 
+var picon = document.createElement("input"); //input element, text
+picon.setAttribute('type',"hidden");
+picon.setAttribute('name',"picon");
 
 ischecked = $('.details_checkbox_pic').is(':checked');
+
 if(ischecked) {
     valpicon = '1';
 } else {
    valpicon = '0';
 }
-o.setAttribute('value',valpicon);
+picon.setAttribute('value',valpicon);
 
 
 f.appendChild(a);
@@ -524,7 +524,9 @@ f.appendChild(k);
 f.appendChild(l);
 f.appendChild(m);
 f.appendChild(n);
-f.appendChild(o);
+//f.appendChild(o);
+
+f.appendChild(picon);
 //and some more input elements here
 //and dont forget to add a submit button
 
