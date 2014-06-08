@@ -423,6 +423,23 @@ d.setAttribute('type',"hidden");
 d.setAttribute('name',"pic");
 d.setAttribute('value',_bwImage);
 
+
+var o = document.createElement("input"); //input element, text
+o.setAttribute('type',"text");
+o.setAttribute('name',"picon");
+o.setAttribute('id',"picon-id");
+
+
+ischecked = $('.details_checkbox_pic').is(':checked');
+if(ischecked) {
+    valpicon = '1';
+} else {
+   valpicon = '0';
+}
+o.setAttribute('value',valpicon);
+
+
+
 var e = document.createElement("input"); //input element, text
 e.setAttribute('type',"hidden");
 e.setAttribute('name',"identitag_code");
