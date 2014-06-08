@@ -407,6 +407,7 @@ mysql_select_db($dbname);
           
           if(_iron_colour===null){
               $('#designer_options_ironon_colour').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
+              $('#designer_options_ironon_colour input:first').focus();
                return false;
            }
         
