@@ -20,6 +20,10 @@ mysql_select_db($dbname);
 
 ?>
 <style>
+    .error-msg{
+        border:red dashed 1px;
+    }
+    
 #designer_options_font .2{margin-bottom:8px;}
 </style>
 
@@ -387,6 +391,19 @@ mysql_select_db($dbname);
                         _colorPack+"\n"+
                         
                         _quantity+"\n" ); */
+        
+        
+   
+          if(_showName!==0 && _name===null) {
+             $('.details_text_name').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
+             return false;
+          }
+                        
+          if(_showPhone!==0 && _phone===''){
+              $('.details_text_phone').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
+              return false;
+          }
+                        
         if(_type!=null && 
                       _price!=null && 
                       
@@ -515,7 +532,17 @@ document.getElementsByTagName('body')[0].appendChild(f);
 document.getElementsByTagName('form')[0].submit();
 
                     }else{
-                    alert("Please complete all options");
+                        
+                        if($('.details_text_name').val()==='') {
+                            $('.details_text_name').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
+                        }
+                        
+                        if($('.details_text_phone').val()===''){
+                            $('.details_text_phone').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
+                        }
+                        
+                        
+                        //alert("Please complete all options");
                     }
         
         
@@ -1023,7 +1050,6 @@ padding:0;
                  *  
                  */
                     echo "<ul>";
-                    
                         foreach( $ironOncolour as $colourName => $colour ){
                             
                             echo "<li class='".$colourName."'><input type='radio' name='iron_on_colour[]' value='".$colourName."' class='".$colourName."'>";
@@ -1099,10 +1125,14 @@ padding:0;
                 <button id="back">< Back</button>
                 <button id="submit">Continue ></button>
             </div>
+            <p id="validation-msg" style="color:red;padding:5px;"></p>
             </div>
         </div>
         
-<script>           
+<script>    
+            function showMsg(msg, obj){
+                $('#validation-msg').html(msg);
+            }
             function checkradio($id) {
                 $('#'+$id).trigger('click');
             }
@@ -1114,8 +1144,9 @@ padding:0;
                     font_color_chk = $('#designer_options_font_colour span.font_colour_white').hasClass('selected');
                     back_ground_chk = $('.Individual #ffffffid').hasClass('selected');
                     
+                    $('#validation-msg').html('');
                     if(font_color_chk === back_ground_chk) {
-                        alert('Font color and background color can not be same!');
+                         $('#validation-msg').html('Font color and background color can not be same!');
                     }
                 });
         
