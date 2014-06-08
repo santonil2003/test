@@ -56,7 +56,7 @@ function insertItem(){
 		$picon=1;
 		$pic=(int)form_param("pic");
 	}
-	
+	$picon = $_POST['picon'];
 	
 	$record = array();
 		
