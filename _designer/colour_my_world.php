@@ -20,7 +20,11 @@ mysql_select_db($dbname);
 
 
 ?>
-
+<style>
+     .error-msg{
+        border:red dashed 1px;
+    }
+</style>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript">
@@ -382,6 +386,30 @@ mysql_select_db($dbname);
         if(_bwImage==""){
             _bwImage=0;
         }
+        
+         if(_showName!==0 && _name===null) {
+             $('.details_text_name').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
+             return false;
+          }
+                        
+          if(_showPhone!==0 && _phone===''){
+              $('.details_text_phone').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
+              return false;
+          }
+          
+          
+          
+          if(_identiTAG===null){
+            $('#selected_identitag').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
+             return false;
+          }
+          
+          
+          if(_iron_colour===null){
+              $('#designer_options_ironon_colour').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
+               return false;
+           }
+        
         if(_type!=null && 
                       _price!=null && 
                       
@@ -513,7 +541,16 @@ document.getElementsByTagName('body')[0].appendChild(f);
 document.getElementsByTagName('form')[0].submit();
 
                     }else{
-                    alert("Please complete all options");
+                        
+                         if($('.details_text_name').val()==='') {
+                            $('.details_text_name').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
+                        }
+                        
+                        if($('.details_text_phone').val()===''){
+                            $('.details_text_phone').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
+                        }
+                        
+                    //alert("Please complete all options");
                     }
         
         
@@ -727,6 +764,10 @@ width:350px;
 
 #designer_options_identitags{
 text-align:left;
+}
+
+#designer_options_identitags ul li{
+    cursor:pointer;
 }
 #designer_options_identitags input{
     margin-left:50px;
@@ -1015,7 +1056,7 @@ padding:0;
                     
                     echo "</ul>";
                     echo "<div style='clear:both'></div>";
-                    echo "<input type='text' value='' id='selected_identitag' size='6' /> Selected IdentiTAG";
+                    echo "<input type='text' value='' id='selected_identitag' size='6' readonly='readonly' /> Selected IdentiTAG <br><span style='color:Red;padding:5px;' class='error-identitag'></span>";
                 ?>
             </div>
 </div>
@@ -1050,4 +1091,21 @@ padding:0;
             </div>
             </div>
         </div>
+        
+        <script>
+            $(document).ready(function(){
+                $('#selected_identitag, ul.tags li').click(function(){
+                        tmp = $('#selected_identitag').val();
+
+                        $('.error-identitag').html('');
+                        $('#selected_identitag').removeClass('error-msg');
+
+                        if(tmp.length<=0) {
+                            $('.error-identitag').html('Please select Identi tag from above grid');
+                        }
+                
+            });
+            
+            });
+            </script>
         
