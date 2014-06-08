@@ -1,9 +1,16 @@
 <?php
 
-$dbhost='localhost';
-$dbuser='identiki';
-$dbpass='id4$cTe';
-$dbname='identikid';
+if (isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
+            $dbhost='localhost';
+            $dbuser='root';
+            $dbpass='';
+            $dbname='identikid';
+        } else {
+            $dbhost='localhost';
+            $dbuser='identiki';
+            $dbpass='id4$cTe';
+            $dbname='identikid';
+        }
 
 
 
@@ -53,7 +60,7 @@ mysql_select_db($dbname);
            var _reversePrint = 0;
            var _quantity = null;
            
-           var imgfol = "bw2";
+           var imgfol = "bwl2";
            
            //init
            if(_colorPack==null){
@@ -234,7 +241,7 @@ mysql_select_db($dbname);
                   $(this).addClass('selected');
                   $(".preview_text").css('color','#000000');
                   $(".preview_phone").css('color','#000000');
-                  imgfol = "bw";
+                  imgfol = "bwl";
                   var bg = $(".preview_image_set").css("background-image");
                   $(".preview_image_set").css("background-image",bg.replace("/bw2/","/bw/"));
               }else{
@@ -612,10 +619,11 @@ document.getElementsByTagName('form')[0].submit();
                 width:400px;
                 position:relative;
             }
-            .preview_image_set{
+            .preview_image_set{       
                 position:absolute;
-                top:35px;
-                left:275px;
+                top:29px;
+                left:262px;
+                background-repeat: no-repeat;
             }
             .preview_phone{position:absolute;display:block;width:260px;text-align:center;font-size:18px;padding:0 0 0 10px;line-height:1;margin-top:10px;}
             .preview_text{position:absolute;display:block;width:260px;text-align:center;font-size:26px;padding:23px 0 0 10px;line-height:1;}
@@ -626,14 +634,15 @@ document.getElementsByTagName('form')[0].submit();
                 border:solid 2px #666;
                 padding:1px;
                 margin:2px;
+                cursor: pointer;
             }
             .font_colour_black,.font_colour_white{border:solid 1px #666;}
             .font_colour_black{width:20px;height:20px;background:#000000;display:inline-block;}
             .font_colour_white{width:20px;height:20px;background:#ffffff;display:inline-block;}
             
             #designer_options_picture ul li{
-                width:40px;
-                height:40px;
+                width:60px;
+                height:60px;
                 border:solid 2px #666;
                 padding:1px;
                 margin:2px;
@@ -644,8 +653,8 @@ document.getElementsByTagName('form')[0].submit();
                 height:32px;
             }
             .preview_image_set{
-                width:40px;
-                height:40px;
+                width:60px;
+                height:60px;
                 display:inline-block;
             }
             
@@ -684,6 +693,7 @@ width:275px;
 }
 #designer_options_font li {
     font-size:28px;
+    cursor: pointer;
 }
 
 #designer_options_font_colour{
@@ -791,10 +801,12 @@ padding:0;
                  * image
                  */
                     echo "<ul>";
-                    
+                    $skip = array(44);
                         foreach( $pictures as $ref => $picture ){
-                            
-                            echo "<li class='".$ref."' rel='".$picture."' style='background-image:url(http://identikid.com.au/_designer/".$picture.")'></li>";
+                            if(in_array($ref, $skip)){
+                                continue;
+                            }
+                            echo "<li class='".$ref."' rel='".$picture."' style='background-image:url(http://identikid.com.au/_designer/".str_replace("bw","bwl",$picture).")'></li>";
                             
                         }
                     

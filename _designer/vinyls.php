@@ -705,6 +705,7 @@ document.getElementsByTagName('form')[0].submit();
                 position:absolute;
                 top:29px;
                 left:262px;
+                background-repeat: no-repeat;
             }
             .preview_phone{position:absolute;display:block;width:260px;text-align:center;font-size:18px;padding:0 0 0 10px;line-height:1;margin-top:10px;}
             .preview_text{position:absolute;display:block;width:260px;text-align:center;font-size:26px;padding:23px 0 0 10px;line-height:1;}
@@ -726,6 +727,7 @@ document.getElementsByTagName('form')[0].submit();
                 border:solid 2px #666;
                 padding:1px;
                 margin:2px;
+                cursor: pointer;
             }
             
             .preview_image{
@@ -784,8 +786,9 @@ text-align:left;
 
 #designer_options_font_colour{
 float:left;
-width:170px;
+width:165px;
 text-align:left;
+padding-left:5px;
 }
 
 #designer_options_colours{
@@ -893,9 +896,11 @@ padding:0;
                  * image
                  */
                     echo "<ul>";
-                    
+                    $skip = array(44);
                         foreach( $pictures as $ref => $picture ){
-                            
+                            if(in_array($ref, $skip)){
+                                continue;
+                            }
                             echo "<li class='".$ref."' rel='".$picture."' style='background-image:url(http://identikid.com.au/_designer/".str_replace("bw","bwl",$picture).")'></li>";
                             
                         }
