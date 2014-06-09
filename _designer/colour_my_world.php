@@ -837,8 +837,8 @@ padding:0;
                     <span><input type="checkbox" checked="checked" name="details_checkbox_pic" class="details_checkbox_pic" /> Pic</span>
                 </p>
                 <p>
-                    <strong>Name:</strong> <input type="text" class="details_text_name" /> 
-                    <strong>Phone:</strong> <input type="text" class="details_text_phone" /> 
+                    <strong>Line 1:</strong> <input type="text" class="details_text_name" /> 
+                    <strong>Line 2:</strong> <input type="text" class="details_text_phone" /> 
                 </p>
             </div>
 </div>
