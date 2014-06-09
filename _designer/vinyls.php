@@ -869,8 +869,8 @@ padding:0;
             <div id="designer_options_details">
                 
                 <p><strong>Include: </strong>
-                    <span><input type="checkbox" checked="checked" name="details_checkbox_name" class="details_checkbox_name" /> Name</span>
-                    <span><input type="checkbox" checked="checked" name="details_checkbox_phone" class="details_checkbox_phone" /> Phone</span>
+                    <span><input type="checkbox" checked="checked" name="details_checkbox_name" class="details_checkbox_name" /> Line 1</span>
+                    <span><input type="checkbox" checked="checked" name="details_checkbox_phone" class="details_checkbox_phone" /> Line 2</span>
                     <span><input type="checkbox" checked="checked" name="details_checkbox_pic" class="details_checkbox_pic" /> Pic</span>
                 </p>
                 <p>
