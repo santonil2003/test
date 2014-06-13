@@ -20,11 +20,7 @@ mysql_select_db($dbname);
 
 
 ?>
-<style>
-     .error-msg{
-        border:red dashed 1px;
-    }
-</style>
+
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript">
@@ -32,16 +28,16 @@ mysql_select_db($dbname);
            var _colourArray = new Array();
            <?php
                 
-                $getColourArray = mysql_query("SELECT * FROM designer_colours");
+                $getColourArray = mysql_query("SELECT * FROM designer_colours WHERE colour_id = '1' OR colour_id = '2' OR colour_id = '3' OR colour_id = '4' OR colour_id = '5' OR colour_id = '6' OR colour_id = '7' OR colour_id = '9' OR colour_id = '10' OR colour_id = '12'");
                 while( $row = mysql_fetch_array($getColourArray) ){
                     echo "_colourArray[".$row['colour_id']."] = '".$row['hex']."';\n";
                 }
            ?>
            
-           var _type = 21;
+           var _type = 5;
            <?php
                 
-                $getPrice = mysql_query("SELECT * FROM prices WHERE productId = '21' AND currencyInt='1'");
+                $getPrice = mysql_query("SELECT * FROM prices WHERE productId = '3' AND currencyInt='1'");
                 while( $row = mysql_fetch_array($getPrice) ){
                     echo "var _price = '".$row['price']."';\n";
                     $price = $row['price'];
@@ -55,13 +51,13 @@ mysql_select_db($dbname);
            var _showImage = 1;
            var _name = null;
            var _phone = "";
-           var _font = 3;
+           var _font = 4;
            var _fontColor = 2;
            var _colorPack = null;
            var _label = null;
            var _iron_colour = null;
            var _identiTAG = null;
-           var _reversePrint = 0;
+           var _reversePrint = null;
            var _quantity = null;
            
            var imgfol = "bwl2";
@@ -74,14 +70,13 @@ mysql_select_db($dbname);
                    
                    if(col.replace("_"," ")==_colourArray[i]){
                        _colorPack = i;
-                       $('#designer_preview').css('background','url(images/preview/'+i+'.png) no-repeat');
+                       $('#designer_preview').css('background-image','url(images/mini/'+i+'.png)');
                     }
                 }
          }
          if(_fontColor==2){
              $(".preview_text").css('color','#FFFFFF');
                   $(".preview_phone").css('color','#FFFFFF');
-                  
          }
          if(_bwImage==""){
            _bwImage = 1;
@@ -111,15 +106,15 @@ mysql_select_db($dbname);
         $(".4","#designer_options_font").css('padding','0px');
     <? } ?>
          
-         if(_font==3){
-            
+         if(_font==4){
+             _font = 4;
 
-               $(".3","#designer_options_font").addClass('selected');
-               var fontset = $(".3","#designer_options_font").css('font-family');
+               $(".4","#designer_options_font").addClass('selected');
+               var fontset = $(".4","#designer_options_font").css('font-family');
                $('.preview_text').css('font-family',fontset);
                $('.preview_phone').css('font-family',fontset);
                
-                    $('.preview_text').css('top','4px');
+                    $('.preview_text').css('top','5px');
                    $('.preview_text').css('left','0px');
                     $('.preview_phone').css('top','50px');
                     $('.preview_phone').css('left','0px');
@@ -143,7 +138,7 @@ mysql_select_db($dbname);
                    $(".preview_phone").show();
                    _showPhone = 1;
                    if(_font==3){
-                         $('.preview_text').css('top','4px');
+                         $('.preview_text').css('top','20px');
                         }else{
                             $('.preview_text').css('top','10px');
                         }
@@ -151,7 +146,7 @@ mysql_select_db($dbname);
                    $(".preview_phone").hide();
                    _showPhone = 0;
                    if(_font==3){
-                         $('.preview_text').css('top','10px');
+                         $('.preview_text').css('top','20px');
                         }else{
                             $('.preview_text').css('top','20px');
                         }
@@ -203,34 +198,47 @@ mysql_select_db($dbname);
                $('.preview_text').css('font-family',fontset);
                $('.preview_phone').css('font-family',fontset);
                if(_font==1){
-                   $('.preview_text').css('top','10px');
+                   $('.preview_text').css('top','25px');
                    $('.preview_text').css('left','0px');
                     $('.preview_phone').css('top','55px');
                     $('.preview_phone').css('left','0px');
+                    $('.preview_text').css('font-size','16px');
+                    $('.preview_phone').css('font-size','18px');
                }else if(_font==3){
-                    $('.preview_text').css('top','4px');
+                    $('.preview_text').css('top','20px');
                    $('.preview_text').css('left','0px');
                     $('.preview_phone').css('top','50px');
                     $('.preview_phone').css('left','0px');
+                    $('.preview_text').css('font-size','16px');
+                    $('.preview_phone').css('font-size','18px');
                 }else if(_font==4){
-                    $('.preview_text').css('top','10px');
+                    $('.preview_text').css('top','25px');
                    $('.preview_text').css('left','0px');
                     $('.preview_phone').css('top','55px');
                     $('.preview_phone').css('left','0px');
-                 }
+                    $('.preview_text').css('font-size','16px');
+                    $('.preview_phone').css('font-size','18px');
+                 }else if(_font==2){
+                     $('.preview_text').css('top','25px');
+                   $('.preview_text').css('left','0px');
+                    $('.preview_phone').css('top','55px');
+                    $('.preview_phone').css('left','0px');
+                    $('.preview_text').css('font-size','16px');
+                    $('.preview_phone').css('font-size','18px');
+                    }
                  if( $(".details_checkbox_phone").prop("checked") ){
                      
                          
                          if(_font==3){
-                         $('.preview_text').css('top','4px');
+                         $('.preview_text').css('top','20px');
                         }else{
-                            $('.preview_text').css('top','10px');
+                            $('.preview_text').css('top','25px');
                         }
                     }else{
                           if(_font==3){
-                         $('.preview_text').css('top','10px');
+                         $('.preview_text').css('top','20px');
                         }else{
-                            $('.preview_text').css('top','20px');
+                            $('.preview_text').css('top','25px');
                         }
                     }
                 
@@ -247,15 +255,15 @@ mysql_select_db($dbname);
                   $(".preview_phone").css('color','#000000');
                   imgfol = "bwl";
                   var bg = $(".preview_image_set").css("background-image");
-                  $(".preview_image_set").css("background-image",bg.replace("/bwl2/","/bwl/"));
+                  $(".preview_image_set").css("background-image",bg.replace("/bw2/","/bw/"));
               }else{
-                  _fontColor = 2;
+                  _fontColor = 0;
                   $(this).addClass('selected');
                   $(".preview_text").css('color','#FFFFFF');
                   $(".preview_phone").css('color','#FFFFFF');
-                  imgfol = "bwl2";
+                  imgfol = "bw2";
                   var bg = $(".preview_image_set").css("background-image");
-                  $(".preview_image_set").css("background-image",bg.replace("/bwl/","/bwl2/"));
+                  $(".preview_image_set").css("background-image",bg.replace("/bw/","/bw2/"));
               } 
            });
            
@@ -279,7 +287,7 @@ mysql_select_db($dbname);
                for(var i=0;i<_colourArray.length;i++){
                    if(col.replace("_"," ")==_colourArray[i]){
                        _colorPack = i;
-                       $('#designer_preview').css('background','url(images/preview/'+i+'.png) no-repeat');
+                       $('#designer_preview').css('background-image','url(images/mini/'+i+'.png)');
                     }
                 }
                
@@ -299,7 +307,7 @@ mysql_select_db($dbname);
                   for(var i=1;i<=_colourArray.length;i++){
                    if(col==_colourArray[i]){
                        _colorPack = i;
-                       $('#designer_preview').css('background','url(images/preview/'+i+'.png) no-repeat');
+                       $('#designer_preview').css('background-image','url(images/mini/'+i+'.png)');
                     }
                 }
                 $(this).addClass("selected");
@@ -340,7 +348,6 @@ mysql_select_db($dbname);
            $("#reverse_print").click(function(){
                if($(this).prop("checked")){
                    _reversePrint = 1;
-                   
                }else{
                    _reversePrint = 0;
                }
@@ -364,10 +371,8 @@ mysql_select_db($dbname);
                 }else if(_font==4){
                     _font=3;
                 }
-               if(_reversePrint==1){
-                   _price = '69';
-        }
-             /* alert(  _type+"\n"+
+               
+              /*alert(  _type+"\n"+
                       _price+"\n"+
                       _bwImage+"\n"+
                         _showName+"\n"+
@@ -378,39 +383,8 @@ mysql_select_db($dbname);
                         _font+"\n"+
                         _fontColor+"\n"+
                         _colorPack+"\n"+
-                        _label+"\n"+
-                        _iron_colour+"\n"+
-                        _identiTAG+"\n"+
-                        _reversePrint+"\n"+
-                        _quantity+"\n" ); */
-        if(_bwImage==""){
-            _bwImage=0;
-        }
-        
-         if(_showName!==0 && _name===null) {
-             $('.details_text_name').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
-             return false;
-          }
                         
-          if(_showPhone!==0 && _phone===''){
-              $('.details_text_phone').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
-              return false;
-          }
-          
-          
-          
-          if(_identiTAG===null){
-            $('#selected_identitag').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
-             return false;
-          }
-          
-          
-          if(_iron_colour===null){
-              $('#designer_options_ironon_colour').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
-              $('#designer_options_ironon_colour input:first').focus();
-               return false;
-           }
-        
+                        _quantity+"\n" ); */
         if(_type!=null && 
                       _price!=null && 
                       
@@ -422,9 +396,9 @@ mysql_select_db($dbname);
                         _font!=null && 
                         _fontColor!=null && 
                         _colorPack!=null && 
-                        _label!=null && 
-                        _iron_colour!=null && 
-                        _identiTAG!=null && 
+                        //_label!=null && 
+                        //_iron_colour!=null && 
+                        ///_identiTAG!=null && 
                         _quantity!=null){
 
 var f = document.createElement("form");
@@ -434,6 +408,7 @@ f.setAttribute('action',"/addtoorder.php");
 
 var a = document.createElement("input"); //input element, text
 a.setAttribute('type',"hidden");
+//a.setAttribute('name',"colours");
 a.setAttribute('name',"background_colour");
 a.setAttribute('value',_colorPack)
 
@@ -451,22 +426,6 @@ var d = document.createElement("input"); //input element, text
 d.setAttribute('type',"hidden");
 d.setAttribute('name',"pic");
 d.setAttribute('value',_bwImage);
-
-
-var picon = document.createElement("input"); //input element, text
-picon.setAttribute('type',"hidden");
-picon.setAttribute('name',"picon");
-
-ischecked = $('.details_checkbox_pic').is(':checked');
-
-if(ischecked) {
-    valpicon = '1';
-} else {
-   valpicon = '0';
-}
-picon.setAttribute('value',valpicon);
-
-
 
 var e = document.createElement("input"); //input element, text
 e.setAttribute('type',"hidden");
@@ -518,6 +477,10 @@ s.setAttribute('type',"submit");
 s.setAttribute('value',"Submit");
 
 
+var o = document.createElement("input"); //input element, text
+o.setAttribute('type',"hidden");
+o.setAttribute('name',"picon");
+o.setAttribute('value','1');
 
 
 f.appendChild(a);
@@ -534,7 +497,7 @@ f.appendChild(k);
 f.appendChild(l);
 f.appendChild(m);
 f.appendChild(n);
-f.appendChild(picon);
+f.appendChild(o);
 //and some more input elements here
 //and dont forget to add a submit button
 
@@ -542,16 +505,7 @@ document.getElementsByTagName('body')[0].appendChild(f);
 document.getElementsByTagName('form')[0].submit();
 
                     }else{
-                        
-                         if($('.details_text_name').val()==='') {
-                            $('.details_text_name').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
-                        }
-                        
-                        if($('.details_text_phone').val()===''){
-                            $('.details_text_phone').addClass('error-msg').focus().click(function(){$(this).removeClass('error-msg')});
-                        }
-                        
-                    //alert("Please complete all options");
+                    alert("Please complete all options");
                     }
         
         
@@ -610,13 +564,13 @@ document.getElementsByTagName('form')[0].submit();
     
 
 }
- @font-face {
+   @font-face {
     font-family: 'girls_are_weirdregular';
-    src: url('girlw3__-webfont.eot');
-    src: url('girlw3__-webfont.eot?#iefix') format('embedded-opentype'),
-         url('girlw3__-webfont.woff') format('woff'),
-         url('girlw3__-webfont.ttf') format('truetype'),
-         url('girlw3__-webfont.svg#girls_are_weirdregular') format('svg');
+    src: url('fnt/girlw3__-webfont.eot');
+    src: url('fnt/girlw3__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fnt/girlw3__-webfont.woff') format('woff'),
+         url('fnt/girlw3__-webfont.ttf') format('truetype'),
+         url('fnt/girlw3__-webfont.svg#girls_are_weirdregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -627,11 +581,11 @@ document.getElementsByTagName('form')[0].submit();
 
 @font-face {
     font-family: 'impress_btregular';
-    src: url('impressn-webfont.eot');
-    src: url('impressn-webfont.eot?#iefix') format('embedded-opentype'),
-         url('impressn-webfont.woff') format('woff'),
-         url('impressn-webfont.ttf') format('truetype'),
-         url('impressn-webfont.svg#impress_btregular') format('svg');
+    src: url('fnt/impressn-webfont.eot');
+    src: url('fnt/impressn-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fnt/impressn-webfont.woff') format('woff'),
+         url('fnt/impressn-webfont.ttf') format('truetype'),
+         url('fnt/impressn-webfont.svg#impress_btregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -642,17 +596,52 @@ document.getElementsByTagName('form')[0].submit();
 
 @font-face {
     font-family: 'technicalregular';
-    src: url('technicn-webfont.eot');
-    src: url('technicn-webfont.eot?#iefix') format('embedded-opentype'),
-         url('technicn-webfont.woff') format('woff'),
-         url('technicn-webfont.ttf') format('truetype'),
-         url('technicn-webfont.svg#technicalregular') format('svg');
+    src: url('fnt/technicn-webfont.eot');
+    src: url('fnt/technicn-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fnt/technicn-webfont.woff') format('woff'),
+         url('fnt/technicn-webfont.ttf') format('truetype'),
+         url('fnt/technicn-webfont.svg#technicalregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
-}           
-            
-            
+}         
+
+@font-face {
+    font-family: 'soupboneregular';
+    src: url('fnt/soupbone-regular-webfont.eot');
+    src: url('fnt/soupbone-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fnt/soupbone-regular-webfont.woff') format('woff'),
+         url('fnt/soupbone-regular-webfont.ttf') format('truetype'),
+         url('fnt/soupbone-regular-webfont.svg#soupboneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'soupbonebold';
+    src: url('fnt/soupbone-bold-webfont.eot');
+    src: url('fnt/soupbone-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fnt/soupbone-bold-webfont.woff') format('woff'),
+         url('fnt/soupbone-bold-webfont.ttf') format('truetype'),
+         url('fnt/soupbone-bold-webfont.svg#soupbonebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}            
+   @font-face {
+	font-family: 'TektonPro-Bold';
+	src: url('fnt/TektonPro-Bold.eot');
+	src: url('fnt/TektonPro-Bold.woff') format('woff'), 
+             url('fnt/TektonPro-Bold.ttf') format('truetype'), 
+             url('fnt/TektonPro-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+         
             body{
                 font-family: arial;
                 font-size:13px;
@@ -662,26 +651,29 @@ document.getElementsByTagName('form')[0].submit();
                 margin:0 auto;
                 border:solid 2px #efefef;
                 position:relative;
+				text-align:center;
             }
-            
+     ol,ul{padding:0;margin:0;}       
             
             ul,li{list-style:none;}
-            li{float:left;}
+            /*li{float:left;}*/
             strong{display:block;clear:both;}
             #designer_preview{
                 margin:0 auto;
-                height:121px;
-                width:400px;
+                height:45px;
+                width:240px;
                 position:relative;
+                background-size:240px 45px;
+                background-repeat:no-repeat;
             }
-            .preview_image_set{       
+            .preview_image_set{
                 position:absolute;
-                top:29px;
-                left:262px;
-                background-repeat: no-repeat;
+                top:12px;
+                left:10px;
+               
             }
             .preview_phone{position:absolute;display:block;width:260px;text-align:center;font-size:18px;padding:0 0 0 10px;line-height:1;margin-top:10px;}
-            .preview_text{position:absolute;display:block;width:260px;text-align:center;font-size:26px;padding:23px 0 0 10px;line-height:1;}
+            .preview_text{position:absolute;display:block;width:200px;text-align:left;font-size:16px;padding:4px 0 0 20px;line-height:1;top:5px;}
             
             #designer_options_picture ul li{
                 width:32px;
@@ -689,7 +681,6 @@ document.getElementsByTagName('form')[0].submit();
                 border:solid 2px #666;
                 padding:1px;
                 margin:2px;
-                cursor: pointer;
             }
             .font_colour_black,.font_colour_white{border:solid 1px #666;}
             .font_colour_black{width:20px;height:20px;background:#000000;display:inline-block;}
@@ -704,12 +695,12 @@ document.getElementsByTagName('form')[0].submit();
             }
             
             .preview_image{
-                width:32px;
-                height:32px;
-            }
-            .preview_image_set{
                 width:60px;
                 height:60px;
+            }
+            .preview_image_set{
+                width:45px;
+                height:25px;
                 display:inline-block;
             }
             
@@ -721,7 +712,6 @@ document.getElementsByTagName('form')[0].submit();
                 float:left;
                 margin:2px;
                 border:solid 2px #666;
-                cursor:pointer;
             }
             .selected{border:solid 2px #00B0E0 !important};
             
@@ -739,37 +729,43 @@ document.getElementsByTagName('form')[0].submit();
                 position:relative;
                 clear:both;
                 margin-bottom:20px;
+                margin: 0 auto;
+                width: 300px;
             }
             #designer_options_details strong{display:inline;clear:none;}
             #designer_options_details{text-align:center;}
             
             #designer_options_font{
-float:left;
+/*float:left;*/
 width:275px;
+text-align:left;
+margin-bottom:30px;
 }
 #designer_options_font li {
     font-size:28px;
-    cursor: pointer;
+    float:none;
 }
 
 #designer_options_font_colour{
-float:left;
-width:175px;
+/*float:left;*/
+width:170px;
+text-align:left;
 }
-
+#designer_options_font_colour{
+    
+margin-bottom:30px;
+}
 #designer_options_colours{
-float:left;
+/*float:left;*/
 width:350px;
+text-align:left;
+margin-bottom:30px;
 }
 
 #designer_options_label ul li{float:none;}
 
 #designer_options_identitags{
 text-align:left;
-}
-
-#designer_options_identitags ul li{
-    cursor:pointer;
 }
 #designer_options_identitags input{
     margin-left:50px;
@@ -790,7 +786,7 @@ right:0;
 width:320px;
 }
 
-#designer_options_ironon_colour ul li span{width:20px;height:20px;display:inline-block;border:solid 2px #666; cursor:pointer;}
+#designer_options_ironon_colour ul li span{width:20px;height:20px;display:inline-block;border:solid 2px #666;}
 
 button{
     color:#ffffff;
@@ -820,66 +816,26 @@ padding:0;
   
         
         <div id="designer_container">
-            <div style="text-align:left;position:absolute;top:20px;right:0px;font-size:11px;color:#3a768f;width:190px;">
-                Format will be improved prior to Print.
-                This is just a idea of how the label font, colours and pic look together.
-                One label is shown for demonstration . However this pack comes with a variety of labels as shown in more info including irons, shoe dots and various other stickon labels.
+            <div style="text-align:left;position:absolute;top:5px;right:70px;font-size:11px;color:#3a768f;width:190px;">
+                Format will be improved prior to Print.<br />
+                This is just a idea of how the label font,colours and pic look.<br />
+                Actual label size L 50mm  H 9mm
             </div>
             <div id="designer_preview">
-                <span class="preview_text">Preview Text</span>
-                <span class="preview_phone">0000 000 000</span>
-                <span class="preview_image"></span>
-                <span class="preview_image_set"></span>
+                <span class="preview_text" >Preview Text</span>
             </div>
             
 <div class="box">
             <div id="designer_options_details">
                 
-                <p><strong>Include: </strong>
-                    <span><input type="checkbox" checked="checked" name="details_checkbox_name" class="details_checkbox_name" /> Line 1</span>
-                    <span><input type="checkbox" checked="checked" name="details_checkbox_phone" class="details_checkbox_phone" /> Line 2</span>
-                    <span><input type="checkbox" checked="checked" name="details_checkbox_pic" class="details_checkbox_pic" /> Pic</span>
-                </p>
                 <p>
-                    <strong>Line 1:</strong> <input type="text" class="details_text_name" /> 
-                    <strong>Line 2:</strong> <input type="text" class="details_text_phone" /> 
+                   
+                    <strong>Name:</strong> <input type="text" class="details_text_name" /> 
+                   
                 </p>
             </div>
 </div>
-            <div class="box">
-            <div id="designer_options_picture">
-                <strong>Choose a picture by clicking on an icon:</strong>
-                <div>
-                    <?php
-                        //pull images from DB here
-                    $query = mysql_query("SELECT * FROM designer_bwimages");
-                    if(mysql_num_rows($query)>0){
-                        while($val = mysql_fetch_array($query)){
-                            $pictures[$val['id']]=$val['image'];
-                        }
-                    }
-                /* designer_bwimages
-                 * 
-                 * id
-                 * imageName
-                 * image
-                 */
-                    echo "<ul>";
-                    $skip = array(44);
-                        foreach( $pictures as $ref => $picture ){
-                            if(in_array($ref, $skip)){
-                                continue;
-                            }
-                            echo "<li class='".$ref."' rel='".$picture."' style='background-image:url(http://identikid.com.au/_designer/".str_replace("bw","bwl",$picture).")'></li>";
-                            
-                        }
-                    
-                    echo "</ul>";
-                    echo "<div style='clear:both'></div>";
-                    ?>
-                </div>
-            </div>
-            </div>
+            
             
             <div class="box">
             <div id="designer_options_font">
@@ -887,7 +843,7 @@ padding:0;
                 <strong>Font:</strong>
                 <?php
                     //pulll fonts from DB here
-                    $query = mysql_query("SELECT * FROM designer_fonts WHERE fontValue = '1' OR fontValue = '3' OR fontValue='4'");
+                    $query = mysql_query("SELECT * FROM designer_fonts WHERE fontValue = '4' ORDER BY fontValue");
                     if(mysql_num_rows($query)>0){
                         while($val = mysql_fetch_array($query)){
                             $fonts[$val['fontName']]=$val['fontValue'];
@@ -903,10 +859,14 @@ padding:0;
                     echo "<ol>";
                     
                         foreach( $fonts as $fontName=>$fontFile ){
-                            if($fontFile!='3'){
-                                echo "<li class='".$fontFile."' style='font-family:".$fontName.";'>Ginger Meggs</li>";
-                            }else{
+                            if($fontFile=='3'){
                                 echo "<li class='".$fontFile."' style='font-family:".$fontName.";line-height:0.5;'>Ginger Meggs</li>";
+                                
+                            }else if($fontFile=='5'){
+                              echo "<li class='".$fontFile."' style='font-family:".$fontName.";line-height:1;padding-bottom:10px'>Ginger Meggs</li>";
+                            }
+                            else{
+                                echo "<li class='".$fontFile."' style='font-family:".$fontName.";'>Ginger Meggs</li>";
                             }
                             
                             
@@ -952,11 +912,11 @@ padding:0;
                             }else{
                                echo str_replace("_"," ",$colourName); 
                             }
-                                    $id = uniqid();
-                                    echo "</div><input style='float:left' type='radio' name='colour[]' value='".$colourName."' class='".$colourName."' id='$id'>";
+                                    
+                                    echo "</div><input style='float:left' type='radio' name='colour[]' value='".$colourName."' class='".$colourName."'>";
                                 $colours = explode(",",$colourSet);
                                 foreach($colours as $colour){
-                                    echo "<span style='background:".$colour."' class='".$colour."' onclick=checkradio('$id')></span>";
+                                    echo "<span style='background:".$colour."' class='".$colour."'></span>";
                                 }
                             echo "</li>";
                             
@@ -970,7 +930,7 @@ padding:0;
             </div>
             
             <div class="box">
-                <div id="designer_options_label">
+                <!--<div id="designer_options_label">
                 <strong>Label Options:</strong>
                 <?php
                     //pull label options here
@@ -1021,10 +981,10 @@ padding:0;
                     echo "<ul>";
                     
                         foreach( $ironOncolour as $colourName => $colour ){
-                            $uniqueid = uniqid();
-                            echo "<li class='".$colourName."'><input type='radio' name='iron_on_colour[]' value='".$colourName."' class='".$colourName."' id='$uniqueid'/>";
+                            
+                            echo "<li class='".$colourName."'><input type='radio' name='iron_on_colour[]' value='".$colourName."' class='".$colourName."'>";
                                 
-                                    echo "<label for='$uniqueid'><span style='background:".$colour."'></span></label>";
+                                    echo "<span style='background:".$colour."'></span>";
                                 
                             echo "</li>";
                             
@@ -1036,7 +996,7 @@ padding:0;
             </div>
             
             <div id="designer_options_identitags">
-                <strong>IdentiTAG: <i>Please choose your tag by clicking on image.</i></strong>
+                <strong>IdentiTAG:</strong>
                 <?php
                     //pull identiTAG images here
                 $query = mysql_query("SELECT * FROM designer_identitag")or die(mysql_error());
@@ -1062,14 +1022,14 @@ padding:0;
                     
                     echo "</ul>";
                     echo "<div style='clear:both'></div>";
-                    echo "<input type='text' value='' id='selected_identitag' size='6' readonly='readonly' /> Selected IdentiTAG <br><span style='color:Red;padding:5px;' class='error-identitag'></span>";
+                    echo "<input type='text' value='' id='selected_identitag' size='6' /> Selected IdentiTAG";
                 ?>
-            </div>
+            </div>-->
 </div>
             <div class='box' style='text-align:center;'>
-            <div id="designer_options_reverse_print">
+            <!--<div id="designer_options_reverse_print">
                   <input type='checkbox' id="reverse_print" /> Text printed on reverse of tag? (add AU$4.00 to order)
-            </div>
+            </div>-->
 
             <div id="designer_options_quantity">
                 <strong>Quantity:</strong>
@@ -1079,9 +1039,9 @@ padding:0;
                     echo "<select id='order_quantity'>";
                     
                     
-                        echo "<option value='1'>1 Colour My World Pack for AU".$price."</option>";
-                        echo "<option value='2'>2 Colour My World Pack for AU".($price*2)."</option>";
-                        echo "<option value='3'>3 Colour My World Pack for AU".($price*3)."</option>";
+                        echo "<option value='1'>60 Pencil Labels for AU$ ".$price."</option>";
+                        echo "<option value='2'>120 Pencil Labels for AU$ ".($price*2)."</option>";
+                        echo "<option value='3'>180 Pencil Labels for AU$ ".($price*3)."</option>";
                     
                     
                     echo "</select>";
@@ -1097,27 +1057,4 @@ padding:0;
             </div>
             </div>
         </div>
-        
-        <script>
-            
-             function checkradio($id) {
-                $('#'+$id).trigger('click');
-               }
-               
-            $(document).ready(function(){
-              
-                $('#selected_identitag, ul.tags li').click(function(){
-                        tmp = $('#selected_identitag').val();
-
-                        $('.error-identitag').html('');
-                        $('#selected_identitag').removeClass('error-msg');
-
-                        if(tmp.length<=0) {
-                            $('.error-identitag').html('Please select Identi tag from above grid');
-                        }
-                
-                });
-            
-            });
-            </script>
         
