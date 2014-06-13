@@ -261,15 +261,15 @@ mysql_select_db($dbname);
                   $(".preview_phone").css('color','#000000');
                   imgfol = "bwl";
                   var bg = $(".preview_image_set").css("background-image");
-                  $(".preview_image_set").css("background-image",bg.replace("/bw2/","/bw/"));
+                  $(".preview_image_set").css("background-image",bg.replace("/bwl2/","/bwl/"));
               }else{
                   _fontColor = 0;
                   $(this).addClass('selected');
                   $(".preview_text").css('color','#FFFFFF');
                   $(".preview_phone").css('color','#FFFFFF');
-                  imgfol = "bw2";
+                  imgfol = "bwl2";
                   var bg = $(".preview_image_set").css("background-image");
-                  $(".preview_image_set").css("background-image",bg.replace("/bw/","/bw2/"));
+                  $(".preview_image_set").css("background-image",bg.replace("/bwl/","/bwl2/"));
               } 
            });
            
