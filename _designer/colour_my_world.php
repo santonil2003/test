@@ -820,7 +820,11 @@ padding:0;
   
         
         <div id="designer_container">
-            
+            <div style="text-align:left;position:absolute;top:45px;right:0px;font-size:11px;color:#3a768f;width:190px;">
+                Format will be improved prior to Print.<br>
+                This is just a idea of how the label font,colours and pic look.<br>
+                Actual label size L 75-85mm H 19mm
+            </div>
             <div id="designer_preview">
                 <span class="preview_text">Preview Text</span>
                 <span class="preview_phone">0000 000 000</span>
