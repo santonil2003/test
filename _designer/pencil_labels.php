@@ -63,7 +63,7 @@ while ($row = mysql_fetch_array($getPrice)) {
             <div id="designer_options_details">
                 <p>
                     <strong>Name:</strong> 
-                    <input type="text" class="details_text_name" placeholder="Preview Text"/> 
+                    <input type="text" class="details_text_name" placeholder="Preview Text" style="width: 160px; height: 32px;"/> 
                 </p>
                 <p class="error-msg"></p>
             </div>
@@ -81,7 +81,7 @@ while ($row = mysql_fetch_array($getPrice)) {
                 }
                 echo "<ol>";
                 foreach ($fonts as $fontName => $fontFile) {
-                    echo "<li class='" . $fontFile . " selected' style='font-family:" . $fontName . ";'>Ginger Meggs</li>";
+                    echo "<li class='" . $fontFile . "' style='font-family:" . $fontName . ";'>Ginger Meggs</li>";
                 }
                 echo "</ol>";
                 ?>
