@@ -509,6 +509,11 @@ if(ischecked) {
 }
 picon.setAttribute('value',valpicon);
 
+var split = document.createElement("input"); //input element, text
+split.setAttribute('type',"hidden");
+split.setAttribute('name',"split");
+split.setAttribute('value','0');
+
 
 f.appendChild(a);
 f.appendChild(b);
@@ -527,6 +532,7 @@ f.appendChild(n);
 //f.appendChild(o);
 
 f.appendChild(picon);
+f.appendChild(split);
 //and some more input elements here
 //and dont forget to add a submit button
 
