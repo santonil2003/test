@@ -20,7 +20,7 @@ $('document').ready(function() {
         switch (font_class) {
             case 'font_colour_white':
                 $('.preview_text').css('color', '#ffffff');
-                $('#font_colour').val('0');
+                $('#font_colour').val('2');
                 break;
             default:
                 $('.preview_text').css('color', '#000000');

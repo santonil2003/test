@@ -23,7 +23,7 @@ while ($row = mysql_fetch_array($getPrice)) {
 <form action="/addtoorder.php" method="post" target="_top" id="pencil_labels">
 
     <input type="hidden" name="background_colour" value="9" id="background_colour"/>
-    <input type="hidden" name="font" value="4" id="font"/>
+    <input type="hidden" name="font" value="3" id="font"/>
     <input type="hidden" name="font_colour" value="1" id="font_colour"/>
     <input type="hidden" name="text1" value="" id="text1"/>
 
