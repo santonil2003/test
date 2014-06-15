@@ -164,7 +164,10 @@ strong{display:block;clear:both;}
     margin:2px;
     border:solid 2px #666;
 }
-.selected{border:solid 2px #00B0E0 !important};
+
+.selected{
+    border:solid 2px #00B0E0 !important
+};
 
 
 
@@ -256,6 +259,10 @@ button{
     margin:5px;
 }
 
+#designer_preview {
+    position:relative;
+}
+
 
 .designer_preview_rainbow_a {
     overflow: hidden;
@@ -269,14 +276,14 @@ button{
 .designer_preview_rainbow_a .preview_text{
     display: block;
     font-family: comic_sans_msregular;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 1;
     position: absolute;
     text-align: center;
-    top: 74px;
+    top: 68px;
     width: 320px;
 }
-/*//////////////////////////////////////////*/
+
 
 
 .designer_preview_rainbow_b {
@@ -291,11 +298,11 @@ button{
 .designer_preview_rainbow_b .preview_text{
     display: block;
     font-family: comic_sans_msregular;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 1;
     position: absolute;
     text-align: center;
-    top: 74px;
+    top: 68px;
     width: 330px;
 }
 
@@ -312,14 +319,13 @@ button{
 .individual_preivew .preview_text{
     display: block;
     font-family: comic_sans_msregular;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 1;
     position: absolute;
     text-align: center;
-    top: 74px;
+    top: 68px;
     width: 300px;
 }
-/*//////////////////////////////////////////*/
 
 #designer_preview_text{
     color: #3A768F;
@@ -330,4 +336,7 @@ button{
     top: 25px;
     width: 190px;
 }
-////////////////////////
+
+.error-msg{
+    color: red;
+}

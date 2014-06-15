@@ -2,6 +2,10 @@ function checkradio($id) {
     $('#' + $id).trigger('click');
 }
 
+function myTrim(x) {
+    return x.replace(/^\s+|\s+$/gm, '');
+}
+
 $('document').ready(function() {
     $('.Rainbow_A input[type=radio]:first').attr('checked', 'checked');
 
@@ -9,16 +13,18 @@ $('document').ready(function() {
         $('#designer_options_font_colour span').removeClass('selected');
         $(this).addClass('selected');
 
-        font_class_str = $(this).attr('class');
-        font_class = font_class_str.replace("selected", "");
-        font_class = font_class.trim();
+        var font_class_str = $(this).attr('class');
+        var font_class = font_class_str.replace("selected", "");
+        font_class = myTrim(font_class);
 
         switch (font_class) {
             case 'font_colour_white':
                 $('.preview_text').css('color', '#ffffff');
+                $('#font_colour').val('0');
                 break;
             default:
                 $('.preview_text').css('color', '#000000');
+                $('#font_colour').val('1');
                 break;
         }
     });
@@ -34,6 +40,9 @@ $('document').ready(function() {
         $('#designer_preview').removeClass('designer_preview_rainbow_b');
         $('#designer_preview').addClass('designer_preview_rainbow_a');
         $('#designer_preview').css('background', 'url(images/pencil/rainbow-a.png) no-repeat scroll 0% 0% transparent');
+
+        /* update form element*/
+        $('#background_colour').val('9');
     });
 
     /* activate rain bow b*/
@@ -42,6 +51,9 @@ $('document').ready(function() {
         $('#designer_preview').removeClass('designer_preview_rainbow_a');
         $('#designer_preview').addClass('designer_preview_rainbow_b');
         $('#designer_preview').css('background', 'url(images/pencil/rainbow-b.png) no-repeat scroll 0% 0% transparent');
+
+        /* update form element*/
+        $('#background_colour').val('10');
     });
 
     /* activate individual color*/
@@ -54,13 +66,34 @@ $('document').ready(function() {
         var span_class = span_class_string.split(" ");
         var image_name = _colourArray.indexOf(span_class[0]);
         $('#designer_preview').css('background', 'url(images/pencil/' + image_name + '.png) no-repeat 30px 54px rgba(0, 0, 0, 0)');
+
+        /* update form element*/
+        $('#background_colour').val(image_name);
     });
 
 
     /* update text on key up*/
 
     $('.details_text_name').keyup(function() {
-        $('.preview_text').html($(this).val());
+        var content = $(this).val();
+
+        $('p.error-msg').html('');
+
+        if (content.length > 23) {
+            content = content.substr(0, 24);
+            $('p.error-msg').html('Maximum 24 character allowed !');
+        }
+
+        $(this).val(content);
+
+        $('.preview_text').html(content);
+
+        //update hidden element
+        $('#text1').val(content);
     });
 
+
+    $('#order_quantity').change(function() {
+        $('#quantdesc').val($(this).val());
+    });
 });
