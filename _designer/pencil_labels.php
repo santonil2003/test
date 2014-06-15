@@ -62,7 +62,7 @@ while ($row = mysql_fetch_array($getPrice)) {
         <div class="box">
             <div id="designer_options_details">
                 <p>
-                    <strong>Name:</strong> 
+                    <label class="detial_text_label">Name : </label> 
                     <input type="text" class="details_text_name" placeholder="Preview Text" style="width: 160px; height: 32px;"/> 
                 </p>
                 <p class="error-msg"></p>

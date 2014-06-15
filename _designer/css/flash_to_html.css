@@ -340,3 +340,7 @@ button{
 .error-msg{
     color: red;
 }
+
+.detial_text_label{
+    font-size: 18px;
+}
