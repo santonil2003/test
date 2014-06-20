@@ -116,10 +116,10 @@ $('document').ready(function() {
 
     $('.details_text_name').keydown(function(event) {
         if (event.keyCode == 32) {
-            $('p.error-msg').html('Space not allowed!');
-            event.preventDefault();
+            //$('p.error-msg').html('Space not allowed!');
+           // event.preventDefault();
         } else {
-            $('p.error-msg').html('');
+            //$('p.error-msg').html('');
         }
     });
 
