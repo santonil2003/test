@@ -128,9 +128,9 @@ $('document').ready(function() {
 
         $('p.error-msg').html('');
 
-        if (line1.length > 10) {
-            line1 = line1.substr(0, 8);
-            $('p.error-msg').html('Maximum 9 character allowed !');
+        if (line1.length > 20) {
+            line1 = line1.substr(0, 19);
+            $('p.error-msg').html('Maximum 20 character allowed !');
         }
 
         $(this).val(line1);
@@ -143,7 +143,20 @@ $('document').ready(function() {
 
     /// line 2 keyp
     $('.details_text_phone').keyup(function() {
+
+
         line2 = $(this).val();
+
+        $('p.error-msg').html('');
+
+        if (line2.length > 20) {
+            line2 = line2.substr(0, 19);
+            $('p.error-msg').html('Maximum 20 character allowed !');
+        }
+        
+        $(this).val(line2);
+
+
         $('.preview_phone').html(line2);
         $('#text1').val(line1 + ' ' + line2);
     });
