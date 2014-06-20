@@ -120,7 +120,7 @@ $('document').ready(function() {
         $('p.error-msg').html('');
 
         if (line1.length > 10) {
-            line1 = line1.substr(0, 10);
+            line1 = line1.substr(0, 9);
             $('p.error-msg').html('Maximum 10 character allowed !');
         }
 
