@@ -62,7 +62,7 @@ while ($row = mysql_fetch_array($getPrice)) {
         </div>
 
         <!------preview------------->
-        <div style="position: fixed; right: 0px;">
+        <div style="position: fixed; right: 0px;top:0px;">
         <div id="designer_preview" class="designer_preview_rainbow_a">
             <span class="preview_image" ></span>
             <span class="preview_text" >Preview Text</span>
