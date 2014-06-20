@@ -62,10 +62,12 @@ while ($row = mysql_fetch_array($getPrice)) {
         </div>
 
         <!------preview------------->
+        <div style="position: fixed; right: 0px;">
         <div id="designer_preview" class="designer_preview_rainbow_a">
             <span class="preview_image" ></span>
             <span class="preview_text" >Preview Text</span>
             <span class="preview_phone" >000 000 000</span>
+        </div>
         </div>
         <!--@end of preview--------->
 
@@ -130,7 +132,7 @@ while ($row = mysql_fetch_array($getPrice)) {
                 $query = mysql_query("SELECT * FROM designer_fonts ORDER BY fontValue");
                 if (mysql_num_rows($query) > 0) {
                     while ($val = mysql_fetch_array($query)) {
-                        $fonts[$val['fontName']] = $val['id'];
+                        $fonts[$val['fontName']] = $val['fontValue'];
                         $style[$val['fontName']] = $val['style'];
                     }
                 }
