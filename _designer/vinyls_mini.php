@@ -27,24 +27,24 @@ while ($row = mysql_fetch_array($getPrice)) {
 
 <form action="/addtoorder.php" method="post" target="_top" id="pencil_labels">
 
-    <input type="hidden" name="background_colour" value="9" id="background_colour"/>
-    <input type="hidden" name="font" value="3" id="font"/>
-    <input type="hidden" name="font_colour" value="1" id="font_colour"/>
-    <input type="hidden" name="split" value="1" id="split"/>
-    <input type="hidden" name="pic" value="1" id="pic"/>
-    <input type="hidden" name="picon" value="1" id="picon"/>
+    <input type="text" name="background_colour" value="9" id="background_colour"/>
+    <input type="text" name="font" value="3" id="font"/>
+    <input type="text" name="font_colour" value="1" id="font_colour"/>
+    <input type="text" name="split" value="1" id="split"/>
+    <input type="text" name="pic" value="1" id="pic"/>
+    <input type="text" name="picon" value="1" id="picon"/>
 
 
-    <input type="hidden" name="identitag_code" value="" id="identitag_code"/>
-    <input type="hidden" name="identitagReserve" value="0" id="identitagReserve"/>
-    <input type="hidden" name="ironon_colour" value="" id="ironon_colour"/>
+    <input type="text" name="identitag_code" value="" id="identitag_code"/>
+    <input type="text" name="identitagReserve" value="0" id="identitagReserve"/>
+    <input type="text" name="ironon_colour" value="" id="ironon_colour"/>
 
-    <input type="hidden" name="chosenLabel" value="1" id="chosenLabel"/>
-    <input type="hidden" name="price" value="<?php echo $price; ?>" id="price"/>
-    <input type="hidden" name="type" value="<?php echo $type; ?>" id="type"/>
-    <input type="hidden" name="quantdesc" value="1" id="quantdesc"/>
+    <input type="text" name="chosenLabel" value="1" id="chosenLabel"/>
+    <input type="text" name="price" value="<?php echo $price; ?>" id="price"/>
+    <input type="text" name="type" value="<?php echo $type; ?>" id="type"/>
+    <input type="text" name="quantdesc" value="1" id="quantdesc"/>
 
-    <input type="hidden" name="submit" value="Submit" id="Submit"/>
+    <input type="text" name="submit" value="Submit" id="Submit"/>
 
 
 
@@ -129,7 +129,7 @@ while ($row = mysql_fetch_array($getPrice)) {
                 $query = mysql_query("SELECT * FROM designer_fonts ORDER BY fontValue");
                 if (mysql_num_rows($query) > 0) {
                     while ($val = mysql_fetch_array($query)) {
-                        $fonts[$val['fontName']] = $val['fontValue'];
+                        $fonts[$val['fontName']] = $val['id'];
                         $style[$val['fontName']] = $val['style'];
                     }
                 }
