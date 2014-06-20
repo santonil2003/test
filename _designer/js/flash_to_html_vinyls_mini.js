@@ -114,21 +114,30 @@ $('document').ready(function() {
 
     /* update text on key up*/
 
+    $('.details_text_name').keydown(function(event) {
+        if (event.keyCode == 32) {
+            $('p.error-msg').html('Space not allowed!');
+            event.preventDefault();
+        } else {
+            $('p.error-msg').html('');
+        }
+    });
+
     $('.details_text_name').keyup(function() {
         line1 = $(this).val();
 
         $('p.error-msg').html('');
 
         if (line1.length > 10) {
-            line1 = line1.substr(0, 9);
-            $('p.error-msg').html('Maximum 10 character allowed !');
+            line1 = line1.substr(0, 8);
+            $('p.error-msg').html('Maximum 9 character allowed !');
         }
 
         $(this).val(line1);
 
         $('.preview_text').html(line1);
-        
-        $('#text1').val(line1 + ' '+ line2);
+
+        $('#text1').val(line1 + ' ' + line2);
     });
 
 
@@ -136,7 +145,7 @@ $('document').ready(function() {
     $('.details_text_phone').keyup(function() {
         line2 = $(this).val();
         $('.preview_phone').html(line2);
-         $('#text1').val(line1 + ' '+ line2);
+        $('#text1').val(line1 + ' ' + line2);
     });
 
 
