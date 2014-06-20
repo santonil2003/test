@@ -8,7 +8,8 @@ function myTrim(x) {
 
 var white_images_folder_path = 'bwl2';
 var black_images_folder_path = 'bwl';
-var line2 = '000 000 000';
+var line1 = "";
+var line2 = "";
 var pic = '1';
 var font = '3';
 
@@ -114,21 +115,28 @@ $('document').ready(function() {
     /* update text on key up*/
 
     $('.details_text_name').keyup(function() {
-        var content = $(this).val();
+        line1 = $(this).val();
 
         $('p.error-msg').html('');
 
-        if (content.length > 23) {
-            content = content.substr(0, 24);
-            $('p.error-msg').html('Maximum 24 character allowed !');
+        if (line1.length > 10) {
+            line1 = line1.substr(0, 24);
+            $('p.error-msg').html('Maximum 10 character allowed !');
         }
 
-        $(this).val(content);
+        $(this).val(line1);
 
-        $('.preview_text').html(content);
+        $('.preview_text').html(line1);
+        
+        $('#text1').val(line1 + ' '+ line2);
+    });
 
-        //update hidden element
-        // $('#text1').val(content);
+
+    /// line 2 keyp
+    $('.details_text_phone').keyup(function() {
+        line2 = $(this).val();
+        $('.preview_phone').html(line2);
+         $('#text1').val(line1 + ' '+ line2);
     });
 
 
@@ -181,13 +189,6 @@ $('document').ready(function() {
             $('.preview_image').hide();
         }
     });
-
-    /// line 2 keyp
-    $('.details_text_phone').keyup(function() {
-        line2 = $(this).val();
-        $('.preview_phone').html(line2);
-    });
-
 
     // make font selected
     $('li.4').trigger('click');
