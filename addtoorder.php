@@ -89,7 +89,7 @@ break;
 
 	
 			
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error()."<BR />".$sql, true);
@@ -98,7 +98,7 @@ break;
 
             case 47: 
 	      list($price, $notused)= getProductPricing($type, $_COOKIE['currency']);
-	      $record = array();
+                        $record = array();
 			$record['ordernumber'] 	 		= $id;
 			$record['price']			= $price;
 			$record['quantdesc']			= $_POST['quantdesc'];
@@ -114,7 +114,7 @@ break;
 
 	
 			
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error()."<BR />".$sql, true);
@@ -133,7 +133,7 @@ break;
 			$record['text1']			= $text1;
 	
 			
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error()."<BR />".$sql, true);
@@ -151,7 +151,7 @@ break;
 			$record['text3']			= $text3;
 	
 			
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error()."<BR />".$sql, true);
@@ -183,7 +183,7 @@ break;
 			$record['gift']	   = $_POST['gift']; 
 			$record['split']	   = $_POST['split'];
 			
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error()."<BR />".$sql, true);
@@ -213,7 +213,7 @@ break;
 			$record['gift']	   = $_POST['gift']; 
 			$record['split']	   = $_POST['split'];
 			
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error()."<BR />".$sql, true);
@@ -238,7 +238,7 @@ break;
 			$record['text9']			= "";
 			$record['text10']	   = ""; 
 			
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error()."<BR />".$sql, true);
@@ -274,7 +274,7 @@ break;
 			$record['text9']			= "";
 			$record['text10']	   = ""; */
 			
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error()."<BR />".$sql, true);
@@ -300,7 +300,7 @@ break;
 			$record['text9']			= "";
 			$record['text10']	   = "";
 			
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error()."<BR />".$sql, true);
@@ -325,7 +325,7 @@ break;
 			$record['text9']			= "";
 			$record['text10']	   = "";
 			
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error()."<BR />".$sql, true);
@@ -350,7 +350,7 @@ break;
 			$record['text9']			= "";
 			$record['text10']	   = "";
 			
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error()."<BR />".$sql, true);
@@ -392,7 +392,7 @@ break;
 			$record['text9']			= $_POST['phinc'].",".$_POST['phinc'].",".$_POST['phinc'];
 			$record['text10']			= $_POST['picon'].",".$_POST['picon'].",".$_POST['picon'];
 			
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error()."<BR />".$sql, true);
@@ -437,7 +437,7 @@ break;
 			$record['text9']				= "1,1,1,1,1";
 			$record['text10']				= ($_SESSION['maxi_pack1_pic']!="none"?1:0).",".($_SESSION['maxi_pack1_pic']!="none"?1:0).",".($_SESSION['maxi_pack1_pic']!="none"?1:0).",".($_SESSION['maxi_pack1_pic']!="none"?1:0).",".($_SESSION['maxi_pack1_pic']!="none"?1:0);
 
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error()."<BR />".$sql, true);
@@ -479,7 +479,7 @@ break;
 			$record['text1']				= $_POST['text1'];
 			$record['colours']				= $_POST['background_colour'];
 			
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error()."<BR />".$sql, true);
@@ -525,7 +525,7 @@ break;
 			$record['text4']				= $designArray[3];
 			$record['text5']				= $designArray[4];
 			
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error()."<BR />".$sql, true);
@@ -538,7 +538,7 @@ break;
 			//$price = $quantity[0];
 			//$quantdesc = $quantity[1];
 			// quantity desc
-			//product_details($type, $_COOKIE['currency'], &$product);
+			//product_details($type, $_COOKIE['currency'], $product);
 			//$price_formatted = (((int)form_param('chosenQuant') + 1) * (int)$product['unitQuant']) . " " . $product['productName'] . " for " . $product['symbol'].(((int)form_param('chosenQuant') + 1)*$product['price']);
 			//$price = ((int)form_param('chosenQuant') + 1) * $product['price'];
 			
@@ -555,7 +555,7 @@ break;
 			}
 			
 			// get identitag ID
-			db_get_field("SELECT data_identitag_id FROM data_identitag WHERE data_identitag_code='" . db_escape_string(form_param('identitag_code')) . "'", &$data_identitag_id);
+			db_get_field("SELECT data_identitag_id FROM data_identitag WHERE data_identitag_code='" . db_escape_string(form_param('identitag_code')) . "'", $data_identitag_id);
 			
 			$record['ordernumber'] 			= $id;
 			$record['price']				= form_param('price');
@@ -575,7 +575,7 @@ break;
 			$record['data_font_colour_id']	= (int)form_param('font_colour');		// font colour.
 		
 		
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error(), true);
@@ -588,7 +588,7 @@ break;
 		case 5:
 		case 3:
 			// quantity desc
-			product_details($type, $_COOKIE['currency'], &$product);
+			product_details($type, $_COOKIE['currency'], $product);
 			
 			if($_POST["type"]!=28 && $_POST["type"]!=29){
 				$price_formatted = (((int)form_param('chosenQuant') + 1) * (int)$product['unitQuant']) . " " . $product['productName'] . " for " . $product['symbol'].(((int)form_param('chosenQuant') + 1)*$product['price']);
@@ -620,7 +620,7 @@ break;
 			$record['data_colour_id']		= (int)form_param('background_colour');			// iron on colours
 			$record['data_font_colour_id']	= (int)form_param('font_colour');		// font colour.
 			
-			$result = db_insert('basket_items', $record, &$insert_id);
+			$result = db_insert('basket_items', $record, $insert_id);
 			if($result == false)
 			{
 				display_error('sql error: ' . mysql_error(), true);
