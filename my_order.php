@@ -1,4 +1,4 @@
-<? 
+<?php 
 require_once("debug_log.php");
 
 include("header.php");
@@ -45,7 +45,7 @@ global $itemnums, $totalprice, $postage, $oseas, $secure, $cur, $currency;
                           <tr> 
                             <td colspan="3">&nbsp;</td>
                           </tr>
-						  <? if($_GET['error']=="nopostage"){?>
+						  <?php if($_GET['error']=="nopostage"){?>
 						  <tr>
 						  	<td colspan="3">
 								<table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -64,33 +64,33 @@ global $itemnums, $totalprice, $postage, $oseas, $secure, $cur, $currency;
 								</table>
 							</td>
 						  </tr>
-						  <? } 
+						  <?php } 
 						   if($cur['minimumOrder']>$totalprice){?>
 						  <tr>
 						  	<td colspan="3">
 								<table width="100%" border="0" cellspacing="0" cellpadding="0">
 									<tr> 
 									  <td width="6%" rowspan="6" valign="top" class="maintext"><img src="images/gen/spacer.gif" width="25" height="10"></td>
-									  <td width="94%" valign="top" class="maintext"><strong>The minimum order that can be placed is for <? echo $cur['symbol'].$cur['minimumOrder']; ?></strong></td>
+									  <td width="94%" valign="top" class="maintext"><strong>The minimum order that can be placed is for <?php echo $cur['symbol'].$cur['minimumOrder']; ?></strong></td>
 									</tr>
 								</table>
 							</td>
 						  </tr>
-						  <? } 
+						  <?php } 
 						  // reset
 						  $totalprice=0;?>
                           <tr> 
                             <td colspan="3">
 							<table width="100%" border="0" cellspacing="0" cellpadding="0">
-							  <? 							viewOrder($id, "user"); ?>
+							  <?php 							viewOrder($id, "user"); ?>
                           	</table></td>
                           </tr>
                           <tr> 
                             <td colspan="3">
 							<table width="100%" border="0" cellpadding="0" cellspacing="0" class="maintext">
-                                <? 
+                                <?php 
 							 if($totalprice>=50 && $_COOKIE["currency"]==1 && false){ ?>
-                                <? ?>
+                                <?php ?>
                                 <tr> 
                                   <td>&nbsp;</td>
                                   <td width="36%"><a href="../competition.php"><img src="../images/competition.gif" alt="" width="175" height="235" border="0"></a></td>
@@ -117,7 +117,7 @@ global $itemnums, $totalprice, $postage, $oseas, $secure, $cur, $currency;
                                       </tr>
                                     </table></td>
                                 </tr>
-                                <? }
+                                <?php }
 $getFreeGift = false; // removed at identikids request 28.01.2005
 
 							if($totalprice>=$cur['freeGift']  && $getFreeGift){ ?>
@@ -128,7 +128,7 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
                                   <td colspan="3" valign="top"><strong>FREE GIFT<br>
                                     <br>
                                     Congratulations!</strong> Your order is over 
-                                    <? echo $cur['symbol'].$cur['freeGift'];?> 
+                                    <?php echo $cur['symbol'].$cur['freeGift'];?> 
                                     which means you qualify for a <strong>free 
                                     gift package!</strong></td>
                                 </tr>
@@ -146,7 +146,7 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
                                       </tr>
                                     </table></td>
                                 </tr>
-                                <? } 
+                                <?php } 
 							 
 						
 							 
@@ -154,14 +154,14 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
                                 <tr> 
                                   <td width="6%"><img src="images/gen/spacer.gif" width="25" height="10"></td>
                                   <td colspan="3"><strong>Order Subtotal 
-                                    (<? echo $cur['symbol'];?>) :</strong></td>
+                                    (<?php echo $cur['symbol'];?>) :</strong></td>
                                   <td width="3%"><img src="images/gen/spacer.gif" width="10" height="10"></td>
-                                  <td width="18%"> <div align="right"><strong><? echo $cur['symbol'].toDollarsAndCents($totalprice);?><img src="images/gen/spacer.gif" width="10" height="10"></strong></div></td>
+                                  <td width="18%"> <div align="right"><strong><?php echo $cur['symbol'].toDollarsAndCents($totalprice);?><img src="images/gen/spacer.gif" width="10" height="10"></strong></div></td>
                                 </tr>
                                 <tr> 
                                   <td colspan="6"><img src="images/gen/spacer.gif" width="10" height="10"></td>
                                 </tr>
-                                <? 
+                                <?php 
                                 // Postage moved to Next Page
                                 /*
                                  
@@ -180,9 +180,9 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
                                 <tr> 
                                   <td><img src="images/gen/spacer.gif" width="25" height="10"></td>
                                   <td colspan="3"><strong>Postage &amp; Handling</strong><strong> 
-                                    (<? echo $cur['symbol'];?>) :</strong></td>
+                                    (<?php echo $cur['symbol'];?>) :</strong></td>
                                   <td><img src="images/gen/spacer.gif" width="10" height="10"></td>
-                                  <td><div align="right"><strong><?
+                                  <td><div align="right"><strong><?php
 								  	if(isset($_SESSION["post_option"])&& $_SESSION["post_option"]!='Normal'){
 											$sql = "SELECT expresspost FROM currencies WHERE id = 1";
 											$result = mysql_query($sql)or die ("SQL ERROR");
@@ -204,7 +204,7 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
                                 </tr>
                                 
 								<!-- express post option for Australia-->
-							<? if($_COOKIE['currency']==1) {?>
+							<?php if($_COOKIE['currency']==1) {?>
 								
 							<!-- postage options -->	
 								<tr> 
@@ -213,7 +213,7 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
 <table width="100%" border="0" cellspacing="0" cellpadding="5">
                                       <tr>
                                         <td valign="top"><strong> 
-                                          <?PHP if (!isset($_SESSION["post_option"]) || $_GET["change_post"]=="change")
+                                          <?phpPHP if (!isset($_SESSION["post_option"]) || $_GET["change_post"]=="change")
 												  {	
 												  	echo "Please select preferred postage option:";
 												  }
@@ -230,7 +230,7 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
                                       </tr>
                                       <tr> 
                                         <td valign="middle" align="right"> 
-                                          <?PHP if (!isset($_SESSION["post_option"]) || $_GET["change_post"]=="change")
+                                          <?phpPHP if (!isset($_SESSION["post_option"]) || $_GET["change_post"]=="change")
 											  { // Display postage options
 											  	echo" 
 											<form method='post' name='selectpostage' action='select_postage.php'><select name='postage'>
@@ -246,7 +246,7 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
 											?>										
 											<a href="Products"><img src="images/nav/n_buy_more.gif" alt="Buy/View more products" name="Image24" width="83" height="22" border="0"></a>&nbsp;&nbsp;
 											<a href="javascript: document.forms['selectpostage'].submit();" ><img src="images/nav/n_submit.gif" name="Image54" width="68" height="22" border="0"></a></form>
-											<?	}
+											<?php	}
 												else 
 												{
 													//echo "<strong>Postage option chosen: </strong>".$_SESSION["post_option"];
@@ -260,7 +260,7 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
                                   </td>
                                 </tr>
 								<!-- postage options end-->
-								<?PHP  
+								<?phpPHP  
 								 }  */
 								 
 								  ?>
@@ -273,10 +273,10 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
                                     <div align="right"><strong>TOTAL :</strong></div></td>
                                   <td height="30" background="../images/bg_grey.gif" bgcolor="#CCCCCC"><img src="images/gen/spacer.gif" width="10" height="10"></td>
                                   <td height="30" background="../images/bg_grey.gif" bgcolor="#CCCCCC"> 
-                                    <div align="right"><strong><?
+                                    <div align="right"><strong><?php
 									 echo $cur['symbol'].toDollarsAndCents($totalprice+$postage)?><img src="images/gen/spacer.gif" width="10" height="10"></strong></div></td>
                                 </tr> -->
-                                <? }?>
+                                <?php }?>
                               </table></td>
                           </tr>
                           <tr> 
@@ -286,7 +286,7 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
                           </tr>
                           <tr> 
                             <td colspan="3"><!--&& (!isset($_SESSION["express_post"]) || $_SESSION["express_post"]==''))-->
-							<? //if($_COOKIE['currency']==1) {?>
+							<?php //if($_COOKIE['currency']==1) {?>
 						<table width="100%" border="0" cellspacing="0" cellpadding="0">
 
                                 <tr> 
@@ -314,7 +314,7 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
                                 </tr>
                               </table></td>
                           </tr>
-						  <? //}else { ?>
+						  <?php //}else { ?>
 						  <!--	<table width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tr> 
                                   <td width="6%" rowspan="6" valign="top" class="maintext"><img src="images/gen/spacer.gif" width="25" height="10"></td>
@@ -322,10 +322,10 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
                                 </tr>
                                 <tr> 
                                   <td valign="top" class="maintext">Postage &amp; 
-                                    Handling is <? echo $cur['symbol'].$cur['postage'];?></td>
+                                    Handling is <?php echo $cur['symbol'].$cur['postage'];?></td>
                                 </tr>
 							</table> -->
-						  <?// }?>
+						  <?php// }?>
                           <tr> 
                             <td>&nbsp;</td>
                             <td>&nbsp;</td>
@@ -333,7 +333,8 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
                           </tr>
                         </table>
                       </td>
-                      <td width="10" rowspan="3" valign="top" bgcolor="#FFFFFF" class="smalltext"><img src="images/gen/spacer.gif" width="15" height="10"></td>
+                      <td width="10" rowspan="3" valign="top" bgcolor="#FFFFFF" class="smalltext">
+                          <img src="images/gen/spacer.gif" width="15" height="10"></td>
                     </tr>
                     <tr valign="top" bgcolor="#FFFFFF"> 
                       <td><img src="images/gen/spacer.gif" width="10" height="10"></td>
@@ -344,22 +345,22 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
                           <tr> <!-- https://echidnaweb.com.au/~identiki/-->
                             <td width="44%"><a href="javascript:history.go(-1)" ><img src="images/nav/n_back.gif" alt="Back" name="back" width="58" height="22" border="0"></a></td>
                             <td width="4%"><img src="images/gen/spacer.gif" width="10" height="10"></td>
-							<? if($id && $itemnums!=0 && $cur['minimumOrder']<$totalprice ) {
+							<?php if($id && $itemnums!=0 && $cur['minimumOrder']<$totalprice ) {
 							   // && ((isset($_SESSION["post_option"]) && !isset($_GET["change_post"]))|| $_COOKIE['currency']!=1)  ) {
 							?>
                             <td width="52%">
 							<form name="toorderform" method="post" action="order_form_ps.php">
-							<input type="hidden" name="orderid" value="<? echo $id;?>">
-							<input type="hidden" name="postageamount" value="<? echo $postage;?>">
+							<input type="hidden" name="orderid" value="<?php echo $id;?>">
+							<input type="hidden" name="postageamount" value="<?php echo $postage;?>">
 							</form>
 							<a href="javascript: document.forms['toorderform'].submit();"><img src="images/nav/n_pay_now.gif" alt="Check Out" name="Image36" width="80" height="22" border="0"></a></td>
-							<? }?>
+							<?php }?>
                           </tr>
                         </table></td>
 						
                     </tr>
 					
-					  <? if($cur['minimumOrder']>$totalprice){?>
+					  <?php if($cur['minimumOrder']>$totalprice){?>
 					  <tr>
 						<td colspan="3">
 							<table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -368,14 +369,14 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
 								</tr>
 								<tr> 
 								  <td width="6%" rowspan="6" valign="top" class="maintext"><img src="images/gen/spacer.gif" width="25" height="10"></td>
-								  <td width="94%" valign="top" class="maintext"><strong>The minumum order that can be placed is for <? echo $cur['symbol'].$cur['minimumOrder']; ?></strong></td>
+								  <td width="94%" valign="top" class="maintext"><strong>The minumum order that can be placed is for <?php echo $cur['symbol'].$cur['minimumOrder']; ?></strong></td>
 								</tr>
 							</table>
 						</td>
 					  </tr>
-					  <? } ?>
+					  <?php } ?>
                     <tr> 
                       <td colspan="3" valign="top"><img src="images/gen/spacer.gif" width="50" height="10"></td>
                     </tr>
                   </table>
-<? include("footer.php"); ?>
+<?php include("footer.php"); ?>
