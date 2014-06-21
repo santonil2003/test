@@ -17,7 +17,6 @@ imgfol = black_images_folder_path;
 
 
 $('document').ready(function() {
-
     $('.Rainbow_A input[type=radio]:first').attr('checked', 'checked');
 
     $('#designer_options_font_colour span').click(function() {
@@ -117,7 +116,7 @@ $('document').ready(function() {
     $('.details_text_name').keydown(function(event) {
         if (event.keyCode == 32) {
             //$('p.error-msg').html('Space not allowed!');
-           // event.preventDefault();
+            // event.preventDefault();
         } else {
             //$('p.error-msg').html('');
         }
@@ -153,7 +152,7 @@ $('document').ready(function() {
             line2 = line2.substr(0, 19);
             $('p.error-msg').html('Maximum 20 character allowed !');
         }
-        
+
         $(this).val(line2);
 
 

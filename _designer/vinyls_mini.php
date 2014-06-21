@@ -62,13 +62,13 @@ while ($row = mysql_fetch_array($getPrice)) {
         </div>
 
         <!------preview------------->
-        <div style="position: fixed; right: 0px;top:0px;">
+        
         <div id="designer_preview" class="designer_preview_rainbow_a">
             <span class="preview_image" ></span>
             <span class="preview_text" >Preview Text</span>
             <span class="preview_phone" >000 000 000</span>
         </div>
-        </div>
+ 
         <!--@end of preview--------->
 
 
@@ -207,9 +207,9 @@ while ($row = mysql_fetch_array($getPrice)) {
             <strong>Quantity:</strong>
             <select id='order_quantity'>
                 <?php
-                echo "<option value='1'>60 Pencil Labels for AU$ " . $price . "</option>";
-                echo "<option value='2'>120 Pencil Labels for AU$ " . ($price * 2) . "</option>";
-                echo "<option value='3'>180 Pencil Labels for AU$ " . ($price * 3) . "</option>";
+                echo "<option value='1'>60 Mini vinyl Labels for AU$ " . $price . "</option>";
+                echo "<option value='2'>120 Mini vinyl Labels for AU$ " . ($price * 2) . "</option>";
+                echo "<option value='3'>180 Mini vinyl Labels for AU$ " . ($price * 3) . "</option>";
                 ?>
             </select>
         </div>
