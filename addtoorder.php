@@ -605,6 +605,9 @@ break;
 			$record['pic']					= (int)$pic;
 			$record['picon']				= (int)$picon;
 			$record['text1']				= $text1;	// name
+                        if($type==3){
+                            $text2 = trim(str_replace('Ph:','',$text2));
+                        }
 			$record['text2']				= $text2;	// phone
 //			$record['text5'] 				= (int)$text5;
 //			$record['colours']				= (int)form_param('colours'); // rainbox colours
