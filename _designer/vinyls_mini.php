@@ -132,8 +132,7 @@ while ($row = mysql_fetch_array($getPrice)) {
                 $query = mysql_query("SELECT * FROM designer_fonts ORDER BY fontValue");
                 if (mysql_num_rows($query) > 0) {
                     while ($val = mysql_fetch_array($query)) {
-                        $fonts[$val['fontName']] = $val['style'];
-                        $style[$val['fontName']] = $val['style'];
+                        $fonts[$val['fontName']] = $val['link'];
                     }
                 }
 

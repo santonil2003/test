@@ -930,7 +930,6 @@ padding:0;
                     if(mysql_num_rows($query)>0){
                         while($val = mysql_fetch_array($query)){
                             $fonts[$val['fontName']]=$val['fontValue'];
-                            $style[$val['fontName']] = $val['style'];
                         }
                     }                
                 /* designer_fonts
@@ -1137,10 +1136,6 @@ padding:0;
                     echo "</select>";
                 ?>
             </div>
-            
-            
-            
-            
             <div id="designer_submit">
                 <button id="back">< Back</button>
                 <button id="submit">Continue ></button>
