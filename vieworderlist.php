@@ -1075,12 +1075,12 @@ $qdata["text5"] = trim(stripslashes($qdata["text5"]));
 
                     if ($font_colour == '1') {
                     // black
-                    $logo = 'background-image: url(_designer/images/bwl/' . $qdata["pic"] . '.png);';
+                    $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl/' . $qdata["pic"] . '.png);';
                     $fontColor = 'color:#000000;';
 
                     } else {
                     //white
-                    $logo = 'background-image: url(_designer/images/bwl2/' . $qdata["pic"] . '.png);';
+                    $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl2/' . $qdata["pic"] . '.png);';
                     $fontColor = 'color:#ffffff;';
                     }
 
@@ -1111,13 +1111,14 @@ $qdata["text5"] = trim(stripslashes($qdata["text5"]));
                     $class = 'designer_preview_rainbow_b';
                     } else {
                     $class = "individual_preivew";
-                    $style = 'background: url(_designer/images/mini_vinyls/' . $background_colour . '.png) no-repeat scroll 30px 54px transparent;';
+                    $style = 'background: url(http://www.identikid.com.au/_designer/images/mini_vinyls/' . $background_colour . '.png) no-repeat scroll 30px 54px transparent;';
                     }
                     ?>
                     <style>
 
                     </style>
                     <link type="text/css" rel="Stylesheet" href="_designer/css/flash_to_html_vinyls_mini.css" />
+                    <link type="text/css" rel="Stylesheet" href="../_designer/css/flash_to_html_vinyls_mini.css" />
                     <div id="designer_preview" class="<?php echo $class; ?>" style="<?php echo $style; ?>">
                         <span class="preview_image" style="<?php echo $logo; ?>"></span>
                         <span class="preview_text" style="<?php echo $fontfamily; ?>"><?php echo $text1; ?></span>
