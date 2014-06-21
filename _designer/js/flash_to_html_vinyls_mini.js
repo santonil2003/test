@@ -136,7 +136,7 @@ $('document').ready(function() {
 
         $('.preview_text').html(line1);
 
-        $('#text1').val(line1 + ' ' + line2);
+        //$('#text1').val(line1 + ' ' + line2);
     });
 
 
@@ -157,7 +157,7 @@ $('document').ready(function() {
 
 
         $('.preview_phone').html(line2);
-        $('#text1').val(line1 + ' ' + line2);
+        //$('#text1').val(line1 + ' ' + line2);
     });
 
 

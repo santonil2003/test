@@ -33,7 +33,7 @@ while ($row = mysql_fetch_array($getPrice)) {
     <input type="hidden" name="split" value="1" id="split"/>
     <input type="hidden" name="pic" value="1" id="pic"/>
     <input type="hidden" name="picon" value="1" id="picon"/>
-    <input type="hidden" name="text1" value="" id="text1"/>
+    <!--<input type="hidden" name="text1" value="" id="text1"/>-->
 
 
     <input type="hidden" name="identitag_code" value="" id="identitag_code"/>
@@ -80,8 +80,8 @@ while ($row = mysql_fetch_array($getPrice)) {
                 <span><input type="checkbox" checked="checked" name="details_checkbox_pic" class="details_checkbox_pic" /> Pic</span>
             </p>
             <p>
-                <strong>Line 1:</strong> <input type="text" class="details_text_name"/> 
-                <strong>Line 2:</strong> <input type="text" class="details_text_phone"/> 
+                <strong>Line 1:</strong> <input type="text" class="details_text_name" name="text1"/> 
+                <strong>Line 2:</strong> <input type="text" class="details_text_phone" name="text2"/> 
             </p>
             <p class="error-msg"></p>
         </div>
