@@ -11,12 +11,8 @@ if (isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
             $dbname='identikid';
         }
 
-
-
 mysql_connect($dbhost,$dbuser,$dbpass);
 mysql_select_db($dbname);
-
-
 
 ?>
 <style>
@@ -372,11 +368,11 @@ mysql_select_db($dbname);
            
            $("#submit").click(function(){
                
-               if(_font==3){
-                   _font=4;
-                }else if(_font==4){
-                    _font=3;
-                }
+//               if(_font==3){
+//                   _font=4;
+//                }else if(_font==4){
+//                    _font=3;
+//                }
                
               /*alert(  _type+"\n"+
                       _price+"\n"+
@@ -929,7 +925,7 @@ padding:0;
                     $query = mysql_query("SELECT * FROM designer_fonts ORDER BY fontValue");
                     if(mysql_num_rows($query)>0){
                         while($val = mysql_fetch_array($query)){
-                            $fonts[$val['fontName']]=$val['fontValue'];
+                            $fonts[$val['fontName']]=$val['link'];
                         }
                     }                
                 /* designer_fonts
