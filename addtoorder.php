@@ -637,7 +637,12 @@ break;
 				$text2="";
 			}else{
 			  if(strpos($_POST["text2"],"Ph:")===false && $_POST["text2"]!="" && $type!=8) {
-			    $text2 = "Ph: ".$_POST["text2"];
+                            if($_POST['text2']){
+                                 $text2 = $_POST["text2"];
+                            } else {
+                                 $text2 = "Ph: ".$_POST["text2"];
+                            }
+			   
 			  } else {
 			    $text2=$_POST["text2"];
 			  }

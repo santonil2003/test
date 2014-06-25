@@ -10,10 +10,8 @@ if (isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
             $dbpass='id4$cTe';
             $dbname='identikid';
         }
-
 mysql_connect($dbhost,$dbuser,$dbpass);
 mysql_select_db($dbname);
-
 ?>
 <style>
     .error-msg{
@@ -46,9 +44,7 @@ mysql_select_db($dbname);
                     $price = $row['price'];
                 }
            ?>
-           
-           
-            var _bwImage = "";
+           var _bwImage = "";
            var _showName = 1;
            var _showPhone = 1;
            var _showImage = 1;
@@ -273,14 +269,10 @@ mysql_select_db($dbname);
            $("input","#designer_options_colours").click(function(){
               var col;
               $("span","#designer_options_colours").removeClass("selected");
-              if($(this).prop("class")=="Individual"){ 
-                  
-                 
+              if($(this).prop("class")=="Individual"){                  
                   var parent = $(this).parent();
-                 
                   col = $("span",parent).first().prop("class");
                   $("span",parent).first().addClass("selected");
-                  
               }else{
                   col = $(this).prop("class"); 
               }
@@ -367,13 +359,13 @@ mysql_select_db($dbname);
            });
            
            $("#submit").click(function(){
-               
-//               if(_font==3){
-//                   _font=4;
-//                }else if(_font==4){
-//                    _font=3;
-//                }
-               
+              /* 
+               if(_font==3){
+                   _font=4;
+                }else if(_font==4){
+                    _font=3;
+                }
+               */
               /*alert(  _type+"\n"+
                       _price+"\n"+
                       _bwImage+"\n"+
