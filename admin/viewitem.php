@@ -1,4 +1,5 @@
-<?
+<?php
+ini_set('display_errors', '0');
 //print_r($_REQUEST);
 $id = $_REQUEST['id'];
 $showperpage = $_REQUEST['showperpage'];
@@ -182,7 +183,7 @@ body {
 <table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%"> 
 	<tr> 
 		<td valign="top" align="center"> 
-			<table cellpadding="0" cellspacing="0" border="0" bgcolor="#5D7EB9">
+			<table cellpadding="0" cellspacing="0" border="0" bgcolor="">
         <tr class="noshow"> 
           <td colspan=3><img src="../images/spacer_trans.gif" height="10" width="330" border="0"></td>
         </tr>
@@ -201,7 +202,7 @@ body {
         <input type="hidden" name="showperpage" value="<? echo $showperpage;?>">
         <input type="hidden" name="startrecord" value="<? echo $startrecord;?>">
         <tr> 
-          <td valign="top"> <table cellpadding="0" cellspacing="0" border="0" bgcolor="#5D7EB9">
+          <td valign="top"> <table cellpadding="0" cellspacing="0" border="0" bgcolor="">
               <tr  class="noshow"> 
                 <td colspan=3><img src="../images/spacer_trans.gif" height="10" width="1" border="0"></td>
               </tr>
@@ -367,7 +368,7 @@ body {
               </tr>
             </table></td>
           <td><img src="../images/spacer_trans.gif" height="1" width="1" border="0"></td>
-          <td valign="top"> <table cellpadding="0" cellspacing="0" border="0" bgcolor="#5D7EB9">
+          <td valign="top"> <table cellpadding="0" cellspacing="0" border="0" bgcolor="">
               <tr> 
                 <td><img src="../images/spacer_trans.gif" height="10" width="130" border="0"></td>
                 <td><img src="../images/spacer_trans.gif" height="1" width="5" border="0"></td>
