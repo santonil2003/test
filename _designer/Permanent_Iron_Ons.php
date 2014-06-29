@@ -22,6 +22,7 @@ while ($row = mysql_fetch_array($getPrice)) {
 ?>
 </script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<link type="text/css" rel="Stylesheet" href="css/designer-common.css" />
 <link type="text/css" rel="Stylesheet" href="css/Permanent_Iron_Ons.css" />
 <script src="js/Permanent_Iron_Ons.js"></script>
 
@@ -45,7 +46,7 @@ while ($row = mysql_fetch_array($getPrice)) {
     <input type="hidden" name="type" value="<?php echo $type; ?>" id="type"/>
     <input type="hidden" name="quantdesc" value="1" id="quantdesc"/>
 
-    <input type="hidden" name="submit" value="Submit" id="Submit"/>
+    <input type="hidden" name="submit" value="Submit"/>
 
 
 
@@ -58,7 +59,7 @@ while ($row = mysql_fetch_array($getPrice)) {
         <div id="designer_preview_text">
             Format will be improved prior to Print.<br />
             This is just a idea of how the label font,colours and pic look.<br />
-            Actual label size L 50mm  H 9mm
+            Actual label size L 50mm  H 16mm
         </div>
 
         <!------preview------------->

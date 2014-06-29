@@ -1,3 +1,6 @@
+<link type="text/css" rel="Stylesheet" href="_designer/css/designer-common.css" />
+<link type="text/css" rel="Stylesheet" href="../_designer/css/designer-common.css" />
+
 <?php
 ini_set('display_errors', '0');
 if (isset($_COOKIE["currency"])) {
@@ -1114,15 +1117,14 @@ $qdata["text5"] = trim(stripslashes($qdata["text5"]));
                     $style = 'background: url(http://www.identikid.com.au/_designer/images/mini_vinyls/' . $background_colour . '.png) no-repeat scroll 30px 54px transparent;';
                     }
                     ?>
-                    <style>
-
-                    </style>
                     <link type="text/css" rel="Stylesheet" href="_designer/css/flash_to_html_vinyls_mini.css" />
                     <link type="text/css" rel="Stylesheet" href="../_designer/css/flash_to_html_vinyls_mini.css" />
+                    <div id="vinyls-mini">
                     <div id="designer_preview" class="<?php echo $class; ?>" style="<?php echo $style; ?>">
                         <span class="preview_image" style="<?php echo $logo; ?>"></span>
                         <span class="preview_text" style="<?php echo $fontfamily; ?>"><?php echo $text1; ?></span>
                         <span class="preview_phone" style="<?php echo $fontfamily; ?>"><?php echo $text2; ?></span>
+                    </div>
                     </div>
                     <!--
                     <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
@@ -1153,7 +1155,7 @@ $qdata["text5"] = trim(stripslashes($qdata["text5"]));
                         <EMBED FlashVars="<?php echo $swfstring; ?>" src="<? echo $aim;?>images/display_shoe.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_shoe" ALIGN=""
                                TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
                     </OBJECT>
-                    <?
+                    <?php
                     }else if($qdata["type"]==5){
                     $width = "170";
                     $height = "32";
@@ -1173,9 +1175,42 @@ $qdata["text5"] = trim(stripslashes($qdata["text5"]));
                     $background_colour = $qdata['data_colour_id'];
                     $font_colour = $qdata['data_font_colour_id'];
                     }
+                    
+                    $fontColor = ($font_colour == '1') ? 'color:#000000;' : 'color:#ffffff;';
+       
+                    $sql = "select * from designer_fonts";
+                    $res = mysql_query($sql);
+                    $fontName = array();
+                    while($row = mysql_fetch_assoc($res)) {
+                    $fontName[$row['link']] = $row['fontName'];
+                    }
+
+                    $style = '';
+                    $fontfamily = 'font-family:'.$fontName[$qdata["font"]].';'.$fontColor;
+
+                    if ($background_colour == 9) {
+                    $class = 'designer_preview_rainbow_a';
+                    } else if ($background_colour == 10) {
+                    $class = 'designer_preview_rainbow_b';
+                    } else {
+                    $class = "individual_preivew";
+                    $style = 'background: url(http://www.identikid.com.au/_designer/images/pencil/'.$background_colour.'.png) no-repeat scroll 30px 54px rgba(0, 0, 0, 0);';
+                    }
+                    
+                    
 
                     $swfstring = "type=".$qdata["type"]."&pic=".$qdata["pic"]."&text1=".urlencode($qdata["text1"])."&font=".$qdata["font"]."&picon=".$qdata["picon"]."&background_colour=" . (int)$background_colour . "&font_colour=" . $font_colour;
+                    $flash = false;
                     ?>
+                    <link type="text/css" rel="Stylesheet" href="_designer/css/pencil_labels.css" />
+                    <link type="text/css" rel="Stylesheet" href="../_designer/css/pencil_labels.css" />
+                    <div id="pencil_labels" style="marging:0px;padding:0px;">
+                    <div id="designer_preview" class="<?php echo $class;?>" style="<?php echo $style;?>">
+                        <span class="preview_text" style="<?php echo $fontColor;?>"><?php echo $qdata["text1"];?></span>
+                    </div>
+                    </div>
+                    
+                    <?php if($flash): ?>
                     <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
                             codebase="<? echo $codebase;?>"
                             WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" id="display_pencil" ALIGN="">
@@ -1185,6 +1220,7 @@ $qdata["text5"] = trim(stripslashes($qdata["text5"]));
                         <EMBED FlashVars="<?php echo $swfstring; ?>" src="<? echo $aim;?>images/display_pencil.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_shoe" ALIGN=""
                                TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
                     </OBJECT>
+                    <?php endif; ?>
                     <?
                     }else if($qdata["type"]==8 || $qdata["type"]==9){
                     $width = "195";

@@ -3,6 +3,9 @@ require_once '../common_db.php';
 require_once 'include.php';
 linkme();
 ?>  
+<link type="text/css" rel="Stylesheet" href="css/designer-common.css" />
+<link type="text/css" rel="Stylesheet" href="css/pencil_labels.css" />
+<script src="js/pencil_labels.js"></script>
 <script>
     var _colourArray = new Array();
 <?php

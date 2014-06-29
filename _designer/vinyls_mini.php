@@ -22,10 +22,11 @@ while ($row = mysql_fetch_array($getPrice)) {
 ?>
 </script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<link type="text/css" rel="Stylesheet" href="css/designer-common.css" />
 <link type="text/css" rel="Stylesheet" href="css/flash_to_html_vinyls_mini.css" />
 <script src="js/flash_to_html_vinyls_mini.js"></script>
 
-<form action="/addtoorder.php" method="post" target="_top" id="pencil_labels">
+<form action="/addtoorder.php" method="post" target="_top" id="vinyls-mini">
 
     <input type="hidden" name="background_colour" value="9" id="background_colour"/>
     <input type="hidden" name="font" value="3" id="font"/>
@@ -45,7 +46,7 @@ while ($row = mysql_fetch_array($getPrice)) {
     <input type="hidden" name="type" value="<?php echo $type; ?>" id="type"/>
     <input type="hidden" name="quantdesc" value="1" id="quantdesc"/>
 
-    <input type="hidden" name="submit" value="Submit" id="Submit"/>
+    <input type="hidden" name="submit" value="Submit" id=""/>
 
 
 
@@ -56,9 +57,9 @@ while ($row = mysql_fetch_array($getPrice)) {
 
     <div id="designer_container">
         <div id="designer_preview_text">
-            Format will be improved prior to Print.<br />
-            This is just a idea of how the label font,colours and pic look.<br />
-            Actual label size L 50mm  H 9mm
+             Format will be improved prior to Print.
+This is just a idea of how the label font,colours and pic look.
+Actual label size L 50mm H 9mm
         </div>
 
         <!------preview------------->

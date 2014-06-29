@@ -1,0 +1,234 @@
+ol,ul{padding:0;margin:0;}       
+
+ul,li{list-style:none;}
+/*li{float:left;}*/
+strong{display:block;clear:both;}
+
+#pencil_labels .preview_image_set{
+    position:absolute;
+    top:12px;
+    left:10px;
+
+}
+
+#pencil_labels #designer_options_picture ul li{
+    width:32px;
+    height:32px;
+    border:solid 2px #666;
+    padding:1px;
+    margin:2px;
+}
+#pencil_labels .font_colour_black,#pencil_labels .font_colour_white{border:solid 1px #666;}
+#pencil_labels .font_colour_black{width:20px;height:20px;background:#000000;display:inline-block;}
+#pencil_labels .font_colour_white{width:20px;height:20px;background:#ffffff;display:inline-block;}
+
+#pencil_labels #designer_options_picture ul li{
+    width:60px;
+    height:60px;
+    border:solid 2px #666;
+    padding:1px;
+    margin:2px;
+}
+
+#pencil_labels .preview_image{
+    width:60px;
+    height:60px;
+}
+#pencil_labels .preview_image_set{
+    width:45px;
+    height:25px;
+    display:inline-block;
+}
+
+#pencil_labels #designer_options_colours ul li{float:none;height:50px; cursor:pointer;}
+#pencil_labels #designer_options_colours ul li span{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    float:left;
+    margin:2px;
+    border:solid 2px #666;
+}
+
+#pencil_labels .selected{
+    border:solid 2px #00B0E0 !important
+};
+
+
+
+#pencil_labels #designer_options_identitags{
+    display:block;
+    width:450px;
+}
+#pencil_labels #designer_options_identitags ul.tags{
+    width:450px;
+}
+
+#pencil_labels .box{
+    position:relative;
+    clear:both;
+    margin-bottom:20px;
+    margin: 0 auto;
+    width: 300px;
+}
+#pencil_labels #designer_options_details strong{display:inline;clear:none;}
+#pencil_labels #designer_options_details{text-align:center;}
+
+#pencil_labels #designer_options_font{
+    /*float:left;*/
+    width:275px;
+    text-align:left;
+    margin-bottom:30px;
+}
+#pencil_labels #designer_options_font li {
+    font-size:28px;
+    float:none;
+}
+
+#pencil_labels #designer_options_font_colour{
+    /*float:left;*/
+    width:170px;
+    text-align:left;
+}
+#pencil_labels #designer_options_font_colour{
+
+    margin-bottom:30px;
+}
+
+#pencil_labels #designer_options_font_colour span {
+    cursor:pointer;
+}
+#pencil_labels #designer_options_colours{
+    /*float:left;*/
+    width:350px;
+    text-align:left;
+    margin-bottom:30px;
+}
+
+#pencil_labels #designer_options_label ul li{float:none;}
+
+#pencil_labels #designer_options_identitags{
+    text-align:left;
+}
+#pencil_labels #designer_options_identitags input{
+    margin-left:50px;
+    font-weight:bold;
+}
+
+#pencil_labels #designer_options_label{
+    position:absolute;
+    top:0;
+    right:0;
+    width:320px;
+}
+
+#pencil_labels #designer_options_ironon_colour{
+    position:absolute;
+    top:200px;
+    right:0;
+    width:320px;
+}
+
+#pencil_labels #designer_options_ironon_colour ul li span{
+    width:20px;
+    height:20px;
+    display:inline-block;
+    border:solid 2px #666;
+}
+
+button{
+    color:#ffffff;
+    background:#00B0E0;
+    border:solid 2px #000000;
+    padding:5px 10px;
+    margin:5px;
+}
+
+#pencil_labels #designer_preview {
+    position:relative;
+}
+
+
+#pencil_labels .designer_preview_rainbow_a {
+    overflow: hidden;
+    height: 106px;
+    width: 410px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    background: url(../images/pencil/rainbow-a.png) no-repeat scroll 0px 0px transparent;
+}
+
+#pencil_labels .designer_preview_rainbow_a .preview_text{
+    display: block;
+    font-family: comic_sans_msregular;
+    font-size: 22px;
+    /*line-height: 1;*/
+    position: absolute;
+    text-align: center;
+    top: 62px;
+    width: 320px;
+    left:0px;
+}
+
+
+
+#pencil_labels .designer_preview_rainbow_b {
+    overflow: hidden;
+    height: 106px;
+    width: 410px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    background: url(../images/pencil/rainbow-b.png) no-repeat scroll 0% 0% transparent;
+}
+
+#pencil_labels .designer_preview_rainbow_b .preview_text{
+    display: block;
+    font-family: comic_sans_msregular;
+    font-size: 22px;
+    /*line-height: 1;*/
+    position: absolute;
+    text-align: center;
+    top: 62px;
+    width: 330px;
+    left:0px;
+}
+
+#pencil_labels .individual_preivew {
+    overflow: hidden;
+    padding: 26px 42px;
+    height: 54px;
+    width: 326px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    background: url("../images/pencil/1.png") no-repeat scroll 30px 54px rgba(0, 0, 0, 0);
+    left:0px;
+}
+
+#pencil_labels .individual_preivew .preview_text{
+    display: block;
+    font-family: comic_sans_msregular;
+    font-size: 22px;
+    line-height: 1;
+    position: absolute;
+    text-align: center;
+    top: 68px;
+    width: 300px;
+}
+
+#pencil_labels #designer_preview_text{
+    color: #3A768F;
+    font-size: 10px;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    top: 25px;
+    width: 190px;
+}
+
+#pencil_labels .error-msg{
+    color: red;
+}
+
+#pencil_labels .detial_text_label{
+    font-size: 18px;
+}
