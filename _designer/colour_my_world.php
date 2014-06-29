@@ -662,6 +662,7 @@ document.getElementsByTagName('form')[0].submit();
                 margin:0 auto;
                 border:solid 2px #efefef;
                 position:relative;
+                text-align: center;
             }
             
             

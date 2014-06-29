@@ -99,8 +99,12 @@ $('document').ready(function() {
 
         var span_class_string = $(this).attr('class');
         var span_class = span_class_string.split(" ");
-        var image_name = _colourArray.indexOf(span_class[0]);
-        $('#designer_preview').css('background', 'url(images/mini_vinyls/' + image_name + '.png) no-repeat 30px 54px rgba(0, 0, 0, 0)');
+        
+        var individual_color = span_class[0];
+        var image_name = $.inArray( individual_color, _colourArray);
+        image_no = image_name.toString();
+
+        $('#designer_preview').css('background', 'url(images/mini_vinyls/' + image_no + '.png) no-repeat 30px 54px rgba(0, 0, 0, 0)');
 
         /* update form element*/
         $('#background_colour').val(image_name);

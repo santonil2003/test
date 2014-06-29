@@ -282,6 +282,7 @@ button{
     text-align: center;
     top: 100px;
     width: 320px;
+    left:0px;
 }
 
 .designer_preview_rainbow_a .preview_phone{
@@ -293,6 +294,7 @@ button{
     text-align: center;
     top: 136px;
     width: 320px;
+    left:0px;
 }
 
 
@@ -313,6 +315,7 @@ button{
     text-align: center;
     top: 100px;
     width: 320px;
+    left:0px;
 }
 
 .designer_preview_rainbow_b .preview_phone{
@@ -324,6 +327,7 @@ button{
     text-align: center;
     top: 136px;
     width: 320px;
+    left:0px;
 }
 
 .preview_image{

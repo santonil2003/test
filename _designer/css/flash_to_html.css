@@ -277,11 +277,12 @@ button{
     display: block;
     font-family: comic_sans_msregular;
     font-size: 22px;
-    line-height: 1;
+    /*line-height: 1;*/
     position: absolute;
     text-align: center;
-    top: 68px;
+    top: 62px;
     width: 320px;
+    left:0px;
 }
 
 
@@ -299,11 +300,12 @@ button{
     display: block;
     font-family: comic_sans_msregular;
     font-size: 22px;
-    line-height: 1;
+    /*line-height: 1;*/
     position: absolute;
     text-align: center;
-    top: 68px;
+    top: 62px;
     width: 330px;
+    left:0px;
 }
 
 .individual_preivew {
@@ -314,6 +316,7 @@ button{
     margin: 0 auto;
     margin-bottom: 25px;
     background: url("../images/pencil/1.png") no-repeat scroll 30px 54px rgba(0, 0, 0, 0);
+    left:0px;
 }
 
 .individual_preivew .preview_text{
