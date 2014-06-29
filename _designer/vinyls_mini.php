@@ -217,7 +217,7 @@ Actual label size L 50mm H 9mm
 
         <div id="designer_submit">
             <button id="back">< Back</button>
-            <button id="submit">Continue ></button>
+            <button id="submit" onclick="$('#vinyls-mini').submit()">Continue ></button>
         </div>
     </div>
 </div>

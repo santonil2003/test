@@ -26,7 +26,7 @@ while ($row = mysql_fetch_array($getPrice)) {
 <link type="text/css" rel="Stylesheet" href="css/Permanent_Iron_Ons.css" />
 <script src="js/Permanent_Iron_Ons.js"></script>
 
-<form action="/addtoorder.php" method="post" target="_top" id="pencil_labels">
+<form action="/addtoorder.php" method="post" target="_top" id="permanent-iron-ons">
 
     <input type="hidden" name="background_colour" value="1" id="background_colour"/>
     <input type="hidden" name="font" value="3" id="font"/>
@@ -219,14 +219,9 @@ while ($row = mysql_fetch_array($getPrice)) {
 
         <div id="designer_submit">
             <button id="back">< Back</button>
-            <button id="submit">Continue ></button>
+            <button id="submit" onclick="$('#permanent-iron-ons').submit()">Continue ></button>
         </div>
     </div>
 </div>
 </form>
-<script>
-    $('document').ready(function(){
-      
-    });
-</script>
 

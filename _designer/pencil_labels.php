@@ -148,7 +148,7 @@ while ($row = mysql_fetch_array($getPrice)) {
 
         <div id="designer_submit">
             <button id="back">< Back</button>
-            <button id="submit">Continue ></button>
+            <button id="submit" onclick="$('#pencil_labels').submit()">Continue ></button>
         </div>
     </div>
 </div>
