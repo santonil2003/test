@@ -23,10 +23,10 @@ function default_error_handler($errno, $errstr, $errfile, $errline)
 	}
 	elseif($errno == E_USER_NOTICE)
 	{
-		if(isset($db))$db->closeDb();
-		include(SITE_DIR.'_pages/_notice.php');
-		include('footer_new.php');
-		exit;
+		//if(isset($db))$db->closeDb();
+		//include(SITE_DIR.'_pages/_notice.php');
+		//include('footer_new.php');
+		//exit;
 	}
 }
 set_error_handler('default_error_handler');
