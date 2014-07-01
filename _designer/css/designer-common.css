@@ -112,3 +112,15 @@ body{
     padding-top: 5px;
     overflow:hidden;
 }
+
+.required-field {
+    border: red dashed 1px;
+}
+
+.btn {
+     background: none repeat scroll 0 0 #00B0E0;
+    border: 2px solid #000000;
+    color: #FFFFFF;
+    margin: 5px;
+    padding: 5px 10px;
+}

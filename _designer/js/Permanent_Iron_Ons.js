@@ -215,6 +215,41 @@ $('document').ready(function() {
     });
 
     // make font selected
-    $('li.4').trigger('click');
+    $('li.3').trigger('click');
+
+     // make white default
+    $('.font_colour_white').trigger('click');
+
+    // make default background blue
+    $("span.16BCEF").trigger('click');
+
+    // on submit
+
+    $('#permanent-iron-ons').submit(function(e){
+
+        $('.details_text_name').removeClass('required-field');
+        $('.details_text_phone').removeClass('required-field');
+        
+        var line1 = $('.details_text_name').val();
+
+        if(line1.length<=0) {
+            $('.details_text_name').addClass('required-field');
+            $('.details_text_name').focus();
+            e.preventDefault();
+        }
+
+        // if line 2 included
+        if ($('.details_checkbox_phone').is(':checked')) {
+            var line2 = $('.details_text_phone').val();
+            if(line2.length<=0) {
+                $('.details_text_phone').addClass('required-field');
+                $('.details_text_phone').focus();
+                e.preventDefault();
+            }
+        }
+
+    });
+
+
 
 });

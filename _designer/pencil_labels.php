@@ -5,6 +5,19 @@ linkme();
 ?>  
 <link type="text/css" rel="Stylesheet" href="css/designer-common.css" />
 <link type="text/css" rel="Stylesheet" href="css/pencil_labels.css" />
+<!--[if IE]>
+  <script type="text/javascript">
+   var scroll_x = '0px';
+   var scroll_y = '0px';
+  </script>
+<![endif]-->
+
+<!--[if !IE]>
+     <script type="text/javascript">
+       var scroll_x = '30px';
+       var scroll_y = '54px';
+    </script>
+<![endif]-->
 <script src="js/pencil_labels.js"></script>
 <script>
     var _colourArray = new Array();
@@ -40,12 +53,7 @@ while ($row = mysql_fetch_array($getPrice)) {
     <input type="hidden" name="type" value="<?php echo $type; ?>" id="type"/>
     <input type="hidden" name="quantdesc" value="1" id="quantdesc"/>
     <input type="hidden" name="picon" value="0" id="picon"/>
-    <input type="hidden" name="submit" value="Submit" id="Submit"/>
-
-
-
-
-
+    <input type="hidden" name="submit" value="Submit"/>
 
 
 
@@ -56,12 +64,11 @@ while ($row = mysql_fetch_array($getPrice)) {
             Actual label size L 50mm  H 9mm
         </div>
 
-        <!------preview------------->
+      
         <div id="designer_preview" class="designer_preview_rainbow_a">
             <span class="preview_text" >Preview Text</span>
         </div>
-        <!--@end of preview--------->
-
+       
         <div class="box">
             <div id="designer_options_details">
                 <p>
@@ -122,7 +129,8 @@ while ($row = mysql_fetch_array($getPrice)) {
                     echo "</div><input style='float:left' type='radio' name='colour[]' value='" . $colourName . "' class='" . $colourName . "' id='$id'>";
                     $colours = explode(",", $colourSet);
                     foreach ($colours as $colour) {
-                        echo "<span style='background:" . $colour . "' class='" . $colour . "' onclick=checkradio('$id')></span>";
+                        $class = str_replace('#','',$colour);
+                        echo "<span style='background:" . $colour . "' class='" . $colour ." ".$class. "' onclick=checkradio('$id')></span>";
                     }
                     echo "</li>";
                 }
@@ -133,7 +141,9 @@ while ($row = mysql_fetch_array($getPrice)) {
 
 
         </div>
-    </div>
+
+
+   
     <div class='box' style='text-align:center;'>
         <div id="designer_options_quantity">
             <strong>Quantity:</strong>
@@ -148,9 +158,9 @@ while ($row = mysql_fetch_array($getPrice)) {
 
         <div id="designer_submit">
             <button id="back">< Back</button>
-            <button id="submit" onclick="$('#pencil_labels').submit()">Continue ></button>
+            <input type="submit" Value="Continue >" class='btn'/>
         </div>
     </div>
-</div>
+ </div>
 </form>
 

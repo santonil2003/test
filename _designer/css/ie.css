@@ -1,8 +1,11 @@
-.individual_preivew {
+
+
+
+#pencil_labels .individual_preivew {
     height: 106px;
     width: 356px;
 }
 
-.individual_preivew .preview_text{
+#pencil_labels .individual_preivew .preview_text{
 	left:40px;
 }

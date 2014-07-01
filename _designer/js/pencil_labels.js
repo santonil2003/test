@@ -68,7 +68,7 @@ $('document').ready(function() {
         var image_name = $.inArray( individual_color, _colourArray);
         image_no = image_name.toString();
 
-        $('#designer_preview').css('background', 'url(images/pencil/' + image_name + '.png) no-repeat 30px 54px');
+        $('#designer_preview').css('background', 'url(images/pencil/' + image_name + '.png) no-repeat '+scroll_x+' '+scroll_y);
 
         /* update form element*/
         $('#background_colour').val(image_name);
@@ -95,10 +95,34 @@ $('document').ready(function() {
         $('#text1').val(content);
     });
 
+    
+
 
     $('#order_quantity').change(function() {
         $('#quantdesc').val($(this).val());
         var price = _price * $(this).val();
         $('#price').val(price);
+    });
+
+    // make default color white
+    $('span.font_colour_white').trigger('click');
+
+    // make default background blue
+    $("span.029ae1").trigger('click');
+
+    $('#pencil_labels input').click(function(){
+       $(this).removeClass('required-field');
+    });
+
+    $('#pencil_labels').submit(function(e){
+        $('.details_text_name').removeClass('required-field');
+        
+        var line1 = $('.details_text_name').val();
+
+        if(line1.length<=0) {
+            $('.details_text_name').addClass('required-field');
+            $('.details_text_name').focus();
+            e.preventDefault();
+        }
     });
 });

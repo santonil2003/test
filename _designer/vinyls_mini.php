@@ -1,5 +1,7 @@
 <?php
 require_once '../common_db.php';
+require_once 'include.php';
+
 linkme();
 ?>  
 <script>
@@ -21,7 +23,6 @@ while ($row = mysql_fetch_array($getPrice)) {
 }
 ?>
 </script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <link type="text/css" rel="Stylesheet" href="css/designer-common.css" />
 <link type="text/css" rel="Stylesheet" href="css/flash_to_html_vinyls_mini.css" />
 <script src="js/flash_to_html_vinyls_mini.js"></script>
@@ -61,8 +62,6 @@ while ($row = mysql_fetch_array($getPrice)) {
 This is just a idea of how the label font,colours and pic look.
 Actual label size L 50mm H 9mm
         </div>
-
-        <!------preview------------->
         
         <div id="designer_preview" class="designer_preview_rainbow_a">
             <span class="preview_image" ></span>
@@ -70,7 +69,7 @@ Actual label size L 50mm H 9mm
             <span class="preview_phone" >000 000 000</span>
         </div>
  
-        <!--@end of preview--------->
+
 
 
         <div id="designer_options_details">
@@ -202,7 +201,6 @@ Actual label size L 50mm H 9mm
                 </div>
             </div>
         </div>
-    </div>
     <div class='box' style='text-align:center;'>
         <div id="designer_options_quantity">
             <strong>Quantity:</strong>
@@ -217,7 +215,7 @@ Actual label size L 50mm H 9mm
 
         <div id="designer_submit">
             <button id="back">< Back</button>
-            <button id="submit" onclick="$('#vinyls-mini').submit()">Continue ></button>
+            <input type="submit" Value="Continue >" class='btn'/>
         </div>
     </div>
 </div>

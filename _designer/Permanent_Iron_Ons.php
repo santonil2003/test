@@ -1,5 +1,6 @@
 <?php
 require_once '../common_db.php';
+require_once 'include.php';
 linkme();
 ?>  
 <script>
@@ -21,7 +22,6 @@ while ($row = mysql_fetch_array($getPrice)) {
 }
 ?>
 </script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <link type="text/css" rel="Stylesheet" href="css/designer-common.css" />
 <link type="text/css" rel="Stylesheet" href="css/Permanent_Iron_Ons.css" />
 <script src="js/Permanent_Iron_Ons.js"></script>
@@ -61,16 +61,12 @@ while ($row = mysql_fetch_array($getPrice)) {
             This is just a idea of how the label font,colours and pic look.<br />
             Actual label size L 50mm  H 16mm
         </div>
-
-        <!------preview------------->
         
         <div id="designer_preview" class="individual_preivew" style="background: url(images/mini_vinyls/1.png) no-repeat scroll 30px 54px transparent;">
             <span class="preview_image" ></span>
             <span class="preview_text" >Preview Text</span>
             <span class="preview_phone" >000 000 000</span>
         </div>
- 
-        <!--@end of preview--------->
 
 
         <div id="designer_options_details">
@@ -194,7 +190,8 @@ while ($row = mysql_fetch_array($getPrice)) {
                         echo "</div><input style='float:left' type='radio' name='colour[]' value='" . $colourName . "' class='" . $colourName . "' id='$id' checked='checked'>";
                         $colours = explode(",", $colourSet);
                         foreach ($colours as $colour) {
-                            echo "<span style='background:" . $colour . "' class='" . $colour . "' onclick=checkradio('$id')></span>";
+                            $class = str_replace('#','',$colour);
+                            echo "<span style='background:" . $colour . "' class='" . $colour ." ".$class. "' onclick=checkradio('$id')></span>";
                         }
                         echo "</li>";
                     }
@@ -204,7 +201,6 @@ while ($row = mysql_fetch_array($getPrice)) {
                 </div>
             </div>
         </div>
-    </div>
     <div class='box' style='text-align:center;'>
         <div id="designer_options_quantity">
             <strong>Quantity:</strong>
@@ -219,7 +215,7 @@ while ($row = mysql_fetch_array($getPrice)) {
 
         <div id="designer_submit">
             <button id="back">< Back</button>
-            <button id="submit" onclick="$('#permanent-iron-ons').submit()">Continue ></button>
+            <input type="submit" Value="Continue >" class='btn'/>
         </div>
     </div>
 </div>
