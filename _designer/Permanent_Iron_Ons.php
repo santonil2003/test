@@ -22,7 +22,6 @@ while ($row = mysql_fetch_array($getPrice)) {
 }
 ?>
 </script>
-<link type="text/css" rel="Stylesheet" href="css/designer-common.css" />
 <link type="text/css" rel="Stylesheet" href="css/Permanent_Iron_Ons.css" />
 <script src="js/Permanent_Iron_Ons.js"></script>
 

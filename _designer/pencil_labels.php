@@ -2,23 +2,9 @@
 require_once '../common_db.php';
 require_once 'include.php';
 linkme();
-?>  
-<link type="text/css" rel="Stylesheet" href="css/designer-common.css" />
-<link type="text/css" rel="Stylesheet" href="css/pencil_labels.css" />
-<!--[if IE]>
-  <script type="text/javascript">
-   var scroll_x = '0px';
-   var scroll_y = '0px';
-  </script>
-<![endif]-->
-
-<!--[if !IE]>
-     <script type="text/javascript">
-       var scroll_x = '30px';
-       var scroll_y = '54px';
-    </script>
-<![endif]-->
+?>
 <script src="js/pencil_labels.js"></script>
+<link type="text/css" rel="Stylesheet" href="css/pencil_labels.css" />
 <script>
     var _colourArray = new Array();
 <?php

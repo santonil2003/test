@@ -2,8 +2,8 @@
 
 
 #pencil_labels .individual_preivew {
-    height: 106px;
-    width: 356px;
+    height: 106px !important;
+    width: 355px !important;
 }
 
 #pencil_labels .individual_preivew .preview_text{

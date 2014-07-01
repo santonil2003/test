@@ -68,7 +68,7 @@ $('document').ready(function() {
         var image_name = $.inArray( individual_color, _colourArray);
         image_no = image_name.toString();
 
-        $('#designer_preview').css('background', 'url(images/pencil/' + image_name + '.png) no-repeat '+scroll_x+' '+scroll_y);
+        $('#designer_preview').css('background', 'url(images/pencil/' + image_name + '.png) no-repeat 30px 54px');
 
         /* update form element*/
         $('#background_colour').val(image_name);

@@ -1,7 +1,6 @@
 <?php
 require_once '../common_db.php';
 require_once 'include.php';
-
 linkme();
 ?>  
 <script>
@@ -23,7 +22,6 @@ while ($row = mysql_fetch_array($getPrice)) {
 }
 ?>
 </script>
-<link type="text/css" rel="Stylesheet" href="css/designer-common.css" />
 <link type="text/css" rel="Stylesheet" href="css/flash_to_html_vinyls_mini.css" />
 <script src="js/flash_to_html_vinyls_mini.js"></script>
 
