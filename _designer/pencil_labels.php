@@ -44,17 +44,20 @@ while ($row = mysql_fetch_array($getPrice)) {
 
 
     <div id="designer_container">
-        <div id="designer_preview_text">
-            Format will be improved prior to Print.<br />
-            This is just a idea of how the label font,colours and pic look.<br />
-            Actual label size L 50mm  H 9mm
-        </div>
+        <div style="position:fixed; width:800px;z-index:99;background-color:#F8F8F8;top:0px;">
+            <div id="designer_preview_text">
+                Format will be improved prior to Print.<br />
+                This is just a idea of how the label font,colours and pic look.<br />
+                Actual label size L 50mm  H 9mm
+            </div>
 
-      
-        <div id="designer_preview" class="designer_preview_rainbow_a">
-            <span class="preview_text" >Preview Text</span>
+
+            <div id="designer_preview" class="designer_preview_rainbow_a">
+                <span class="preview_text" >Preview Text</span>
+            </div>
         </div>
-       
+        <div style="width:800px; height:110px;overflow:hidden;"></div>
+
         <div class="box">
             <div id="designer_options_details">
                 <p>
@@ -115,8 +118,8 @@ while ($row = mysql_fetch_array($getPrice)) {
                     echo "</div><input style='float:left' type='radio' name='colour[]' value='" . $colourName . "' class='" . $colourName . "' id='$id'>";
                     $colours = explode(",", $colourSet);
                     foreach ($colours as $colour) {
-                        $class = str_replace('#','',$colour);
-                        echo "<span style='background:" . $colour . "' class='" . $colour ." ".$class. "' onclick=checkradio('$id')></span>";
+                        $class = str_replace('#', '', $colour);
+                        echo "<span style='background:" . $colour . "' class='" . $colour . " " . $class . "' onclick=checkradio('$id')></span>";
                     }
                     echo "</li>";
                 }
@@ -129,24 +132,24 @@ while ($row = mysql_fetch_array($getPrice)) {
         </div>
 
 
-   
-    <div class='box' style='text-align:center;'>
-        <div id="designer_options_quantity">
-            <strong>Quantity:</strong>
-            <select id='order_quantity'>
-                <?php
-                echo "<option value='1'>60 Pencil Labels for AU$ " . $price . "</option>";
-                echo "<option value='2'>120 Pencil Labels for AU$ " . ($price * 2) . "</option>";
-                echo "<option value='3'>180 Pencil Labels for AU$ " . ($price * 3) . "</option>";
-                ?>
-            </select>
-        </div>
 
-        <div id="designer_submit">
-            <button id="back">< Back</button>
-            <input type="submit" Value="Continue >" class='btn'/>
+        <div class='box' style='text-align:center;'>
+            <div id="designer_options_quantity">
+                <strong>Quantity:</strong>
+                <select id='order_quantity'>
+                    <?php
+                    echo "<option value='1'>60 Pencil Labels for AU$ " . $price . "</option>";
+                    echo "<option value='2'>120 Pencil Labels for AU$ " . ($price * 2) . "</option>";
+                    echo "<option value='3'>180 Pencil Labels for AU$ " . ($price * 3) . "</option>";
+                    ?>
+                </select>
+            </div>
+
+            <div id="designer_submit">
+                <button id="back">< Back</button>
+                <input type="submit" Value="Continue >" class='btn'/>
+            </div>
         </div>
     </div>
- </div>
 </form>
 
