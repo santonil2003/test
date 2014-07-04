@@ -5,23 +5,12 @@
     <style type="text/css">
 
     </style>
+    
+    <?php
+require_once '../common_db.php';
+linkme();
+?>  
 
-  
-<?php
-
-$dbhost='localhost';
-$dbuser='identiki';
-$dbpass='id4$cTe';
-$dbname='identikid';
-
-
-
-mysql_connect($dbhost,$dbuser,$dbpass);
-mysql_select_db($dbname);
-
-
-
-?>
 <script type="text/javascript" src="cssSandpaper-master/shared/js/EventHelpers.js">
 </script>
 <script type="text/javascript" src="cssSandpaper-master/shared/js/cssQuery-p.js">
