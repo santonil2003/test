@@ -84,7 +84,9 @@ while ($row = mysql_fetch_array($getPrice)) {
 
 
                 <div id="designer_options_details">
-                    <p style="color:red;" class="browser-incompactible">Identikid interactive preview may not be compatible with Internet Explorer , Please use Firefox or chrome for best user experience. Thankyou.</p>
+                    <p style="color:red;" class="browser-incompactible">
+                        Identikid interactive preview may not be compatible with Internet Explorer , Please use Firefox or chrome for best user experience. However your labels will still be printed correctly if you continue to place order on IE. Thanks
+                    </p>
                     <p><strong>Include: </strong>
                         <span><input type="checkbox" checked="checked" name="details_checkbox_name" class="details_checkbox_name" disabled="disabled"/> Line 1</span>
                         <span><input type="checkbox" checked="checked" name="details_checkbox_phone" class="details_checkbox_phone" /> Line 2</span>
