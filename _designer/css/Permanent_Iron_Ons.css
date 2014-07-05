@@ -72,7 +72,10 @@ strong{display:block;clear:both;}
     width: 300px;
 }
 #designer_options_details strong{display:inline;clear:none;}
-#designer_options_details{text-align:center;}
+#designer_options_details{
+    margin-top: 210px;
+    text-align: center;
+}
 
 #designer_options_font{
     /*float:left;*/
@@ -226,7 +229,7 @@ button{
 
 .individual_preivew {
     height: 180px;
-    margin: 0 auto 25px;
+    margin: 0 auto;
     overflow: hidden;
     width: 438px;
     background: url(../images/mini_vinyls/1.png) no-repeat scroll 0% 0% transparent;
@@ -305,6 +308,20 @@ button{
 #designer_options_font li table tr td {
     font-size:25px;
     cursor:pointer;
+}
+
+.fixed_preview {
+    background-color: #FFFFFF;
+    border: 2px solid #EFEFEF;
+    margin: 0 auto 0 -2px;
+    overflow: hidden;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 770px;
+    -moz-box-shadow:    inset 0 0 10px #EFEFEF;
+    -webkit-box-shadow: inset 0 0 10px #EFEFEF;
+    box-shadow:         inset 0 0 10px #EFEFEF;
 }
 
 

@@ -4,7 +4,7 @@ require_once 'include.php';
 linkme();
 ?>  
 <script>
-var _colourArray = new Array();
+    var _colourArray = new Array();
 <?php
 $individual = array();
 $getColourArray = mysql_query("SELECT * FROM data_colour WHERE data_colour_background = '0'");
@@ -55,16 +55,18 @@ while ($row = mysql_fetch_array($getPrice)) {
 
 
     <div id="designer_container">
-        <div id="designer_preview_text">
-            Format will be improved prior to Print.<br />
-            This is just a idea of how the label font,colours and pic look.<br />
-            Actual label size L 50mm  H 16mm
-        </div>
-        
-        <div id="designer_preview" class="individual_preivew" style="background: url(images/mini_vinyls/1.png) no-repeat scroll 30px 54px transparent;">
-            <span class="preview_image" ></span>
-            <span class="preview_text" >Preview Text</span>
-            <span class="preview_phone" >000 000 000</span>
+        <div class="fixed_preview">
+            <div id="designer_preview_text">
+                Format will be improved prior to Print.<br />
+                This is just a idea of how the label font,colours and pic look.<br />
+                Actual label size L 50mm  H 16mm
+            </div>
+
+            <div id="designer_preview" class="individual_preivew" style="background: url(images/mini_vinyls/1.png) no-repeat scroll 30px 54px transparent;">
+                <span class="preview_image" ></span>
+                <span class="preview_text" >Preview Text</span>
+                <span class="preview_phone" >000 000 000</span>
+            </div>
         </div>
 
 
@@ -172,8 +174,8 @@ while ($row = mysql_fetch_array($getPrice)) {
                     $colourSets['Individual'] = implode(',', $individual);
 
                     echo "<ul>";
-                    
-                    
+
+
 
                     foreach ($colourSets as $colourName => $colourSet) {
                         $colourName = str_replace(" ", "_", $colourName);
@@ -189,8 +191,8 @@ while ($row = mysql_fetch_array($getPrice)) {
                         echo "</div><input style='float:left' type='radio' name='colour[]' value='" . $colourName . "' class='" . $colourName . "' id='$id' checked='checked'>";
                         $colours = explode(",", $colourSet);
                         foreach ($colours as $colour) {
-                            $class = str_replace('#','',$colour);
-                            echo "<span style='background:" . $colour . "' class='" . $colour ." ".$class. "' onclick=checkradio('$id')></span>";
+                            $class = str_replace('#', '', $colour);
+                            echo "<span style='background:" . $colour . "' class='" . $colour . " " . $class . "' onclick=checkradio('$id')></span>";
                         }
                         echo "</li>";
                     }
@@ -200,23 +202,23 @@ while ($row = mysql_fetch_array($getPrice)) {
                 </div>
             </div>
         </div>
-    <div class='box' style='text-align:center;'>
-        <div id="designer_options_quantity">
-            <strong>Quantity:</strong>
-            <select id='order_quantity'>
-                <?php
-                echo "<option value='1'>60 Permanent Iron Ons for AU$ " . $price . "</option>";
-                echo "<option value='2'>120 Permanent Iron Ons for AU$ " . ($price * 2) . "</option>";
-                echo "<option value='3'>180 Permanent Iron Ons for AU$ " . ($price * 3) . "</option>";
-                ?>
-            </select>
-        </div>
+        <div class='box' style='text-align:center;'>
+            <div id="designer_options_quantity">
+                <strong>Quantity:</strong>
+                <select id='order_quantity'>
+                    <?php
+                    echo "<option value='1'>60 Permanent Iron Ons for AU$ " . $price . "</option>";
+                    echo "<option value='2'>120 Permanent Iron Ons for AU$ " . ($price * 2) . "</option>";
+                    echo "<option value='3'>180 Permanent Iron Ons for AU$ " . ($price * 3) . "</option>";
+                    ?>
+                </select>
+            </div>
 
-        <div id="designer_submit">
-            <button id="back">< Back</button>
-            <input type="submit" Value="Continue >" class='btn'/>
+            <div id="designer_submit">
+                <button id="back">< Back</button>
+                <input type="submit" Value="Continue >" class='btn'/>
+            </div>
         </div>
     </div>
-</div>
 </form>
 
