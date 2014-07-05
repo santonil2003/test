@@ -6,12 +6,28 @@ function myTrim(x) {
     return x.replace(/^\s+|\s+$/gm, '');
 }
 
+function arch_line1() {
+    var new_preview_text_html = $('#holder_preview_text').html();
+    $('#holder_preview_text').html(new_preview_text_html);
+    var $preview_text = $('.preview_text').hide();
+    $preview_text.show().arctext({radius: 67});
+}
+
+function arch_line2() {
+    var holder_preview_phone_html = $('#holder_preview_phone').html();
+    $('#holder_preview_phone').html(holder_preview_phone_html);
+    var $preview_phone = $('.preview_phone').hide();
+    $preview_phone.show().arctext({radius: 67, dir: -1});
+}
+
 var white_images_folder_path = 'bwl2';
 var black_images_folder_path = 'bwl';
 var line1 = "";
 var line2 = "";
 var pic = '1';
 var font = '3';
+var count = 20;
+var limit = 20;
 
 imgfol = black_images_folder_path;
 
@@ -66,7 +82,7 @@ $('document').ready(function() {
         $('#designer_preview').removeClass('individual_preivew');
         $('#designer_preview').removeClass('designer_preview_rainbow_b');
         $('#designer_preview').addClass('designer_preview_rainbow_a');
-        $('#designer_preview').css('background', 'url(images/mini_vinyls/9.png) no-repeat scroll 0% 0% transparent');
+        $('#designer_preview').css('background', 'url(images/shoedots/9.png) no-repeat scroll 0% 0% transparent');
 
         /* update form element*/
         $('#background_colour').val('9');
@@ -81,7 +97,7 @@ $('document').ready(function() {
         $('#designer_preview').removeClass('individual_preivew');
         $('#designer_preview').removeClass('designer_preview_rainbow_a');
         $('#designer_preview').addClass('designer_preview_rainbow_b');
-        $('#designer_preview').css('background', 'url(images/mini_vinyls/10.png) no-repeat scroll 0% 0% transparent');
+        $('#designer_preview').css('background', 'url(images/shoedots/10.png) no-repeat scroll 0% 0% transparent');
 
         /* update form element*/
         $('#background_colour').val('10');
@@ -100,10 +116,10 @@ $('document').ready(function() {
         var span_class_string = $(this).attr('class');
         var span_class = span_class_string.split(" ");
         var individual_color = span_class[0];
-        var image_name = $.inArray( individual_color, _colourArray);
+        var image_name = $.inArray(individual_color, _colourArray);
         image_no = image_name.toString();
 
-        $('#designer_preview').css('background', 'url(images/mini_vinyls/' + image_no + '.png) no-repeat 30px 54px rgba(0, 0, 0, 0)');
+        $('#designer_preview').css('background', 'url(images/shoedots/' + image_no + '.png) no-repeat 0px 0px rgba(0, 0, 0, 0)');
 
         /* update form element*/
         $('#background_colour').val(image_name);
@@ -124,48 +140,50 @@ $('document').ready(function() {
             //$('p.error-msg').html('');
         }
     });
-    
-    var count = 20;
+
+
     $('.details_text_name').keyup(function() {
         line1 = $(this).val();
 
+        if (!isNaN(line1)) {
+            limit = 15;
+        } else {
+            limit = 20;
+        }
+
         $('p.error-msg').html('');
 
-        if (line1.length > 20) {
-            line1 = line1.substr(0, 19);
-            $('p.error-msg').html('Maximum 20 character allowed !');
+        if (line1.length > limit) {
+            line1 = line1.substr(0, limit-1);
+            $('p.error-msg').html('Maximum ' + limit + ' character allowed !');
         }
 
         $(this).val(line1);
-        
-        var code = e.keyCode || e.which;
-        
-        
-
         $('.preview_text').html(line1);
-
-        //$('#text1').val(line1 + ' ' + line2);
+        arch_line1();
     });
 
 
     /// line 2 keyp
     $('.details_text_phone').keyup(function() {
-
-
         line2 = $(this).val();
+
+        if (!isNaN(line2)) {
+            limit = 15;
+        } else {
+            limit = 20;
+        }
 
         $('p.error-msg').html('');
 
-        if (line2.length > 20) {
-            line2 = line2.substr(0, 19);
+        if (line2.length > limit) {
+            line2 = line2.substr(0, limit-1);
             $('p.error-msg').html('Maximum 20 character allowed !');
         }
 
         $(this).val(line2);
-
-
         $('.preview_phone').html(line2);
-        //$('#text1').val(line1 + ' ' + line2);
+        arch_line2();
     });
 
 
@@ -222,22 +240,19 @@ $('document').ready(function() {
     // make font selected
     $('li.3').trigger('click');
 
-     // make white default
+    // make white default
     $('.font_colour_white').trigger('click');
-
-    // make default background blue
-    $("span.16BCEF").trigger('click');
 
     // on submit
 
-    $('#permanent-iron-ons').submit(function(e){
+    $('#permanent-iron-ons').submit(function(e) {
 
         $('.details_text_name').removeClass('required-field');
         $('.details_text_phone').removeClass('required-field');
-        
+
         var line1 = $('.details_text_name').val();
 
-        if(line1.length<=0) {
+        if (line1.length <= 0) {
             $('.details_text_name').addClass('required-field');
             $('.details_text_name').focus();
             e.preventDefault();
@@ -246,7 +261,7 @@ $('document').ready(function() {
         // if line 2 included
         if ($('.details_checkbox_phone').is(':checked')) {
             var line2 = $('.details_text_phone').val();
-            if(line2.length<=0) {
+            if (line2.length <= 0) {
                 $('.details_text_phone').addClass('required-field');
                 $('.details_text_phone').focus();
                 e.preventDefault();

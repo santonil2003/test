@@ -72,7 +72,7 @@ strong{display:block;clear:both;}
     width: 300px;
 }
 #designer_options_details strong{display:inline;clear:none;}
-#designer_options_details{text-align:center;margin-top:400px;}
+#designer_options_details{text-align:center;}
 
 #designer_options_font{
     /*float:left;*/
@@ -150,7 +150,7 @@ button{
 
 
 .designer_preview_rainbow_a {
-    background: url("../images/mini_vinyls/9.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url("../images/shoedots/9.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     height: 180px;
     margin: 0 auto 25px;
     overflow: hidden;
@@ -185,7 +185,7 @@ button{
     margin: 0 auto 25px;
     overflow: hidden;
     width: 438px;
-    background: url(../images/mini_vinyls/10.png) no-repeat scroll 0% 0% transparent;
+    background: url(../images/shoedots/10.png) no-repeat scroll 0% 0% transparent;
 }
 
 .designer_preview_rainbow_b .preview_text{
@@ -225,40 +225,31 @@ button{
 }
 
 .individual_preivew {
-    height: 180px;
+    background: url("../images/shoedots/1.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 150px;
     margin: 0 auto 25px;
     overflow: hidden;
-    width: 438px;
-    background: url(../images/mini_vinyls/1.png) no-repeat scroll 0% 0% transparent;
+    width: 150px;
 }
 
 .individual_preivew .preview_text{
     display: block;
     font-family: comic_sans_msregular;
-    font-size: 22px;
-    line-height: 1;
-    position: absolute;
+    font-size: 15px;
     text-align: center;
-    top: 78px;
-    width: 300px;
-    left: 42px;
 }
 
 .individual_preivew .preview_phone{
     display: block;
     font-family: comic_sans_msregular;
-    font-size: 22px;
-    line-height: 1;
-    position: absolute;
+    font-size: 15px;
     text-align: center;
-    top: 108px;
-    width: 300px;
-    left: 42px;
+    margin-top: 106px;
 }
 
 .individual_preivew .preview_image{
-    right: 88px;
-    top: 74px;
+    right: 44px;
+    top: 44px;
 }
 
 #designer_preview_text{
