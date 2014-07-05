@@ -1,5 +1,6 @@
-
-
+.browser-incompactible{
+    display:block;
+}
 
 #pencil_labels .individual_preivew {
     height: 106px !important;

@@ -81,7 +81,10 @@ while ($row = mysql_fetch_array($getPrice)) {
                 </div>
 
 
+
+
                 <div id="designer_options_details">
+                    <p style="color:red;" class="browser-incompactible">Identikid interactive preview may not be compactible with Internet Explore , Please use Firefox or chrome for best user experience. Thankyou.</p>
                     <p><strong>Include: </strong>
                         <span><input type="checkbox" checked="checked" name="details_checkbox_name" class="details_checkbox_name" disabled="disabled"/> Line 1</span>
                         <span><input type="checkbox" checked="checked" name="details_checkbox_phone" class="details_checkbox_phone" /> Line 2</span>
@@ -203,16 +206,16 @@ while ($row = mysql_fetch_array($getPrice)) {
                                 $skip = false;
                                 foreach ($colours as $colour) {
                                     $class = str_replace('#', '', $colour);
-                                    
+
                                     // temp skip
-                                    if($class =='FDFFFF') {
-                                        $skip =true;
+                                    if ($class == 'FDFFFF') {
+                                        $skip = true;
                                     }
-                                    if($skip) {
+                                    if ($skip) {
                                         continue;
                                     }
                                     // end of temp skip
-                                    
+
                                     echo "<span style='background:" . $colour . "' class='" . $colour . " " . $class . "' onclick=checkradio('$id')></span>";
                                 }
                                 echo "</li>";
