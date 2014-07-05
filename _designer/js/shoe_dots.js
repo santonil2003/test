@@ -10,14 +10,14 @@ function arch_line1() {
     var new_preview_text_html = $('#holder_preview_text').html();
     $('#holder_preview_text').html(new_preview_text_html);
     var $preview_text = $('.preview_text').hide();
-    $preview_text.show().arctext({radius: 67});
+    $preview_text.show().arctext({radius: 66});
 }
 
 function arch_line2() {
     var holder_preview_phone_html = $('#holder_preview_phone').html();
     $('#holder_preview_phone').html(holder_preview_phone_html);
     var $preview_phone = $('.preview_phone').hide();
-    $preview_phone.show().arctext({radius: 67, dir: -1});
+    $preview_phone.show().arctext({radius: 66, dir: -1});
 }
 
 var white_images_folder_path = 'bwl2';
@@ -27,7 +27,7 @@ var line2 = "";
 var pic = '1';
 var font = '3';
 var count = 20;
-var limit = 20;
+var limit = 18;
 
 imgfol = black_images_folder_path;
 
@@ -148,7 +148,7 @@ $('document').ready(function() {
         if (!isNaN(line1)) {
             limit = 15;
         } else {
-            limit = 20;
+            limit = 18;
         }
 
         $('p.error-msg').html('');
@@ -171,14 +171,14 @@ $('document').ready(function() {
         if (!isNaN(line2)) {
             limit = 15;
         } else {
-            limit = 20;
+            limit = 18;
         }
 
         $('p.error-msg').html('');
 
         if (line2.length > limit) {
             line2 = line2.substr(0, limit-1);
-            $('p.error-msg').html('Maximum 20 character allowed !');
+            $('p.error-msg').html('Maximum '+limit+' character allowed !');
         }
 
         $(this).val(line2);

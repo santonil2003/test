@@ -247,8 +247,8 @@ while ($row = mysql_fetch_array($getPrice)) {
             var $preview_text = $('.preview_text').hide();
             var $preview_phone = $('.preview_phone').hide();
 
-            $preview_text.show().arctext({radius: 70});
-            $preview_phone.show().arctext({radius: 70, dir: -1});
+            $preview_text.show().arctext({radius: 66});
+            $preview_phone.show().arctext({radius: 66, dir: -1});
         </script>
     </body>
 </html>
