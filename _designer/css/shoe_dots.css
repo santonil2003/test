@@ -72,7 +72,10 @@ strong{display:block;clear:both;}
     width: 300px;
 }
 #designer_options_details strong{display:inline;clear:none;}
-#designer_options_details{text-align:center;}
+#designer_options_details{
+    margin-top: 180px;
+    text-align: center;
+}
 
 #designer_options_font{
     /*float:left;*/
@@ -227,7 +230,7 @@ button{
 .individual_preivew {
     background: url("../images/shoedots/1.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     height: 150px;
-    margin: 0 auto 25px;
+    margin: 0 auto;
     overflow: hidden;
     width: 150px;
 }
@@ -296,6 +299,32 @@ button{
 #designer_options_font li table tr td {
     font-size:25px;
     cursor:pointer;
+}
+
+#designer_container{
+    padding-top: 0px;
+}
+
+.fixed_preview {
+    background-color: #FFFFFF;
+    border-left: 2px solid #EFEFEF;
+    border-right: 2px solid #EFEFEF;
+    border-top: 2px solid #EFEFEF;
+     border-bottom: 2px solid #EFEFEF;
+    height: 150px;
+    margin: 0 auto 0 -2px;
+    overflow: hidden;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 770px;
+}
+
+#designer_preview{
+    /*border:#DEDEDE solid 1px;*/
+    -moz-box-shadow:     0 1px 30px 0 #CCCCCC;
+    -webkit-box-shadow:  0 1px 30px 0 #CCCCCC;
+    box-shadow:          0 1px 30px 0 #CCCCCC;
 }
 
 

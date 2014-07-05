@@ -30,7 +30,7 @@ while ($row = mysql_fetch_array($getColourArray)) {
     $individual[$row['data_colour_id']] = $row['hexcode'];
 }
 
-$type = 19;
+$type = 20;
 echo "_type = $type;\n";
 $getPrice = mysql_query("SELECT * FROM prices WHERE productId = '$type' AND currencyInt='1'");
 while ($row = mysql_fetch_array($getPrice)) {
@@ -72,13 +72,13 @@ while ($row = mysql_fetch_array($getPrice)) {
 
 
             <div id="designer_container">
-                <?php if (1 == 1): ?>
+                <div class="fixed_preview">
                     <div id="designer_preview" class="individual_preivew" style="background: url(/_designer/images/shoedots/df1e2e.png) no-repeat scroll 0% 0% transparent;">
                         <div id="holder_preview_text"><span class="preview_text" >Preview Text</span></div>
                         <span class="preview_image" ></span>
                         <div id="holder_preview_phone"><span class="preview_phone" >000 000 000</span></div>
                     </div>
-                <?php endif; ?>
+                </div>
 
 
                 <div id="designer_options_details">
@@ -228,9 +228,9 @@ while ($row = mysql_fetch_array($getPrice)) {
                         <strong>Quantity:</strong>
                         <select id='order_quantity'>
                             <?php
-                            echo "<option value='1'>60 Permanent Iron Ons for AU$ " . $price . "</option>";
-                            echo "<option value='2'>120 Permanent Iron Ons for AU$ " . ($price * 2) . "</option>";
-                            echo "<option value='3'>180 Permanent Iron Ons for AU$ " . ($price * 3) . "</option>";
+                            echo "<option value='1'>20 Shoe Dots for AU$ " . $price . "</option>";
+                            echo "<option value='2'>40 Shoe Dots for AU$ " . ($price * 2) . "</option>";
+                            echo "<option value='3'>60 Shoe Dots for AU$ " . ($price * 3) . "</option>";
                             ?>
                         </select>
                     </div>
