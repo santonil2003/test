@@ -121,9 +121,12 @@ mysql_select_db($dbname);
                }
            });
            
+           var temp_phone = '';
+           
            $(".details_checkbox_phone").click(function(){
                if($(this).prop("checked")){
                    $(".preview_phone").show();
+                   $('.details_text_phone').val(temp_phone);
                    _showPhone = 1;
                    if(_font==3){
                          $('.preview_text').css('top','4px');
@@ -133,6 +136,9 @@ mysql_select_db($dbname);
                }else{
                    $(".preview_phone").hide();
                    _showPhone = 0;
+                   temp_phone = $('.details_text_phone').val();
+                   $('.details_text_phone').val('');
+                   _phone = '';
                    if(_font==3){
                          $('.preview_text').css('top','10px');
                         }else{
@@ -183,6 +189,8 @@ mysql_select_db($dbname);
                $("li","#designer_options_font").removeClass('selected');
                $(".preview_text").css("font-family",$(this).prop("class"));
                _font = $(this).prop("class");
+               
+               console.log(_font);
                $(this).addClass('selected');
                var fontset = $(this).css('font-family');
                $('.preview_text').css('font-family',fontset);
@@ -216,7 +224,18 @@ mysql_select_db($dbname);
                     $('.preview_text').css('font-size','26px');
                     $('.preview_text').css('font-weight','bold');
                     $('.preview_phone').css('font-size','18px');
-                    }
+                 } else if(_font==5){
+                    console.log('i am here');
+                    $('.preview_text').css('top','8px');
+                    $('.preview_text').css('left','0px');
+                    $('.preview_phone').css('top','55px');
+                    $('.preview_phone').css('left','0px');
+                    $('.preview_text').css('font-size','26px');
+                    $('.preview_text').css('font-weight','bold');
+                    $('.preview_phone').css('font-size','18px');
+                   }
+                    
+                    
                  if( $(".details_checkbox_phone").prop("checked") ){
                      
                          
@@ -352,27 +371,7 @@ mysql_select_db($dbname);
            });
            
            $("#submit").click(function(){
-              /* 
-               if(_font==3){
-                   _font=4;
-                }else if(_font==4){
-                    _font=3;
-                }
-               */
-              /*alert(  _type+"\n"+
-                      _price+"\n"+
-                      _bwImage+"\n"+
-                        _showName+"\n"+
-                        _showPhone+"\n"+
-                        _showImage+"\n"+
-                        _name+"\n"+
-                        _phone+"\n"+
-                        _font+"\n"+
-                        _fontColor+"\n"+
-                        _colorPack+"\n"+
-                        
-                        _quantity+"\n" ); */
-        
+             
         
    
           if(_showName!==0 && _name===null) {

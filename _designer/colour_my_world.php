@@ -128,9 +128,12 @@ mysql_select_db($dbname);
                }
            });
            
+           var temp_phone = '';
+           
            $(".details_checkbox_phone").click(function(){
                if($(this).prop("checked")){
                    $(".preview_phone").show();
+                   $('.details_text_phone').val(temp_phone);
                    _showPhone = 1;
                    if(_font==3){
                          $('.preview_text').css('top','4px');
@@ -140,6 +143,9 @@ mysql_select_db($dbname);
                }else{
                    $(".preview_phone").hide();
                    _showPhone = 0;
+                       temp_phone = $('.details_text_phone').val();
+                   $('.details_text_phone').val('');
+                   _phone = '';
                    if(_font==3){
                          $('.preview_text').css('top','10px');
                         }else{

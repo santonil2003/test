@@ -186,12 +186,14 @@ $('document').ready(function() {
         ischecked = $('.details_checkbox_phone').is(':checked');
         if (ischecked) {
             $('.preview_phone').show().val(line2);
+            $('.details_text_phone').val(line2);
             $('#split').val('1');
             $('.designer_preview_rainbow_a .preview_text').css('top', '100');
             $('.designer_preview_rainbow_b .preview_text').css('top', '100');
             $('.individual_preivew .preview_text').css('top', '80');
         } else {
-            line2 = $('.preview_phone').val();
+            line2 = $('.details_text_phone').val();
+            $('.details_text_phone').val('');
             $('#split').val('0');
             $('.preview_phone').hide().val('');
             $('.designer_preview_rainbow_a .preview_text').css('top', '122');

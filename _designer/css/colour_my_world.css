@@ -171,3 +171,14 @@ button{
     -webkit-box-shadow: inset 0 0 10px #EFEFEF;
     box-shadow:         inset 0 0 10px #EFEFEF;
 }
+
+
+#colour-my-world .designer_preview_all .preview_text{
+    left: 0;
+    top: 4px;
+}
+
+#colour-my-world .designer_preview_all .preview_phone{
+    left: 0;
+    top: 50px;
+}
