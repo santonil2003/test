@@ -2,11 +2,89 @@
     display:block;
 }
 
+/* pencil labels  */
 #pencil_labels .individual_preivew {
     height: 106px !important;
     width: 355px !important;
 }
 
 #pencil_labels .individual_preivew .preview_text{
-	left:40px;
+    left:40px;
 }
+
+/* permanent iron  */
+#permanent-iron-ons .designer-options{
+    margin-top: 0px;
+}
+
+#permanent-iron-ons .fixed_preview{
+    border: none;
+}
+
+/* shoe dots */
+#shoe-dots .fixed_preview{
+    height:180px;
+    border: none;
+}
+
+#shoe-dots .designer-options{
+    margin-top: 0px;
+}
+
+/* vinyls-mini*/
+#vinyls-mini .designer-options{
+    margin-top: 0px;
+}
+
+#vinyls-mini .fixed_preview{
+    border: none;
+}
+
+#vinyls-mini #designer_preview_text{
+    right: -6px;
+}
+
+/*pencil_labels*/
+#pencil_labels .designer-options{
+    margin-top: -80px;
+}
+
+#pencil_labels .fixed_preview{
+    border: none;
+}
+
+/**colour-my-world*/
+#colour-my-world .designer-options{
+    margin-top: 0px;
+}
+
+#colour-my-world .fixed_preview{
+    border: none;
+    width: 800px;
+}
+
+
+
+
+//* vinyl-wrapper */
+
+#vinyl-wrapper #designer_options_font ol lo.3{
+    margin-top:5px;
+    padding-bottom:10px;
+    padding-top:10px;
+
+}
+
+#vinyl-wrapper #designer_options_font ol li.4{
+    padding:0;
+}
+
+#vinyl-wrapper .designer-options{
+    margin-top: 0px;
+}
+
+#vinyl-wrapper .fixed_preview{
+    border: none;
+    width: 800px;
+}
+

@@ -10,5 +10,5 @@
 									</OBJECT>
 <!--[if gte IE 6]></noscript><![endif]--><!--<script type="text/javascript">endIeFix();</script>	-->
             
-             <iframe src="/_designer/vinyls.php" height="1200"width="100%" frameBorder="0"></iframe>
+             <iframe src="/_designer/vinyls.php" height="650"width="100%" frameBorder="0"></iframe>
 </td></tr></table>

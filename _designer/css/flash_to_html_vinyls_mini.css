@@ -271,7 +271,7 @@
     position: absolute;
     right: 0;
     text-align: left;
-    top: 25px;
+    top: 70px;
     width: 175px;
 }
 
@@ -309,6 +309,28 @@
 #vinyls-mini #designer_options_font li table tr td {
     font-size:25px;
     cursor:pointer;
+}
+
+.fixed_preview {
+    background-color: #FFFFFF;
+    border: 2px solid #EFEFEF;
+    margin: 0 auto 0 -2px;
+    overflow: hidden;
+    padding: 0px 15px;
+    position: fixed;
+    top: 0;
+    width: 770px;
+    -moz-box-shadow:    inset 0 0 10px #EFEFEF;
+    -webkit-box-shadow: inset 0 0 10px #EFEFEF;
+    box-shadow:         inset 0 0 10px #EFEFEF;
+}
+.designer-options{
+    height: 350px;
+    margin-top: 194px;
+    overflow-y: scroll;
+    -moz-box-shadow:    inset 0 0 10px #EFEFEF;
+    -webkit-box-shadow: inset 0 0 10px #EFEFEF;
+    box-shadow:         inset 0 0 10px #EFEFEF;
 }
 
 

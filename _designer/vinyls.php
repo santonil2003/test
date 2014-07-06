@@ -1,4 +1,6 @@
+<link type="text/css" rel="Stylesheet" href="css/vinyls.css" />
 <?php
+require_once 'include.php';
 if (isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
             $dbhost='localhost';
             $dbuser='root';
@@ -13,16 +15,7 @@ if (isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
 mysql_connect($dbhost,$dbuser,$dbpass);
 mysql_select_db($dbname);
 ?>
-<style>
-    .error-msg{
-        border:red dashed 1px;
-    }
-    
-#designer_options_font .2{margin-bottom:8px;}
-</style>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script type="text/javascript">
+<script type="text/javascript">
            
         $(document).ready(function(){
             $('.44').hide();
@@ -549,304 +542,9 @@ document.getElementsByTagName('form')[0].submit();
            
         });    
         </script>
-       
-        <style type="text/css">
-            
-            
-            
-            @font-face {
-    font-family: 'comic_sans_msregular';
-    src: url('/_designer/fnt/comic-webfont.eot');
-    src: url('/_designer/fnt/comic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/_designer/fnt/comic-webfont.woff') format('woff'),
-         url('/_designer/fnt/comic-webfont.ttf') format('truetype'),
-         url('/_designer/fnt/comic-webfont.svg#comic_sans_msregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'kidsregular';
-    src: url('fnt/kidsn-webfont.eot');
-    src: url('fnt/kidsn-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fnt/kidsn-webfont.woff') format('woff'),
-         url('fnt/kidsn-webfont.ttf') format('truetype'),
-         url('fnt/kidsn-webfont.svg#kidsregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    
-
-}
-
-
-
-
-@font-face {
-    font-family: 'swis721_cn_btroman';
-    src: url('fnt/swz721c-webfont.eot');
-    src: url('fnt/swz721c-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fnt/swz721c-webfont.woff') format('woff'),
-         url('fnt/swz721c-webfont.ttf') format('truetype'),
-         url('fnt/swz721c-webfont.svg#swis721_cn_btroman') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    
-
-}
-   @font-face {
-    font-family: 'girls_are_weirdregular';
-    src: url('fnt/girlw3__-webfont.eot');
-    src: url('fnt/girlw3__-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fnt/girlw3__-webfont.woff') format('woff'),
-         url('fnt/girlw3__-webfont.ttf') format('truetype'),
-         url('fnt/girlw3__-webfont.svg#girls_are_weirdregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'impress_btregular';
-    src: url('fnt/impressn-webfont.eot');
-    src: url('fnt/impressn-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fnt/impressn-webfont.woff') format('woff'),
-         url('fnt/impressn-webfont.ttf') format('truetype'),
-         url('fnt/impressn-webfont.svg#impress_btregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'technicalregular';
-    src: url('fnt/technicn-webfont.eot');
-    src: url('fnt/technicn-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fnt/technicn-webfont.woff') format('woff'),
-         url('fnt/technicn-webfont.ttf') format('truetype'),
-         url('fnt/technicn-webfont.svg#technicalregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}         
-
-@font-face {
-    font-family: 'soupboneregular';
-    src: url('fnt/soupbone-regular-webfont.eot');
-    src: url('fnt/soupbone-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fnt/soupbone-regular-webfont.woff') format('woff'),
-         url('fnt/soupbone-regular-webfont.ttf') format('truetype'),
-         url('fnt/soupbone-regular-webfont.svg#soupboneregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-
-
-
-@font-face {
-    font-family: 'soupbonebold';
-    src: url('fnt/soupbone-bold-webfont.eot');
-    src: url('fnt/soupbone-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fnt/soupbone-bold-webfont.woff') format('woff'),
-         url('fnt/soupbone-bold-webfont.ttf') format('truetype'),
-         url('fnt/soupbone-bold-webfont.svg#soupbonebold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}            
-   @font-face {
-	font-family: 'TektonPro-Bold';
-	src: url('fnt/TektonPro-Bold.eot');
-	src: url('fnt/TektonPro-Bold.woff') format('woff'), 
-             url('fnt/TektonPro-Bold.ttf') format('truetype'), 
-             url('fnt/TektonPro-Bold.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-         
-            body{
-                font-family: arial;
-                font-size:13px;
-            }
-            #designer_container{
-                width:800px;
-                margin:0 auto;
-                border:solid 2px #efefef;
-                position:relative;
-				text-align:center;
-            }
-            
-            
-            ul,li{list-style:none;}
-            li{float:left;}
-            strong{display:block;clear:both;}
-            #designer_preview{
-                margin:0 auto;
-                height:121px;
-                width:400px;
-                position:relative;
-            }
-            .preview_image_set{
-                position:absolute;
-                top:29px;
-                left:262px;
-                background-repeat: no-repeat;
-            }
-            .preview_phone{position:absolute;display:block;width:260px;text-align:center;font-size:18px;padding:0 0 0 10px;line-height:1;margin-top:10px;}
-            .preview_text{position:absolute;display:block;width:260px;text-align:center;font-size:26px;padding:23px 0 0 10px;line-height:1;}
-            
-            #designer_options_picture ul li{
-                width:32px;
-                height:32px;
-                border:solid 2px #666;
-                padding:1px;
-                margin:2px;
-            }
-            .font_colour_black,.font_colour_white{border:solid 1px #666;}
-            .font_colour_black{width:20px;height:20px;background:#000000;display:inline-block;}
-            .font_colour_white{width:20px;height:20px;background:#ffffff;display:inline-block;}
-            
-            #designer_options_picture ul li{
-                width:60px;
-                height:60px;
-                border:solid 2px #666;
-                padding:1px;
-                margin:2px;
-                cursor: pointer;
-            }
-            
-            .preview_image{
-                width:60px;
-                height:60px;
-            }
-            .preview_image_set{
-                width:60px;
-                height:60px;
-                display:inline-block;
-            }
-            
-            #designer_options_colours ul li{float:none;height:50px;}
-            #designer_options_colours ul li span{
-                display:inline-block;
-                width:20px;
-                height:20px;
-                float:left;
-                margin:2px;
-                border:solid 2px #666;
-            }
-            .selected{border:solid 2px #00B0E0 !important};
-            
-            
-            
-            #designer_options_identitags{
-                display:block;
-                width:450px;
-            }
-            #designer_options_identitags ul.tags{
-                width:450px;
-            }
-            
-            .box{
-                position:relative;
-                clear:both;
-                margin-bottom:20px;
-            }
-            #designer_options_details strong{display:inline;clear:none;}
-            #designer_options_details{text-align:center;}
-            
-            #designer_options_font{
-float:left;
-width:275px;
-text-align:left;
-}
-#designer_options_font li {
-    font-size:25px;
-    float:none;
-    cursor: pointer;
-}
-
-#designer_options_font li table tr td {
-    font-size:25px;
-}
-
-#designer_options_font_colour{
-float:left;
-width:165px;
-text-align:left;
-padding-left:5px;
-}
-
-#designer_options_colours{
-float:left;
-width:350px;
-text-align:left;
-}
-
-#designer_options_label ul li{float:none;}
-
-#designer_options_identitags{
-text-align:left;
-}
-#designer_options_identitags input{
-    margin-left:50px;
-    font-weight:bold;
-}
-
-#designer_options_label{
-position:absolute;
-top:0;
-right:0;
-width:320px;
-}
-
-#designer_options_ironon_colour{
-position:absolute;
-top:200px;
-right:0;
-width:320px;
-}
-
-#designer_options_ironon_colour ul li span{width:20px;height:20px;display:inline-block;border:solid 2px #666;}
-
-button{
-    color:#ffffff;
-    background:#00B0E0;
-    border:solid 2px #000000;
-    padding:5px 10px;
-    margin:5px;
-}
-
-        </style>
-        <!--[if IE]>
-<style type=\"text/css\">
-
-#designer_options_font ol lo.3{
-margin-top:5px;
-padding-bottom:10px;
-padding-top:10px;
-
-}
-#designer_options_font ol li.4{
-padding:0;
-}
-
-</style>
-<![endif]-->
-        
-  
-        
+<div id="vinyl-wrapper">
         <div id="designer_container">
+            <div class="fixed_preview">
             <div style="text-align:left;position:absolute;top:45px;right:0px;font-size:11px;color:#3a768f;width:190px;">
                 Format will be improved prior to Print.<br />
                 This is just a idea of how the label font,colours and pic look.<br />
@@ -858,7 +556,8 @@ padding:0;
                 <span class="preview_image"></span>
                 <span class="preview_image_set"></span>
             </div>
-            
+            </div>
+            <div class="designer-options">
 <div class="box">
             <div id="designer_options_details">
                 
@@ -1103,6 +802,7 @@ padding:0;
                 ?>
             </div>-->
 </div>
+            </div>
             <div class='box' style='text-align:center;'>
             <!--<div id="designer_options_reverse_print">
                   <input type='checkbox' id="reverse_print" /> Text printed on reverse of tag? (add AU$4.00 to order)
@@ -1131,6 +831,7 @@ padding:0;
            
             </div>
         </div>
+</div>
         
 <script>    
             function showMsg(msg, obj){

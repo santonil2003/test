@@ -1,4 +1,6 @@
+<link type="text/css" rel="Stylesheet" href="css/colour_my_world.css" />
 <?php
+require_once 'include.php';
 if (isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
             $dbhost='localhost';
             $dbuser='root';
@@ -11,19 +13,10 @@ if (isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
             $dbname='identikid';
         }
 
-
-
 mysql_connect($dbhost,$dbuser,$dbpass);
 mysql_select_db($dbname);
 
-
-
 ?>
-
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <link type="text/css" rel="Stylesheet" href="css/designer-common.css" />
-        <link type="text/css" rel="Stylesheet" href="css/colour_my_world.css" />
         <script type="text/javascript">
         $(document).ready(function(){
            var _colourArray = new Array();
@@ -575,11 +568,10 @@ padding:0;
 
 </style>
 <![endif]-->
-        
-  
-        
+        <div id="colour-my-world">
         <div id="designer_container">
-            <div style="text-align:left;position:absolute;top:20px;right:0px;font-size:11px;color:#3a768f;width:190px;">
+             <div class="fixed_preview">
+            <div id="designer_preview_text">
                 Format will be improved prior to Print.
                 This is just a idea of how the label font, colours and pic look together.
                 One label is shown for demonstration . However this pack comes with a variety of labels as shown in more info including irons, shoe dots and various other stickon labels.
@@ -590,7 +582,8 @@ padding:0;
                 <span class="preview_image"></span>
                 <span class="preview_image_set"></span>
             </div>
-            
+             </div>
+            <div class="designer-options">
 <div class="box">
             <div id="designer_options_details">
                 
@@ -829,7 +822,8 @@ padding:0;
             <div id="designer_options_reverse_print">
                   <input type='checkbox' id="reverse_print" /> Text printed on reverse of tag? (add AU$4.00 to order)
             </div>
-
+            </div>
+ </div>
             <div id="designer_options_quantity">
                 <strong>Quantity:</strong>
                 <?php
@@ -854,8 +848,9 @@ padding:0;
                 <button id="back">< Back</button>
                 <button id="submit">Continue ></button>
             </div>
-            </div>
+       
         </div>
+            </div>
         
         <script>
             

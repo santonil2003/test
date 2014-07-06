@@ -1,10 +1,10 @@
+<link type="text/css" rel="Stylesheet" href="css/pencil_labels.css" />
 <?php
 require_once '../common_db.php';
 require_once 'include.php';
 linkme();
 ?>
 <script src="js/pencil_labels.js"></script>
-<link type="text/css" rel="Stylesheet" href="css/pencil_labels.css" />
 <script>
     var _colourArray = new Array();
 <?php
@@ -44,7 +44,7 @@ while ($row = mysql_fetch_array($getPrice)) {
 
 
     <div id="designer_container">
-        <div style="position:fixed; width:800px;z-index:99;background-color:#F8F8F8;top:0px;">
+        <div class="fixed_preview">
             <div id="designer_preview_text">
                 Format will be improved prior to Print.<br />
                 This is just a idea of how the label font,colours and pic look.<br />
@@ -57,82 +57,83 @@ while ($row = mysql_fetch_array($getPrice)) {
             </div>
         </div>
         <div style="width:800px; height:110px;overflow:hidden;"></div>
+        <div class="designer-options">
+            <p style="color:red;" class="browser-incompactible">
+                Identikid interactive preview may not be compatible with Internet Explorer , Please use Firefox or chrome for best user experience. However your labels will still be printed correctly if you continue to place order on IE. Thanks
+            </p>
+            <div class="box">
+                <div id="designer_options_details">
+                    <p>
+                        <label class="detial_text_label">Name : </label> 
+                        <input type="text" class="details_text_name" placeholder="Preview Text" style="width: 160px; height: 32px;"/> 
+                    </p>
+                    <p class="error-msg"></p>
+                </div>
+            </div>
+            <br/>
+            <div class="box">
+                <div id="designer_options_font">
+                    <strong>Font:</strong>
+                    <?php
+                    $sql = mysql_query("SELECT * FROM designer_fonts WHERE fontValue = '4' ORDER BY fontValue");
+                    if (mysql_num_rows($sql) > 0) {
+                        while ($val = mysql_fetch_array($sql)) {
+                            $fonts[$val['fontName']] = $val['fontValue'];
+                        }
+                    }
+                    echo "<ol>";
+                    foreach ($fonts as $fontName => $fontFile) {
+                        echo "<li class='" . $fontFile . "' style='font-family:" . $fontName . ";'>Ginger Meggs</li>";
+                    }
+                    echo "</ol>";
+                    ?>
+                </div>
 
-        <div class="box">
-            <div id="designer_options_details">
-                <p>
-                    <label class="detial_text_label">Name : </label> 
-                    <input type="text" class="details_text_name" placeholder="Preview Text" style="width: 160px; height: 32px;"/> 
-                </p>
-                <p class="error-msg"></p>
+                <div id="designer_options_font_colour">
+                    <strong>Font Colour:</strong>
+                    <span class="font_colour_black"></span>
+                    <span class="font_colour_white"></span>
+                </div>
+
+                <div id="designer_options_colours">
+                    <strong>Choose a colour set:</strong>
+                    <?php
+                    $query = mysql_query("SELECT * FROM designer_colour_sets");
+                    if (mysql_num_rows($query) > 0) {
+                        while ($val = mysql_fetch_array($query)) {
+                            $colourSets[$val['colourSetName']] = $val['colourArray'];
+                        }
+                    }
+
+                    echo "<ul>";
+
+                    foreach ($colourSets as $colourName => $colourSet) {
+                        $colourName = str_replace(" ", "_", $colourName);
+
+                        echo "<li class='" . $colourName . "'><div>";
+                        if ($colourName == 'Individual') {
+                            echo "Individual (choose a colour by clicking on it)";
+                        } else {
+                            echo str_replace("_", " ", $colourName);
+                        }
+
+                        $id = 'radio' . uniqid();
+                        echo "</div><input style='float:left' type='radio' name='colour[]' value='" . $colourName . "' class='" . $colourName . "' id='$id'>";
+                        $colours = explode(",", $colourSet);
+                        foreach ($colours as $colour) {
+                            $class = str_replace('#', '', $colour);
+                            echo "<span style='background:" . $colour . "' class='" . $colour . " " . $class . "' onclick=checkradio('$id')></span>";
+                        }
+                        echo "</li>";
+                    }
+
+                    echo "</ul>";
+                    ?>
+                </div>
+
+
             </div>
         </div>
-        <br/>
-        <div class="box">
-            <div id="designer_options_font">
-                <strong>Font:</strong>
-                <?php
-                $sql = mysql_query("SELECT * FROM designer_fonts WHERE fontValue = '4' ORDER BY fontValue");
-                if (mysql_num_rows($sql) > 0) {
-                    while ($val = mysql_fetch_array($sql)) {
-                        $fonts[$val['fontName']] = $val['fontValue'];
-                    }
-                }
-                echo "<ol>";
-                foreach ($fonts as $fontName => $fontFile) {
-                    echo "<li class='" . $fontFile . "' style='font-family:" . $fontName . ";'>Ginger Meggs</li>";
-                }
-                echo "</ol>";
-                ?>
-            </div>
-
-            <div id="designer_options_font_colour">
-                <strong>Font Colour:</strong>
-                <span class="font_colour_black"></span>
-                <span class="font_colour_white"></span>
-            </div>
-
-            <div id="designer_options_colours">
-                <strong>Choose a colour set:</strong>
-                <?php
-                $query = mysql_query("SELECT * FROM designer_colour_sets");
-                if (mysql_num_rows($query) > 0) {
-                    while ($val = mysql_fetch_array($query)) {
-                        $colourSets[$val['colourSetName']] = $val['colourArray'];
-                    }
-                }
-
-                echo "<ul>";
-
-                foreach ($colourSets as $colourName => $colourSet) {
-                    $colourName = str_replace(" ", "_", $colourName);
-
-                    echo "<li class='" . $colourName . "'><div>";
-                    if ($colourName == 'Individual') {
-                        echo "Individual (choose a colour by clicking on it)";
-                    } else {
-                        echo str_replace("_", " ", $colourName);
-                    }
-
-                    $id = 'radio' . uniqid();
-                    echo "</div><input style='float:left' type='radio' name='colour[]' value='" . $colourName . "' class='" . $colourName . "' id='$id'>";
-                    $colours = explode(",", $colourSet);
-                    foreach ($colours as $colour) {
-                        $class = str_replace('#', '', $colour);
-                        echo "<span style='background:" . $colour . "' class='" . $colour . " " . $class . "' onclick=checkradio('$id')></span>";
-                    }
-                    echo "</li>";
-                }
-
-                echo "</ul>";
-                ?>
-            </div>
-
-
-        </div>
-
-
-
         <div class='box' style='text-align:center;'>
             <div id="designer_options_quantity">
                 <strong>Quantity:</strong>

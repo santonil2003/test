@@ -1,10 +1,11 @@
+<link type="text/css" rel="Stylesheet" href="css/flash_to_html_vinyls_mini.css" />
 <?php
 require_once '../common_db.php';
 require_once 'include.php';
 linkme();
 ?>  
 <script>
-var _colourArray = new Array();
+    var _colourArray = new Array();
 <?php
 $individual = array();
 $getColourArray = mysql_query("SELECT * FROM data_colour WHERE data_colour_background = '0'");
@@ -22,7 +23,6 @@ while ($row = mysql_fetch_array($getPrice)) {
 }
 ?>
 </script>
-<link type="text/css" rel="Stylesheet" href="css/flash_to_html_vinyls_mini.css" />
 <script src="js/flash_to_html_vinyls_mini.js"></script>
 
 <form action="/addtoorder.php" method="post" target="_top" id="vinyls-mini">
@@ -55,167 +55,168 @@ while ($row = mysql_fetch_array($getPrice)) {
 
 
     <div id="designer_container">
-        <div id="designer_preview_text">
-             Format will be improved prior to Print.
-This is just a idea of how the label font,colours and pic look.
-Actual label size L 50mm H 9mm
-        </div>
-        
-        <div id="designer_preview" class="designer_preview_rainbow_a">
-            <span class="preview_image" ></span>
-            <span class="preview_text" >Preview Text</span>
-            <span class="preview_phone" >000 000 000</span>
-        </div>
- 
+        <div class="fixed_preview">
+            <div id="designer_preview_text">
+                Format will be improved prior to Print.
+                This is just a idea of how the label font,colours and pic look.
+                Actual label size L 50mm H 9mm
+            </div>
 
-
-
-        <div id="designer_options_details">
-
-            <p><strong>Include: </strong>
-                <span><input type="checkbox" checked="checked" name="details_checkbox_name" class="details_checkbox_name" disabled="disabled"/> Line 1</span>
-                <span><input type="checkbox" checked="checked" name="details_checkbox_phone" class="details_checkbox_phone" /> Line 2</span>
-                <span><input type="checkbox" checked="checked" name="details_checkbox_pic" class="details_checkbox_pic" /> Pic</span>
-            </p>
-            <p>
-                <strong>Line 1:</strong> <input type="text" class="details_text_name" name="text1"/> 
-                <strong>Line 2:</strong> <input type="text" class="details_text_phone" name="text2"/> 
-            </p>
-            <p class="error-msg"></p>
-        </div>
-
-
-        <div class="block-box">
-            <div id="designer_options_picture">
-                <strong>Choose a picture by clicking on an icon:</strong>
-                <div>
-                    <?php
-                    //pull images from DB here
-                    $query = mysql_query("SELECT * FROM designer_bwimages");
-                    if (mysql_num_rows($query) > 0) {
-                        while ($val = mysql_fetch_array($query)) {
-                            $pictures[$val['id']] = $val['image'];
-                        }
-                    }
-                    /* designer_bwimages
-                     * 
-                     * id
-                     * imageName
-                     * image
-                     */
-                    echo "<ul>";
-                    $skip = array(44);
-                    foreach ($pictures as $ref => $picture) {
-                        if (in_array($ref, $skip)) {
-                            continue;
-                        }
-                        echo "<li class='" . $ref . "' rel='" . $picture . "' style='background-image:url(http://identikid.com.au/_designer/" . str_replace("bw", "bwl", $picture) . ")'></li>";
-                    }
-
-                    echo "</ul>";
-                    echo "<div style='clear:both'></div>";
-                    ?>
-                </div>
+            <div id="designer_preview" class="designer_preview_rainbow_a">
+                <span class="preview_image" ></span>
+                <span class="preview_text" >Preview Text</span>
+                <span class="preview_phone" >000 000 000</span>
             </div>
         </div>
 
+        <div class="designer-options">
+            <div id="designer_options_details">
 
-        <br/>
-        <div class="block-box">
-            <div id="designer_options_font">
-
-                <strong>Font:</strong>
-                <?php
-                //pulll fonts from DB here
-                $query = mysql_query("SELECT * FROM designer_fonts ORDER BY fontValue");
-                if (mysql_num_rows($query) > 0) {
-                    while ($val = mysql_fetch_array($query)) {
-                        $fonts[$val['fontName']] = $val['link'];
-                    }
-                }
-
-                echo "<ol>";
-
-                foreach ($fonts as $fontName => $fontFile) {
-                    if ($fontFile == '3') {
-                        echo "<li class='" . $fontFile . "' style='font-size:24px;font-family:" . $fontName . ";' data='" . $fontName . "'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle'>Ginger Meggs</td></tr></table></li>";
-                    } else if ($fontFile == '2') {
-                        echo "<li class='" . $fontFile . "' style='font-family:" . $fontName . ";' data='" . $fontName . "'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle'>Ginger Meggs</td></tr></table></li>";
-                    } else if ($fontFile == '5') {
-                        echo "<li class='" . $fontFile . "' style='font-family:" . $fontName . ";' data='" . $fontName . "'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle' style='font-weight:bold;'>Ginger Meggs</td></tr></table></li>";
-                    } else {
-                        echo "<li class='" . $fontFile . "' style='font-family:" . $fontName . ";' data='" . $fontName . "'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle'>Ginger Meggs</td></tr></table></li>";
-                    }
-                }
-
-                echo "</ol>";
-                ?>
-
+                <p><strong>Include: </strong>
+                    <span><input type="checkbox" checked="checked" name="details_checkbox_name" class="details_checkbox_name" disabled="disabled"/> Line 1</span>
+                    <span><input type="checkbox" checked="checked" name="details_checkbox_phone" class="details_checkbox_phone" /> Line 2</span>
+                    <span><input type="checkbox" checked="checked" name="details_checkbox_pic" class="details_checkbox_pic" /> Pic</span>
+                </p>
+                <p>
+                    <strong>Line 1:</strong> <input type="text" class="details_text_name" name="text1"/> 
+                    <strong>Line 2:</strong> <input type="text" class="details_text_phone" name="text2"/> 
+                </p>
+                <p class="error-msg"></p>
             </div>
 
-            <div class="colour-selector">
 
-                <div id="designer_options_font_colour">
-                    <strong>Font Colour:</strong>
-                    <span class="font_colour_black"></span>
-                    <span class="font_colour_white"></span>
+            <div class="block-box">
+                <div id="designer_options_picture">
+                    <strong>Choose a picture by clicking on an icon:</strong>
+                    <div>
+                        <?php
+                        //pull images from DB here
+                        $query = mysql_query("SELECT * FROM designer_bwimages");
+                        if (mysql_num_rows($query) > 0) {
+                            while ($val = mysql_fetch_array($query)) {
+                                $pictures[$val['id']] = $val['image'];
+                            }
+                        }
+                        /* designer_bwimages
+                         * 
+                         * id
+                         * imageName
+                         * image
+                         */
+                        echo "<ul>";
+                        $skip = array(44);
+                        foreach ($pictures as $ref => $picture) {
+                            if (in_array($ref, $skip)) {
+                                continue;
+                            }
+                            echo "<li class='" . $ref . "' rel='" . $picture . "' style='background-image:url(http://identikid.com.au/_designer/" . str_replace("bw", "bwl", $picture) . ")'></li>";
+                        }
+
+                        echo "</ul>";
+                        echo "<div style='clear:both'></div>";
+                        ?>
+                    </div>
                 </div>
+            </div>
 
-                <div id="designer_options_colours">
-                    <strong>Choose a colour set:</strong>
+
+            <br/>
+            <div class="block-box">
+                <div id="designer_options_font">
+
+                    <strong>Font:</strong>
                     <?php
-                    $query = mysql_query("SELECT * FROM designer_colour_sets");
+                    //pulll fonts from DB here
+                    $query = mysql_query("SELECT * FROM designer_fonts ORDER BY fontValue");
                     if (mysql_num_rows($query) > 0) {
                         while ($val = mysql_fetch_array($query)) {
-                            $colourSets[$val['colourSetName']] = $val['colourArray'];
+                            $fonts[$val['fontName']] = $val['link'];
                         }
                     }
 
-                    $colourSets['Individual'] = implode(',', $individual);
+                    echo "<ol>";
 
-                    echo "<ul>";
-
-                    foreach ($colourSets as $colourName => $colourSet) {
-                        $colourName = str_replace(" ", "_", $colourName);
-
-                        echo "<li class='" . $colourName . "'><div>";
-                        if ($colourName == 'Individual') {
-                            echo "Individual (choose a colour by clicking on it)";
+                    foreach ($fonts as $fontName => $fontFile) {
+                        if ($fontFile == '3') {
+                            echo "<li class='" . $fontFile . "' style='font-size:24px;font-family:" . $fontName . ";' data='" . $fontName . "'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle'>Ginger Meggs</td></tr></table></li>";
+                        } else if ($fontFile == '2') {
+                            echo "<li class='" . $fontFile . "' style='font-family:" . $fontName . ";' data='" . $fontName . "'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle'>Ginger Meggs</td></tr></table></li>";
+                        } else if ($fontFile == '5') {
+                            echo "<li class='" . $fontFile . "' style='font-family:" . $fontName . ";' data='" . $fontName . "'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle' style='font-weight:bold;'>Ginger Meggs</td></tr></table></li>";
                         } else {
-                            echo str_replace("_", " ", $colourName);
+                            echo "<li class='" . $fontFile . "' style='font-family:" . $fontName . ";' data='" . $fontName . "'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle'>Ginger Meggs</td></tr></table></li>";
                         }
-
-                        $id = 'radio' . uniqid();
-                        echo "</div><input style='float:left' type='radio' name='colour[]' value='" . $colourName . "' class='" . $colourName . "' id='$id'>";
-                        $colours = explode(",", $colourSet);
-                        foreach ($colours as $colour) {
-                            echo "<span style='background:" . $colour . "' class='" . $colour . "' onclick=checkradio('$id')></span>";
-                        }
-                        echo "</li>";
                     }
 
-                    echo "</ul>";
+                    echo "</ol>";
                     ?>
+
+                </div>
+
+                <div class="colour-selector">
+
+                    <div id="designer_options_font_colour">
+                        <strong>Font Colour:</strong>
+                        <span class="font_colour_black"></span>
+                        <span class="font_colour_white"></span>
+                    </div>
+
+                    <div id="designer_options_colours">
+                        <strong>Choose a colour set:</strong>
+                        <?php
+                        $query = mysql_query("SELECT * FROM designer_colour_sets");
+                        if (mysql_num_rows($query) > 0) {
+                            while ($val = mysql_fetch_array($query)) {
+                                $colourSets[$val['colourSetName']] = $val['colourArray'];
+                            }
+                        }
+
+                        $colourSets['Individual'] = implode(',', $individual);
+
+                        echo "<ul>";
+
+                        foreach ($colourSets as $colourName => $colourSet) {
+                            $colourName = str_replace(" ", "_", $colourName);
+
+                            echo "<li class='" . $colourName . "'><div>";
+                            if ($colourName == 'Individual') {
+                                echo "Individual (choose a colour by clicking on it)";
+                            } else {
+                                echo str_replace("_", " ", $colourName);
+                            }
+
+                            $id = 'radio' . uniqid();
+                            echo "</div><input style='float:left' type='radio' name='colour[]' value='" . $colourName . "' class='" . $colourName . "' id='$id'>";
+                            $colours = explode(",", $colourSet);
+                            foreach ($colours as $colour) {
+                                echo "<span style='background:" . $colour . "' class='" . $colour . "' onclick=checkradio('$id')></span>";
+                            }
+                            echo "</li>";
+                        }
+
+                        echo "</ul>";
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
-    <div class='box' style='text-align:center;'>
-        <div id="designer_options_quantity">
-            <strong>Quantity:</strong>
-            <select id='order_quantity'>
-                <?php
-                echo "<option value='1'>60 Mini vinyl Labels for AU$ " . $price . "</option>";
-                echo "<option value='2'>120 Mini vinyl Labels for AU$ " . ($price * 2) . "</option>";
-                echo "<option value='3'>180 Mini vinyl Labels for AU$ " . ($price * 3) . "</option>";
-                ?>
-            </select>
-        </div>
+        <div class='box' style='text-align:center;'>
+            <div id="designer_options_quantity">
+                <strong>Quantity:</strong>
+                <select id='order_quantity'>
+                    <?php
+                    echo "<option value='1'>60 Mini vinyl Labels for AU$ " . $price . "</option>";
+                    echo "<option value='2'>120 Mini vinyl Labels for AU$ " . ($price * 2) . "</option>";
+                    echo "<option value='3'>180 Mini vinyl Labels for AU$ " . ($price * 3) . "</option>";
+                    ?>
+                </select>
+            </div>
 
-        <div id="designer_submit">
-            <button id="back">< Back</button>
-            <input type="submit" Value="Continue >" class='btn'/>
+            <div id="designer_submit">
+                <button id="back">< Back</button>
+                <input type="submit" Value="Continue >" class='btn'/>
+            </div>
         </div>
     </div>
-</div>
 </form>
 
