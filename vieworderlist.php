@@ -622,6 +622,8 @@ function viewOrder($id, $from) {
                 $logo = 'background-image:none;';
             }
             
+            $flash = false;
+            
             $sql = "select * from designer_fonts";
             $res = mysql_query($sql);
             $fontName = array();
@@ -649,7 +651,7 @@ function viewOrder($id, $from) {
                                     </div>
                                 </div>
 
-            <?php if (1 == 2): ?>
+            <?php if ($flash): ?>
                                     <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
                                             codebase="<? echo $codebase;?>"
                                             WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" id="display_vinyl" ALIGN="">
@@ -1922,6 +1924,15 @@ function viewOrder($id, $from) {
                                         <td class="maintext"><?= getRealFontNumber($font[0]); ?></td>
                                         <td width="9%"  class="maintext"><img src="<? echo $aim;?>images/gen/spacer.gif" width="25" height="10"></td>
                                     </tr>
+                                     <tr> 
+                                            <td class="maintext">Font Colour:</td>
+                                            <td class="maintext"><?php
+                if ($qdata['data_font_colour_id'] == 1)
+                    echo "Black";
+                else
+                    echo "White";
+                ?></td>
+                                        </tr>
                                     <?
                                     if($from=="admin"){
                                     ?>
@@ -1975,6 +1986,15 @@ function viewOrder($id, $from) {
                                         <td class="maintext"><?= getRealFontNumber($font[1]); ?></td>
                                         <td width="9%"  class="maintext"><img src="<? echo $aim;?>images/gen/spacer.gif" width="25" height="10"></td>
                                     </tr>
+                                     <tr> 
+                                            <td class="maintext">Font Colour:</td>
+                                            <td class="maintext"><?php
+                if ($qdata['data_font_colour_id'] == 1)
+                    echo "Black";
+                else
+                    echo "White";
+                ?></td>
+                                        </tr>
                                     <?
                                     if($from=="admin"){
                                     ?>
@@ -2306,7 +2326,7 @@ function viewOrder($id, $from) {
                                         ?>
                                         <tr> 
                                             <td class="maintext"><? if($qdata["type"]==7){?>Pack:<? }else{ ?>Colours:<? }?></td>
-                                            <td class="maintext"><?
+                                            <td class="maintext"><?php
                                                 if($qdata["type"]==5 || $qdata["type"]==6 || $qdata["type"]==7){
                                                 if($qdata["colours"]==2){
                                                 //echo "Boys Colours";
@@ -2336,6 +2356,15 @@ function viewOrder($id, $from) {
                                                 echo $qdata["colours"];
                                                 }
                                                 ?></td>
+                                        </tr>
+                                        <tr> 
+                                            <td class="maintext">Font Colour:</td>
+                                            <td class="maintext"><?php
+                        if ($qdata['data_font_colour_id'] == 1)
+                            echo "Black";
+                        else
+                            echo "White";
+                        ?></td>
                                         </tr>
                                         <?
                                         }
@@ -2422,7 +2451,7 @@ function viewOrder($id, $from) {
                                             <td class="maintext">&nbsp;</td>
                                             <td class="maintext"><? if ($qdata['text3'] == 2) echo "Coloured"; else echo "Semi-permanent"; ?></td>
                                         </tr>
-                                        <?								
+                                        <?php								
                                         if ($qdata['text3'] == 2)
                                         {
                                         db_get_field("SELECT data_colour_name FROM data_colour WHERE data_colour_id="
@@ -2455,6 +2484,15 @@ function viewOrder($id, $from) {
                                         <tr> 
                                             <td class="maintext">Font:</td>
                                             <td class="maintext"><? echo getRealFontNumber($qdata["font"]);?></td>
+                                        </tr>
+                                         <tr> 
+                                            <td class="maintext">Font Colour:</td>
+                                            <td class="maintext"><?php
+                        if ($qdata['data_font_colour_id'] == 1)
+                            echo "Black";
+                        else
+                            echo "White";
+                        ?></td>
                                         </tr>
 
                                         <?   }
