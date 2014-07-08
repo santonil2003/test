@@ -245,8 +245,8 @@ $('document').ready(function() {
 
     // on submit
 
-    $('#permanent-iron-ons').submit(function(e) {
-
+    $('#shoe-dots').submit(function(e) {
+        
         $('.details_text_name').removeClass('required-field');
         $('.details_text_phone').removeClass('required-field');
 
