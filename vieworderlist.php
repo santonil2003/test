@@ -1,6 +1,5 @@
 <link type="text/css" rel="Stylesheet" href="_designer/css/designer-common.css" />
 <link type="text/css" rel="Stylesheet" href="../_designer/css/designer-common.css" />
-
 <?php
 ini_set('display_errors', '0');
 if (isset($_COOKIE["currency"])) {
@@ -1254,6 +1253,8 @@ function viewOrder($id, $from) {
                             ?>
                             <link type="text/css" rel="Stylesheet" href="_designer/css/pencil_labels.css" />
                             <link type="text/css" rel="Stylesheet" href="../_designer/css/pencil_labels.css" />
+
+                            
                             <div id="pencil_labels" style="marging:0px;padding:0px;">
                                 <div id="designer_preview" class="<?php echo $class; ?>" style="<?php echo $style; ?>">
                                     <span class="preview_text" style="<?php echo $fontColor; ?>"><?php echo $qdata["text1"]; ?></span>
@@ -3193,3 +3194,5 @@ if($id==false || mysql_num_rows($result)==0){
 }
 }
 ?>
+<link type="text/css" rel="Stylesheet" href="_designer/css/ie.css" />
+<link type="text/css" rel="Stylesheet" href="../_designer/css/ie.css" />
