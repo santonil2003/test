@@ -3194,5 +3194,8 @@ if($id==false || mysql_num_rows($result)==0){
 }
 }
 ?>
-<link type="text/css" rel="Stylesheet" href="_designer/css/ie.css" />
-<link type="text/css" rel="Stylesheet" href="../_designer/css/ie.css" />
+
+<!--[if IE]>
+    <link type="text/css" rel="Stylesheet" href="_designer/css/ie.css" />
+    <link type="text/css" rel="Stylesheet" href="../_designer/css/ie.css" />
+<![endif]-->
