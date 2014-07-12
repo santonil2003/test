@@ -355,9 +355,9 @@ function viewOrder($id, $from) {
                                             }
                                             /*  
                                             ?>
-            <?= $qdata["text3"] > 0 ? $qdata["text3"] . ' x Fairy<br>' : ''; ?>
-            <?= $qdata["text4"] > 0 ? $qdata["text4"] . ' x Mermaid<br>' : ''; ?>
-            <?= $qdata["text5"] > 0 ? $qdata["text5"] . ' x Butterfly<br>' : ''; ?>
+                                            <?= $qdata["text3"] > 0 ? $qdata["text3"] . ' x Fairy<br>' : ''; ?>
+                                            <?= $qdata["text4"] > 0 ? $qdata["text4"] . ' x Mermaid<br>' : ''; ?>
+                                            <?= $qdata["text5"] > 0 ? $qdata["text5"] . ' x Butterfly<br>' : ''; ?>
                                             <?= $qdata["text6"] > 0 ? $qdata["text6"] . ' x Heart<br>' : ''; ?>
                                             <?= $qdata["text7"] > 0 ? $qdata["text7"] . ' x Flower' : ''; ?>
 
@@ -391,9 +391,9 @@ function viewOrder($id, $from) {
                                             }
                                             /*  
                                             ?>
-            <?= $qdata["text3"] > 0 ? $qdata["text3"] . ' x Fairy<br>' : ''; ?>
-            <?= $qdata["text4"] > 0 ? $qdata["text4"] . ' x Mermaid<br>' : ''; ?>
-            <?= $qdata["text5"] > 0 ? $qdata["text5"] . ' x Butterfly<br>' : ''; ?>
+                                            <?= $qdata["text3"] > 0 ? $qdata["text3"] . ' x Fairy<br>' : ''; ?>
+                                            <?= $qdata["text4"] > 0 ? $qdata["text4"] . ' x Mermaid<br>' : ''; ?>
+                                            <?= $qdata["text5"] > 0 ? $qdata["text5"] . ' x Butterfly<br>' : ''; ?>
                                             <?= $qdata["text6"] > 0 ? $qdata["text6"] . ' x Heart<br>' : ''; ?>
                                             <?= $qdata["text7"] > 0 ? $qdata["text7"] . ' x Flower' : ''; ?>
 
@@ -545,18 +545,18 @@ function viewOrder($id, $from) {
                                     <EMBED FlashVars="<?php echo $swfstring; ?>" src="<? echo $aim;?>images/display_vinyl.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_vinyl" ALIGN=""
                                            TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
                                 </OBJECT>
-            <?php
-            if ($qdata["type"] == 11 && $qdata["text3"] == 1) { //61266 semi permanent iron on
-                $width = "180";
-                $height = "54";
-                if ($from == "admin") {
-                    $width*=2;
-                    $height*=2;
-                }
-                $swfstring = "type=" . $qdata["type"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) .
-                        "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] .
-                        "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"];
-                ?>
+                                <?php
+                                if ($qdata["type"] == 11 && $qdata["text3"] == 1) { //61266 semi permanent iron on
+                                    $width = "180";
+                                    $height = "54";
+                                    if ($from == "admin") {
+                                        $width*=2;
+                                        $height*=2;
+                                    }
+                                    $swfstring = "type=" . $qdata["type"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) .
+                                            "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] .
+                                            "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"];
+                                    ?>
                                     <br /><br />
                                     <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
                                             codebase="<? echo $codebase;?>"
@@ -593,53 +593,53 @@ function viewOrder($id, $from) {
                                                TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
                                     </OBJECT>
 
-                <?php
-            }
-        } else if ($qdata["type"] == 1 && $qdata["basketid"] > 54876) {
-            $width = "300";
-            $height = "100";
-            if ($from == "admin") {
-                $width*=2;
-                $height*=2;
-            }
-            
-            $swfstring = "type=" . $qdata["type"] . "&colour=" . $qdata["colours"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"] . "&fontcolour=" . $qdata["data_font_colour_id"];
-            
-            $text1 = $qdata['text1'];
-            $text2 = trim(str_replace('Ph:', '', $qdata['text2']));
-            
-            $font_colour = $qdata["data_font_colour_id"];
+                                    <?php
+                                }
+                            } else if ($qdata["type"] == 1 && $qdata["basketid"] > 54876) {
+                                $width = "300";
+                                $height = "100";
+                                if ($from == "admin") {
+                                    $width*=2;
+                                    $height*=2;
+                                }
 
-            if ($font_colour == '1') {
-                $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl/' . $qdata["pic"] . '.png);';
-                $fontColor = 'color:#000000;';
-            } else {
-                $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl2/' . $qdata["pic"] . '.png);';
-                $fontColor = 'color:#ffffff;';
-            }
+                                $swfstring = "type=" . $qdata["type"] . "&colour=" . $qdata["colours"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"] . "&fontcolour=" . $qdata["data_font_colour_id"];
 
-            if (!$qdata["picon"]) {
-                $logo = 'background-image:none;';
-            }
-            
-            $flash = false;
-            
-            $sql = "select * from designer_fonts";
-            $res = mysql_query($sql);
-            $fontName = array();
-            while ($row = mysql_fetch_assoc($res)) {
-                $fontName[$row['link']] = $row['fontName'];
-            }
+                                $text1 = $qdata['text1'];
+                                $text2 = trim(str_replace('Ph:', '', $qdata['text2']));
 
-            $singleLineCSS = '';
+                                $font_colour = $qdata["data_font_colour_id"];
 
-            if (!$qdata['text2']) {
-                $singleLineCSS = "top:10px;";
-            }
+                                if ($font_colour == '1') {
+                                    $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl/' . $qdata["pic"] . '.png);';
+                                    $fontColor = 'color:#000000;';
+                                } else {
+                                    $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl2/' . $qdata["pic"] . '.png);';
+                                    $fontColor = 'color:#ffffff;';
+                                }
 
-            $fontfamily = 'font-family:' . $fontName[$qdata["font"]] . ';' . $fontColor . $singleLineCSS;
-            $style = 'background: url(http://www.identikid.com.au/_designer/images/preview/' . $qdata["colours"] . '.png) no-repeat scroll 0% 0% transparent;';
-            ?>
+                                if (!$qdata["picon"]) {
+                                    $logo = 'background-image:none;';
+                                }
+
+                                $flash = false;
+
+                                $sql = "select * from designer_fonts";
+                                $res = mysql_query($sql);
+                                $fontName = array();
+                                while ($row = mysql_fetch_assoc($res)) {
+                                    $fontName[$row['link']] = $row['fontName'];
+                                }
+
+                                $singleLineCSS = '';
+
+                                if (!$qdata['text2']) {
+                                    $singleLineCSS = "top:10px;";
+                                }
+
+                                $fontfamily = 'font-family:' . $fontName[$qdata["font"]] . ';' . $fontColor . $singleLineCSS;
+                                $style = 'background: url(http://www.identikid.com.au/_designer/images/preview/' . $qdata["colours"] . '.png) no-repeat scroll 0% 0% transparent;';
+                                ?>
                                 <link type="text/css" rel="Stylesheet" href="/_designer/css/vinyls.css" />
                                 <link type="text/css" rel="Stylesheet" href="/../_designer/css/vinyls.css" />
                                 <div id="vinyl-wrapper">
@@ -651,7 +651,7 @@ function viewOrder($id, $from) {
                                     </div>
                                 </div>
 
-            <?php if ($flash): ?>
+                                <?php if ($flash): ?>
                                     <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
                                             codebase="<? echo $codebase;?>"
                                             WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" id="display_vinyl" ALIGN="">
@@ -661,18 +661,18 @@ function viewOrder($id, $from) {
                                         <EMBED FlashVars="<?php echo $swfstring; ?>" src="<? echo $aim;?>images/display_vinyl.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_vinyl" ALIGN=""
                                                TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>" FlashVars="<? echo $swfstring;?>"></EMBED>
                                     </OBJECT>
-            <?php endif; ?>
-            <?php
-        } else if ($qdata["type"] == 1 && $qdata["basketid"] < 54876) {
-            $width = "300";
-            $height = "100";
-            if ($from == "admin") {
-                $width*=2;
-                $height*=2;
-            }
+                                <?php endif; ?>
+                                <?php
+                            } else if ($qdata["type"] == 1 && $qdata["basketid"] < 54876) {
+                                $width = "300";
+                                $height = "100";
+                                if ($from == "admin") {
+                                    $width*=2;
+                                    $height*=2;
+                                }
 
-            $swfstring = "type=" . $qdata["type"] . "&colour=" . $qdata["colours"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"] . "&fontcolour=" . $qdata["data_font_colour_id"];
-            ?>
+                                $swfstring = "type=" . $qdata["type"] . "&colour=" . $qdata["colours"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"] . "&fontcolour=" . $qdata["data_font_colour_id"];
+                                ?>
                                 <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
                                         codebase="<? echo $codebase;?>"
                                         WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" id="display_vinyl" ALIGN="">
@@ -682,16 +682,16 @@ function viewOrder($id, $from) {
                                     <EMBED FlashVars="<?php echo $swfstring; ?>" src="<? echo $aim;?>images/display_vinyl.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_vinyl" ALIGN=""
                                            TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
                                 </OBJECT>
-            <?php
-        } else if ($qdata["type"] == 12 && $qdata["basketid"] > 59990) {
-            $width = "300";
-            $height = "100";
-            if ($from == "admin") {
-                $width*=2;
-                $height*=2;
-            }
-            $swfstring = "type=" . $qdata["type"] . "&colour=" . $qdata["colours"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"] . "&fontcolour=" . $qdata["data_font_colour_id"];
-            ?>
+                                <?php
+                            } else if ($qdata["type"] == 12 && $qdata["basketid"] > 59990) {
+                                $width = "300";
+                                $height = "100";
+                                if ($from == "admin") {
+                                    $width*=2;
+                                    $height*=2;
+                                }
+                                $swfstring = "type=" . $qdata["type"] . "&colour=" . $qdata["colours"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"] . "&fontcolour=" . $qdata["data_font_colour_id"];
+                                ?>
                                 <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
                                         codebase="<? echo $codebase;?>"
                                         WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" id="display_vinyl" ALIGN="">
@@ -752,17 +752,17 @@ function viewOrder($id, $from) {
                                            NAME="display_vinyl" ALIGN=""
                                            TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
                                 </OBJECT>
-            <?php
-        }
-    } else if ($qdata["type"] == 12 && $qdata["basketid"] < 59990) {
-        $width = "300";
-        $height = "100";
-        if ($from == "admin") {
-            $width*=2;
-            $height*=2;
-        }
-        $swfstring = "type=" . $qdata["type"] . "&colour=" . $qdata["colours"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"] . "&fontcolour=" . $qdata["data_font_colour_id"];
-        ?>
+                                <?php
+                            }
+                        } else if ($qdata["type"] == 12 && $qdata["basketid"] < 59990) {
+                            $width = "300";
+                            $height = "100";
+                            if ($from == "admin") {
+                                $width*=2;
+                                $height*=2;
+                            }
+                            $swfstring = "type=" . $qdata["type"] . "&colour=" . $qdata["colours"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"] . "&fontcolour=" . $qdata["data_font_colour_id"];
+                            ?>
                             <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
                                     codebase="<? echo $codebase;?>"
                                     WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" id="display_vinyl" ALIGN="">
@@ -772,16 +772,16 @@ function viewOrder($id, $from) {
                                 <EMBED FlashVars="<?php echo $swfstring; ?>" src="<? echo $aim;?>images/display_vinyl.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_vinyl" ALIGN=""
                                        TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
                             </OBJECT>		
-        <?php
-    } else if ($qdata["type"] == 10) { //&& $qdata["basketid"] > 58159){ // Starter Packs
-        $width = "300";
-        $height = "100";
-        if ($from == "admin") {
-            $width*=2;
-            $height*=2;
-        }
-        $swfstring = "type=" . $qdata["type"] . "&colour=" . $qdata["colours"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"] . "&fontcolour=" . $qdata["data_font_colour_id"];
-        ?>
+                            <?php
+                        } else if ($qdata["type"] == 10) { //&& $qdata["basketid"] > 58159){ // Starter Packs
+                            $width = "300";
+                            $height = "100";
+                            if ($from == "admin") {
+                                $width*=2;
+                                $height*=2;
+                            }
+                            $swfstring = "type=" . $qdata["type"] . "&colour=" . $qdata["colours"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"] . "&fontcolour=" . $qdata["data_font_colour_id"];
+                            ?>
                             <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
                                     codebase="<? echo $codebase;?>"
                                     WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" id="display_vinyl" ALIGN="">
@@ -817,21 +817,21 @@ function viewOrder($id, $from) {
                                        HEIGHT="<? echo $height;?>" NAME="display_vinyl" ALIGN=""
                                        TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
                             </OBJECT>		  
-        <?php
-    } elseif ($qdata["typedetail"] == 2) { //61266 coloured iron on for mixed packs
-        $width = "180";
-        $height = "54";
-        if ($from == "admin") {
-            $width*=2;
-            $height*=2;
-        }
-        $swfstring = "type=" . $qdata["type"] . "&pic=" . $qdata["pic"] .
-                "&text1=" . urlencode($qdata["text1"]) .
-                "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] .
-                "&picon=" . $qdata["picon"] . "&split=" .
-                $qdata["split"] . "&background_colour=" . $qdata['text4'] .
-                "&font_colour=" . $qdata['text5'];
-        ?>				
+                            <?php
+                        } elseif ($qdata["typedetail"] == 2) { //61266 coloured iron on for mixed packs
+                            $width = "180";
+                            $height = "54";
+                            if ($from == "admin") {
+                                $width*=2;
+                                $height*=2;
+                            }
+                            $swfstring = "type=" . $qdata["type"] . "&pic=" . $qdata["pic"] .
+                                    "&text1=" . urlencode($qdata["text1"]) .
+                                    "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] .
+                                    "&picon=" . $qdata["picon"] . "&split=" .
+                                    $qdata["split"] . "&background_colour=" . $qdata['text4'] .
+                                    "&font_colour=" . $qdata['text5'];
+                            ?>				
                             <br />
                             <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
                                     codebase="<? echo $codebase;?>"
@@ -1105,71 +1105,71 @@ function viewOrder($id, $from) {
                             </OBJECT>
                             <?
                             }*/?>
-        <?php
-        // mini vinyls
-    } else if ($qdata["type"] == 3) {
-        $width = "164";
-        $height = "63";
-        if ($from == "admin") {
-            $width*=2;
-            $height*=2;
-        }
+                            <?php
+                            // mini vinyls
+                        } else if ($qdata["type"] == 3) {
+                            $width = "164";
+                            $height = "63";
+                            if ($from == "admin") {
+                                $width*=2;
+                                $height*=2;
+                            }
 
-        if ((int) $qdata['data_colour_id'] == 0) {
-            // old format, bg = yellow, font = black;
-            $background_colour = VINYL_OLD_DEFAULT_BACKGROUND_COLOUR;
-            $font_colour = VINYL_OLD_DEFAULT_FONT_COLOUR;
-        } else {
-            $background_colour = $qdata['data_colour_id'];
-            $font_colour = $qdata['data_font_colour_id'];
-        }
+                            if ((int) $qdata['data_colour_id'] == 0) {
+                                // old format, bg = yellow, font = black;
+                                $background_colour = VINYL_OLD_DEFAULT_BACKGROUND_COLOUR;
+                                $font_colour = VINYL_OLD_DEFAULT_FONT_COLOUR;
+                            } else {
+                                $background_colour = $qdata['data_colour_id'];
+                                $font_colour = $qdata['data_font_colour_id'];
+                            }
 
-        $text1 = $qdata['text1'];
-        $text2 = trim(str_replace('Ph:', '', $qdata['text2']));
-
-
+                            $text1 = $qdata['text1'];
+                            $text2 = trim(str_replace('Ph:', '', $qdata['text2']));
 
 
-        if ($font_colour == '1') {
-            // black
-            $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl/' . $qdata["pic"] . '.png);';
-            $fontColor = 'color:#000000;';
-        } else {
-            //white
-            $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl2/' . $qdata["pic"] . '.png);';
-            $fontColor = 'color:#ffffff;';
-        }
-
-        if (!$qdata["picon"]) {
-            $logo = 'background-image:none;';
-        }
-
-        $sql = "select * from designer_fonts";
-        $res = mysql_query($sql);
-        $fontName = array();
-        while ($row = mysql_fetch_assoc($res)) {
-            $fontName[$row['link']] = $row['fontName'];
-        }
 
 
-        // echo '<pre>';
-        //print_r($fontName);
-        //echo '</pre>';
-        //echo $swfstring = "type=" . $qdata["type"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&background_colour=" . (int) $background_colour . "&font_colour=" . $font_colour;
+                            if ($font_colour == '1') {
+                                // black
+                                $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl/' . $qdata["pic"] . '.png);';
+                                $fontColor = 'color:#000000;';
+                            } else {
+                                //white
+                                $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl2/' . $qdata["pic"] . '.png);';
+                                $fontColor = 'color:#ffffff;';
+                            }
+
+                            if (!$qdata["picon"]) {
+                                $logo = 'background-image:none;';
+                            }
+
+                            $sql = "select * from designer_fonts";
+                            $res = mysql_query($sql);
+                            $fontName = array();
+                            while ($row = mysql_fetch_assoc($res)) {
+                                $fontName[$row['link']] = $row['fontName'];
+                            }
 
 
-        $style = '';
-        $fontfamily = 'font-family:' . $fontName[$qdata["font"]] . ';' . $fontColor;
+                            // echo '<pre>';
+                            //print_r($fontName);
+                            //echo '</pre>';
+                            //echo $swfstring = "type=" . $qdata["type"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&background_colour=" . (int) $background_colour . "&font_colour=" . $font_colour;
 
-        if ($background_colour == 9) {
-            $class = 'designer_preview_rainbow_a';
-        } else if ($background_colour == 10) {
-            $class = 'designer_preview_rainbow_b';
-        } else {
-            $class = "individual_preivew";
-            $style = 'background: url(http://www.identikid.com.au/_designer/images/mini_vinyls/' . $background_colour . '.png) no-repeat scroll 30px 54px transparent;';
-        }
-        ?>
+
+                            $style = '';
+                            $fontfamily = 'font-family:' . $fontName[$qdata["font"]] . ';' . $fontColor;
+
+                            if ($background_colour == 9) {
+                                $class = 'designer_preview_rainbow_a';
+                            } else if ($background_colour == 10) {
+                                $class = 'designer_preview_rainbow_b';
+                            } else {
+                                $class = "individual_preivew";
+                                $style = 'background: url(http://www.identikid.com.au/_designer/images/mini_vinyls/' . $background_colour . '.png) no-repeat scroll 30px 54px transparent;';
+                            }
+                            ?>
                             <link type="text/css" rel="Stylesheet" href="_designer/css/flash_to_html_vinyls_mini.css" />
                             <link type="text/css" rel="Stylesheet" href="../_designer/css/flash_to_html_vinyls_mini.css" />
                             <div id="vinyls-mini">
@@ -1186,7 +1186,7 @@ function viewOrder($id, $from) {
                                 <PARAM NAME=movie VALUE="<? echo $aim;?>images/display_mini.swf?<? echo $swfstring;?>">
                                 <PARAM NAME=quality VALUE=high>
                                 <PARAM NAME=bgcolor VALUE=#FFFFFF>
-                                <EMBED FlashVars="<?php //echo $swfstring;       ?>" src="<? echo $aim;?>images/display_mini.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_mini" ALIGN=""
+                                <EMBED FlashVars="<?php //echo $swfstring;               ?>" src="<? echo $aim;?>images/display_mini.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_mini" ALIGN=""
                                        TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
                             </OBJECT>-->
                             <?
@@ -1208,50 +1208,50 @@ function viewOrder($id, $from) {
                                 <EMBED FlashVars="<?php echo $swfstring; ?>" src="<? echo $aim;?>images/display_shoe.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_shoe" ALIGN=""
                                        TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
                             </OBJECT>
-        <?php
-    } else if ($qdata["type"] == 5) {
-        $width = "170";
-        $height = "32";
-        if ($from == "admin") {
-            $width*=2;
-            $height*=2;
-        }
+                            <?php
+                        } else if ($qdata["type"] == 5) {
+                            $width = "170";
+                            $height = "32";
+                            if ($from == "admin") {
+                                $width*=2;
+                                $height*=2;
+                            }
 
-        if ((int) $qdata['data_colour_id'] == 0) {
-            // old format, bg = yellow, font = black;
-            $background_colour = MINI_OLD_DEFAULT_BACKGROUND_COLOUR;
-            $font_colour = MINI_OLD_DEFAULT_FONT_COLOUR;
-        } else {
-            $background_colour = $qdata['data_colour_id'];
-            $font_colour = $qdata['data_font_colour_id'];
-        }
+                            if ((int) $qdata['data_colour_id'] == 0) {
+                                // old format, bg = yellow, font = black;
+                                $background_colour = MINI_OLD_DEFAULT_BACKGROUND_COLOUR;
+                                $font_colour = MINI_OLD_DEFAULT_FONT_COLOUR;
+                            } else {
+                                $background_colour = $qdata['data_colour_id'];
+                                $font_colour = $qdata['data_font_colour_id'];
+                            }
 
-        $fontColor = ($font_colour == '1') ? 'color:#000000;' : 'color:#ffffff;';
+                            $fontColor = ($font_colour == '1') ? 'color:#000000;' : 'color:#ffffff;';
 
-        $sql = "select * from designer_fonts";
-        $res = mysql_query($sql);
-        $fontName = array();
-        while ($row = mysql_fetch_assoc($res)) {
-            $fontName[$row['link']] = $row['fontName'];
-        }
+                            $sql = "select * from designer_fonts";
+                            $res = mysql_query($sql);
+                            $fontName = array();
+                            while ($row = mysql_fetch_assoc($res)) {
+                                $fontName[$row['link']] = $row['fontName'];
+                            }
 
-        $style = '';
-        $fontfamily = 'font-family:' . $fontName[$qdata["font"]] . ';' . $fontColor;
+                            $style = '';
+                            $fontfamily = 'font-family:' . $fontName[$qdata["font"]] . ';' . $fontColor;
 
-        if ($background_colour == 9) {
-            $class = 'designer_preview_rainbow_a';
-        } else if ($background_colour == 10) {
-            $class = 'designer_preview_rainbow_b';
-        } else {
-            $class = "individual_preivew";
-            $style = 'background: url(http://www.identikid.com.au/_designer/images/pencil/' . $background_colour . '.png) no-repeat scroll 30px 54px rgba(0, 0, 0, 0);';
-        }
+                            if ($background_colour == 9) {
+                                $class = 'designer_preview_rainbow_a';
+                            } else if ($background_colour == 10) {
+                                $class = 'designer_preview_rainbow_b';
+                            } else {
+                                $class = "individual_preivew";
+                                $style = 'background: url(http://www.identikid.com.au/_designer/images/pencil/' . $background_colour . '.png) no-repeat scroll 30px 54px rgba(0, 0, 0, 0);';
+                            }
 
 
 
-        $swfstring = "type=" . $qdata["type"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&background_colour=" . (int) $background_colour . "&font_colour=" . $font_colour;
-        $flash = false;
-        ?>
+                            $swfstring = "type=" . $qdata["type"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&background_colour=" . (int) $background_colour . "&font_colour=" . $font_colour;
+                            $flash = false;
+                            ?>
                             <link type="text/css" rel="Stylesheet" href="_designer/css/pencil_labels.css" />
                             <link type="text/css" rel="Stylesheet" href="../_designer/css/pencil_labels.css" />
                             <div id="pencil_labels" style="marging:0px;padding:0px;">
@@ -1270,7 +1270,7 @@ function viewOrder($id, $from) {
                                     <EMBED FlashVars="<?php echo $swfstring; ?>" src="<? echo $aim;?>images/display_pencil.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_shoe" ALIGN=""
                                            TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
                                 </OBJECT>
-        <?php endif; ?>
+                            <?php endif; ?>
                             <?
                             }else if($qdata["type"]==8 || $qdata["type"]==9){
                             $width = "195";
@@ -1308,55 +1308,55 @@ function viewOrder($id, $from) {
                                 <EMBED FlashVars="<?php echo $swfstring; ?>" src="<? echo $aim;?>images/display_address_labels.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_address_labels" ALIGN=""
                                        TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
                             </OBJECT><?PHP
-        echo "<BR /><BR />";
+                            echo "<BR /><BR />";
 
 
-        //SHARED PACKS
-    } else if ($qdata['type'] == 17) {
-        // pack type;
-        list($pack1, $pack2) = split(",", $qdata['text5']);
-        $pack = split(",", $qdata['text5']);
-        // kidsName
-        list($pack1_text1, $pack2_text1) = split(",", $qdata['text1']);
-        $pack1_text1 = rawurldecode($pack1_text1);
-        $pack2_text1 = rawurldecode($pack2_text1);
-        $text1 = split(",", $qdata['text1']);
-        // phone number
-        list($pack1_text2, $pack2_text2) = split(",", $qdata['text2']);
-        $pack1_text2 = rawurldecode($pack1_text2);
-        $pack2_text2 = rawurldecode($pack2_text2);
-        $text2 = split(",", $qdata['text2']);
-        // pictures
-        list($pack1_picon, $pack2_picon) = split(",", $qdata['picon']);
-        $picon = split(",", $qdata['picon']);
-        list($pack1_pic, $pack2_pic) = split(",", $qdata['pic']);
-        $pic = split(",", $qdata['pic']);
-        //font
-        list($pack1_font, $pack2_font) = split(",", $qdata['font']);
-        $font = split(",", $qdata['font']);
-        // colours
-        list($pack1_colours, $pack2_colours) = split(",", $qdata['colours']);
-        $colours = split(",", $qdata['colours']);
-        //split
-        list($pack1_split, $pack2_split) = split(",", $qdata['split']);
-        $split = split(",", $qdata['split']);
-        //font colours
-        list($pack1_font_col, $pack2_font_col) = split(",", $qdata['text10']);
-        $font_col = split(",", $qdata['text10']);
+                            //SHARED PACKS
+                        } else if ($qdata['type'] == 17) {
+                            // pack type;
+                            list($pack1, $pack2) = split(",", $qdata['text5']);
+                            $pack = split(",", $qdata['text5']);
+                            // kidsName
+                            list($pack1_text1, $pack2_text1) = split(",", $qdata['text1']);
+                            $pack1_text1 = rawurldecode($pack1_text1);
+                            $pack2_text1 = rawurldecode($pack2_text1);
+                            $text1 = split(",", $qdata['text1']);
+                            // phone number
+                            list($pack1_text2, $pack2_text2) = split(",", $qdata['text2']);
+                            $pack1_text2 = rawurldecode($pack1_text2);
+                            $pack2_text2 = rawurldecode($pack2_text2);
+                            $text2 = split(",", $qdata['text2']);
+                            // pictures
+                            list($pack1_picon, $pack2_picon) = split(",", $qdata['picon']);
+                            $picon = split(",", $qdata['picon']);
+                            list($pack1_pic, $pack2_pic) = split(",", $qdata['pic']);
+                            $pic = split(",", $qdata['pic']);
+                            //font
+                            list($pack1_font, $pack2_font) = split(",", $qdata['font']);
+                            $font = split(",", $qdata['font']);
+                            // colours
+                            list($pack1_colours, $pack2_colours) = split(",", $qdata['colours']);
+                            $colours = split(",", $qdata['colours']);
+                            //split
+                            list($pack1_split, $pack2_split) = split(",", $qdata['split']);
+                            $split = split(",", $qdata['split']);
+                            //font colours
+                            list($pack1_font_col, $pack2_font_col) = split(",", $qdata['text10']);
+                            $font_col = split(",", $qdata['text10']);
 
 
-        for ($i = 0; $i <= 1; $i++) {
+                            for ($i = 0; $i <= 1; $i++) {
 
-            if ($pack[$i] == 1 && $qdata["basketid"] < 56508) {
-                // vinyl
-                $width = "300";
-                $height = "100";
-                if ($from == "admin") {
-                    $width*=2;
-                    $height*=2;
-                }
-                $swfstring = "type=7&pic={$pic[$i]}&text1={$text1[$i]}&text2={$text2[$i]}&font={$font[$i]}&picon={$picon[$i]}&split={$split[$i]}";
-                ?>
+                                if ($pack[$i] == 1 && $qdata["basketid"] < 56508) {
+                                    // vinyl
+                                    $width = "300";
+                                    $height = "100";
+                                    if ($from == "admin") {
+                                        $width*=2;
+                                        $height*=2;
+                                    }
+                                    $swfstring = "type=7&pic={$pic[$i]}&text1={$text1[$i]}&text2={$text2[$i]}&font={$font[$i]}&picon={$picon[$i]}&split={$split[$i]}";
+                                    ?>
                                     <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
                                             codebase="<? echo $codebase;?>"
                                             WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" id="display_vinyl" ALIGN="">
@@ -1407,18 +1407,18 @@ function viewOrder($id, $from) {
                                         <EMBED FlashVars="<?php echo $swfstring; ?>" src="<? echo $aim;?>images/display_iron.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_vinyl" ALIGN=""
                                                TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
                                     </OBJECT><br><br>
-                <?php
-            } elseif ($pack[$i] == 19) {
-                //iron permanent coloured
-                $width = "180";
-                $height = "54";
-                if ($from == "admin") {
-                    $width*=2;
-                    $height*=2;
-                }
+                                    <?php
+                                } elseif ($pack[$i] == 19) {
+                                    //iron permanent coloured
+                                    $width = "180";
+                                    $height = "54";
+                                    if ($from == "admin") {
+                                        $width*=2;
+                                        $height*=2;
+                                    }
 
-                $swfstring = "type=19&pic={$pic[$i]}&text1={$text1[$i]}&text2={$text2[$i]}&font={$font[$i]}&picon={$picon[$i]}&split={$split[$i]}&background_colour={$colours[$i]}&font_colour={$font_col[$i]}";
-                ?>
+                                    $swfstring = "type=19&pic={$pic[$i]}&text1={$text1[$i]}&text2={$text2[$i]}&font={$font[$i]}&picon={$picon[$i]}&split={$split[$i]}&background_colour={$colours[$i]}&font_colour={$font_col[$i]}";
+                                    ?>
                                     <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
                                             codebase="<? echo $codebase;?>"
                                             WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" id="display_coloured_iron" ALIGN="">
@@ -1566,136 +1566,203 @@ function viewOrder($id, $from) {
                                         <EMBED FlashVars="<?php echo $swfstring; ?>" src="<? echo $aim;?>images/display_allergy_mini.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_mini" ALIGN=""
                                                TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
                                     </OBJECT>
-                <?php
-            } //end if
-        } else if ($qdata["type"] == 19) {
-            $width = "180";
-            $height = "54";
-            if ($from == "admin") {
-                $width*=2;
-                $height*=2;
-            }
-            $swfstring = "type=" . $qdata["type"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"] . "&background_colour=" . $qdata['data_colour_id'] . "&font_colour=" . $qdata['data_font_colour_id'];
-            
-            $text1 = $qdata['text1'];
-            $text2 = trim(str_replace('Ph:', '', $qdata['text2']));
+                                    <?php
+                                } //end if
+                            } else if ($qdata["type"] == 19) {
+                                $width = "180";
+                                $height = "54";
+                                if ($from == "admin") {
+                                    $width*=2;
+                                    $height*=2;
+                                }
+                                $swfstring = "type=" . $qdata["type"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"] . "&background_colour=" . $qdata['data_colour_id'] . "&font_colour=" . $qdata['data_font_colour_id'];
 
-            if ($font_colour == '1') {
-                $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl/' . $qdata["pic"] . '.png);';
-                $fontColor = 'color:#000000;';
-            } else {
-                $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl2/' . $qdata["pic"] . '.png);';
-                $fontColor = 'color:#ffffff;';
-            }
+                                $text1 = $qdata['text1'];
+                                $text2 = trim(str_replace('Ph:', '', $qdata['text2']));
 
-            if (!$qdata["picon"]) {
-                $logo = 'background-image:none;';
-            }
+                                if ($font_colour == '1') {
+                                    $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl/' . $qdata["pic"] . '.png);';
+                                    $fontColor = 'color:#000000;';
+                                } else {
+                                    $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl2/' . $qdata["pic"] . '.png);';
+                                    $fontColor = 'color:#ffffff;';
+                                }
 
-            $sql = "select * from designer_fonts";
-            $res = mysql_query($sql);
-            $fontName = array();
+                                if (!$qdata["picon"]) {
+                                    $logo = 'background-image:none;';
+                                }
 
-            while ($row = mysql_fetch_assoc($res)) {
-                $fontName[$row['link']] = $row['fontName'];
-            }
+                                $sql = "select * from designer_fonts";
+                                $res = mysql_query($sql);
+                                $fontName = array();
 
-            $singleLineCSS = '';
+                                while ($row = mysql_fetch_assoc($res)) {
+                                    $fontName[$row['link']] = $row['fontName'];
+                                }
 
-            if (!$qdata['text2']) {
-                $singleLineCSS = "top:90px;";
-            }
+                                $singleLineCSS = '';
 
-            $fontfamily = 'font-family:' . $fontName[$qdata["font"]] . ';' . $fontColor . $singleLineCSS;
-            $style = 'background: url(http://www.identikid.com.au/_designer/images/mini_vinyls/' . $qdata["data_colour_id"] . '.png) no-repeat scroll 30px 54px transparent;';
-            
-            $flash = false;
-            ?>
+                                if (!$qdata['text2']) {
+                                    $singleLineCSS = "top:90px;";
+                                }
+
+                                $fontfamily = 'font-family:' . $fontName[$qdata["font"]] . ';' . $fontColor . $singleLineCSS;
+                                $style = 'background: url(http://www.identikid.com.au/_designer/images/mini_vinyls/' . $qdata["data_colour_id"] . '.png) no-repeat scroll 30px 54px transparent;';
+
+                                $flash = false;
+                                ?>
                                 <link type="text/css" rel="Stylesheet" href="/_designer/css/Permanent_Iron_Ons.css" />
                                 <link type="text/css" rel="Stylesheet" href="/../_designer/css/Permanent_Iron_Ons.css" />
                                 <div id="permanent-iron-ons">
                                     <div id="designer_preview" class="individual_preivew" style="<?php echo $style; ?>">
                                         <span class="preview_image" style="<?php echo $logo; ?>"></span>
-                                         <span class="preview_text" style="<?php echo $fontfamily; ?>"><?php echo $qdata["text1"]; ?></span>
+                                        <span class="preview_text" style="<?php echo $fontfamily; ?>"><?php echo $qdata["text1"]; ?></span>
                                         <span class="preview_phone" style="<?php echo $fontfamily; ?>"><?php echo $qdata["text2"]; ?></span>
                                     </div>
                                 </div>
-                                <?php if($flash):?>
-                                <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-                                        codebase="<? echo $codebase;?>"
-                                        WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" id="display_coloured_iron" ALIGN="">
-                                    <PARAM NAME=movie VALUE="<? echo $aim;?>images/display_coloured_ironon.swf?<? echo $swfstring;?>">
-                                    <PARAM NAME=quality VALUE=high>
-                                    <PARAM NAME=bgcolor VALUE=#FFFFFF>
-                                    <EMBED FlashVars="<?php echo $swfstring; ?>" src="<? echo $aim;?>images/display_coloured_ironon.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_vinyl" ALIGN=""
-                                           TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
-                                </OBJECT>
-                                <?php endif ;?>
+                                <?php if ($flash): ?>
+                                    <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+                                            codebase="<? echo $codebase;?>"
+                                            WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" id="display_coloured_iron" ALIGN="">
+                                        <PARAM NAME=movie VALUE="<? echo $aim;?>images/display_coloured_ironon.swf?<? echo $swfstring;?>">
+                                        <PARAM NAME=quality VALUE=high>
+                                        <PARAM NAME=bgcolor VALUE=#FFFFFF>
+                                        <EMBED FlashVars="<?php echo $swfstring; ?>" src="<? echo $aim;?>images/display_coloured_ironon.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_vinyl" ALIGN=""
+                                               TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
+                                    </OBJECT>
+                                <?php endif; ?>
                                 <?php
-                                }
-                                elseif((int)$qdata['type'] == 20 || (int)$qdata['type'] == 28 || (int)$qdata['type'] == 29)
-                                {
+                            }
+                            elseif ((int) $qdata['type'] == 20 || (int) $qdata['type'] == 28 || (int) $qdata['type'] == 29) {
                                 $width = "160";
                                 $height = "160";
-                                /*if($from=="admin"){
-                                //								$width*=2;
-                                //									$height*=2;
-                                }*/
-                                $swfstring = "type=".$qdata["type"]."&pic=".$qdata["pic"]."&kidsName=".urlencode($qdata["text1"])."&kidsPhone=".urlencode($qdata["text2"])."&picon=".$qdata["picon"]."&background_colour=" . $qdata['data_colour_id'] . "&font_colour=" . $qdata['data_font_colour_id'];
+                                /* if($from=="admin"){
+                                  //								$width*=2;
+                                  //									$height*=2;
+                                  } */
+                                $swfstring = "type=" . $qdata["type"] . "&pic=" . $qdata["pic"] . "&kidsName=" . urlencode($qdata["text1"]) . "&kidsPhone=" . urlencode($qdata["text2"]) . "&picon=" . $qdata["picon"] . "&background_colour=" . $qdata['data_colour_id'] . "&font_colour=" . $qdata['data_font_colour_id'];
+
+                                $flash = 0;
+
+                                $text1 = $qdata['text1'];
+                                $text2 = trim(str_replace('Ph:', '', $qdata['text2']));
+
+                                if ($qdata['data_font_colour_id'] == '1') {
+                                    $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl/' . $qdata["pic"] . '.png);';
+                                    $fontColor = 'color:#000000;';
+                                } else {
+                                    $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl2/' . $qdata["pic"] . '.png);';
+                                    $fontColor = 'color:#ffffff;';
+                                }
+
+                                if (!$qdata["picon"]) {
+                                    $logo = 'background-image:none;';
+                                }
+
+                                $sql = "select * from designer_fonts";
+                                $res = mysql_query($sql);
+                                $fontName = array();
+
+                                while ($row = mysql_fetch_assoc($res)) {
+                                    $fontName[$row['link']] = $row['fontName'];
+                                }
+
+                                $fontfamily = 'font-family:' . $fontName[$qdata["font"]] . ';' . $fontColor;
+                                $style = 'background: url(http://www.identikid.com.au/_designer/images/shoedots/' . $qdata["data_colour_id"] . '.png) no-repeat scroll 0px 0px transparent;';
                                 ?>
-                                <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
-                                        codebase="<? echo $codebase;?>"
-                                        WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" id="display_coloured_iron" ALIGN="">
-                                    <PARAM NAME=movie VALUE="<? echo $aim;?>images/display_shoe_dots.swf?<? echo $swfstring;?>">
-                                    <PARAM NAME=quality VALUE=high>
-                                    <PARAM NAME=bgcolor VALUE=#FFFFFF>
-                                    <EMBED FlashVars="<?php echo $swfstring; ?>" src="<? echo $aim;?>images/display_shoe_dots.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_vinyl" ALIGN=""
-                                           TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
-                                </OBJECT>
-            <?php
-        } else if ($qdata["type"] == 21) {
-            $width = "300";
-            $height = "50";
-            if ($from == "admin") {
-                $width*=2;
-                $height*=2;
-            }
-            $swfstring = "type=" . $qdata["type"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"] . "&background_colour=" . ($qdata['colours']) . "&font_colour=" . $qdata['data_font_colour_id'];
-            $text1 = $qdata['text1'];
-            $text2 = trim(str_replace('Ph:', '', $qdata['text2']));
+                                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+                                <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+                                <!--[if IE]>
+                                        <link rel="Stylesheet" type="text/css" href="/_designer/css/ie.css" />
+                                        <link rel="Stylesheet" type="text/css" href="/../_designer/css/ie.css" />
+                                <![endif]-->
+            <?php if ($form !== 'admin'): ?>
+                                    <link type="text/css" rel="Stylesheet" href="/_designer/css/curve.css" />
+                                    <link type="text/css" rel="Stylesheet" href="/_designer/css/shoe_dots.css" />
+                                    <script type="text/javascript" src="/_designer/js/jquery.arctext.js"></script>
+                                    <script src="/_designer/js/shoe_dots.js"></script>
+            <?php else: ?>
+                                    <link type="text/css" rel="Stylesheet" href="/../_designer/css/curve.css" />
+                                    <link type="text/css" rel="Stylesheet" href="/../_designer/css/shoe_dots.css" />
+                                    <script type="text/javascript" src="/../_designer/js/jquery.arctext.js"></script>
+                                    <script src="/../_designer/js/shoe_dots.js"></script>
+            <?php endif; ?>
 
-            if ($font_colour == '1') {
-                $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl/' . $qdata["pic"] . '.png);';
-                $fontColor = 'color:#000000;';
-            } else {
-                $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl2/' . $qdata["pic"] . '.png);';
-                $fontColor = 'color:#ffffff;';
-            }
+                                <div id="shoe-dots">
+                                    <p style="color:red;" class="browser-incompactible">
+                                        Identikid interactive preview may not be compatible with Internet Explorer , Please use Firefox or chrome for best user experience. However your labels will still be printed correctly if you continue to place order on IE. Thanks
+                                    </p>
+                                    <div id="designer_preview" class="individual_preivew" style="<?php echo $style; ?>">
+                                        <div id="holder_preview_text"><span class="preview_text" style="<?php echo $fontfamily; ?>"><?php echo $qdata["text1"]; ?></span></div>
+                                        <span class="preview_image" style="<?php echo $logo; ?>" ></span>
+                                        <div id="holder_preview_phone"><span class="preview_phone" style="<?php echo $fontfamily; ?>"><?php echo $qdata["text2"]; ?></span></div>
+                                    </div>
+                                </div>
 
-            if (!$qdata["picon"]) {
-                $logo = 'background-image:none;';
-            }
+                                <script type="text/javascript">
+                                    $(document).ready(function() {
+                                        var $preview_text = $('#shoe-dots .preview_text').hide();
+                                        var $preview_phone = $('#shoe-dots .preview_phone').hide();
+
+                                        $preview_text.show().arctext({radius: 66});
+                                        $preview_phone.show().arctext({radius: 66, dir: -1});
+                                    });
+                                </script>
+            <?php if ($flash): ?>
+                                    <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+                                            codebase="<? echo $codebase;?>"
+                                            WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" id="display_coloured_iron" ALIGN="">
+                                        <PARAM NAME=movie VALUE="<? echo $aim;?>images/display_shoe_dots.swf?<? echo $swfstring;?>">
+                                        <PARAM NAME=quality VALUE=high>
+                                        <PARAM NAME=bgcolor VALUE=#FFFFFF>
+                                        <EMBED FlashVars="<?php echo $swfstring; ?>" src="<? echo $aim;?>images/display_shoe_dots.swf" quality=high bgcolor=#FFFFFF  WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_vinyl" ALIGN=""
+                                               TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
+                                    </OBJECT>
+            <?php endif; ?>
+                                <?php
+                            } else if ($qdata["type"] == 21) {
+                                $width = "300";
+                                $height = "50";
+                                if ($from == "admin") {
+                                    $width*=2;
+                                    $height*=2;
+                                }
+                                $swfstring = "type=" . $qdata["type"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"] . "&background_colour=" . ($qdata['colours']) . "&font_colour=" . $qdata['data_font_colour_id'];
+                                $text1 = $qdata['text1'];
+                                $text2 = trim(str_replace('Ph:', '', $qdata['text2']));
+
+                                if ($font_colour == '1') {
+                                    $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl/' . $qdata["pic"] . '.png);';
+                                    $fontColor = 'color:#000000;';
+                                } else {
+                                    $logo = 'background-image: url(http://www.identikid.com.au/_designer/images/bwl2/' . $qdata["pic"] . '.png);';
+                                    $fontColor = 'color:#ffffff;';
+                                }
+
+                                if (!$qdata["picon"]) {
+                                    $logo = 'background-image:none;';
+                                }
 
 
-            $swfstring = "type=" . $qdata["type"] . "&colour=" . $qdata["colours"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"] . "&fontcolour=" . $qdata["data_font_colour_id"];
+                                $swfstring = "type=" . $qdata["type"] . "&colour=" . $qdata["colours"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"] . "&fontcolour=" . $qdata["data_font_colour_id"];
 
-            $sql = "select * from designer_fonts";
-            $res = mysql_query($sql);
-            $fontName = array();
+                                $sql = "select * from designer_fonts";
+                                $res = mysql_query($sql);
+                                $fontName = array();
 
-            while ($row = mysql_fetch_assoc($res)) {
-                $fontName[$row['link']] = $row['fontName'];
-            }
+                                while ($row = mysql_fetch_assoc($res)) {
+                                    $fontName[$row['link']] = $row['fontName'];
+                                }
 
-            $singleLineCSS = '';
+                                $singleLineCSS = '';
 
-            if (!$qdata['text2']) {
-                $singleLineCSS = "top:10px;";
-            }
+                                if (!$qdata['text2']) {
+                                    $singleLineCSS = "top:10px;";
+                                }
 
-            $fontfamily = 'font-family:' . $fontName[$qdata["font"]] . ';' . $fontColor . $singleLineCSS;
-            $style = 'background: url(http://www.identikid.com.au/_designer/images/preview/' . $qdata["colours"] . '.png) no-repeat scroll 0% 0% transparent;';
-            ?>
+                                $fontfamily = 'font-family:' . $fontName[$qdata["font"]] . ';' . $fontColor . $singleLineCSS;
+                                $style = 'background: url(http://www.identikid.com.au/_designer/images/preview/' . $qdata["colours"] . '.png) no-repeat scroll 0% 0% transparent;';
+                                ?>
                                 <link type="text/css" rel="Stylesheet" href="/_designer/css/colour_my_world.css" />
                                 <link type="text/css" rel="Stylesheet" href="/../_designer/css/colour_my_world.css" />
                                 <div id="colour-my-world">
@@ -1706,7 +1773,7 @@ function viewOrder($id, $from) {
                                         <span class="preview_image_set" style="<?php echo $logo; ?>"></span>
                                     </div>
                                 </div>
-                                <?php if (1 == 2): ?>
+            <?php if (1 == 2): ?>
                                     <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
                                             codebase="<? echo $codebase;?>"
                                             WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" id="display_coloured_iron" ALIGN="">
@@ -1924,15 +1991,15 @@ function viewOrder($id, $from) {
                                         <td class="maintext"><?= getRealFontNumber($font[0]); ?></td>
                                         <td width="9%"  class="maintext"><img src="<? echo $aim;?>images/gen/spacer.gif" width="25" height="10"></td>
                                     </tr>
-                                     <tr> 
-                                            <td class="maintext">Font Colour:</td>
-                                            <td class="maintext"><?php
-                if ($qdata['data_font_colour_id'] == 1)
-                    echo "Black";
-                else
-                    echo "White";
-                ?></td>
-                                        </tr>
+                                    <tr> 
+                                        <td class="maintext">Font Colour:</td>
+                                        <td class="maintext"><?php
+            if ($qdata['data_font_colour_id'] == 1)
+                echo "Black";
+            else
+                echo "White";
+            ?></td>
+                                    </tr>
                                     <?
                                     if($from=="admin"){
                                     ?>
@@ -1986,15 +2053,15 @@ function viewOrder($id, $from) {
                                         <td class="maintext"><?= getRealFontNumber($font[1]); ?></td>
                                         <td width="9%"  class="maintext"><img src="<? echo $aim;?>images/gen/spacer.gif" width="25" height="10"></td>
                                     </tr>
-                                     <tr> 
-                                            <td class="maintext">Font Colour:</td>
-                                            <td class="maintext"><?php
-                if ($qdata['data_font_colour_id'] == 1)
-                    echo "Black";
-                else
-                    echo "White";
-                ?></td>
-                                        </tr>
+                                    <tr> 
+                                        <td class="maintext">Font Colour:</td>
+                                        <td class="maintext"><?php
+                                if ($qdata['data_font_colour_id'] == 1)
+                                    echo "Black";
+                                else
+                                    echo "White";
+            ?></td>
+                                    </tr>
                                     <?
                                     if($from=="admin"){
                                     ?>
@@ -2097,15 +2164,15 @@ function viewOrder($id, $from) {
                         <tr>
                             <td width="22%" class="maintext" align="left"><strong>File Attachment:</storng></td>
                             <td width="66%" class="maintext" align="left">&nbsp;&nbsp;<?php
-            if ($qdata["text4"] != '') {
-                $picid = $qdata["text4"];
-                $sqlpic = "SELECT * FROM document_db WHERE id = '$picid'";
-                $resultpic = mysql_query($sqlpic);
-                $rowpic = mysql_fetch_assoc($resultpic);
-                echo "<a href = 'http://identikid.com.au/pdf/" . $rowpic["document_db_filename"] . "' target='_blank'>" . $rowpic["document_db_filename"] . "</a>";
-            } else {
-                echo "No Attachement";
-            }
+                                if ($qdata["text4"] != '') {
+                                    $picid = $qdata["text4"];
+                                    $sqlpic = "SELECT * FROM document_db WHERE id = '$picid'";
+                                    $resultpic = mysql_query($sqlpic);
+                                    $rowpic = mysql_fetch_assoc($resultpic);
+                                    echo "<a href = 'http://identikid.com.au/pdf/" . $rowpic["document_db_filename"] . "' target='_blank'>" . $rowpic["document_db_filename"] . "</a>";
+                                } else {
+                                    echo "No Attachement";
+                                }
             ?></td>
                         </tr>
                         <?	}
@@ -2121,30 +2188,30 @@ function viewOrder($id, $from) {
                             <td width="22%" class="maintextalert" align="left"><strong>Reason:</strong></td>
                             <td width="66%" class="maintextalert" align="left">&nbsp;&nbsp;<? echo $qdata["text1"];?></td>
                         </tr>
-                                <?php
-                            } elseif((int) $qdata['type'] == 19 || (int) $qdata['type'] == 3 || (int) $qdata['type'] == 20 || (int) $qdata['type'] == 28 || (int) $qdata['type'] == 29) {
+            <?php
+        } elseif((int) $qdata['type'] == 19 || (int) $qdata['type'] == 3 || (int) $qdata['type'] == 20 || (int) $qdata['type'] == 28 || (int) $qdata['type'] == 29) {
 //						debug_showvar($qdata);
-                                // coloured iron-ons
-                                // & mini labels
-                                // & shoedots
+            // coloured iron-ons
+            // & mini labels
+            // & shoedots
 
-                                if ((int) $qdata['data_colour_id'] == 0) {
-                                    // old format, bg = yellow, font = black;
-                                    $sql = "SELECT data_font_colour_name FROM data_font_colour WHERE data_font_colour_id=" . VINYL_OLD_DEFAULT_FONT_COLOUR;
-                                    $colour_result = db_get_field($sql, $font_colour_name);
-                                    if ($colour_result = false) {
-                                        $font_colour_name = "ERROR";
-                                    }
-                                    $sql = "SELECT data_colour_name FROM data_colour WHERE data_colour_id=" . VINYL_OLD_DEFAULT_BACKGROUND_COLOUR;
-                                    $colour_result = db_get_field($sql, $background_colour_name);
-                                    if ($colour_result = false) {
-                                        $background_colour_name = "ERROR";
-                                    }
-                                } else {
-                                    $background_colour_name = $qdata['data_colour_name'];
-                                    $font_colour_name = $qdata['data_font_colour_name'];
-                                }
-                                ?>
+            if ((int) $qdata['data_colour_id'] == 0) {
+                // old format, bg = yellow, font = black;
+                $sql = "SELECT data_font_colour_name FROM data_font_colour WHERE data_font_colour_id=" . VINYL_OLD_DEFAULT_FONT_COLOUR;
+                $colour_result = db_get_field($sql, $font_colour_name);
+                if ($colour_result = false) {
+                    $font_colour_name = "ERROR";
+                }
+                $sql = "SELECT data_colour_name FROM data_colour WHERE data_colour_id=" . VINYL_OLD_DEFAULT_BACKGROUND_COLOUR;
+                $colour_result = db_get_field($sql, $background_colour_name);
+                if ($colour_result = false) {
+                    $background_colour_name = "ERROR";
+                }
+            } else {
+                $background_colour_name = $qdata['data_colour_name'];
+                $font_colour_name = $qdata['data_font_colour_name'];
+            }
+            ?>
                         <tr> 
                             <td width="9%" rowspan="9" class="maintext"><img src="<? echo $aim;?>images/gen/spacer.gif" width="25" height="10"></td>
                             <td class="maintext"><img src="<? echo $aim;?>images/gen/spacer.gif" width="10" height="10"></td>
@@ -2204,9 +2271,9 @@ function viewOrder($id, $from) {
                         <tr> 
                             <td class="maintext">Colours:</td>
                             <td class="maintext"><?php
-                        db_get_field("SELECT data_colour_name FROM data_colour WHERE data_colour_id=" . ((int) $qdata['colours']), $colour_name);
-                        echo $colour_name;
-                        ?></td>
+            db_get_field("SELECT data_colour_name FROM data_colour WHERE data_colour_id=" . ((int) $qdata['colours']), $colour_name);
+            echo $colour_name;
+            ?></td>
                         </tr>
                         <tr> 
                             <td class="maintext">Font:</td>
@@ -2237,10 +2304,10 @@ function viewOrder($id, $from) {
                         <tr> 
                             <td class="maintext">identiTAG:</td>
                             <td class="maintext"><?php
-            $tagsql = "SELECT data_identitag_code FROM data_identitag WHERE data_identitag_id=" . $qdata["data_identitag_id"];
-            $tagresult = mysql_query($tagsql) or die($tagsql . mysql_error());
-            $tagrow = mysql_fetch_assoc($tagresult);
-            echo "<img src = 'http://www.identikid.com.au/images/identitags/" . $tagrow['data_identitag_code'] . ".gif'>"
+                    $tagsql = "SELECT data_identitag_code FROM data_identitag WHERE data_identitag_id=" . $qdata["data_identitag_id"];
+                    $tagresult = mysql_query($tagsql) or die($tagsql . mysql_error());
+                    $tagrow = mysql_fetch_assoc($tagresult);
+                    echo "<img src = 'http://www.identikid.com.au/images/identitags/" . $tagrow['data_identitag_code'] . ".gif'>"
             ?></td>
                         </tr>
                         <tr>
@@ -2327,44 +2394,39 @@ function viewOrder($id, $from) {
                                         <tr> 
                                             <td class="maintext"><? if($qdata["type"]==7){?>Pack:<? }else{ ?>Colours:<? }?></td>
                                             <td class="maintext"><?php
-                                                if($qdata["type"]==5 || $qdata["type"]==6 || $qdata["type"]==7){
-                                                if($qdata["colours"]==2){
-                                                //echo "Boys Colours";
-                                                }else{
-                                                //	echo "Girls Colours";
-                                                }
-                                                }
-                                                elseif($qdata["type"]==1){ // Vinyl Labels Colours
-                                                $thecol = $qdata["colours"];	
-                                                $mysql = "SELECT data_colour_name FROM data_colour WHERE data_colour_id = '$thecol'";
-                                                $myresult = mysql_query($mysql) or die (mysql_error());
-                                                while ($myrow = mysql_fetch_assoc($myresult))
-                                                {
-                                                echo $myrow["data_colour_name"];
-                                                }
-
-                                                }elseif($qdata["type"]==16 || $qdata["type"]==10 || $qdata["type"]==11 || $qdata["type"]==12){ // Baby Packs // starter packs // baby packs
-                                                $thecol = $qdata["colours"];	
-                                                $mysql = "SELECT data_colour_name FROM data_colour WHERE data_colour_id = '$thecol'";
-                                                $myresult = mysql_query($mysql) or die (mysql_error());
-                                                while ($myrow = mysql_fetch_assoc($myresult))
-                                                {
-                                                echo $myrow["data_colour_name"];
-                                                }
-
-                                                }else{
-                                                echo $qdata["colours"];
-                                                }
-                                                ?></td>
+                if ($qdata["type"] == 5 || $qdata["type"] == 6 || $qdata["type"] == 7) {
+                    if ($qdata["colours"] == 2) {
+                        //echo "Boys Colours";
+                    } else {
+                        //	echo "Girls Colours";
+                    }
+                } elseif ($qdata["type"] == 1) { // Vinyl Labels Colours
+                    $thecol = $qdata["colours"];
+                    $mysql = "SELECT data_colour_name FROM data_colour WHERE data_colour_id = '$thecol'";
+                    $myresult = mysql_query($mysql) or die(mysql_error());
+                    while ($myrow = mysql_fetch_assoc($myresult)) {
+                        echo $myrow["data_colour_name"];
+                    }
+                } elseif ($qdata["type"] == 16 || $qdata["type"] == 10 || $qdata["type"] == 11 || $qdata["type"] == 12) { // Baby Packs // starter packs // baby packs
+                    $thecol = $qdata["colours"];
+                    $mysql = "SELECT data_colour_name FROM data_colour WHERE data_colour_id = '$thecol'";
+                    $myresult = mysql_query($mysql) or die(mysql_error());
+                    while ($myrow = mysql_fetch_assoc($myresult)) {
+                        echo $myrow["data_colour_name"];
+                    }
+                } else {
+                    echo $qdata["colours"];
+                }
+                ?></td>
                                         </tr>
                                         <tr> 
                                             <td class="maintext">Font Colour:</td>
                                             <td class="maintext"><?php
-                        if ($qdata['data_font_colour_id'] == 1)
-                            echo "Black";
-                        else
-                            echo "White";
-                        ?></td>
+                                if ($qdata['data_font_colour_id'] == 1)
+                                    echo "Black";
+                                else
+                                    echo "White";
+                ?></td>
                                         </tr>
                                         <?
                                         }
@@ -2429,10 +2491,10 @@ function viewOrder($id, $from) {
                                         <tr> 
                                             <td class="maintext">Font Colour:</td>
                                             <td class="maintext"><?php
-                if ($qdata['data_font_colour_id'] == 1)
-                    echo "Black";
-                else
-                    echo "White";
+                                if ($qdata['data_font_colour_id'] == 1)
+                                    echo "Black";
+                                else
+                                    echo "White";
                 ?></td>
                                         </tr>
                                         <tr> 
@@ -2451,172 +2513,8 @@ function viewOrder($id, $from) {
                                             <td class="maintext">&nbsp;</td>
                                             <td class="maintext"><? if ($qdata['text3'] == 2) echo "Coloured"; else echo "Semi-permanent"; ?></td>
                                         </tr>
-                                        <?php								
-                                        if ($qdata['text3'] == 2)
-                                        {
-                                        db_get_field("SELECT data_colour_name FROM data_colour WHERE data_colour_id="
-                                        . ((int)$qdata['text4']), $colour_name);
-                                        if ((int)$qdata['text5'] == 1)
-                                        $fcolour = "Black";
-                                        else
-                                        $fcolour = "White";
-                                        echo '<tr><td></td><td class="maintext">Colour:</td>
-                                        <td></td><td class="maintext">'.$colour_name.'</tr>';
-                                        echo '<tr><td></td><td class="maintext">Font Colour:</td>
-                                        <td></td><td class="maintext">'.$fcolour.'</tr>';
-                                        }
-
-                                        }
-                                        }
-
-                                        if($qdata["type"]==16){							?>
-                                        <tr> 
-                                            <td class="maintext">Pic:</td>
-                                            <td class="maintext"><? if($qdata["picon"]=="1"){
-                                                if ($qdata["pic"] >= 32){
-                                                echo getNewTags($qdata["pic"]);
-                                                }
-                                                elseif($qdata["pic"] < 32)
-                                                {
-                                                echo getPicType($qdata["pic"]);
-                                                }else{ echo "none"; }?></td>
-                                        </tr>
-                                        <tr> 
-                                            <td class="maintext">Font:</td>
-                                            <td class="maintext"><? echo getRealFontNumber($qdata["font"]);?></td>
-                                        </tr>
-                                         <tr> 
-                                            <td class="maintext">Font Colour:</td>
-                                            <td class="maintext"><?php
-                        if ($qdata['data_font_colour_id'] == 1)
-                            echo "Black";
-                        else
-                            echo "White";
-                        ?></td>
-                                        </tr>
-
-                                        <?   }
-
-                                        // new baby pack
-                                        if($qdata["type"]==16 && $from!="admin"){
-                                        ?>
-                                        <tr> 
-                                            <td class="maintext" valign=top>Pack Type:</td>
-                                            <td class="maintext">40 Mini Labels, 20 Iron Ons, 1 identiTAG, 1 Gift Box, 1 kidcard</td>
-                                        </tr>
-                                        <?
-                                        }
-
-                                        } // all other types with exclusions
-
-
-                                        if( $qdata["type"]==10 && $qdata["gift"]!=""){?>
-                                        <tr> 
-                                            <td class="maintext">Labels:</td>
-                                            <td class="maintext"><? if($qdata["gift"]=="1"){ echo "30 Mini Labels"; }else{ echo "60 Pencil Labels"; };?></td>
-                                        </tr>
-                                        <? }
-
-                                        // new baby pack card.
-                                        if( $qdata["type"]==16 && $qdata["text5"]!=""){
-                                        ?>
-                                        <tr> 
-                                            <td class="maintext">&nbsp;</td>
-                                            <td class="maintext"></td>
-                                        </tr>
-                                        <tr> 
-                                            <td class="maintext"><b>Gift Card:</b></td>
-                                            <!--<td class="maintext"><?= getPicType($qdata['text5']) ?></td>-->
-                                            <td class="maintext"><?= $qdata['text5'] == "50" ? "Girl Card" : "Boys Card" ?></td>
-                                        </tr>
-                                        <? 
-                                        }
-
-                                        // birthday pack
-                                        if( $qdata["type"]==12 && $qdata["gift"]!=""){
-                                        ?>
-                                        <tr> 
-                                            <td class="maintext"><strong>Identitag:</strong></td>
-                                            <td class="maintext"><img src="<? echo $aim;?>images/identitags/<?= $qdata['text3'] ?>.gif"  border="0"></td>
-                                        </tr>
-                                        <tr> 
-                                            <td class="maintext"><b>Print reverse:</b></td>
-                                            <td class="maintext"><?= $qdata['text7'] == "1" ? "Yes" : "No" ?></td>
-                                        </tr>
-                                        <tr> 
-                                            <td class="maintext" valign="top"><strong>Iron-on Type:</strong></td>
-                                            <td class="maintext"><?= ((int) $qdata['text6'] == 2 ? "Coloured" : "Semi-permanent") ?>
-                                                <?								
-                                                if ($qdata['text6'] == 2)
-                                                {
-                                                db_get_field("SELECT data_colour_name FROM data_colour WHERE data_colour_id=". ((int)$qdata['text4']), $colour_name);
-                                                if ((int)$qdata['text5'] == 1) {
-                                                $fcolour = "Black";
-                                                } else {
-                                                $fcolour = "White";
-                                                ?><br>
-                                                Colour: <?= $colour_name ?><br>
-                                                Font Colour: <?= $fcolour ?>
-                                                <!--
-                                                        <tr>
-                                                                <td class="maintext">Colour:</td>
-                                                                <td class="maintext"><?= $colour_name ?></td>
-                                                        </tr>
-                                                        <tr>
-                                                                <td class="maintext">Font Colour:</td>
-                                                                <td class="maintext"><?= $fcolour ?></td>
-                                                        </tr>
-                                                -->
-                                                <?
-                                                }
-                                                }
-                                                ?></td>
-                                        </tr>
-                                        <tr> 
-                                            <td class="maintext"><b class="maintextalert">Gift Card:</b></td>
-                                            <? //for all gift cards ?>
-                                            <!--<td class="maintext"><?= getPicType($qdata['gift']) ?></td>-->
-                                            <? //Boy or Girl ?>
-                                            <td class="maintext"><?= $qdata['gift'] == "50" ? "Girl Card" : "Boys Card" ?></td>
-                                        </tr>
-                                        <? 
-                                        }
-                                        // Starter packs
-                                        if ($qdata['type']==10)
-                                        {
-                                        if ($qdata["text3"]!="")
-                                        {
-                                        $thetext = strtoupper($qdata["text3"]);								
-                                        ?><tr>
-                                            <td class="maintext" width="25px"><b>Identitag:</b></td>
-                                            <td><? echo "<img src = 'http://www.identikid.com.au/images/identitags/".$thetext.".gif'>"?></td>
-                                        </tr>
-                                        <tr> 
-                                            <td class="maintext"><b>Print reverse:</b></td>
-                                            <td class="maintext"><?= $qdata['text7'] == "1" ? "Yes" : "No" ?></td>
-                                        </tr>
-                                        <tr> 
-                                            <td colsapn="4"></td>
-                                        </tr>
-                                        <? } ?>
-                                        <tr> 
-                                            <td colsapn="4"></td>
-                                        </tr>
-                                        <tr> 
-                                            <td class="maintext">&nbsp;</td>
-                                            <td class="maintext"><strong>Iron-on Type:</strong></td>
-                                            <td class="maintext">&nbsp;</td>
-                                            <td class="maintext">
                 <?php
-                if ($qdata['typedetail'] == 2)
-                    echo "Coloured";
-                else
-                    echo "Semi-permanent";
-                ?>
-                                            </td>
-                                        </tr>
-                <?php
-                if ($qdata['typedetail'] == 2) {
+                if ($qdata['text3'] == 2) {
                     db_get_field("SELECT data_colour_name FROM data_colour WHERE data_colour_id="
                             . ((int) $qdata['text4']), $colour_name);
                     if ((int) $qdata['text5'] == 1)
@@ -2624,312 +2522,475 @@ function viewOrder($id, $from) {
                     else
                         $fcolour = "White";
                     echo '<tr><td></td><td class="maintext">Colour:</td>
-                        <td></td><td class="maintext">' . $colour_name . '</tr>';
+                                        <td></td><td class="maintext">' . $colour_name . '</tr>';
                     echo '<tr><td></td><td class="maintext">Font Colour:</td>
-                        <td></td><td class="maintext">' . $fcolour . '</tr>';
+                                        <td></td><td class="maintext">' . $fcolour . '</tr>';
                 }
             }
+        }
+
+        if ($qdata["type"] == 16) {
             ?>
-
-
-                                    <?php
-                                    // New Baby Packs and Starter packs
-                                    if ($qdata['type'] == 16 && $qdata["text3"] != "") {
-                                        $thetext = strtoupper($qdata["text3"]);
-                                        ?>
-                                        <tr> 
-                                            <td colsapn="4"></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="maintext">&nbsp;</td>
-                                            <td class="maintext" width="25px"><b>Identitag:</b></td>
-                                            <td class="maintext">&nbsp;</td>
-                                            <td><? echo "<img src = 'http://www.identikid.com.au/images/identitags/".$thetext.".gif'>"?></td>
-                                        </tr>
-                                        <tr> 
-                                            <td class="maintext"><b>Print reverse:</b></td>
-                                            <td class="maintext"><?= $qdata['text7'] == "1" ? "Yes" : "No" ?></td>
-                                        </tr>
-
-                                        <? 	} 
-
-                                        // IDENTITAGS
-                                        if($qdata["type"]==14){
-                                        //$t=1;
-                                        $x=1; //reference to tag image
-                                        $tagArray = array();
-
-                                        $basketid = $qdata['basketid'];
-
-                                        $mysql = "SELECT * FROM basket_items WHERE type = 14 AND ordernumber='$id' AND id = '$basketid'";
-                                        $myresult = mysql_query($mysql) or die ("database error identitag line 939(or abouts");
-                                        while ($myrow = mysql_fetch_assoc($myresult))
-                                        {
-                                        $offset = 4;
-                                        for($i=1; $i<5; $i++){
-
-                                        $thetext = getIdentitagDesc(strtoupper($myrow["text".$i]));
-                                        // extract first 2 digits
-                                        $temp = substr($thetext, 0, 2);
-                                        // remove blank spaces
-                                        $finalstring = str_replace(" ", "", $temp);
-                                        if($finalstring != ''){							
-                                        ?></table>
-                                    <br>
-                                    <table>
-                                        <tr>
-                                            <td width="25px"></td>
-                                            <td><? echo "<img src = 'http://www.identikid.com.au/images/identitags/".$finalstring.".gif'>"?></td>
-                                        </tr>								
-
-                                        <?
-                                        $num = $i+$offset;
-                                        $text1 = getIdentitagDesc($myrow["text".$num]);
-                                        $num = $i+$offset+1;
-                                        $text2 = getIdentitagDesc($myrow["text".$num]);
-                                        $offset++;
-
-                                        if($text1 != '' || $text2 != '') {
-                                        ?>
-                                    </table>
-                                    <br>
-                                    <table>
-                                        <tr>
-                                            <td colspan="2" height="12"><strong><font face="Arial, Helvetica, sans-serif" size="2">Text on reverse side of tag</font></strong></td>
-                                        </tr>
-
-                                        <?
-                                        if($text1 != '') { ?>
-                                        <tr> 
-                                            <td class="maintext" width="90px" bgcolor="#CCFFCC">First Line:</td>
-                                            <td class="maintext" bgcolor="#CCFFCC"><?= $text1; ?></td>
-                                        </tr>
-                                        <? } 
-
-                                        if($text2 != '') { ?>							
-                                        <tr> 
-                                            <td class="maintext" bgcolor="#66CCFF">Second Line:</td>
-                                            <td class="maintext" bgcolor="#66CCFF"><?= $text2; ?></td>
-                                        </tr> 
-                                        <?
-                                        }  
-                                        }  
-                                        }
-                                        }
-                                        }
-
-                                        /*	  }						
-
-                                        //	while($qdata["text".$t] && $qdata["text".$t]!=""){
-
-                                        // if reverse text not checked
-                                        if($myrow["text5"] == "")
-                                        {
-                                        for ($y=1; $y<5; $y++)
-                                        {
-                                        if($myrow["text".$y] !='')
-                                        {
-                                        $thetext = getIdentitagDesc(strtoupper($myrow["text".$y]));
-                                        // extract first 2 digits
-                                        $temp = substr($thetext, 0, 2);
-                                        // remove blank spaces
-                                        $finalstring = str_replace(" ", "", $temp);
-
-                                        ?>
-                                        <tr>
-                                            <td width="25px"></td>
-                                            <td><? echo "<img src = 'http://www.identikid.com.au/images/identitags/".$finalstring.".gif'>"?></td>
-                                        </tr>								
-
-                                        <?
-                                        }
-                                        }
-                                        }
-
-                                        // if reverse text checked
-                                        else
-                                        {
-                                        for ($t=1; $t<13; $t++)
-
-                                        {
-
-                                        if($myrow["text".$t] && $myrow["text".$t]="")
-                                        {
-                                        // create image name array (a.gif, s.gif etc)
-                                        if ($t < 5)
-                                        {
-                                        // text as it is called from basket_items
-                                        $thetext = getIdentitagDesc(strtoupper($myrow["text".$t]));
-                                        // extract first 2 digits
-                                        $temp = substr($thetext, 0, 2);
-                                        // remove blank spaces
-                                        $finalstring = str_replace(" ", "", $temp);
-                                        // add to array
-                                        $tagArray[$t] = $finalstring;	
-                                        } 
-
-                                        // if the tag number is odd (reverse text)	
-                                        if ($t % 2 && $t > 4) {
-                                        ?>
-                                    </table>
-                                    <br>
-                                    <table>
-                                        <tr>
-                                            <td colspan="2"><? echo "<img src = 'http://www.identikid.com.au/images/identitags/".$tagArray[$x].".gif'>"?></td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2" height="12"><strong><font face="Arial, Helvetica, sans-serif" size="2">Text on reverse side of tag</font></strong></td>
-                                        </tr>
-                                        <tr> 
-                                            <td class="maintext" width="90px" bgcolor="#CCFFCC">First Line:</td>
-                                            <td class="maintext" bgcolor="#CCFFCC"><? echo getIdentitagDesc($myrow["text".$t]);?></td>
-                                        </tr>
-
-                                        <?
-                                        // if the tag number is even
-                                        $x++;
-                                        } elseif (($t % 2) == 0 && $t > 4) {
-                                        ?>
-                                        <tr> 
-                                            <td class="maintext" bgcolor="#66CCFF">Second Line:</td>
-                                            <td class="maintext" bgcolor="#66CCFF"><? echo getIdentitagDesc($myrow["text".$t]);?></td>
-                                        </tr>
-                                        <? } 
-                                        }
-                                        //end if
-
-                                        // end for
-                                        }
-                                        $t++;
-
-                                        }//end while
-                                        } */
-
-                                        } // IDENTITAGS
-
-                                        if($qdata['type']==18)
-                                        {
-
-                                        $desc = substr($qdata["quantdesc"], 0, strpos($qdata["quantdesc"], "Allergy")-1);
-                                        if($qdata['text5']==1)
-                                        {
-                                        $desc .= " Vinyl Labels";
-                                        }
-                                        else {
-                                        $desc .= " Mini Labels";
-                                        }
-                                        ?>
-                                        <tr> 
-                                            <td class="maintext">Pack Type:</td>
-                                            <td class="maintext"><?= $desc; ?></td>
-                                        </tr>
-                                        <tr> 
-                                            <td class="maintext">Colours:</td>
-                                            <td class="maintext"><? 
-                                                db_get_field("SELECT data_colour_name FROM data_colour WHERE data_colour_id=" . ((int)$qdata['colours']), $colour_name);
-                                                echo $colour_name;
-
-                                                ?></td>
-                                        </tr>
-
-                                        <tr> 
-                                            <td class="maintext">Pic:</td>
-                                            <td class="maintext"><? if($qdata["picon"]=="1"){ echo getAllergyPicType($qdata["pic"]); }else{ echo "none"; }?></td>
-                                        </tr>
-                                        <tr> 
-                                            <td class="maintext">Font:</td>
-                                            <td class="maintext"><? echo getRealFontNumber($qdata["font"]);?></td>
-                                        </tr>
-                                        <tr> 
-                                            <td class="maintext">Font Colour:</td>
-                                            <td class="maintext"><?php
+                                    <tr> 
+                                        <td class="maintext">Pic:</td>
+                                        <td class="maintext"><? if($qdata["picon"]=="1"){
+                                            if ($qdata["pic"] >= 32){
+                                            echo getNewTags($qdata["pic"]);
+                                            }
+                                            elseif($qdata["pic"] < 32)
+                                            {
+                                            echo getPicType($qdata["pic"]);
+                                            }else{ echo "none"; }?></td>
+                                    </tr>
+                                    <tr> 
+                                        <td class="maintext">Font:</td>
+                                        <td class="maintext"><? echo getRealFontNumber($qdata["font"]);?></td>
+                                    </tr>
+                                    <tr> 
+                                        <td class="maintext">Font Colour:</td>
+                                        <td class="maintext"><?php
                         if ($qdata['data_font_colour_id'] == 1)
                             echo "Black";
                         else
                             echo "White";
-                        ?></td>
-                                        </tr>
+            ?></td>
+                                    </tr>
 
-                                        <?
-                                        }
+                                    <?   }
 
-                                        if( (int)$qdata['type'] == 19 || (int)$qdata['type'] == 20)
-                                        {
-                                        ?>
-                                        <tr> 
-                                            <td class="maintext" nowrap>Background Colour:</td>
-                                            <td class="maintext"><?= get_background_colour($qdata['colours']); ?></td>
-                                        </tr>
-                                        <tr> 
-                                            <td class="maintext">Font Colour:</td>
-                                            <td class="maintext"><?= get_font_colour($qdata['text5']); ?></td>
-                                        </tr>
-                                        <?
+                                    // new baby pack
+                                    if($qdata["type"]==16 && $from!="admin"){
+                                    ?>
+                                    <tr> 
+                                        <td class="maintext" valign=top>Pack Type:</td>
+                                        <td class="maintext">40 Mini Labels, 20 Iron Ons, 1 identiTAG, 1 Gift Box, 1 kidcard</td>
+                                    </tr>
+                                    <?
+                                    }
 
-                                        }
+                                    } // all other types with exclusions
 
-                                        // Book Labels
-                                        if( (int)$qdata['type'] == 33)
-                                        {
-                                        ?>
-                                        <tr> 
-                                            <td class="maintext" nowrap>Background Colour:</td>
-                                            <td class="maintext"><?= ((int) $qdata['colours'] == 10 ? "Set B" : "Set A") ?></td>
-                                        </tr>
-                                        <tr> 
-                                            <td class="maintext">Pic:</td>
-                                            <td class="maintext"><?= getPicType($qdata["pic"]) ?></td>
-                                        </tr>
-                                        <?
 
-                                        }
+                                    if( $qdata["type"]==10 && $qdata["gift"]!=""){?>
+                                    <tr> 
+                                        <td class="maintext">Labels:</td>
+                                        <td class="maintext"><? if($qdata["gift"]=="1"){ echo "30 Mini Labels"; }else{ echo "60 Pencil Labels"; };?></td>
+                                    </tr>
+                                    <? }
 
-                                        ?>
-                                                <!--<tr>
-                                                  <td> </td> 
-                                                  <td class="maintext" width="25px"><b>Total:</b></td>
-                                                  <td class="maintext"><? echo $cur['symbol'].toDollarsAndCents($qdata["price"]);?></td>
-                                                </tr>-->
-                                        <? if($from=="admin" && ($qdata["type"]==10 || $qdata["type"]==11 || $qdata["type"]==12 || $qdata['type']==16)){ ?>
-                                    </table>
-                                </td>
-                                <td><img src="<? echo $aim;?>images/gen/spacer.gif" width="10" height="1"></td>
-                                <td>
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                        <? if($qdata["type"]==10){ ?>
-                                        <tr>
-                                            <td class="maintext">
-                                                <strong>Starter Pack - <?= $cur[$currency]['symbol']; ?><?= $qdata["price"] ?></strong><br>
-                                                40 vinyls<br>
-                                                40 iron-ons<br>
-                                                20 shoe labels<br>
-                                                1 bagtags<br>
-                                                30 mini labels or 60 pencil labels</td>
-                                        </tr>
-                                        <? }else if($qdata["type"]==11){ ?>
-                                        <tr>
-                                            <td class="maintext">
-                                                <strong>Mixed Pack - <?= $cur[$currency]['symbol']; ?><?= $qdata["price"] ?> per child</strong><br>
-                                                30 vinyls<br>
-                                                30 iron-ons</td>
-                                        </tr>
-                                        <? }else if($qdata["type"]==12){ // birthday pack ?>
-                                        <tr>
-                                            <td class="maintext">
-                                                <strong>Birthday Pack - <?= $cur[$currency]['symbol']; ?><?= $qdata["price"] ?></strong><br>
-                                                30 vinyls<br>
-                                                30 iron-ons<br>
-                                                1 Identitag<br>
-                                                Giftbox<br>
-                                                <span class="maintextalert">Gift Card</span><br>
-                                                Matching ribbon</td>
-                                        </tr>
-                                        <?
-                                        }else if($qdata["type"]==16){ 			// new baby pack
-                                        ?>
-                                        <tr>
-                                            <td class="maintext">
-                                                <strong>New Baby Pack - <?= $cur[$currency]['symbol']; ?><?= $qdata["price"] ?></strong><br>
+                                    // new baby pack card.
+                                    if( $qdata["type"]==16 && $qdata["text5"]!=""){
+                                    ?>
+                                    <tr> 
+                                        <td class="maintext">&nbsp;</td>
+                                        <td class="maintext"></td>
+                                    </tr>
+                                    <tr> 
+                                        <td class="maintext"><b>Gift Card:</b></td>
+                                        <!--<td class="maintext"><?= getPicType($qdata['text5']) ?></td>-->
+                                        <td class="maintext"><?= $qdata['text5'] == "50" ? "Girl Card" : "Boys Card" ?></td>
+                                    </tr>
+                                    <? 
+                                    }
+
+                                    // birthday pack
+                                    if( $qdata["type"]==12 && $qdata["gift"]!=""){
+                                    ?>
+                                    <tr> 
+                                        <td class="maintext"><strong>Identitag:</strong></td>
+                                        <td class="maintext"><img src="<? echo $aim;?>images/identitags/<?= $qdata['text3'] ?>.gif"  border="0"></td>
+                                    </tr>
+                                    <tr> 
+                                        <td class="maintext"><b>Print reverse:</b></td>
+                                        <td class="maintext"><?= $qdata['text7'] == "1" ? "Yes" : "No" ?></td>
+                                    </tr>
+                                    <tr> 
+                                        <td class="maintext" valign="top"><strong>Iron-on Type:</strong></td>
+                                        <td class="maintext"><?= ((int) $qdata['text6'] == 2 ? "Coloured" : "Semi-permanent") ?>
+                                            <?								
+                                            if ($qdata['text6'] == 2)
+                                            {
+                                            db_get_field("SELECT data_colour_name FROM data_colour WHERE data_colour_id=". ((int)$qdata['text4']), $colour_name);
+                                            if ((int)$qdata['text5'] == 1) {
+                                            $fcolour = "Black";
+                                            } else {
+                                            $fcolour = "White";
+                                            ?><br>
+                                            Colour: <?= $colour_name ?><br>
+                                            Font Colour: <?= $fcolour ?>
+                                            <!--
+                                                    <tr>
+                                                            <td class="maintext">Colour:</td>
+                                                            <td class="maintext"><?= $colour_name ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                            <td class="maintext">Font Colour:</td>
+                                                            <td class="maintext"><?= $fcolour ?></td>
+                                                    </tr>
+                                            -->
+                                            <?
+                                            }
+                                            }
+                                            ?></td>
+                                    </tr>
+                                    <tr> 
+                                        <td class="maintext"><b class="maintextalert">Gift Card:</b></td>
+                                        <? //for all gift cards ?>
+                                        <!--<td class="maintext"><?= getPicType($qdata['gift']) ?></td>-->
+                                        <? //Boy or Girl ?>
+                                        <td class="maintext"><?= $qdata['gift'] == "50" ? "Girl Card" : "Boys Card" ?></td>
+                                    </tr>
+                                    <? 
+                                    }
+                                    // Starter packs
+                                    if ($qdata['type']==10)
+                                    {
+                                    if ($qdata["text3"]!="")
+                                    {
+                                    $thetext = strtoupper($qdata["text3"]);								
+                                    ?><tr>
+                                        <td class="maintext" width="25px"><b>Identitag:</b></td>
+                                        <td><? echo "<img src = 'http://www.identikid.com.au/images/identitags/".$thetext.".gif'>"?></td>
+                                    </tr>
+                                    <tr> 
+                                        <td class="maintext"><b>Print reverse:</b></td>
+                                        <td class="maintext"><?= $qdata['text7'] == "1" ? "Yes" : "No" ?></td>
+                                    </tr>
+                                    <tr> 
+                                        <td colsapn="4"></td>
+                                    </tr>
+                                    <? } ?>
+                                    <tr> 
+                                        <td colsapn="4"></td>
+                                    </tr>
+                                    <tr> 
+                                        <td class="maintext">&nbsp;</td>
+                                        <td class="maintext"><strong>Iron-on Type:</strong></td>
+                                        <td class="maintext">&nbsp;</td>
+                                        <td class="maintext">
+            <?php
+            if ($qdata['typedetail'] == 2)
+                echo "Coloured";
+            else
+                echo "Semi-permanent";
+            ?>
+                                        </td>
+                                    </tr>
+            <?php
+            if ($qdata['typedetail'] == 2) {
+                db_get_field("SELECT data_colour_name FROM data_colour WHERE data_colour_id="
+                        . ((int) $qdata['text4']), $colour_name);
+                if ((int) $qdata['text5'] == 1)
+                    $fcolour = "Black";
+                else
+                    $fcolour = "White";
+                echo '<tr><td></td><td class="maintext">Colour:</td>
+                        <td></td><td class="maintext">' . $colour_name . '</tr>';
+                echo '<tr><td></td><td class="maintext">Font Colour:</td>
+                        <td></td><td class="maintext">' . $fcolour . '</tr>';
+            }
+        }
+        ?>
+
+
+        <?php
+        // New Baby Packs and Starter packs
+        if ($qdata['type'] == 16 && $qdata["text3"] != "") {
+            $thetext = strtoupper($qdata["text3"]);
+            ?>
+                                    <tr> 
+                                        <td colsapn="4"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="maintext">&nbsp;</td>
+                                        <td class="maintext" width="25px"><b>Identitag:</b></td>
+                                        <td class="maintext">&nbsp;</td>
+                                        <td><? echo "<img src = 'http://www.identikid.com.au/images/identitags/".$thetext.".gif'>"?></td>
+                                    </tr>
+                                    <tr> 
+                                        <td class="maintext"><b>Print reverse:</b></td>
+                                        <td class="maintext"><?= $qdata['text7'] == "1" ? "Yes" : "No" ?></td>
+                                    </tr>
+
+                                    <? 	} 
+
+                                    // IDENTITAGS
+                                    if($qdata["type"]==14){
+                                    //$t=1;
+                                    $x=1; //reference to tag image
+                                    $tagArray = array();
+
+                                    $basketid = $qdata['basketid'];
+
+                                    $mysql = "SELECT * FROM basket_items WHERE type = 14 AND ordernumber='$id' AND id = '$basketid'";
+                                    $myresult = mysql_query($mysql) or die ("database error identitag line 939(or abouts");
+                                    while ($myrow = mysql_fetch_assoc($myresult))
+                                    {
+                                    $offset = 4;
+                                    for($i=1; $i<5; $i++){
+
+                                    $thetext = getIdentitagDesc(strtoupper($myrow["text".$i]));
+                                    // extract first 2 digits
+                                    $temp = substr($thetext, 0, 2);
+                                    // remove blank spaces
+                                    $finalstring = str_replace(" ", "", $temp);
+                                    if($finalstring != ''){							
+                                    ?></table>
+                                <br>
+                                <table>
+                                    <tr>
+                                        <td width="25px"></td>
+                                        <td><? echo "<img src = 'http://www.identikid.com.au/images/identitags/".$finalstring.".gif'>"?></td>
+                                    </tr>								
+
+                                    <?
+                                    $num = $i+$offset;
+                                    $text1 = getIdentitagDesc($myrow["text".$num]);
+                                    $num = $i+$offset+1;
+                                    $text2 = getIdentitagDesc($myrow["text".$num]);
+                                    $offset++;
+
+                                    if($text1 != '' || $text2 != '') {
+                                    ?>
+                                </table>
+                                <br>
+                                <table>
+                                    <tr>
+                                        <td colspan="2" height="12"><strong><font face="Arial, Helvetica, sans-serif" size="2">Text on reverse side of tag</font></strong></td>
+                                    </tr>
+
+                                    <?
+                                    if($text1 != '') { ?>
+                                    <tr> 
+                                        <td class="maintext" width="90px" bgcolor="#CCFFCC">First Line:</td>
+                                        <td class="maintext" bgcolor="#CCFFCC"><?= $text1; ?></td>
+                                    </tr>
+                                    <? } 
+
+                                    if($text2 != '') { ?>							
+                                    <tr> 
+                                        <td class="maintext" bgcolor="#66CCFF">Second Line:</td>
+                                        <td class="maintext" bgcolor="#66CCFF"><?= $text2; ?></td>
+                                    </tr> 
+                                    <?
+                                    }  
+                                    }  
+                                    }
+                                    }
+                                    }
+
+                                    /*	  }						
+
+                                    //	while($qdata["text".$t] && $qdata["text".$t]!=""){
+
+                                    // if reverse text not checked
+                                    if($myrow["text5"] == "")
+                                    {
+                                    for ($y=1; $y<5; $y++)
+                                    {
+                                    if($myrow["text".$y] !='')
+                                    {
+                                    $thetext = getIdentitagDesc(strtoupper($myrow["text".$y]));
+                                    // extract first 2 digits
+                                    $temp = substr($thetext, 0, 2);
+                                    // remove blank spaces
+                                    $finalstring = str_replace(" ", "", $temp);
+
+                                    ?>
+                                    <tr>
+                                        <td width="25px"></td>
+                                        <td><? echo "<img src = 'http://www.identikid.com.au/images/identitags/".$finalstring.".gif'>"?></td>
+                                    </tr>								
+
+                                    <?
+                                    }
+                                    }
+                                    }
+
+                                    // if reverse text checked
+                                    else
+                                    {
+                                    for ($t=1; $t<13; $t++)
+
+                                    {
+
+                                    if($myrow["text".$t] && $myrow["text".$t]="")
+                                    {
+                                    // create image name array (a.gif, s.gif etc)
+                                    if ($t < 5)
+                                    {
+                                    // text as it is called from basket_items
+                                    $thetext = getIdentitagDesc(strtoupper($myrow["text".$t]));
+                                    // extract first 2 digits
+                                    $temp = substr($thetext, 0, 2);
+                                    // remove blank spaces
+                                    $finalstring = str_replace(" ", "", $temp);
+                                    // add to array
+                                    $tagArray[$t] = $finalstring;	
+                                    } 
+
+                                    // if the tag number is odd (reverse text)	
+                                    if ($t % 2 && $t > 4) {
+                                    ?>
+                                </table>
+                                <br>
+                                <table>
+                                    <tr>
+                                        <td colspan="2"><? echo "<img src = 'http://www.identikid.com.au/images/identitags/".$tagArray[$x].".gif'>"?></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" height="12"><strong><font face="Arial, Helvetica, sans-serif" size="2">Text on reverse side of tag</font></strong></td>
+                                    </tr>
+                                    <tr> 
+                                        <td class="maintext" width="90px" bgcolor="#CCFFCC">First Line:</td>
+                                        <td class="maintext" bgcolor="#CCFFCC"><? echo getIdentitagDesc($myrow["text".$t]);?></td>
+                                    </tr>
+
+                                    <?
+                                    // if the tag number is even
+                                    $x++;
+                                    } elseif (($t % 2) == 0 && $t > 4) {
+                                    ?>
+                                    <tr> 
+                                        <td class="maintext" bgcolor="#66CCFF">Second Line:</td>
+                                        <td class="maintext" bgcolor="#66CCFF"><? echo getIdentitagDesc($myrow["text".$t]);?></td>
+                                    </tr>
+                                    <? } 
+                                    }
+                                    //end if
+
+                                    // end for
+                                    }
+                                    $t++;
+
+                                    }//end while
+                                    } */
+
+                                    } // IDENTITAGS
+
+                                    if($qdata['type']==18)
+                                    {
+
+                                    $desc = substr($qdata["quantdesc"], 0, strpos($qdata["quantdesc"], "Allergy")-1);
+                                    if($qdata['text5']==1)
+                                    {
+                                    $desc .= " Vinyl Labels";
+                                    }
+                                    else {
+                                    $desc .= " Mini Labels";
+                                    }
+                                    ?>
+                                    <tr> 
+                                        <td class="maintext">Pack Type:</td>
+                                        <td class="maintext"><?= $desc; ?></td>
+                                    </tr>
+                                    <tr> 
+                                        <td class="maintext">Colours:</td>
+                                        <td class="maintext"><? 
+                                            db_get_field("SELECT data_colour_name FROM data_colour WHERE data_colour_id=" . ((int)$qdata['colours']), $colour_name);
+                                            echo $colour_name;
+
+                                            ?></td>
+                                    </tr>
+
+                                    <tr> 
+                                        <td class="maintext">Pic:</td>
+                                        <td class="maintext"><? if($qdata["picon"]=="1"){ echo getAllergyPicType($qdata["pic"]); }else{ echo "none"; }?></td>
+                                    </tr>
+                                    <tr> 
+                                        <td class="maintext">Font:</td>
+                                        <td class="maintext"><? echo getRealFontNumber($qdata["font"]);?></td>
+                                    </tr>
+                                    <tr> 
+                                        <td class="maintext">Font Colour:</td>
+                                        <td class="maintext"><?php
+                        if ($qdata['data_font_colour_id'] == 1)
+                            echo "Black";
+                        else
+                            echo "White";
+            ?></td>
+                                    </tr>
+
+                                    <?
+                                    }
+
+                                    if( (int)$qdata['type'] == 19 || (int)$qdata['type'] == 20)
+                                    {
+                                    ?>
+                                    <tr> 
+                                        <td class="maintext" nowrap>Background Colour:</td>
+                                        <td class="maintext"><?= get_background_colour($qdata['colours']); ?></td>
+                                    </tr>
+                                    <tr> 
+                                        <td class="maintext">Font Colour:</td>
+                                        <td class="maintext"><?= get_font_colour($qdata['text5']); ?></td>
+                                    </tr>
+                                    <?
+
+                                    }
+
+                                    // Book Labels
+                                    if( (int)$qdata['type'] == 33)
+                                    {
+                                    ?>
+                                    <tr> 
+                                        <td class="maintext" nowrap>Background Colour:</td>
+                                        <td class="maintext"><?= ((int) $qdata['colours'] == 10 ? "Set B" : "Set A") ?></td>
+                                    </tr>
+                                    <tr> 
+                                        <td class="maintext">Pic:</td>
+                                        <td class="maintext"><?= getPicType($qdata["pic"]) ?></td>
+                                    </tr>
+                                    <?
+
+                                    }
+
+                                    ?>
+                                            <!--<tr>
+                                              <td> </td> 
+                                              <td class="maintext" width="25px"><b>Total:</b></td>
+                                              <td class="maintext"><? echo $cur['symbol'].toDollarsAndCents($qdata["price"]);?></td>
+                                            </tr>-->
+                                    <? if($from=="admin" && ($qdata["type"]==10 || $qdata["type"]==11 || $qdata["type"]==12 || $qdata['type']==16)){ ?>
+                                </table>
+                            </td>
+                            <td><img src="<? echo $aim;?>images/gen/spacer.gif" width="10" height="1"></td>
+                            <td>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <? if($qdata["type"]==10){ ?>
+                                    <tr>
+                                        <td class="maintext">
+                                            <strong>Starter Pack - <?= $cur[$currency]['symbol']; ?><?= $qdata["price"] ?></strong><br>
+                                            40 vinyls<br>
+                                            40 iron-ons<br>
+                                            20 shoe labels<br>
+                                            1 bagtags<br>
+                                            30 mini labels or 60 pencil labels</td>
+                                    </tr>
+                                    <? }else if($qdata["type"]==11){ ?>
+                                    <tr>
+                                        <td class="maintext">
+                                            <strong>Mixed Pack - <?= $cur[$currency]['symbol']; ?><?= $qdata["price"] ?> per child</strong><br>
+                                            30 vinyls<br>
+                                            30 iron-ons</td>
+                                    </tr>
+                                    <? }else if($qdata["type"]==12){ // birthday pack ?>
+                                    <tr>
+                                        <td class="maintext">
+                                            <strong>Birthday Pack - <?= $cur[$currency]['symbol']; ?><?= $qdata["price"] ?></strong><br>
+                                            30 vinyls<br>
+                                            30 iron-ons<br>
+                                            1 Identitag<br>
+                                            Giftbox<br>
+                                            <span class="maintextalert">Gift Card</span><br>
+                                            Matching ribbon</td>
+                                    </tr>
+                                    <?
+                                    }else if($qdata["type"]==16){ 			// new baby pack
+                                    ?>
+                                    <tr>
+                                        <td class="maintext">
+                                            <strong>New Baby Pack - <?= $cur[$currency]['symbol']; ?><?= $qdata["price"] ?></strong><br>
                                 40 mini labels<br>
                                 20 iron-ons<br>
                                 1 identiTAG<br>
