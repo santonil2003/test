@@ -154,7 +154,7 @@ $('document').ready(function() {
 
         if (line2.length > 20) {
             line2 = line2.substr(0, 19);
-            $('p.error-msg').html('Maximum 20 character allowed !');
+            $('p.error-msg').html('Maximum 20 character allowed!');
         }
 
         $(this).val(line2);
@@ -186,12 +186,17 @@ $('document').ready(function() {
     $('.details_checkbox_phone').click(function() {
         ischecked = $('.details_checkbox_phone').is(':checked');
         if (ischecked) {
+            $('.line-2').show();
+            
             $('.preview_phone').show().val(line2);
             $('#split').val('1');
+            
             $('.designer_preview_rainbow_a .preview_text').css('top', '100');
             $('.designer_preview_rainbow_b .preview_text').css('top', '100');
             $('.individual_preivew .preview_text').css('top', '80');
         } else {
+            $('.line-2').hide();
+            
             line2 = $('.preview_phone').val();
             $('#split').val('0');
             $('.preview_phone').hide().val('');
@@ -250,5 +255,8 @@ $('document').ready(function() {
 
         
     });
+    
+    // uncheck line2
+    $('.details_checkbox_phone').click();
 
 });
