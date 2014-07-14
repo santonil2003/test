@@ -27,7 +27,7 @@
 
 /* shoe dots */
 #shoe-dots .fixed_preview{
-    height:200px;
+    height:180px !important;
     border: none !important;
 }
 
