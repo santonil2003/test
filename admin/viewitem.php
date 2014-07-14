@@ -9,7 +9,9 @@ $fromviewer = $_REQUEST['fromviewer'];
 
 $includeabove = true;
 include("../useractions.php"); // this includes common_db.php
+echo '<div class="view-order-list">';
 include("../vieworderlist.php");
+echo '</div>';
 
 linkme();
 session_start();

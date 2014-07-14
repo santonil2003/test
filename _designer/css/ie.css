@@ -2,6 +2,10 @@
     display:block;
 }
 
+.view-order-list .browser-incompactible{
+    display:none !important;
+}
+
 /* pencil labels  */
 #pencil_labels .individual_preivew {
     height: 106px !important;
