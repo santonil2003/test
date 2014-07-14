@@ -27,12 +27,12 @@
 
 /* shoe dots */
 #shoe-dots .fixed_preview{
-    height:180px;
-    border: none;
+    height:200px;
+    border: none !important;
 }
 
 #shoe-dots .designer-options{
-    margin-top: 0px;
+    margin-top: 0px !important;
 }
 
 /* vinyls-mini*/
