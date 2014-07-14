@@ -9,9 +9,7 @@ $fromviewer = $_REQUEST['fromviewer'];
 
 $includeabove = true;
 include("../useractions.php"); // this includes common_db.php
-echo '<div class="view-order-list">';
 include("../vieworderlist.php");
-echo '</div>';
 
 linkme();
 session_start();
@@ -181,8 +179,9 @@ body {
 }
 
 </style>
+</head>
 <body marginheight="0" marginwidth="0" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0"> 
-<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%"> 
+<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%" class="view-order-list"> 
 	<tr> 
 		<td valign="top" align="center"> 
 			<table cellpadding="0" cellspacing="0" border="0" bgcolor="">
