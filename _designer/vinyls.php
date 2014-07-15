@@ -802,10 +802,11 @@ document.getElementsByTagName('form')[0].submit();
             </div>-->
 </div>
             </div>
-            <div class='box' style='text-align:center;'>
+            <div class='box-1' style='text-align:center;'>
             <!--<div id="designer_options_reverse_print">
                   <input type='checkbox' id="reverse_print" /> Text printed on reverse of tag? (add AU$4.00 to order)
             </div>-->
+            <span class="scroll-down">Scroll to view all available options</span>
 
             <div id="designer_options_quantity">
                 <strong>Quantity:</strong>

@@ -92,3 +92,12 @@
     width: 800px;
 }
 
+.scroll-down {
+   right:17px !important;
+   bottom: 82px;
+}
+
+.designer-options{
+    border-top: 2px solid #EFEFEF;
+    border-bottom: 2px solid #EFEFEF;
+}

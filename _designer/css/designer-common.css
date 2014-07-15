@@ -118,7 +118,7 @@ body{
 }
 
 .btn {
-     background: none repeat scroll 0 0 #00B0E0;
+    background: none repeat scroll 0 0 #00B0E0;
     border: 2px solid #000000;
     color: #FFFFFF;
     margin: 5px;
@@ -127,4 +127,23 @@ body{
 
 .browser-incompactible{
     display:none;
+}
+
+.scroll-down {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* future proofing */
+    -khtml-border-radius: 10px; /* for old Konqueror browsers */
+    padding: 5px 5px 5px 25px;
+    position:absolute;
+    right:13px;
+    bottom: 79px;
+    background: url("../images/info.png") no-repeat scroll 2px 5px #EFEFEF;
+}
+
+.scroll-up {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* future proofing */
+    -khtml-border-radius: 10px; /* for old Konqueror browsers */
 }

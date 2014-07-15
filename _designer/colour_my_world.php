@@ -831,6 +831,7 @@ padding:0;
             </div>
  </div>
             <div id="designer_options_quantity">
+            <span class="scroll-down">Scroll to view all available options</span>
                 <strong>Quantity:</strong>
                 <?php
                     //pull product quantity details here

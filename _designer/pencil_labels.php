@@ -130,11 +130,10 @@ while ($row = mysql_fetch_array($getPrice)) {
                     echo "</ul>";
                     ?>
                 </div>
-
-
             </div>
         </div>
-        <div class='box' style='text-align:center;'>
+        <div class='box-1' style='text-align:center;'>
+            <span class="scroll-down">Scroll to view all available options</span>
             <div id="designer_options_quantity">
                 <strong>Quantity:</strong>
                 <select id='order_quantity'>
