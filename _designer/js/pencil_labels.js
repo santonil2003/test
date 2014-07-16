@@ -99,7 +99,7 @@ $('document').ready(function() {
 
 
     $('#order_quantity').change(function() {
-        $('#quantdesc').val($(this).val());
+        $('#quantdesc').val($(this).find(":selected").text());
         var price = _price * $(this).val();
         $('#price').val(price);
     });

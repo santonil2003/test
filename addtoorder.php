@@ -589,7 +589,7 @@ break;
 		case 3:
 			// quantity desc
 			product_details($type, $_COOKIE['currency'], &$product);
-			
+			/*
 			if($_POST["type"]!=28 && $_POST["type"]!=29){
 				$price_formatted = (((int)form_param('chosenQuant') + 1) * (int)$product['unitQuant']) . " " . $product['productName'] . " for " . $product['symbol'].(((int)form_param('chosenQuant') + 1)*$product['price']);
 				$price = ((int)form_param('chosenQuant') + 1) * $product['price'];
@@ -597,7 +597,9 @@ break;
 			else {
 				$price_formatted = $_POST['quantdesc'];
 				$price = $_POST['price'];
-			}
+			}*/
+                        $price_formatted = $_POST['quantdesc'];
+			$price = $_POST['price'];
 			$record['ordernumber'] 			= $id;
 			$record['price']				= $price;
 			$record['quantdesc']			= $price_formatted;

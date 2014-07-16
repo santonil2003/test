@@ -37,8 +37,9 @@ while ($row = mysql_fetch_array($getPrice)) {
     <input type="hidden" name="chosenLabel" value="1" id="chosenLabel"/>
     <input type="hidden" name="price" value="<?php echo $price; ?>" id="price"/>
     <input type="hidden" name="type" value="<?php echo $type; ?>" id="type"/>
-    <input type="hidden" name="quantdesc" value="1" id="quantdesc"/>
+    <input type="hidden" name="quantdesc" value="60 Pencil Labels for AU$ <?php echo $price; ?>" id="quantdesc"/>
     <input type="hidden" name="picon" value="0" id="picon"/>
+    <input type="hidden" name="colours" value="3" id=""/>
     <input type="hidden" name="submit" value="Submit"/>
 
 
