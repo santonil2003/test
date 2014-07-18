@@ -46,7 +46,7 @@ $curr = getCurrencies();
 
     <body marginheight="0" marginwidth="0" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0">
         <div id="dialog" title="">
-            <form id='sub-package-price'>
+            <form id='sub-package-price' action="currencymanager_actions.php" method="post">
                 <table>
                     <tr>
                         <Td>Product Id :</Td><Td><span id='dialog-product-id'></span></Td>
@@ -55,15 +55,21 @@ $curr = getCurrencies();
                         <Td>Items per unit :</Td><Td><input type='text' value='' name='product_item_per_unit' id='product_item_per_unit'/></Td>
                     </tr>
                     <tr>
-                        <Td>Price Units :</Td><Td><input type='text' value='' name='price_per_units' id='price_per_units'/></Td>
+                        <Td>Price per unit : AUD $ </Td><Td><input type='text' value='' name='price_per_units' id='price_per_units'/></Td>
                     </tr>
                 </table>
+                <input type="hidden" name="productId" id="hidden-product-id"/>
+                <input type="hidden" name="action" value="updatePricePerSet" id="hidden-product-id"/>
+
             </form>
         </div>
 
         <script>
-            function updateProductPackPrice(productId, productName) {
+            function updateProductPackPrice(productId, productName, items_per_unit, price_per_unit) {
                 $('#dialog-product-id').html(productId);
+                $('#hidden-product-id').val(productId);
+                $('#product_item_per_unit').val(items_per_unit);
+                $('#price_per_units').val(price_per_unit);
                 $("#dialog").dialog({title: productName});
                 $("#dialog").dialog("open");
             }
@@ -71,6 +77,7 @@ $curr = getCurrencies();
             $(function() {
                 $("#dialog").dialog({
                     autoOpen: false,
+                    width:380,
                     buttons: {
                         "Save": function() {
                             $('#sub-package-price').submit();
@@ -509,7 +516,17 @@ $curr = getCurrencies();
                                                 ?>
                                             <?php } ?>
                                             <td>
-                                                <a href="javascript:updateProductPackPrice('<?php echo $prods[$i]['id'] ?>','<?php echo $prods[$i]['productName']; ?>')" title="packed price" class="setting"><img src="images/setting.png"></a>
+                                                <?php
+                                                $price_per_unit = '';
+                                                $items_per_unit = '';
+                                                $query = "SELECT * FROM price_per_set WHERE product_id=" . $prods[$i]['id'] . " AND currencyInt='1' ";
+                                                $price_per_set_result = mysql_query($query);
+                                                while ($price_per_set_row = mysql_fetch_array($price_per_set_result)) {
+                                                    $price_per_unit = $price_per_set_row['price'];
+                                                    $items_per_unit = $price_per_set_row['items_per_unit'];
+                                                }
+                                                ?>
+                                                <a href="javascript:updateProductPackPrice('<?php echo $prods[$i]['id'] ?>','<?php echo $prods[$i]['productName']; ?>','<?php echo $items_per_unit; ?>','<?php echo $price_per_unit; ?>')" title="packed price" class="setting"><img src="images/setting.png"></a>
                                             </td>
                                             <td><input type="submit" value="update &gt;"></td>
                                         </form>

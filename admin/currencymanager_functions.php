@@ -1,8 +1,12 @@
 <?
-require_once('../_common/_constants.php');
-require_once(SITE_DIR.'_common/_connection.php'); 
-$cfg = new Config();
-$db = new DbConnect($cfg);
+require_once('../_common/_constants.php');
+
+require_once(SITE_DIR.'_common/_connection.php'); 
+
+$cfg = new Config();
+
+$db = new DbConnect($cfg);
+
 $db->connectDb();
 
 function get_ex_rate() {

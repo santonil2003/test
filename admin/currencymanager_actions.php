@@ -1,4 +1,4 @@
-<?
+<?php
 $includeabove=true;
 include("../useractions.php");
 include("currencymanager_functions.php");
@@ -31,6 +31,9 @@ switch($_POST["action"]){
 	case "updateEx":
 	updateEx();
 	break;
+        case 'updatePricePerSet':
+            updatePricePerSet();
+        break;
 	
 }
 
@@ -48,6 +51,32 @@ function updatepostagegift(){
 		if(!$result) error_message(sql_error());
 	}
 	header("location:currencymanager.php");
+}
+
+function updatePricePerSet(){
+    global $curr, $prods;
+    
+    $productId = $_POST['productId'];
+    $pricePerUnits = $_POST['price_per_units'];
+    $productItemPerUnit = $_POST['product_item_per_unit'];
+    
+    $query = "SELECT * FROM price_per_set WHERE currencyInt='1' AND product_id=".$_POST["productId"];
+    $result = mysql_query($query);
+    $num_rows = mysql_num_rows($result);
+    
+    $price = round($pricePerUnits,2);
+        
+    if($num_rows>0){
+        $sql = "UPDATE `price_per_set` SET `price` = '$price',items_per_unit='$productItemPerUnit' WHERE currencyInt='1' AND product_id=".$productId;
+    } else {
+        $sql = "INSERT INTO `price_per_set` (id, product_id, currencyInt, price, items_per_unit, extra) VALUES (NULL, '".$productId."', '1', '".$price."', '".$productItemPerUnit."','');";
+    }
+        
+    $res = mysql_query($sql);
+        
+    if(!$res) error_message(sql_error());
+    
+    header("location:currencymanager.php");
 }
 
 
@@ -163,6 +192,3 @@ function updatezip5()
 	
 	header("location:currencymanager.php");
 }
-
-
-?>
