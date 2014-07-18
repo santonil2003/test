@@ -2,6 +2,8 @@
 require_once '../common_db.php';
 require_once 'include.php';
 linkme();
+require_once 'helper.php';
+$productId = 20;// for shoe dots
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +32,7 @@ while ($row = mysql_fetch_array($getColourArray)) {
     $individual[$row['data_colour_id']] = $row['hexcode'];
 }
 
-$type = 20;
+$type = $productId;
 echo "_type = $type;\n";
 $getPrice = mysql_query("SELECT * FROM prices WHERE productId = '$type' AND currencyInt='1'");
 while ($row = mysql_fetch_array($getPrice)) {
@@ -233,9 +235,10 @@ while ($row = mysql_fetch_array($getPrice)) {
                         <strong>Quantity:</strong>
                         <select id='order_quantity'>
                             <?php
-                            echo "<option value='1'>20 Shoe Dots for AU$ " . $price . "</option>";
-                            echo "<option value='2'>40 Shoe Dots for AU$ " . ($price * 2) . "</option>";
-                            echo "<option value='3'>60 Shoe Dots for AU$ " . ($price * 3) . "</option>";
+                            echo "<option value='" . ($price * 1) . "'>20 Shoe Dots for AU$ " . $price . "</option>";
+                            echo "<option value='" . ($price * 2) . "'>40 Shoe Dots for AU$ " . ($price * 2) . "</option>";
+                            echo "<option value='" . ($price * 3) . "'>60 Shoe Dots for AU$ " . ($price * 3) . "</option>";
+                            echo Helper::getExtraPriceOption($productId);
                             ?>
                         </select>
                     </div>

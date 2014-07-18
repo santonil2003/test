@@ -14,6 +14,9 @@ if (isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
         }
 mysql_connect($dbhost,$dbuser,$dbpass);
 mysql_select_db($dbname);
+
+require_once 'helper.php';
+$productId = 1;// for vinyl
 ?>
 <script type="text/javascript">
            
@@ -360,15 +363,13 @@ mysql_select_db($dbname);
            });
            
            //Quantity
-        
-           $("#order_quantity").val('1');
-           _quantity = $(this).find(":selected").text();
            $("#order_quantity").change(function(){
                 _quantity = $(this).find(":selected").text();
                 var multiply = $(this).find(":selected").val();
-                _price = (_price * multiply);
-                
+                _price = multiply;
            });
+           
+           $("#order_quantity").trigger('change');
            
            $("#submit").click(function(){
              
@@ -814,12 +815,10 @@ document.getElementsByTagName('form')[0].submit();
                     //pull product quantity details here
                     
                     echo "<select id='order_quantity'>";
-                    
-                    
-                        echo "<option value='1'>60 Vinyl Labels for AU".$price."</option>";
-                        echo "<option value='2'>120 Vinyl Labels for AU".($price*2)."</option>";
-                        echo "<option value='3'>180 Vinyl Labels for AU".($price*3)."</option>";
-                    
+                        echo "<option value='".$price."'>60 Vinyl Labels for AU$ ".$price."</option>";
+                        echo "<option value='".($price*2)."'>120 Vinyl Labels for AU$ ".($price*2)."</option>";
+                        echo "<option value='".($price*3)."'>180 Vinyl Labels for AU$ ".($price*3)."</option>";
+                        echo Helper::getExtraPriceOption($productId);
                     
                     echo "</select>";
                 ?>

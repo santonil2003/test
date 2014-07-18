@@ -3,6 +3,8 @@
 require_once '../common_db.php';
 require_once 'include.php';
 linkme();
+require_once 'helper.php';
+$productId = 3;// for mini
 ?>  
 <script>
     var _colourArray = new Array();
@@ -14,7 +16,7 @@ while ($row = mysql_fetch_array($getColourArray)) {
     $individual[$row['data_colour_id']] = $row['hexcode'];
 }
 
-$type = 3;
+$type = $productId;
 echo "_type = $type;\n";
 $getPrice = mysql_query("SELECT * FROM prices WHERE productId = '$type' AND currencyInt='1'");
 while ($row = mysql_fetch_array($getPrice)) {
@@ -206,9 +208,10 @@ while ($row = mysql_fetch_array($getPrice)) {
                 <strong>Quantity:</strong>
                 <select id='order_quantity'>
                     <?php
-                    echo "<option value='1'>60 Mini vinyl Labels for AU$ " . $price . "</option>";
-                    echo "<option value='2'>120 Mini vinyl Labels for AU$ " . ($price * 2) . "</option>";
-                    echo "<option value='3'>180 Mini vinyl Labels for AU$ " . ($price * 3) . "</option>";
+                    echo "<option value='$price'>60 Mini vinyl Labels for AU$ " . $price . "</option>";
+                    echo "<option value='".($price * 2)."'>120 Mini vinyl Labels for AU$ " . ($price * 2) . "</option>";
+                    echo "<option value='" . ($price * 3) . "'>180 Mini vinyl Labels for AU$ " . ($price * 3) . "</option>";
+                    echo Helper::getExtraPriceOption($productId);
                     ?>
                 </select>
             </div>

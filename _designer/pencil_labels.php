@@ -3,6 +3,8 @@
 require_once '../common_db.php';
 require_once 'include.php';
 linkme();
+require_once 'helper.php';
+$productId = 5;// for mini
 ?>
 <script src="js/pencil_labels.js"></script>
 <script>
@@ -13,7 +15,7 @@ while ($row = mysql_fetch_array($getColourArray)) {
     echo "_colourArray[" . $row['colour_id'] . "] = '" . $row['hex'] . "';\n";
 }
 
-$type = 5;
+$type = $productId;
 echo "_type = $type;\n";
 $getPrice = mysql_query("SELECT * FROM prices WHERE productId = '$type' AND currencyInt='1'");
 while ($row = mysql_fetch_array($getPrice)) {
@@ -139,9 +141,10 @@ while ($row = mysql_fetch_array($getPrice)) {
                 <strong>Quantity:</strong>
                 <select id='order_quantity'>
                     <?php
-                    echo "<option value='1'>60 Pencil Labels for AU$ " . $price . "</option>";
-                    echo "<option value='2'>120 Pencil Labels for AU$ " . ($price * 2) . "</option>";
-                    echo "<option value='3'>180 Pencil Labels for AU$ " . ($price * 3) . "</option>";
+                    echo "<option value='" . $price . "'>60 Pencil Labels for AU$ " . $price . "</option>";
+                    echo "<option value='" . ($price * 2) . "'>120 Pencil Labels for AU$ " . ($price * 2) . "</option>";
+                    echo "<option value='" . ($price * 3) . "'>180 Pencil Labels for AU$ " . ($price * 3) . "</option>";
+                    echo Helper::getExtraPriceOption($productId);
                     ?>
                 </select>
             </div>
