@@ -45,51 +45,7 @@ $curr = getCurrencies();
     </style>
 
     <body marginheight="0" marginwidth="0" leftmargin="0" rightmargin="0" topmargin="0" bottommargin="0">
-        <div id="dialog" title="">
-            <form id='sub-package-price' action="currencymanager_actions.php" method="post">
-                <table>
-                    <tr>
-                        <Td>Product Id :</Td><Td><span id='dialog-product-id'></span></Td>
-                    </tr>
-                    <tr>
-                        <Td>Items per unit :</Td><Td><input type='text' value='' name='product_item_per_unit' id='product_item_per_unit'/></Td>
-                    </tr>
-                    <tr>
-                        <Td>Price per unit : AUD $ </Td><Td><input type='text' value='' name='price_per_units' id='price_per_units'/></Td>
-                    </tr>
-                </table>
-                <input type="hidden" name="productId" id="hidden-product-id"/>
-                <input type="hidden" name="action" value="updatePricePerSet" id="hidden-product-id"/>
-
-            </form>
-        </div>
-
-        <script>
-            function updateProductPackPrice(productId, productName, items_per_unit, price_per_unit) {
-                $('#dialog-product-id').html(productId);
-                $('#hidden-product-id').val(productId);
-                $('#product_item_per_unit').val(items_per_unit);
-                $('#price_per_units').val(price_per_unit);
-                $("#dialog").dialog({title: productName});
-                $("#dialog").dialog("open");
-            }
-
-            $(function() {
-                $("#dialog").dialog({
-                    autoOpen: false,
-                    width:380,
-                    buttons: {
-                        "Save": function() {
-                            $('#sub-package-price').submit();
-                            $(this).dialog("close");
-                        },
-                        Cancel: function() {
-                            $(this).dialog("close");
-                        }
-                    }
-                });
-            });
-        </script>
+       
 
         <table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
             <tr>
@@ -619,5 +575,51 @@ $curr = getCurrencies();
         </table>
     </tr>
 </table>
+        
+         <div id="dialog" title="">
+            <form id='sub-package-price' action="currencymanager_actions.php" method="post">
+                <table>
+                    <tr>
+                        <Td>Product Id :</Td><Td><span id='dialog-product-id'></span></Td>
+                    </tr>
+                    <tr>
+                        <Td>Items per unit :</Td><Td><input type='text' value='' name='product_item_per_unit' id='product_item_per_unit'/></Td>
+                    </tr>
+                    <tr>
+                        <Td>Price per unit : AUD $ </Td><Td><input type='text' value='' name='price_per_units' id='price_per_units'/></Td>
+                    </tr>
+                </table>
+                <input type="hidden" name="productId" id="hidden-product-id"/>
+                <input type="hidden" name="action" value="updatePricePerSet" id="hidden-product-id"/>
+
+            </form>
+        </div>
+
+        <script>
+            function updateProductPackPrice(productId, productName, items_per_unit, price_per_unit) {
+                $('#dialog-product-id').html(productId);
+                $('#hidden-product-id').val(productId);
+                $('#product_item_per_unit').val(items_per_unit);
+                $('#price_per_units').val(price_per_unit);
+                $("#dialog").dialog({title: productName});
+                $("#dialog").dialog("open");
+            }
+
+            $(function() {
+                $("#dialog").dialog({
+                    autoOpen: false,
+                    width:380,
+                    buttons: {
+                        "Save": function() {
+                            $('#sub-package-price').submit();
+                            $(this).dialog("close");
+                        },
+                        Cancel: function() {
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+            });
+        </script>
 </body>
 </html>
