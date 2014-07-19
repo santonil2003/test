@@ -1,1 +1,0 @@
-<? include("send_friend.php");?>

@@ -1,1 +1,0 @@
-<P><A href="/Colour_My_World_Pack"></A></P><A href="/Great_Gift_Ideas"></A><A href="/Colour_My_World_Pack"></A><A href="/Products"></A><A href="/Products"></A><A href="/Products/Products"><IMG style="WIDTH: 457px; HEIGHT: 341px" border=0 src="/images/bg/back-to-school-homepage.png" width=464 height=378></A> 

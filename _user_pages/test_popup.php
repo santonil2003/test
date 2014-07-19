@@ -1,2 +1,0 @@
-<P align=center>We are currently upgrading our site to suit all devices. I the interim for those devices not compatible with our current website, we have created this temporary <STRONG>quick order form</STRONG> to send through to our orders dept in case the label creator does not load with your existing device. Click on the link below to be taken to our back up service</P>
-<P align=center><A href="http://form.jotform.com/form/3580944149">http://form.jotform.com/form/3580944149</A></P>
