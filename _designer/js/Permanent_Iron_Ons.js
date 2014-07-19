@@ -190,7 +190,7 @@ $('document').ready(function() {
             $('#split').val('1');
             $('.designer_preview_rainbow_a .preview_text').css('top', '100');
             $('.designer_preview_rainbow_b .preview_text').css('top', '100');
-            $('.individual_preivew .preview_text').css('top', '80');
+            $('.individual_preivew .preview_text').css('top', '78');
         } else {
             line2 = $('.details_text_phone').val();
             $('.details_text_phone').val('');

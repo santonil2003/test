@@ -17,12 +17,20 @@
 }
 
 /* permanent iron  */
+#permanent-iron-ons .preview_text{
+    line-height: 1.25 !important;
+}
+
+#permanent-iron-ons .preview_phone{
+    line-height: 1.25 !important;
+}
+
 #permanent-iron-ons .designer-options{
-    margin-top: 0px;
+    margin-top: 0px !important;
 }
 
 #permanent-iron-ons .fixed_preview{
-    border: none;
+    border: none !important;
 }
 
 /* shoe dots */
@@ -36,35 +44,49 @@
 }
 
 /* vinyls-mini*/
+
+#vinyls-mini .preview_text{
+    line-height: 1.25 !important;
+}
+
+#vinyls-mini .preview_phone{
+    line-height: 1.25 !important;
+}
+
 #vinyls-mini .designer-options{
-    margin-top: 0px;
+    margin-top: 0px !important;
 }
 
 #vinyls-mini .fixed_preview{
-    border: none;
+    border: none !important;
 }
 
 #vinyls-mini #designer_preview_text{
-    right: -6px;
+    right: -6px !important;
 }
 
 /*pencil_labels*/
+#pencil_labels .preview_text{
+   line-height: 1.25 !important;
+   margin-top: -2px !important;
+}
+
 #pencil_labels .designer-options{
-    margin-top: -80px;
+    margin-top: -80px !important;
 }
 
 #pencil_labels .fixed_preview{
-    border: none;
+    border: none !important;
 }
 
 /**colour-my-world*/
 #colour-my-world .designer-options{
-    margin-top: 0px;
+    margin-top: 0px !important;
 }
 
 #colour-my-world .fixed_preview{
-    border: none;
-    width: 800px;
+    border: none !important;
+    width: 800px !important;
 }
 
 
