@@ -92,7 +92,14 @@
 
 
 
-//* vinyl-wrapper */
+/* vinyl-wrapper */
+#vinyl-wrapper .preview_text{
+    line-height: 1.25 !important;
+}
+
+#vinyl-wrapper .preview_phone{
+    line-height: 1.25 !important;
+}
 
 #vinyl-wrapper #designer_options_font ol lo.3{
     margin-top:5px;
