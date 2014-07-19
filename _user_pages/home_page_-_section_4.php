@@ -1,1 +1,0 @@
-<P><A href="/pages/Shipping"><IMG style="WIDTH: 199px; HEIGHT: 225px" border=0 src="/images/bg/J.gif" width=0 height=0></A><A href="http://greatbigfancywordgame.appspot.com/" target=_blank></A></P>

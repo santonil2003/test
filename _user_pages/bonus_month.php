@@ -1,1 +1,0 @@
-<IMG src="http://identikid.com.au/images/bg/Bonus-month-graphic-2012.gif">&nbsp; 

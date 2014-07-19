@@ -1,1 +1,0 @@
-<? include('order/order_maxi_tags.php'); ?>

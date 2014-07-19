@@ -1,1 +1,0 @@
-<P><A href="/Products/Gift_Vouchers"><IMG border=0 src="/images/bg/home_h_gift_vouchers.gif" width=193 height=170></A></P>

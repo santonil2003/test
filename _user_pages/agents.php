@@ -1,1 +1,0 @@
-<P>Currently We are not taking agents...thanks for your interest</P>
