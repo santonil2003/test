@@ -271,5 +271,8 @@ $('document').ready(function() {
     });
 
 
+    $('.FF1818').trigger('click');
+
+
 
 });
