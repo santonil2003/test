@@ -1,0 +1,271 @@
+#semi-permanet-irons-ons ol,#semi-permanet-irons-ons ul{padding:0;margin:0;}       
+
+#semi-permanet-irons-ons ul,#semi-permanet-irons-ons li{list-style:none;}
+/*li{float:left;}*/
+#semi-permanet-irons-ons strong{display:block;clear:both;}
+
+#semi-permanet-irons-ons .preview_image_set{
+    position:absolute;
+    top:12px;
+    left:10px;
+
+}
+
+#semi-permanet-irons-ons #designer_options_picture ul li{
+    width:32px;
+    height:32px;
+    border:solid 2px #666;
+    padding:1px;
+    margin:2px;
+}
+#semi-permanet-irons-ons .font_colour_black,#semi-permanet-irons-ons .font_colour_white{border:solid 1px #666;}
+#semi-permanet-irons-ons .font_colour_black{width:20px;height:20px;background:#000000;display:inline-block;}
+#semi-permanet-irons-ons .font_colour_white{width:20px;height:20px;background:#ffffff;display:inline-block;}
+
+#semi-permanet-irons-ons #designer_options_picture ul li{
+    width:60px;
+    height:60px;
+    border:solid 2px #666;
+    padding:1px;
+    margin:2px;
+}
+
+#semi-permanet-irons-ons .preview_image{
+    width:60px;
+    height:60px;
+}
+#semi-permanet-irons-ons .preview_image_set{
+    width:45px;
+    height:25px;
+    display:inline-block;
+}
+
+#semi-permanet-irons-ons #designer_options_colours ul li{float:none;height:50px; cursor:pointer;}
+#semi-permanet-irons-ons #designer_options_colours ul li span{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    float:left;
+    margin:2px;
+    border:solid 2px #666;
+}
+
+#semi-permanet-irons-ons .selected{
+    border:solid 2px #00B0E0 !important
+}
+
+
+
+#semi-permanet-irons-ons #designer_options_identitags{
+    display:block;
+    width:450px;
+}
+#semi-permanet-irons-ons #designer_options_identitags ul .tags{
+    width:450px;
+}
+
+#semi-permanet-irons-ons .box{
+    position:relative;
+    clear:both;
+    margin-bottom:20px;
+    margin: 0 auto;
+    width: 300px;
+}
+#semi-permanet-irons-ons #designer_options_details strong{display:inline;clear:none;}
+#semi-permanet-irons-ons #designer_options_details{text-align:center;}
+
+#semi-permanet-irons-ons #designer_options_font{
+    /*float:left;*/
+    width:275px;
+    text-align:left;
+    margin-bottom:30px;
+}
+#semi-permanet-irons-ons #designer_options_font li {
+    font-size:28px;
+    float:none;
+}
+
+#semi-permanet-irons-ons #designer_options_font_colour{
+    /*float:left;*/
+    width:270px;
+    text-align:left;
+}
+#semi-permanet-irons-ons #designer_options_font_colour{
+
+    margin-bottom:30px;
+}
+
+#semi-permanet-irons-ons #designer_options_font_colour span {
+    cursor:pointer;
+}
+#semi-permanet-irons-ons #designer_options_colours{
+    /*float:left;*/
+    width:350px;
+    text-align:left;
+    margin-bottom:30px;
+}
+
+#semi-permanet-irons-ons #designer_options_label ul li{float:none;}
+
+#semi-permanet-irons-ons #designer_options_identitags{
+    text-align:left;
+}
+#semi-permanet-irons-ons #designer_options_identitags input{
+    margin-left:50px;
+    font-weight:bold;
+}
+
+#semi-permanet-irons-ons #designer_options_label{
+    position:absolute;
+    top:0;
+    right:0;
+    width:320px;
+}
+
+#semi-permanet-irons-ons #designer_options_ironon_colour{
+    position:absolute;
+    top:200px;
+    right:0;
+    width:320px;
+}
+
+#semi-permanet-irons-ons #designer_options_ironon_colour ul li span{
+    width:20px;
+    height:20px;
+    display:inline-block;
+    border:solid 2px #666;
+}
+
+#semi-permanet-irons-ons  button{
+    color:#ffffff;
+    background:#00B0E0;
+    border:solid 2px #000000;
+    padding:5px 10px;
+    margin:5px;
+}
+
+#semi-permanet-irons-ons #designer_preview {
+    position:relative;
+}
+
+
+#semi-permanet-irons-ons .preview_image{
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    background-image: url("../images/bwl/1.png");
+    height: 60px;
+}
+
+
+
+#semi-permanet-irons-ons .individual_preivew {
+    border: 2px solid #000000;
+    height: 80px;
+    margin: 0 auto 25px;
+    overflow: hidden;
+    width: 275px;
+}
+
+#semi-permanet-irons-ons .individual_preivew .preview_text{
+    display: block;
+    font-family: comic_sans_msregular;
+    font-size: 22px;
+    line-height: 1;
+    position: absolute;
+    text-align: center;
+    top: 15px;
+    width: 215px;
+    left: 0px;
+}
+
+#semi-permanet-irons-ons .individual_preivew .preview_phone{
+    display: block;
+    font-family: comic_sans_msregular;
+    font-size: 22px;
+    line-height: 1;
+    position: absolute;
+    text-align: center;
+    top: 40px;
+    width: 215px;
+    left: 0px;
+}
+
+#semi-permanet-irons-ons .individual_preivew .preview_image{
+    right: 0px;
+    top: 10px;
+}
+
+#semi-permanet-irons-ons #designer_preview_text{
+    color: #3A768F;
+    font-size: 10px;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    top: 10px;
+    width: 240px
+}
+
+#semi-permanet-irons-ons .error-msg{
+    color: red;
+}
+
+#semi-permanet-irons-ons .detial_text_label{
+    font-size: 18px;
+}
+
+#semi-permanet-irons-ons .block-box {
+    text-align: center;
+    padding-left:14px;
+}
+
+#semi-permanet-irons-ons #designer_options_picture ul {
+    margin: 0px;
+    padding: 0px;
+    display:block;
+}
+#semi-permanet-irons-ons #designer_options_picture ul li {
+    float:left;
+    cursor:pointer;
+}
+
+#semi-permanet-irons-ons #designer_options_font {
+    float:left;
+}
+
+#semi-permanet-irons-ons .colour-selector{
+    float:right;
+}
+
+#semi-permanet-irons-ons #designer_options_font li table tr td {
+    font-size:25px;
+    cursor:pointer;
+}
+
+.fixed_preview {
+    background-color: #FFFFFF;
+    border: 2px solid #EFEFEF;
+    margin: 0 auto 0 -2px;
+    overflow: hidden;
+    padding: 0px 15px;
+    position: fixed;
+    top: 0;
+    width: 770px;
+    -moz-box-shadow:    inset 0 0 10px #EFEFEF;
+    -webkit-box-shadow: inset 0 0 10px #EFEFEF;
+    box-shadow:         inset 0 0 10px #EFEFEF;
+}
+.designer-options{
+    height: 350px;
+    margin-top: 98px;
+    overflow-y: scroll;
+    -moz-box-shadow:    inset 0 0 10px #EFEFEF;
+    -webkit-box-shadow: inset 0 0 10px #EFEFEF;
+    box-shadow:         inset 0 0 10px #EFEFEF;
+}
+
+.split-lines {
+    padding:0 15px 0 2px;
+}
+
+

@@ -130,3 +130,14 @@
     border-top: 2px solid #EFEFEF;
     border-bottom: 2px solid #EFEFEF;
 }
+
+
+
+/* semi-permanet-irons-ons*/
+ #semi-permanet-irons-ons .fixed_preview{
+    border: none !important;
+}
+
+ #semi-permanet-irons-ons .designer-options{
+    margin-top: 25px !important;
+}
