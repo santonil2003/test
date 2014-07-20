@@ -1126,6 +1126,11 @@ TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMB
                             $text1 = $qdata['text1'];
                             $text2 = trim(str_replace('Ph:', '', $qdata['text2']));
 
+                            $topCss = '';
+                            if(!$text2){
+                                $topCss = 'top:120px;';
+                            }
+
 
 
 
@@ -1158,7 +1163,7 @@ TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMB
 
 
                             $style = '';
-                            $fontfamily = 'font-family:' . $fontName[$qdata["font"]] . ';' . $fontColor;
+                            $fontfamily = 'font-family:' . $fontName[$qdata["font"]] . ';' . $fontColor.$topCss;
 
                             if ($background_colour == 9) {
                                 $class = 'designer_preview_rainbow_a';
