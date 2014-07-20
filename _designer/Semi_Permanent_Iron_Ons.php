@@ -171,7 +171,7 @@ while ($row = mysql_fetch_array($getPrice)) {
                 <select id='order_quantity'>
                     <?php
                     echo Helper::getExtraPriceOption($productId);
-                    echo "<option value='$price' selcted='selected'>60 Semi-Permanent Iron Ons for AU$ " . $price . "</option>";
+                    echo "<option value='$price' selected='selected'>60 Semi-Permanent Iron Ons for AU$ " . $price . "</option>";
                     echo "<option value='".($price * 2)."'>120 Semi-Permanent Iron Ons for AU$ " . ($price * 2) . "</option>";
                     echo "<option value='" . ($price * 3) . "'>180 Semi-Permanent Iron Ons for AU$ " . ($price * 3) . "</option>";
                     ?>
