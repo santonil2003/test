@@ -1,0 +1,1 @@
+<P align=center><IMG style="WIDTH: 302px; HEIGHT: 381px" src="/images/bg/MOTHERS%20DAY%20TILE.gif" width=334 height=485></P>

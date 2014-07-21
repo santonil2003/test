@@ -1,0 +1,1 @@
+<IMG src="/images/bg/worldwide-image.gif">&nbsp; 
