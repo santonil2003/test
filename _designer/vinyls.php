@@ -188,12 +188,13 @@ $productId = 1;// for vinyl
            });
            
            //Font
-           $("li","#designer_options_font").click(function(){
-               $("li","#designer_options_font").removeClass('selected');
-               $(".preview_text").css("font-family",$(this).prop("class"));
-               _font = $(this).prop("class");
+           //$("li","#designer_options_font").click(function(){
+            $("#designer_options_font ol li").click(function(){
+               $("#designer_options_font ol li").removeClass('selected');
+               $(".preview_text").css("font-family",$(this).attr('class'));
+               _font = $(this).attr('class');
                
-               console.log(_font);
+              
                $(this).addClass('selected');
                var fontset = $(this).css('font-family');
                $('.preview_text').css('font-family',fontset);
