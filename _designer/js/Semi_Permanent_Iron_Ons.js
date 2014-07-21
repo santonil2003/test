@@ -107,10 +107,7 @@ $('document').ready(function() {
             $('.preview_phone').show().val(line2);
             split = $('#split').is(':checked');
             $('#split').prop('checked', false);
-
-            $('.designer_preview_rainbow_a .preview_text').css('top', '100');
-            $('.designer_preview_rainbow_b .preview_text').css('top', '100');
-            // $('.individual_preivew .preview_text').css('top', '80');
+            $('.individual_preivew .preview_text').css('top', '14');
         } else {
             $('.line-2').attr('disabled', 'disabled');
             line2 = $('.preview_phone').val();
@@ -119,11 +116,8 @@ $('document').ready(function() {
                 $('#split').prop('checked', true);
             }
 
-
             $('.preview_phone').hide().val('');
-            $('.designer_preview_rainbow_a .preview_text').css('top', '122');
-            $('.designer_preview_rainbow_b .preview_text').css('top', '122');
-            // $('.individual_preivew .preview_text').css('top', '90');
+            $('.individual_preivew .preview_text').css('top', '26');
         }
     });
 

@@ -132,8 +132,16 @@
 }
 
 
+/*semi permanent irons*/
 
-/* semi-permanet-irons-ons*/
+#semi-permanet-irons-ons .preview_text{
+    line-height: 1.25 !important;
+}
+
+#semi-permanet-irons-ons .preview_phone{
+    line-height: 1.25 !important;
+}
+
  #semi-permanet-irons-ons .fixed_preview{
     border: none !important;
 }
