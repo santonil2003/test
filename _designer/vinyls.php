@@ -123,31 +123,73 @@ $productId = 1;// for vinyl
                    _showName = 0;
                }
            });
+
+           function updateTop(_Font){
+
+            $('.preview_text').css('top','');
+          _Font = eval(_Font);
+            if ($('input.details_checkbox_phone').is(':checked')) {
+                switch(_Font){
+                case 1:
+                $('.preview_text').css('top','10px');
+                break;
+                case 2:
+                case 6:
+                 $('.preview_text').css('top','6px');
+                break;
+                case 3:
+                 $('.preview_text').css('top','4px');
+                break;
+                case 4:
+                $('.preview_text').css('top','2px');
+                break;
+                case 5:
+                 $('.preview_text').css('top','2px');
+                break;
+               }
+              
+            } else {
+               switch(_Font){
+                case 1:
+                $('.preview_text').css('top','20px');
+                break;
+                case 2:
+                case 6:
+                 $('.preview_text').css('top','16px');
+                break;
+                case 3:
+                 $('.preview_text').css('top','14px');
+                break;
+                case 4:
+                $('.preview_text').css('top','12px');
+                break;
+                case 5:
+                 $('.preview_text').css('top','12px');
+                break;
+               }
+              
+            }
+           }
            
            var temp_phone = '';
            
            $(".details_checkbox_phone").click(function(){
+
+              
+               
                if($(this).prop("checked")){
                    $(".preview_phone").show();
                    $('.details_text_phone').val(temp_phone);
                    _showPhone = 1;
-                   if(_font==3){
-                         $('.preview_text').css('top','4px');
-                        }else{
-                            $('.preview_text').css('top','10px');
-                        }
                }else{
                    $(".preview_phone").hide();
                    _showPhone = 0;
                    temp_phone = $('.details_text_phone').val();
                    $('.details_text_phone').val('');
-                   _phone = '';
-                   if(_font==3){
-                         $('.preview_text').css('top','10px');
-                        }else{
-                            $('.preview_text').css('top','20px');
-                        }
+                   _phone = '';                 
                }
+
+                updateTop(_font);
            });
            
            $(".details_checkbox_pic").click(function(){
@@ -194,7 +236,6 @@ $productId = 1;// for vinyl
                $(".preview_text").css("font-family",$(this).attr('class'));
                _font = $(this).attr('class');
                
-              
                $(this).addClass('selected');
                var fontset = $(this).css('font-family');
                $('.preview_text').css('font-family',fontset);
@@ -214,47 +255,54 @@ $productId = 1;// for vinyl
                     $('.preview_text').css('font-size','26px');
                     $('.preview_phone').css('font-size','18px');
                 }else if(_font==4){
-                    $('.preview_text').css('top','8px');
+                    $('.preview_text').css('top','2px');
                    $('.preview_text').css('left','0px');
-                    $('.preview_phone').css('top','55px');
+                    $('.preview_phone').css('top','48px');
                     $('.preview_phone').css('left','0px');
                     $('.preview_text').css('font-size','26px');
                     $('.preview_phone').css('font-size','18px');
                  }else if(_font==2){
-                     $('.preview_text').css('top','10px');
+                     $('.preview_text').css('top','6px');
                    $('.preview_text').css('left','0px');
-                    $('.preview_phone').css('top','55px');
+                    $('.preview_phone').css('top','50px');
                     $('.preview_phone').css('left','0px');
                     $('.preview_text').css('font-size','26px');
-                    $('.preview_text').css('font-weight','bold');
+                    //$('.preview_text').css('font-weight','bold');
                     $('.preview_phone').css('font-size','18px');
                  } else if(_font==5){
-                    console.log('i am here');
-                    $('.preview_text').css('top','8px');
+                    $('.preview_text').css('top','2px');
                     $('.preview_text').css('left','0px');
-                    $('.preview_phone').css('top','55px');
+                    $('.preview_phone').css('top','45px');
                     $('.preview_phone').css('left','0px');
                     $('.preview_text').css('font-size','26px');
                     $('.preview_text').css('font-weight','bold');
                     $('.preview_phone').css('font-size','18px');
+                   } else if(_font==6){
+                    $('.preview_text').css('top','6px');
+                    $('.preview_text').css('left','0px');
+                    $('.preview_phone').css('top','50px');
+                    $('.preview_phone').css('left','0px');
+                    $('.preview_text').css('font-size','26px');
+                    //$('.preview_text').css('font-weight','bold');
+                    $('.preview_phone').css('font-size','18px');
                    }
+
+                   updateTop(_font);
                     
-                    
+                 /*   
                  if( $(".details_checkbox_phone").prop("checked") ){
-                     
-                         
-                         if(_font==3){
+                     if(_font==3){
                          $('.preview_text').css('top','4px');
-                        }else{
-                            $('.preview_text').css('top','10px');
-                        }
+                      } else {
+                         $('.preview_text').css('top','10px');
+                      }
                     }else{
                           if(_font==3){
                          $('.preview_text').css('top','10px');
                         }else{
                             $('.preview_text').css('top','20px');
                         }
-                    }
+                    }*/
                 
                 
            });

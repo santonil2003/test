@@ -80,6 +80,7 @@ strong{display:block;clear:both;}
     float:left;
     width:275px;
     text-align:left;
+    margin-right: 100px;
 }
 #vinyl-wrapper #designer_options_font li {
     font-size:25px;
@@ -88,7 +89,7 @@ strong{display:block;clear:both;}
 }
 
 #vinyl-wrapper #designer_options_font li table tr td {
-    font-size:25px;
+    font-size:23px;
 }
 
 #vinyl-wrapper #designer_options_font_colour{
