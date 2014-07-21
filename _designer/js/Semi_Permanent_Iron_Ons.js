@@ -103,6 +103,9 @@ $('document').ready(function() {
         ischecked = $('.details_checkbox_phone').is(':checked');
         if (ischecked) {
             $('.line-2').attr('disabled', false);
+            $('#split').attr('disabled','disabled');
+            $('#split').attr('title','Split not allowed');
+            $('.line-2').attr('title', '');
 
             $('.preview_phone').show().val(line2);
             split = $('#split').is(':checked');
@@ -110,6 +113,9 @@ $('document').ready(function() {
             $('.individual_preivew .preview_text').css('top', '14');
         } else {
             $('.line-2').attr('disabled', 'disabled');
+            $('.line-2').attr('title', 'Click Line 2 check box to add Line 2');
+            $('#split').attr('title','');
+            $('#split').attr('disabled',false);
             line2 = $('.preview_phone').val();
 
             if (split) {
