@@ -66,7 +66,7 @@ while ($row = mysql_fetch_array($getPrice)) {
 
             <div id="designer_preview" class="individual_preivew">
                 <span class="preview_image" ></span>
-                <span class="preview_text" >FirstName Surname</span>
+                <span class="preview_text" >Firstname Surname</span>
                 <span class="preview_phone" >Ph:000 000 000</span>
             </div>
         </div>
