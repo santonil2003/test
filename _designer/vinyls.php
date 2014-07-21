@@ -481,7 +481,7 @@ e.setAttribute('name',"identitag_code");
 e.setAttribute('value',_identiTAG);
 
 var g = document.createElement("input"); //input element, text
-g.setAttribute('type',"text");
+g.setAttribute('type',"hidden");
 g.setAttribute('name',"identitagReserve");
 g.setAttribute('value',_reversePrint);
 
