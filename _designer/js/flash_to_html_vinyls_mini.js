@@ -252,7 +252,8 @@ $('document').ready(function() {
         // if line 2 included
         if ($('.details_checkbox_phone').is(':checked')) {
             var line2 = $('.details_text_phone').val();
-            if (line2.length <= 0) {
+            var isLine2disabled = $('.details_text_phone').prop( "disabled" )
+            if (line2.length <= 0 && !isLine2disabled) {
                 $('.details_text_phone').addClass('required-field');
                 $('.details_text_phone').focus();
                 e.preventDefault();
