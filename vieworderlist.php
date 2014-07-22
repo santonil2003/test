@@ -1125,6 +1125,18 @@ TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMB
 
                             $text1 = $qdata['text1'];
                             $text2 = trim(str_replace('Ph:', '', $qdata['text2']));
+                            $split = $qdata['split'];
+                            
+                            if($split){
+                                $line1Array = explode(' ', $text1);
+                                $fname = $line1Array[0];
+                                $lname = trim(str_replace($fname, '', $text1));
+                                
+                                $text1 = $fname;
+                                $text2 = $lname;
+                            }
+                            
+                            
 
                             $topCss = '';
                             if(!$text2){

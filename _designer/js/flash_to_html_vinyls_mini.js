@@ -12,6 +12,7 @@ var line1 = "";
 var line2 = "";
 var pic = '1';
 var font = '3';
+var split = '0';
 
 imgfol = black_images_folder_path;
 
@@ -99,9 +100,9 @@ $('document').ready(function() {
 
         var span_class_string = $(this).attr('class');
         var span_class = span_class_string.split(" ");
-        
+
         var individual_color = span_class[0];
-        var image_name = $.inArray( individual_color, _colourArray);
+        var image_name = $.inArray(individual_color, _colourArray);
         image_no = image_name.toString();
 
         $('#designer_preview').css('background', 'url(images/mini_vinyls/' + image_no + '.png) no-repeat 30px 54px rgba(0, 0, 0, 0)');
@@ -187,24 +188,28 @@ $('document').ready(function() {
     $('.details_checkbox_phone').click(function() {
         ischecked = $('.details_checkbox_phone').is(':checked');
         if (ischecked) {
-            $('.line-2').show();
+            $('#split').attr('disabled', false);
+            if(split){
+                $('#split').prop('checked', true);
+            }
             
             $('.preview_phone').show().val(line2);
-            $('#split').val('1');
-            
             $('.designer_preview_rainbow_a .preview_text').css('top', '100');
             $('.designer_preview_rainbow_b .preview_text').css('top', '100');
             $('.individual_preivew .preview_text').css('top', '80');
         } else {
-            $('.line-2').hide();
+            split = $('#split').is(':checked');
+            $('#split').prop('checked', false);
+            $('#split').attr('disabled', 'disabled');
             
             line2 = $('.preview_phone').val();
-            $('#split').val('0');
             $('.preview_phone').hide().val('');
             $('.designer_preview_rainbow_a .preview_text').css('top', '122');
             $('.designer_preview_rainbow_b .preview_text').css('top', '122');
             $('.individual_preivew .preview_text').css('top', '90');
         }
+        
+        splitLine1();
     });
 
     // pic check box
@@ -228,17 +233,17 @@ $('document').ready(function() {
     $('.font_colour_white').trigger('click');
 
 
-     $('#vinyls-mini input').click(function(){
-       $(this).removeClass('required-field');
-     });
+    $('#vinyls-mini input').click(function() {
+        $(this).removeClass('required-field');
+    });
 
-    $('#vinyls-mini').submit(function(e){
+    $('#vinyls-mini').submit(function(e) {
         $('.details_text_name').removeClass('required-field');
         $('.details_text_phone').removeClass('required-field');
-        
+
         var line1 = $('.details_text_name').val();
 
-        if(line1.length<=0) {
+        if (line1.length <= 0) {
             $('.details_text_name').addClass('required-field');
             $('.details_text_name').focus();
             e.preventDefault();
@@ -247,17 +252,46 @@ $('document').ready(function() {
         // if line 2 included
         if ($('.details_checkbox_phone').is(':checked')) {
             var line2 = $('.details_text_phone').val();
-            if(line2.length<=0) {
+            var isLine2disabled = $('.details_text_phone').prop( "disabled" )
+            if (line2.length <= 0 && !isLine2disabled) {
                 $('.details_text_phone').addClass('required-field');
                 $('.details_text_phone').focus();
                 e.preventDefault();
             }
         }
 
-        
     });
-    
-    // uncheck line2
-    $('.details_checkbox_phone').click();
+
+    function splitLine1() {
+        ischecked = $('#split').is(':checked');
+
+        Line1 = $('.details_text_name').val();
+        Line2 = $('.details_text_phone').val();
+
+        if (ischecked) {
+            lineArray = Line1.split(" ");
+
+            fname = lineArray[0];
+            lname = Line1.replace(fname, '').trim();
+
+            $('.preview_text').html(fname);
+            $('.preview_phone').html(lname);
+
+            $('.details_text_phone').attr('disabled', 'disabled');
+        } else {
+            $('.preview_text').html($('.details_text_name').val());
+            $('.preview_phone').html(Line2);
+
+            $('.details_text_phone').attr('disabled', false);
+        }
+    }
+
+    $('#split').click(function() {
+        splitLine1();
+    });
+
+    $('.details_text_name').keyup(function() {
+        splitLine1();
+    });
 
 });

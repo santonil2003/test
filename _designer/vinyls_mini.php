@@ -32,7 +32,7 @@ while ($row = mysql_fetch_array($getPrice)) {
     <input type="hidden" name="background_colour" value="9" id="background_colour"/>
     <input type="hidden" name="font" value="3" id="font"/>
     <input type="hidden" name="font_colour" value="1" id="font_colour"/>
-    <input type="hidden" name="split" value="1" id="split"/>
+    <!--<input type="hidden" name="split" value="1" id="split"/>-->
     <input type="hidden" name="pic" value="1" id="pic"/>
     <input type="hidden" name="picon" value="1" id="picon"/>
     <!--<input type="hidden" name="text1" value="" id="text1"/>-->
@@ -80,8 +80,9 @@ while ($row = mysql_fetch_array($getPrice)) {
                     <span><input type="checkbox" checked="checked" name="details_checkbox_pic" class="details_checkbox_pic" title="Check to enable picture"/> Pic</span>
                 </p>
                 <p>
-                    <div class="line-1"><strong>Line 1:</strong> <input type="text" class="details_text_name" name="text1"/></div>
-                    <div class="line-2"><strong>Line 2:</strong> <input type="text" class="details_text_phone" name="text2"/></div>
+                    <strong>Line 1:</strong> <input type="text" class="details_text_name" name="text1"/>
+                    <span class="split-lines"><input type="checkbox" name="split" value="1" id="split"/> Split into 2 lines</span>
+                    <strong>Line 2:</strong> <input type="text" class="details_text_phone" name="text2"/>
                 </p>
                 <p class="error-msg"></p>
             </div>
