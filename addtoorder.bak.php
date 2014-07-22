@@ -622,6 +622,8 @@ break;
 			{
 				$record['split']				= (int)form_param('split');
 			}
+                        $record['split'] = ($_POST["type"]==3) ? (int) $_POST['split'] : 0;
+                        
 			$record['data_colour_id']		= (int)form_param('background_colour');			// iron on colours
 			$record['data_font_colour_id']	= (int)form_param('font_colour');		// font colour.
 			
