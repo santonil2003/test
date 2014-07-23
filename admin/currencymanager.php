@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
 $includeabove = true;
 include("../useractions.php");
 include("currencymanager_functions.php");
