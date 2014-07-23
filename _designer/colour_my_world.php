@@ -841,10 +841,10 @@ padding:0;
                     //pull product quantity details here
                     
                     echo "<select id='order_quantity'>";
-                        echo "<option value='".$price."'>1 Colour My World Pack for AU$ ".$price."</option>";
+                        echo Helper::getExtraPriceOption($productId);
+                        echo "<option value='".$price."' selected>1 Colour My World Pack for AU$ ".$price."</option>";
                         echo "<option value='".($price*2)."'>2 Colour My World Pack for AU$ ".($price*2)."</option>";
                         echo "<option value='".($price*3)."'>3 Colour My World Pack for AU$ ".($price*3)."</option>";
-                        echo Helper::getExtraPriceOption($productId);
                    
                     echo "</select>";
                 ?>

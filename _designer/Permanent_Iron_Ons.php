@@ -213,10 +213,10 @@ while ($row = mysql_fetch_array($getPrice)) {
                 <strong>Quantity:</strong>
                 <select id='order_quantity'>
                     <?php
-                    echo "<option value='" . $price . "'>60 Permanent Iron Ons for AU$ " . $price . "</option>";
+                    echo Helper::getExtraPriceOption($productId);
+                    echo "<option value='" . $price . "' selected>60 Permanent Iron Ons for AU$ " . $price . "</option>";
                     echo "<option value='" . ($price * 2) . "'>120 Permanent Iron Ons for AU$ " . ($price * 2) . "</option>";
                     echo "<option value='" . ($price * 3) . "'>180 Permanent Iron Ons for AU$ " . ($price * 3) . "</option>";
-                     echo Helper::getExtraPriceOption($productId);
                     ?>
                 </select>
             </div>

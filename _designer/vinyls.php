@@ -864,11 +864,10 @@ document.getElementsByTagName('form')[0].submit();
                     //pull product quantity details here
                     
                     echo "<select id='order_quantity'>";
-                        echo "<option value='".$price."'>60 Vinyl Labels for AU$ ".$price."</option>";
+                        echo Helper::getExtraPriceOption($productId);
+                        echo "<option value='".$price."' selected>60 Vinyl Labels for AU$ ".$price."</option>";
                         echo "<option value='".($price*2)."'>120 Vinyl Labels for AU$ ".($price*2)."</option>";
                         echo "<option value='".($price*3)."'>180 Vinyl Labels for AU$ ".($price*3)."</option>";
-                        echo Helper::getExtraPriceOption($productId);
-                    
                     echo "</select>";
                 ?>
             </div>
@@ -890,6 +889,9 @@ document.getElementsByTagName('form')[0].submit();
             }
             
             $('document').ready(function(){
+                
+                $('#designer_options_font ol li.3').trigger('click');
+                
                 $('#designer_options_font_colour span.font_colour_white').addClass('selected');    
                 
                 $('#designer_options_font_colour span.font_colour_white, .Individual #ffffffid').click(function() {
