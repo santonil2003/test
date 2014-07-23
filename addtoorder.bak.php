@@ -1,5 +1,5 @@
 <?php
-error_reporting(E_ERROR | E_PARSE);
+
 include("useractions.php");
 session_start();
 
@@ -598,10 +598,6 @@ break;
 				$price_formatted = $_POST['quantdesc'];
 				$price = $_POST['price'];
 			}
-                        
-                        $checklist = array(3,5,20,19);
-                        $price_formatted = (in_array($_POST['type'], $checklist)) ? $_POST['quantdesc'] : $price_formatted;
-                        
                         //$price_formatted = $_POST['quantdesc'];
 			$price = $_POST['price'];
 			$record['ordernumber'] 			= $id;
