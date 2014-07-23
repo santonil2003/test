@@ -1,6 +1,6 @@
 <?PHP
 session_start();
-
+error_reporting(E_ERROR | E_PARSE);
 /*
 require_once("../_common/_constants.php");
 require_once("../_common/_connection.php");

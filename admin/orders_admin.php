@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(E_ERROR | E_PARSE);
 // set explicit form variables
 //print_r($_REQUEST);
 $showperpage = $_REQUEST['showperpage'];
