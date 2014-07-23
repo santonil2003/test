@@ -82,7 +82,7 @@ while ($row = mysql_fetch_array($getPrice)) {
                 <p>
                     <div class="line-1">
                         <strong>Line 1:</strong> <input type="text" class="details_text_name" name="text1"/>
-                        <span class="split-lines"><input type="checkbox" name="split" value="1" id="split"/> Split into 2 lines</span>
+                        <span class="split-lines" style="display:none;"><input type="checkbox" name="split" value="1" id="split"/> Split into 2 lines</span>
                         <strong>Line 2:</strong> <input type="text" class="details_text_phone line-2" name="text2"/></div>
                 </p>
                 <p class="error-msg"></p>

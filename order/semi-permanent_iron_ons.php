@@ -1,5 +1,9 @@
 <table width="100%" ><tr align="center" ><td align="center" >
+            <iframe src="/_designer/Semi_Permanent_Iron_Ons.php" height="650" width="100%" frameBorder="0" id="iframe-vinyls-mini"></iframe>
 
+            <?php 
+            $flash = false;
+            if($flash):?>
 <script language="JavaScript" type="text/javascript">
 <!--
 // Version check based upon the values entered above in "Globals"
@@ -27,5 +31,6 @@ if (hasReqestedVersion) {
 }
 // -->
 </script>
+<?php endif;?>
 
 </td></tr></table>
