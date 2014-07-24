@@ -860,7 +860,7 @@ AND a.id=" . $id;
                             $width*=2;
                             $height*=2;
                         }
-                        
+
                         $swfstring = "type=" . $qdata["type"] . "&pic=" . $qdata["pic"] . "&text1=" . urlencode($qdata["text1"]) . "&text2=" . urlencode($qdata["text2"]) . "&font=" . $qdata["font"] . "&picon=" . $qdata["picon"] . "&split=" . $qdata["split"];
 
                         $text1 = $qdata['text1'];
@@ -1180,8 +1180,16 @@ AND a.id=" . $id;
 
                         if ($split) {
                             $line1Array = explode(' ', $text1);
-                            $fname = $line1Array[0];
-                            $lname = trim(str_replace($fname, '', $text1));
+                            $last_index = count($line1Array) - 1;
+
+                            if ($last_index == 0) {
+                                $lname = '';
+                            } else {
+                                $lname = $line1Array[$last_index];
+                                unset($line1Array[$last_index]);
+                            }
+
+                            $fname = implode(' ', $line1Array);
 
                             $text1 = $fname;
                             $text2 = $lname;
@@ -1253,7 +1261,7 @@ AND a.id=" . $id;
                         <PARAM NAME=movie VALUE="<? echo $aim;?>images/display_mini.swf?<? echo $swfstring;?>">
                         <PARAM NAME=quality VALUE=high>
                         <PARAM NAME=bgcolor VALUE=#FFFFFF>
-                        <EMBED FlashVars="<?php //echo $swfstring;    ?>" src="<? echo $aim;?>images/display_mini.swf" quality=high bgcolor=#FFFFFF WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_mini" ALIGN=""
+                        <EMBED FlashVars="<?php //echo $swfstring;      ?>" src="<? echo $aim;?>images/display_mini.swf" quality=high bgcolor=#FFFFFF WIDTH="<? echo $width;?>" HEIGHT="<? echo $height;?>" NAME="display_mini" ALIGN=""
                                                                TYPE="application/x-shockwave-flash" PLUGINSPAGE="<? echo $pluginspace;?>"></EMBED>
                                                     </OBJECT>-->
                         <?
