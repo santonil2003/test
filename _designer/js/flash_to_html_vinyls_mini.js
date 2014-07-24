@@ -33,13 +33,16 @@ $('document').ready(function() {
 
             $last_index = no_of_words - 1;
 
-            lname = lineArray[$last_index];
+
 
             if ($last_index === 0) {
                 lname = '';
+            } else {
+                lname = lineArray[$last_index];
+                delete lineArray[$last_index];
             }
 
-            fname = Line1.replace(lname, '').trim();
+            fname = lineArray.join(" ");
 
             $('.preview_text').html(fname);
             $('.preview_phone').html(lname);
@@ -239,7 +242,7 @@ $('document').ready(function() {
             $('.designer_preview_rainbow_b .preview_text').css('top', '122');
             $('.individual_preivew .preview_text').css('top', '90');
         }
-        
+
         splitLine1();
     });
 
