@@ -46,9 +46,12 @@ $('document').ready(function() {
 
             $('.preview_text').html(fname);
             $('.preview_phone').html(lname);
+
+            $('#split').val(1);
         } else {
             $('.preview_text').html($('.details_text_name').val());
             $('.preview_phone').html(Line2);
+            $('#split').val(0);
         }
     }
 
@@ -286,7 +289,9 @@ $('document').ready(function() {
         // if line 2 included
         if ($('.details_checkbox_phone').is(':checked')) {
             var line2 = $('.details_text_phone').val();
-            if (line2.length <= 0) {
+            var Previewline2 = $('.preview_phone').html().trim();
+
+            if ((line2.length <= 0) && (Previewline2.length <= 0)) {
                 $('.details_text_phone').addClass('required-field');
                 $('.details_text_phone').focus();
                 e.preventDefault();

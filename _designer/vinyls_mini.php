@@ -81,7 +81,7 @@ while ($row = mysql_fetch_array($getPrice)) {
                 </p>
                 <p>
                     <strong>Line 1:</strong> <input type="text" class="details_text_name" name="text1"/>
-                    <input type="hidden" name="split" value="1" id="split"/>
+                    <input type="hidden" name="split" value="0" id="split"/>
                     <strong>Line 2:</strong> <input type="text" class="details_text_phone" name="text2"/>
                 </p>
                 <p class="error-msg"></p>
