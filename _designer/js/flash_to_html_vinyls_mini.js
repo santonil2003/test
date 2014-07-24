@@ -6,18 +6,49 @@ function myTrim(x) {
     return x.replace(/^\s+|\s+$/gm, '');
 }
 
+
 var white_images_folder_path = 'bwl2';
 var black_images_folder_path = 'bwl';
 var line1 = "";
 var line2 = "";
 var pic = '1';
 var font = '3';
-var split = '0';
 
 imgfol = black_images_folder_path;
 
 
 $('document').ready(function() {
+
+    function splitLine1() {
+        Line1 = myTrim($('.details_text_name').val());
+        Line2 = myTrim($('.details_text_phone').val());
+
+        ischecked = $('.details_checkbox_phone').is(':checked');
+
+
+
+        if ((Line2.length <= 0) && ischecked) {
+            lineArray = Line1.split(" ");
+            no_of_words = lineArray.length;
+
+            $last_index = no_of_words - 1;
+
+            lname = lineArray[$last_index];
+
+            if ($last_index === 0) {
+                lname = '';
+            }
+
+            fname = Line1.replace(lname, '').trim();
+
+            $('.preview_text').html(fname);
+            $('.preview_phone').html(lname);
+        } else {
+            $('.preview_text').html($('.details_text_name').val());
+            $('.preview_phone').html(Line2);
+        }
+    }
+
     $('.Rainbow_A input[type=radio]:first').attr('checked', 'checked');
 
     $('#designer_options_font_colour span').click(function() {
@@ -141,7 +172,7 @@ $('document').ready(function() {
 
         $('.preview_text').html(line1);
 
-        //$('#text1').val(line1 + ' ' + line2);
+        splitLine1();
     });
 
 
@@ -159,10 +190,12 @@ $('document').ready(function() {
         }
 
         $(this).val(line2);
-
-
         $('.preview_phone').html(line2);
-        //$('#text1').val(line1 + ' ' + line2);
+
+        line1 = $('.details_text_name').val();
+        $('.preview_text').html(line1);
+
+        splitLine1();
     });
 
 
@@ -188,21 +221,19 @@ $('document').ready(function() {
     $('.details_checkbox_phone').click(function() {
         ischecked = $('.details_checkbox_phone').is(':checked');
         if (ischecked) {
-            $('#split').attr('disabled', false);
-            if(split){
-                $('#split').prop('checked', true);
-            }
-            
+            $('.line-2').show();
+
             $('.preview_phone').show().val(line2);
+            $('#split').val('1');
+
             $('.designer_preview_rainbow_a .preview_text').css('top', '100');
             $('.designer_preview_rainbow_b .preview_text').css('top', '100');
             $('.individual_preivew .preview_text').css('top', '80');
         } else {
-            split = $('#split').is(':checked');
-            $('#split').prop('checked', false);
-            $('#split').attr('disabled', 'disabled');
-            
+            $('.line-2').hide();
+
             line2 = $('.preview_phone').val();
+            $('#split').val('0');
             $('.preview_phone').hide().val('');
             $('.designer_preview_rainbow_a .preview_text').css('top', '122');
             $('.designer_preview_rainbow_b .preview_text').css('top', '122');
@@ -252,46 +283,13 @@ $('document').ready(function() {
         // if line 2 included
         if ($('.details_checkbox_phone').is(':checked')) {
             var line2 = $('.details_text_phone').val();
-            var isLine2disabled = $('.details_text_phone').prop( "disabled" )
-            if (line2.length <= 0 && !isLine2disabled) {
+            if (line2.length <= 0) {
                 $('.details_text_phone').addClass('required-field');
                 $('.details_text_phone').focus();
                 e.preventDefault();
             }
         }
 
+
     });
-
-    function splitLine1() {
-        ischecked = $('#split').is(':checked');
-
-        Line1 = $('.details_text_name').val();
-        Line2 = $('.details_text_phone').val();
-
-        if (ischecked) {
-            lineArray = Line1.split(" ");
-
-            fname = lineArray[0];
-            lname = Line1.replace(fname, '').trim();
-
-            $('.preview_text').html(fname);
-            $('.preview_phone').html(lname);
-
-            $('.details_text_phone').attr('disabled', 'disabled');
-        } else {
-            $('.preview_text').html($('.details_text_name').val());
-            $('.preview_phone').html(Line2);
-
-            $('.details_text_phone').attr('disabled', false);
-        }
-    }
-
-    $('#split').click(function() {
-        splitLine1();
-    });
-
-    $('.details_text_name').keyup(function() {
-        splitLine1();
-    });
-
 });
