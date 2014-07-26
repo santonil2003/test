@@ -76,7 +76,7 @@ while ($row = mysql_fetch_array($getPrice)) {
 
                 <p><strong>Include: </strong>
                     <span><input type="checkbox" checked="checked" name="details_checkbox_name" class="details_checkbox_name" disabled="disabled"/> Line 1</span>
-                    <span><input type="checkbox" checked="checked" name="details_checkbox_phone" class="details_checkbox_phone" title="Check to enable line 2"/> Line 2</span>
+                    <span><input type="checkbox" checked="checked" name="details_checkbox_phone" class="details_checkbox_phone" title="Check to enable line 2" disabled="disabled"/> Line 2</span>
                     <span><input type="checkbox" checked="checked" name="details_checkbox_pic" class="details_checkbox_pic" title="Check to enable picture"/> Pic</span>
                 </p>
                 <p>
