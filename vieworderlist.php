@@ -1928,6 +1928,12 @@ AND a.id=" . $id;
                         <td class="maintext">Font Colour:</td>
                         <td class="maintext"><?= $font_colour_name; ?></td>
                     </tr>
+                     <?php if($qdata["quantdesc"]):?>
+                    <tr>
+                        <td class="maintext">Quantity:</td>
+                        <td class="maintext"><?= $qdata["quantdesc"]; ?></td>
+                    </tr>
+                    <?php endif;?>
                     <?
 
                     }
@@ -2330,6 +2336,12 @@ AND a.id=" . $id;
                             }?>
                         </td>
                     </tr>
+                    <?php if($qdata["quantdesc"]):?>
+                    <tr>
+                        <td class="maintext">Quantity:</td>
+                        <td class="maintext"><?= $qdata["quantdesc"]; ?></td>
+                    </tr>
+                    <?php endif;?>
                     <?php
                 } elseif((int) $qdata['type'] == 21) {
                     // colour my world pack
@@ -2398,6 +2410,14 @@ AND a.id=" . $id;
                         <td class="maintext">Pack Choice:</td>
                         <td class="maintext"><?= $qdata['productName']; ?></td>
                     </tr>
+                     <?php if($qdata["quantdesc"]):?>
+                    <tr>
+                        <td></td>
+                        <td class="maintext">Quantity:</td>
+                        <td></td>
+                        <td class="maintext"><?= $qdata["quantdesc"]; ?></td>
+                    </tr>
+                    <?php endif;?>
                     <?
 
                     }
@@ -2555,7 +2575,14 @@ AND a.id=" . $id;
                                     <tr>
                                         <td class="maintext">Font:</td>
                                         <td class="maintext"><? echo getRealFontNumber($qdata["font"]);?></td>
-                                    </tr><?
+                                    </tr>
+                                     <?php if($qdata["quantdesc"]):?>
+                    <tr>
+                        <td class="maintext">Quantity:</td>
+                        <td class="maintext"><?= $qdata["quantdesc"]; ?></td>
+                    </tr>
+                    <?php endif;?>
+                                    <?
                                     if($qdata["typedetail"]==1){
                                     $typeDetailDes="60 vinyl";
                                     }else if($qdata["typedetail"]==2){
