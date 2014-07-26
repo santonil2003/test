@@ -1324,7 +1324,7 @@ function sendNewOrder($id, $name, $email, $payment, $ccPayment=false){
 	       	 $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_background_colour($qdata['colours'])."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata["picon"]=="1"?getPicType($qdata["pic"]):'none')."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getFontNumber($qdata["font"])."</font></td></tr><br>";
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_font_colour($qdata["data_font_colour_id"])."</font></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_font_colour($qdata["data_font_colour_id"])."</font></td></tr></table>";
 	         
 	         break;
 	         
@@ -1335,7 +1335,7 @@ function sendNewOrder($id, $name, $email, $payment, $ccPayment=false){
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata["picon"]=="1"?getPicType($qdata["pic"]):'none')."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">White</font></td></tr>";
 		 $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getFontNumber($qdata["font"])."</font></td></tr>";
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font&nbsp;Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">black</font></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font&nbsp;Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">black</font></td></tr></table>";
 
 	         break;
 	         
@@ -1346,7 +1346,7 @@ function sendNewOrder($id, $name, $email, $payment, $ccPayment=false){
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_background_colour($qdata['data_colour_id'])."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata["picon"]=="1"?getPicType($qdata["pic"]):'none')."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getFontNumber($qdata["font"])."</font></td></tr><br>";
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_font_colour($qdata["data_font_colour_id"])."</font></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_font_colour($qdata["data_font_colour_id"])."</font></td></tr></table>";
 	         
 	         break;
 	         
@@ -1357,7 +1357,7 @@ function sendNewOrder($id, $name, $email, $payment, $ccPayment=false){
 	           $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Phones</i>: </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['text2']."</font></td></tr><br>";
 	           $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata["picon"]=="1"?getPicType($qdata["pic"]):'none')."</font></td></tr>";
 $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">White</font></td></tr>";
-$content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">Black</font></td></tr></table><br>";
+$content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">Black</font></td></tr></table>";
 
 	         break;
 	         	         
@@ -1366,13 +1366,13 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Name</i>: </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['text1']."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_background_colour($qdata['data_colour_id'])."</font></td></tr>";
 	     	   $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getFontNumber($qdata["font"])."</font></td></tr><br>";
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_font_colour($qdata["data_font_colour_id"])."</font></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_font_colour($qdata["data_font_colour_id"])."</font></td></tr></table>";
 	         
 	         break;
 
 		 //Kidscard
 	         case '7':
-		 $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Type:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata["colours"]=='1'?'Boys':'Girls')."</font></td></tr></table><br>";
+		 $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Type:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata["colours"]=='1'?'Boys':'Girls')."</font></td></tr></table>";
 
 	         break;
 
@@ -1386,7 +1386,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getPicType($qdata["pic"])."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colours:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['colours']."</font></td></tr>";
 	     	 $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getFontNumber($qdata["font"])."</font></td></tr>";
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font&nbsp;Colours:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">White</font></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font&nbsp;Colours:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">White</font></td></tr></table>";
        
 	         break;
 	         
@@ -1400,7 +1400,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_font_colour($qdata["data_font_colour_id"])."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>IdentiTAG:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata["data_identitag_name"]."</font></td></tr>";
 			   $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Print&nbsp;Reverse:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata['text7']=='1'?"Yes":"No")."</font></td></tr>";
-			   $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Label&nbsp;Type:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata["gift"]=="1"?"30 Mini Labels":"60 Pencil Labels")."</font></td></tr></table><br>";
+			   $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Label&nbsp;Type:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata["gift"]=="1"?"30 Mini Labels":"60 Pencil Labels")."</font></td></tr></table>";
 
 	         break;
 	         
@@ -1422,7 +1422,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 				  }
 				}
 				$content.="</font></td></tr>";
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Gift&nbsp;Card:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata['gift']=="50"?"Girl Card":"Boys Card")."</font></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Gift&nbsp;Card:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata['gift']=="50"?"Girl Card":"Boys Card")."</font></td></tr></table>";
 
 	         break;
 
@@ -1493,7 +1493,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_font_colour($qdata["data_font_colour_id"])."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>IdentiTAG:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata["data_identitag_name"]."</font></td></tr>";
 			   $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Print&nbsp;Reverse:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata['text7']=='1'?"Yes":"No")."</font></td></tr>";
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Gift&nbsp;Card:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata['text5']=="50"?"Girl Card":"Boys Card")."</font></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Gift&nbsp;Card:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata['text5']=="50"?"Girl Card":"Boys Card")."</font></td></tr></table>";
 
 	         break;
 	         
@@ -1552,7 +1552,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($pack[1]=='2'?'White':get_background_colour($colours[1]))."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($picon[1]=="1"?getPicType($pic[1]):'none')."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getFontNumber($font[1])."</font></td></tr>";
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_font_colour($font_col[1])."</font></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_font_colour($font_col[1])."</font></td></tr></table>";
 
 	         break;
 	          
@@ -1573,7 +1573,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 		 $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_background_colour($qdata['colours'])."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata["picon"]=="1"?getPicType($qdata["pic"]):'none')."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getFontNumber($qdata["font"])."</font></td></tr>";
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_font_colour($qdata["data_font_colour_id"])."</font></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_font_colour($qdata["data_font_colour_id"])."</font></td></tr></table>";
 	         
 	         break;
    
@@ -1584,7 +1584,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_background_colour($qdata['data_colour_id'])."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata["picon"]=="1"?getPicType($qdata["pic"]):'none')."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getFontNumber($qdata["font"])."</font></td></tr>";
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_font_colour($qdata["data_font_colour_id"])."</font></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_font_colour($qdata["data_font_colour_id"])."</font></td></tr></table>";
 	         
 	         break;
 	         
@@ -1595,7 +1595,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_background_colour($qdata['data_colour_id'])."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata["picon"]=="1"?getPicType($qdata["pic"]):'none')."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getFontNumber($qdata["font"])."</font></td></tr>";
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_font_colour($qdata["data_font_colour_id"])."</font></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_font_colour($qdata["data_font_colour_id"])."</font></td></tr></table>";
 	         
 	         break;
 	         
@@ -1610,14 +1610,14 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>IdentiTAG:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata["data_identitag_name"]."</font></td></tr>";
 			   $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Print&nbsp;Reverse:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata['text7']=='1'?"Yes":"No")."</font></td></tr>";
 			   $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>IronOn&nbsp;Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_background_colour($qdata['data_colour_id'])."</font></td></tr>";
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pack&nbsp;Choice:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['productName']."</font></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pack&nbsp;Choice:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['productName']."</font></td></tr></table>";
 	         
 	         break;
 
 		 //Zip Tags
 	         case '22':
                case '23': 
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getPicType($qdata["pic"])."</font></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getPicType($qdata["pic"])."</font></td></tr></table>";
 	         
 	         break;
 	         
@@ -1630,7 +1630,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
             $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Text 4</i>: </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['text4']."</font></td></tr>";
             $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata["picon"]=="1"?getPicType($qdata["pic"]):'none')."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['colours']."</font></td></tr>";
-	     	   $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">1</font></td></tr></table><br>";
+	     	   $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">1</font></td></tr></table>";
 	                
 	         break;
 
@@ -1640,7 +1640,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Phone</i>: </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['text2']."</font></td></tr>";
                  $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".($qdata["picon"]=="1"?getPicType($qdata["pic"]):'none')."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">White</font></td></tr>";
-		 $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font&nbsp;Coulor:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">Black</font></td></tr></table><br>";       
+		 $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font&nbsp;Coulor:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">Black</font></td></tr></table>";       
 	         break;
 
 		 //Identibands
@@ -1651,7 +1651,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
                      $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Design {$i}</i>: </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getBandPicType($qdata['text'.$i])."</font></td></tr>";
 	           }
 		 }
-	         $content.="<tr><td align='right' colspan='2'><br></td></tr></table><br>";
+	         $content.="<tr><td align='right' colspan='2'><br></td></tr></table>";
 	                
 	         break;
 	         
@@ -1659,7 +1659,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	         case '33':
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Name</i>: </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['text1']."</font></td></tr>";
             $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".(getPicType($qdata["pic"]))."</font></td></tr>";
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colours:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".((int)$qdata['colours']==10?"Set B":"Set A")."</font></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colours:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".((int)$qdata['colours']==10?"Set B":"Set A")."</font></td></tr></table>";
 	                
 	         break;
 
@@ -1715,7 +1715,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 
 		$content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pack Item</i>: </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getLabelType(22)."</font></td></tr>";
 		 $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Design:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getZiptagDesc($text7[2])."</font></td></tr>";
-	         $content.="<tr><td align='right' width='80px' nowrap colspan=\"2\"><br></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap colspan=\"2\"><br></td></tr></table>";
 	                         
 	         break;
 	         
@@ -1757,7 +1757,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	         
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pack Item</i>: </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getLabelType(22)."</font></td></tr>";
 				$content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getIdentibandDesc($text7[4])."</font></td></tr>";
-	         $content.="<tr><td align='right' width='80px' nowrap colspan=\"2\"><br></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap colspan=\"2\"><br></td></tr></table>";
 	       					
 	                         
 	         break;
@@ -1770,7 +1770,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	         for( $i=3 ; $i <= 12; $i++) {
 				 $content.=$qdata["text".$i]!=''?$qdata["text".$i].'<br>':'';
 				}    
-				$content.="</font></td></tr></table><br>";
+				$content.="</font></td></tr></table>";
 				
 				break; 
 	         
@@ -1781,7 +1781,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	         for( $i=3 ; $i <= 12; $i++) {
 				 $content.=$qdata["text".$i]!=''?$qdata["text".$i].'<br>':'';
 				}    
-				$content.="</font></td></tr></table><br>";  
+				$content.="</font></td></tr></table>";  
 				
 	         break;
 
@@ -1798,7 +1798,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Number</i>: </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['text1']."</font></td></tr>";
             $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Street</i>: </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['text2']."</font></td></tr>";
             $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getPicType($qdata["pic"])."</font></td></tr>";
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colours:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_background_colour($qdata['colours'])."</font></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colours:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".get_background_colour($qdata['colours'])."</font></td></tr></table>";
 	                
 	         break;
 	         
@@ -1807,20 +1807,20 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Name</i>: </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['text1']."</font></td></tr>";
 	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colour:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['colours']."</font></td></tr>";
 	       	$content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Pic:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getPicType($qdata["pic"])."</font></td></tr>";
-	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getFontNumber($qdata["font"])."</font></td></tr></table><br>";
+	         $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Font:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".getFontNumber($qdata["font"])."</font></td></tr></table>";
 	         
 	         break;
           //Wall Art
 	       case '45':
 
-				 $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Design:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['text3']."</font></td></tr></table><br>";
+				 $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Design:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['text3']."</font></td></tr></table>";
 				  
 	          break;
 	          
 	      //Kipiis
 	       case '46':
 
-				 $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colours:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['text1']."</font></td></tr></table><br>";
+				 $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS\" size=\"2\"><i>Colours:</i> </font></td><td align='left' ><font face=\"Comic Sans MS\" size=\"2\">".$qdata['text1']."</font></td></tr></table>";
 			    break;
 			    
 			//Popup window products
@@ -1845,6 +1845,15 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	         
 	       default:break;
 	     }
+            if($qdata["quantdesc"]) {
+             $content.= '<table width="100%" border="0">'
+                     .'<tr>'
+                     .'<td width="80px" nowrap="" align="right"><font size="2" face="Comic Sans MS"><i>Quantity</i>: </font></td>'
+                     .'<td align="left"><font size="2" face="Comic Sans MS">'.$qdata["quantdesc"].'</font></td>'
+                     .'</tr>'
+                     .'</table><hr>';
+            }
+            
 
 		  
 		}
