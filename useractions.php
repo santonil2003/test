@@ -1,7 +1,6 @@
 <?php
 date_default_timezone_set('Australia/NSW');
-//error_reporting(E_ALL);
-//ini_set('display_errors', '1');
+error_reporting(E_ERROR | E_PARSE);
 
 $useractions = "loaded";
 //if(isset($includeabove) && $includeabove==true){
@@ -1851,7 +1850,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
                      .'<td width="80px" nowrap="" align="right"><font size="2" face="Comic Sans MS"><i>Quantity</i>: </font></td>'
                      .'<td align="left"><font size="2" face="Comic Sans MS">'.$qdata["quantdesc"].'</font></td>'
                      .'</tr>'
-                     .'</table><hr>';
+                     .'</table><br>';
             }
             
 
@@ -1969,6 +1968,41 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 			</table>";
 		$text .= "\nOrder Total: " . $currency_symbol["symbol"] . $total_order_charge;
 	}
+        
+        
+        // shipping address detials ////////////////////////////////
+        if($_POST['address']){
+        $content.= '<hr>
+                <table style="background-color:#EFEFEF;padding:10px;">
+                <tr> 
+                   <td align="left" class="maintext" colspan="2"><strong>Shipping Details</strong><hr></td>  
+               </tr>';
+               if($_POST['del_name']){
+                   $content.='<tr><td align="right" class="maintext"><strong>Delivery Name:</strong></td><td class="maintext">' . stripslashes($_POST['del_name']) . '</td></tr>';
+               }
+               $content.='<tr> 
+                   <td align="left" class="maintext"><strong>Delivery Address:</strong></td> 
+                   <td class="maintext">' . stripslashes($_POST['address']) . '</td> 
+               </tr> 
+               <tr> 
+                   <td align="left" class="maintext"><strong>Suburb / Town / City:</strong></td> 
+                   <td class="maintext">' . stripslashes($_POST['suburb']) . '</td> 
+               </tr> 
+               <tr> 
+                   <td align="left" class="maintext"><strong>Postcode:</strong></td> 
+                   <td class="maintext">' . $_POST['postcode'] . '</td> 
+               </tr> 
+               <tr> 
+                   <td align="left" class="maintext"><strong>State:</strong></td> 
+                   <td class="maintext">' . $_POST['state'] . '</td> 
+               </tr> 
+               <tr> 
+                   <td align="left" class="maintext"><strong>Country:</strong></td> 
+                   <td class="maintext">' . $_POST['country'] . '</td> 
+               </tr>
+           </table>';
+        }
+        // @end of shipping address details ////////////////////////
 
 	if($ccPayment){
 		$content .= "<br />Your Credit Card has been charged ".$_CURRENCIES[1]['currency'].sprintf("%01.2f", $_SESSION['paymentAmount']);
