@@ -1,15 +1,15 @@
 /* Page Structure
 ----------------------------------------------- */
 body	{
-	margin: 0 0 0 0;
-	padding:0px;
-	background-color: #ffffff;
-	background: url(../images/bg/b_main.jpg) repeat-x;
-	font:15px verdana, arial, helvetica, sans-serif;
-	line-height:19px;
-	color: #636466;
-	}
-	
+    margin: 0 0 0 0;
+    padding:0px;
+    background-color: #ffffff;
+    background: url(../images/bg/b_main.jpg) repeat-x;
+    font:15px verdana, arial, helvetica, sans-serif;
+    line-height:19px;
+    color: #636466;
+}
+
 p {	font:15px verdana, arial, helvetica, sans-serif;	color: #636466; line-height:20px; margin:0; padding:20px 0 0 0;}
 td {font:15px verdana, arial, helvetica, sans-serif;	color: #636466; line-height:20px;}
 h1 {font-family: verdana, Arial, Helvetica, sans-serif; font-size:28px; margin:0; padding:4px 0 17px 0; color: #005aa9; font-weight:normal;}
@@ -48,20 +48,20 @@ A.clicklink:visited:hover { color:#2c2c27; text-decoration:underline;}
 
 
 .form {
-	height: 20px;
-	font-size: 11px;
-	background-color: #fff;
-	color: #27557c;
-	border: 1px solid #9bb8d8;
-	font-family: Trebuchet MS, Arial, sans-serif;
+    height: 20px;
+    font-size: 11px;
+    background-color: #fff;
+    color: #27557c;
+    border: 1px solid #9bb8d8;
+    font-family: Trebuchet MS, Arial, sans-serif;
 }
 
 .form2 {
-	font-size: 11px;
-	background-color: #005aa9;
-	color: #ffffff;
-	border: 1px solid #549ad8;
-	font-family: Trebuchet MS, Arial, sans-serif;
+    font-size: 11px;
+    background-color: #005aa9;
+    color: #ffffff;
+    border: 1px solid #549ad8;
+    font-family: Trebuchet MS, Arial, sans-serif;
 }
 
 /* Lightbox CSS Stuff */
@@ -95,10 +95,43 @@ A.clicklink:visited:hover { color:#2c2c27; text-decoration:underline;}
 #overlay{ position: absolute; top: 0; left: 0; z-index: 90; width: 100%; height: 500px; background-color: #000; }
 
 .shoppingCartText {
-  font-size: 10px;
-  color:#FFFFFF;
+    font-size: 10px;
+    color:#FFFFFF;
 }
 
 .ordertext {
-  font-size: 12px;
+    font-size: 12px;
+}
+
+
+.round-bottom{
+    border: none;
+    background-color: #636466;
+    color: #FFFFFF;
+    font-size: 13px;
+    padding: 2px 10px;
+    cursor:pointer;
+
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* future proofing */
+    -khtml-border-radius: 10px; /* for old Konqueror browsers */
+}
+
+.floating-cart{
+    position:absolute;
+    right:0;
+    text-align: right;
+    cursor: pointer;
+
+}
+
+.bgcolor{
+    background-color: #5C80BA;
+}
+
+
+.floating-cart #toggle-cart{
+    margin:0px;
+    padding:0px;
 }
