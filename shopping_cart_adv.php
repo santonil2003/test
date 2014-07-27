@@ -92,11 +92,11 @@ if($id){
             if ($id == false || mysql_num_rows($result) == 0) {
                 ?>
                 <tr>
-                    <td colspan="2"> <strong> No items on Cart</strong></td>
+                    <td colspan="2" align="center"> <strong> No items on Cart</strong></td>
                 </tr>
                 <?php
             }
-             if (mysql_num_rows($result) > 0) {
+             if ($id) {
             ?>
             <tr>
                 <td colspan="2" align="center">
