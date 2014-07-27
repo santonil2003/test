@@ -482,7 +482,7 @@ $breadcrumb = false;
                 <td style="width:998;height:239;" class="parent-of-cart">
                     <div class="cart-wrapper">
                         <div class="floating-cart">
-                            <?php include_once('shopping_cart_adv.php');?>
+                            <?php //include_once('shopping_cart_adv.php');?>
                         </div>
                     </div>
                     <?
