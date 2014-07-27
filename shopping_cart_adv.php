@@ -32,10 +32,13 @@ $bgcolor = "#5b7fbb";
 </script>
 <?php
 if($id){
-$query = "SELECT * FROM basket_items WHERE ordernumber=" . $id;
-$result = mysql_query($query);
-if (!$result) {
-    error_message(sql_error());
+    $query = "SELECT * FROM basket_items WHERE ordernumber=" . $id;
+    $result = mysql_query($query);
+    if (!$result) {
+        error_message(sql_error());
+    }
+} else {
+    $id = false;
 }
 ?>
 <ul class="cart">
@@ -93,6 +96,7 @@ if (!$result) {
                 </tr>
                 <?php
             }
+             if (mysql_num_rows($result) > 0) {
             ?>
             <tr>
                 <td colspan="2" align="center">
@@ -103,8 +107,9 @@ if (!$result) {
                     </form>
                 </td>
             </tr>
+            <?php
+            }
+            ?>
         </table>
     </li>
 </ul>
-<?php
-}
