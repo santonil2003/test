@@ -31,6 +31,7 @@ $bgcolor = "#5b7fbb";
     });
 </script>
 <?php
+if($id){
 $query = "SELECT * FROM basket_items WHERE ordernumber=" . $id;
 $result = mysql_query($query);
 if (!$result) {
@@ -105,3 +106,5 @@ if (!$result) {
         </table>
     </li>
 </ul>
+<?php
+}
