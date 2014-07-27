@@ -46,7 +46,7 @@ if($id){
         <table border="0" width="100%">
             <tr>
                 <td align="left" valign="middle"><span class="sp-left"><img src="css/images/scart.png" height="28px"/></span></td>
-                <td align="center" valign="middle"><strong style="font-size:10px;">My Order (<?php echo mysql_num_rows($result); ?>)</strong></td>
+                <td align="center" valign="middle"><strong style="font-size:10px;">My Order (<?php echo ($id) ? mysql_num_rows($result) : 0; ?>)</strong></td>
                 <td align="right" valign="middle">
                     <span class="sp-right">
                         <img src="css/images/right.png" class="cart-arrow"/>
