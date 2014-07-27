@@ -59,29 +59,29 @@ $breadcrumb = false;
 
         <script src="js/AC_OETags.js" language="javascript"></script>
         <script language="JavaScript" type="text/javascript">
-        <!--
+            <!--
         // -----------------------------------------------------------------------------
-        // Globals
-        // Major version of Flash required
+            // Globals
+            // Major version of Flash required
             var requiredMajorVersion = 7;
-        // Minor version of Flash required
+            // Minor version of Flash required
             var requiredMinorVersion = 0;
-        // Minor version of Flash required
+            // Minor version of Flash required
             var requiredRevision = 0;
-        // -----------------------------------------------------------------------------
-        // -->
+            // -----------------------------------------------------------------------------
+            // -->
         </script>
     </head>
 
     <script type="text/javascript">
-    <!--
+            <!--
         var fileLoadingImage = 'images/gen/loading.gif';
-        var fileBottomNavCloseImage = 'images/gen/closelabel.gif';
-        var resizeSpeed = 5;
-        var borderSize = 10;
-        var animate = true;
-        var overlayOpacity = 0.8;
-    //-->
+            var fileBottomNavCloseImage = 'images/gen/closelabel.gif';
+            var resizeSpeed = 5;
+            var borderSize = 10;
+            var animate = true;
+            var overlayOpacity = 0.8;
+            //-->
     </script>
     <script type="text/javascript" src="js/milonic_src.js"></script>
     <script type="text/javascript" src="js/jquery-1.2.6.js"></script>
@@ -104,10 +104,10 @@ $breadcrumb = false;
 
     <!-- <noscript><a href="http://www.milonic.com/">DHTML JavaScript Website Pull Down Navigation Menu By Milonic</a></noscript> -->
     <script type="text/javascript">
-        if (ns4)
-            _d.write("<scr" + "ipt type=text/javascript src=js/mmenuns4.js><\/scr" + "ipt>");
-        else
-            _d.write("<scr" + "ipt type=text/javascript src=js/mmenudom.js><\/scr" + "ipt>");
+            if (ns4)
+                _d.write("<scr" + "ipt type=text/javascript src=js/mmenuns4.js><\/scr" + "ipt>");
+            else
+                _d.write("<scr" + "ipt type=text/javascript src=js/mmenudom.js><\/scr" + "ipt>");
     </script>
     <script type="text/javascript">
 
@@ -117,12 +117,12 @@ $breadcrumb = false;
 
         $(document).ready(
                 function() {
-                    if($('a[rel="lightbox"]').length > 0){
+                    if ($('a[rel="lightbox"]').length > 0) {
                         $('a[rel="lightbox"]').lightbox();
                     }
-                    
+
                     init();
-                    
+
                     $(window).resize(
                             function() {
                                 if ($("#shopping_cart").css('display') != 'none') {
@@ -302,176 +302,176 @@ $breadcrumb = false;
 
         <script>
 
-            var price = 0;
-            var symbol = '';
-            var productName = '';
-            var args = '';
+        var price = 0;
+        var symbol = '';
+        var productName = '';
+        var args = '';
 
-            function arrayCompare(a1, a2) {
-                if (a1.length != a2.length)
-                    return false;
-                var length = a2.length;
-                for (var i = 0; i < length; i++) {
-                    if (a1[i] !== a2[i])
-                        return false;
-                }
-                return true;
-            }
-
-            function inArray(needle, haystack) {
-                var length = haystack.length;
-                for (var i = 0; i < length; i++) {
-                    if (typeof haystack[i] == 'object') {
-                        if (arrayCompare(haystack[i], needle))
-                            return true;
-                    } else {
-                        if (haystack[i] == needle)
-                            return true;
-                    }
-                }
+        function arrayCompare(a1, a2) {
+            if (a1.length != a2.length)
                 return false;
-            }
-
-
-
-            function addtooderPOPUP() {
-
-                if (!(productId != ""))
+            var length = a2.length;
+            for (var i = 0; i < length; i++) {
+                if (a1[i] !== a2[i])
                     return false;
-
-                args = addtooderPOPUP.arguments;
-
-                $.ajax({type: "POST", data: "id=" + productId, url: "product_info.php", dataType: "xml", success: addtoorderproccess});
-
             }
+            return true;
+        }
 
-            function checkImgSize(imgId) {
+        function inArray(needle, haystack) {
+            var length = haystack.length;
+            for (var i = 0; i < length; i++) {
+                if (typeof haystack[i] == 'object') {
+                    if (arrayCompare(haystack[i], needle))
+                        return true;
+                } else {
+                    if (haystack[i] == needle)
+                        return true;
+                }
+            }
+            return false;
+        }
 
-                if (document.getElementById(imgId).width > 350) {
-                    if (document.getElementById(imgId).height > 200) {
-                        document.getElementById(imgId).height = 200;
-                    } else {
-                        document.getElementById(imgId).width = 350;
-                    }
-                } else if (document.getElementById(imgId).height > 200) {
+
+
+        function addtooderPOPUP() {
+
+            if (!(productId != ""))
+                return false;
+
+            args = addtooderPOPUP.arguments;
+
+            $.ajax({type: "POST", data: "id=" + productId, url: "product_info.php", dataType: "xml", success: addtoorderproccess});
+
+        }
+
+        function checkImgSize(imgId) {
+
+            if (document.getElementById(imgId).width > 350) {
+                if (document.getElementById(imgId).height > 200) {
                     document.getElementById(imgId).height = 200;
+                } else {
+                    document.getElementById(imgId).width = 350;
                 }
+            } else if (document.getElementById(imgId).height > 200) {
+                document.getElementById(imgId).height = 200;
+            }
+        }
+
+        function addtoorderproccess(xml) {
+
+
+            var product = $('product', xml);
+            price = new String(product.find('price').text());
+            symbol = new String(product.find('symbol').text());
+            productName = new String(product.find('productName').text());
+
+            var popup_html = '<form name="addorder" method="POST" action="addtoorder.php">';
+            popup_html += '<input type="hidden" name="type" value="' + productId + '">';
+            popup_html += '<input type="hidden" name="typedetail" value="">';
+            popup_html += '<input type="hidden" name="quantdesc" value="">';
+            popup_html += '<input type="hidden" name="price" value="">';
+            popup_html += '<input type="hidden" name="design" value="' + productDesign + '">';
+            popup_html += '<table width="100%" border="0" >';
+            if (picture != "") {
+                popup_html += '<tr><td colspan="2" align="center" ><br><img id="popupImg" src="images/' + picture + '" alt="identiKid Products"  border="0"><br><br></td></tr>';
+            }
+            if (inArray('name', args)) {
+                popup_html += '<tr><td align="right" width="45%" >Name: </td><td><input type="text" name="name"></td></tr>';
             }
 
-            function addtoorderproccess(xml) {
-
-
-                var product = $('product', xml);
-                price = new String(product.find('price').text());
-                symbol = new String(product.find('symbol').text());
-                productName = new String(product.find('productName').text());
-
-                var popup_html = '<form name="addorder" method="POST" action="addtoorder.php">';
-                popup_html += '<input type="hidden" name="type" value="' + productId + '">';
-                popup_html += '<input type="hidden" name="typedetail" value="">';
-                popup_html += '<input type="hidden" name="quantdesc" value="">';
-                popup_html += '<input type="hidden" name="price" value="">';
-                popup_html += '<input type="hidden" name="design" value="' + productDesign + '">';
-                popup_html += '<table width="100%" border="0" >';
-                if (picture != "") {
-                    popup_html += '<tr><td colspan="2" align="center" ><br><img id="popupImg" src="images/' + picture + '" alt="identiKid Products"  border="0"><br><br></td></tr>';
+            if (typeof (msg) !== 'undefined') {
+                popup_html += '<input type="hidden" name="msg_name" value="' + msg[0] + '">';
+                var limit = "";
+                if (msg[1] != undefined) {
+                    limit = '<br><small>( ' + msg[1] + ' Words )</small>';
+                    popup_html += '<input type="hidden" name="msg_limit" value="' + msg[1] + '">';
                 }
-                if (inArray('name', args)) {
-                    popup_html += '<tr><td align="right" width="45%" >Name: </td><td><input type="text" name="name"></td></tr>';
-                }
-
-                if (typeof (msg) !== 'undefined') {
-                    popup_html += '<input type="hidden" name="msg_name" value="' + msg[0] + '">';
-                    var limit = "";
-                    if (msg[1] != undefined) {
-                        limit = '<br><small>( ' + msg[1] + ' Words )</small>';
-                        popup_html += '<input type="hidden" name="msg_limit" value="' + msg[1] + '">';
-                    }
-                    popup_html += '<tr><td align="right" width="45%" >' + msg[0] + ': ' + limit + ' </td><td> <textarea name="msg"></textarea></td></tr>';
-                }
-
-                if (typeof (colour) !== 'undefined') {
-                    popup_html += '<tr><td align="right" width="45%" >Colour: </td><td><select name="colour" id="colour">';
-                    for (var i = 0; i < colour.length; i++) {
-                        popup_html += '<option value="' + colour[i] + '">' + colour[i] + '</option>';
-                    }
-                    popup_html += '</select></td></tr>';
-                }
-                if (typeof (material) !== 'undefined') {
-                    popup_html += '<tr><td align="right" width="45%" >Material: </td><td><select name="material" id="material">';
-                    for (var i = 0; i < material.length; i++) {
-                        popup_html += '<option value="' + material[i] + '">' + material[i] + '</option>';
-                    }
-                    popup_html += '</select></td></tr>';
-                }
-                if (typeof (qty) !== 'undefined') {
-                    popup_html += '<tr><td align="right" width="45%" >Qty: </td><td><select name="qty" id="qty">';
-                    for (var i = 0; i < qty.length; i++) {
-                        popup_html += '<option value="' + qty[i] + '">' + qty[i] + '</option>';
-                    }
-                    popup_html += '</select></td></tr>';
-                }
-
-                if (typeof (finePrint) !== 'undefined') {
-                    popup_html += '<tr><td align="center" colspan="2" ><br>* ' + finePrint + '</td></tr>';
-                }
-
-                popup_html += '</table>';
-                popup_html += '<br><img id="cancelPopup"  src="images/nav/n_back.gif" alt="identi Kid Products - Back" width="58" height="22" style="cursor:pointer;" border="0">';
-                popup_html += '&nbsp;&nbsp;<img style="cursor:pointer;" id="addToOrderPopUpButton" src="images/nav/n_add_to_order.gif" alt="identi Kid Products - Add to Order" width="101" height="22" border="0"><br><br>';
-                popup_html += '</form>';
-
-
-                $('#popup_product_display').html(popup_html);
-                $.blockUI({
-                    message: $('#popup_product_display'),
-                    css: {top: '20%'}
-
-                });
-
-                $('#cancelPopup').click($.unblockUI);
-                $('#addToOrderPopUpButton').click(submitProductOPopup);
-
-                checkImgSize("popupImg");
-
-                $('#popup_product_display').keypress(function(event) {
-                    if (event.which == '13') {
-                        alert("To add this item to the order, click the 'add to order' button");
-                        event.preventDefault();
-                    }
-                });
+                popup_html += '<tr><td align="right" width="45%" >' + msg[0] + ': ' + limit + ' </td><td> <textarea name="msg"></textarea></td></tr>';
             }
 
-            function submitProductOPopup()
-            {
-
-                var qty = document.addorder.qty.value >= 1 ? document.addorder.qty.value : 1;
-                document.addorder.price.value = (price * qty);
-                document.addorder.quantdesc.value = qty + ' ' + document.addorder.design.value + ' ' + productName + ' for ' + symbol + (price * qty);
-                document.addorder.submit();
-
+            if (typeof (colour) !== 'undefined') {
+                popup_html += '<tr><td align="right" width="45%" >Colour: </td><td><select name="colour" id="colour">';
+                for (var i = 0; i < colour.length; i++) {
+                    popup_html += '<option value="' + colour[i] + '">' + colour[i] + '</option>';
+                }
+                popup_html += '</select></td></tr>';
+            }
+            if (typeof (material) !== 'undefined') {
+                popup_html += '<tr><td align="right" width="45%" >Material: </td><td><select name="material" id="material">';
+                for (var i = 0; i < material.length; i++) {
+                    popup_html += '<option value="' + material[i] + '">' + material[i] + '</option>';
+                }
+                popup_html += '</select></td></tr>';
+            }
+            if (typeof (qty) !== 'undefined') {
+                popup_html += '<tr><td align="right" width="45%" >Qty: </td><td><select name="qty" id="qty">';
+                for (var i = 0; i < qty.length; i++) {
+                    popup_html += '<option value="' + qty[i] + '">' + qty[i] + '</option>';
+                }
+                popup_html += '</select></td></tr>';
             }
 
-            function twoDecimals(string) {
-
-                var bits = string.split(".");
-                if (bits.length > 1) {
-                    if (bits[1].length == 0) {
-                        string = string + "00";
-                    }
-                    else if (bits[1].length == 1) {
-                        string = string + "0";
-                    }
-                    else if (bits[1].length > 2) {
-                        string = bits[0] + "." + bits[1].substr(0, 2);
-                    }
-                }
-                else {
-                    string = string + ".00";
-                }
-                return string;
-
+            if (typeof (finePrint) !== 'undefined') {
+                popup_html += '<tr><td align="center" colspan="2" ><br>* ' + finePrint + '</td></tr>';
             }
+
+            popup_html += '</table>';
+            popup_html += '<br><img id="cancelPopup"  src="images/nav/n_back.gif" alt="identi Kid Products - Back" width="58" height="22" style="cursor:pointer;" border="0">';
+            popup_html += '&nbsp;&nbsp;<img style="cursor:pointer;" id="addToOrderPopUpButton" src="images/nav/n_add_to_order.gif" alt="identi Kid Products - Add to Order" width="101" height="22" border="0"><br><br>';
+            popup_html += '</form>';
+
+
+            $('#popup_product_display').html(popup_html);
+            $.blockUI({
+                message: $('#popup_product_display'),
+                css: {top: '20%'}
+
+            });
+
+            $('#cancelPopup').click($.unblockUI);
+            $('#addToOrderPopUpButton').click(submitProductOPopup);
+
+            checkImgSize("popupImg");
+
+            $('#popup_product_display').keypress(function(event) {
+                if (event.which == '13') {
+                    alert("To add this item to the order, click the 'add to order' button");
+                    event.preventDefault();
+                }
+            });
+        }
+
+        function submitProductOPopup()
+        {
+
+            var qty = document.addorder.qty.value >= 1 ? document.addorder.qty.value : 1;
+            document.addorder.price.value = (price * qty);
+            document.addorder.quantdesc.value = qty + ' ' + document.addorder.design.value + ' ' + productName + ' for ' + symbol + (price * qty);
+            document.addorder.submit();
+
+        }
+
+        function twoDecimals(string) {
+
+            var bits = string.split(".");
+            if (bits.length > 1) {
+                if (bits[1].length == 0) {
+                    string = string + "00";
+                }
+                else if (bits[1].length == 1) {
+                    string = string + "0";
+                }
+                else if (bits[1].length > 2) {
+                    string = bits[0] + "." + bits[1].substr(0, 2);
+                }
+            }
+            else {
+                string = string + ".00";
+            }
+            return string;
+
+        }
 
         </script>
         <div id="popup_product_display" name="popup_product_display" style="display:none;"></div>
@@ -479,7 +479,12 @@ $breadcrumb = false;
         <? //include('msg_box.php'); ?> 
         <table border="0" cellspacing="0" cellpadding="0" width="998" align="center">
             <tr>
-                <td style="width:998;height:239;">
+                <td style="width:998;height:239;" class="parent-of-cart">
+                    <div class="cart-wrapper">
+                        <div class="floating-cart">
+                            <?php include_once('shopping_cart_adv.php');?>
+                        </div>
+                    </div>
                     <?
                     $header_list = array();
                     if ($handle = opendir('images/heads/'))
