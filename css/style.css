@@ -103,6 +103,15 @@ A.clicklink:visited:hover { color:#2c2c27; text-decoration:underline;}
     font-size: 12px;
 }
 
+.sp-left{
+    float:left;
+}
+
+.sp-right{
+    float:right;
+    padding-top: 4px;
+}
+
 
 .round-bottom{
     border: none;
@@ -118,6 +127,13 @@ A.clicklink:visited:hover { color:#2c2c27; text-decoration:underline;}
     -khtml-border-radius: 10px; /* for old Konqueror browsers */
 }
 
+.cart-wrapper{
+    position: relative;
+    margin: 0px;
+    padding:0px;
+    width:998px;
+}
+
 .floating-cart{
     position:absolute;
     right:0;
@@ -126,12 +142,47 @@ A.clicklink:visited:hover { color:#2c2c27; text-decoration:underline;}
 
 }
 
-.bgcolor{
-    background-color: #5C80BA;
+.floating-cart .cart{
+    list-style: none;
+    margin: 0px;
+    padding:0px;
+    background-color: #edeceb;
+    border:#d0cfce solid 1px;
+    width:150px;
+    overflow:hidden;
+}
+
+.cart .cart-title{
+    height:35px;
+    width:100%;
+}
+
+.cart .cart-body table tr td{
+    font-size: 10px;
+}
+.qty-title{
+    display: block;
+    clear:both;
+}
+
+.qty-qtydesc{
+    display: block;
+    clear:both;
+
+}
+
+.hr-solid{
+    border-bottom:#000 solid 1px;
+}
+.hr-solid-top{
+    border-top:#f2f1f0 solid 1px;
 }
 
 
-.floating-cart #toggle-cart{
-    margin:0px;
+
+.floating-cart .cart li{
+    margin: 0px;
     padding:0px;
+    list-style: none;
+    float:left;
 }
