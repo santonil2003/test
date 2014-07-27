@@ -172,7 +172,7 @@ A.clicklink:visited:hover { color:#2c2c27; text-decoration:underline;}
 }
 
 .hr-solid{
-    border-bottom:#000 solid 1px;
+    border-bottom:#f2f1f0 solid 1px;
 }
 .hr-solid-top{
     border-top:#f2f1f0 solid 1px;
@@ -183,6 +183,10 @@ A.clicklink:visited:hover { color:#2c2c27; text-decoration:underline;}
 .floating-cart .cart li{
     margin: 0px;
     padding:0px;
-    list-style: none;
+    padding: 0px 0px 0px 1px;
     float:left;
+}
+
+.cart-body tr td.last{
+     border-bottom:#f2f1f0 solid 1px;
 }

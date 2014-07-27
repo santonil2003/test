@@ -54,40 +54,41 @@ if (!$result) {
 
     </li>
     <li style="display:none;" class="cart-body">
-        <table border="0">
+        <table border="0" cellpadding="0" cellspacing="0">
             <?php
             $runningtotal = 0;
             if ($id != false) {
                 ?>
                 <tr>
-                    <td colspan="2" class="hr-solid-top"><strong>Order ID: <?= $id + 1000 ?></strong></td>
+                    <td colspan="2" class="hr-solid-top"><strong> Order ID: <?= $id + 1000 ?></strong></td>
                 </tr>
                 <?php
                 if (mysql_num_rows($result) > 0) {
                     while ($qdata = mysql_fetch_array($result)) {
                         ?>
                         <tr>
-                            <td valign="top"><strong>Title</strong>:</td>
-                            <td><em><?php echo getLabelType($qdata["type"]); ?></em></td>
+                            <td valign="top"> <strong>Title</strong></td>
+                            <td>:<em><?php echo getLabelType($qdata["type"]); ?></em></td>
                         </tr>
                         <tr>
-                            <td valign="top"><strong>Qty</strong>:</td>
-                            <td><em><?php echo $qdata["quantdesc"]; ?></em></td>
+                            <td valign="top" class="last"> <strong> Qty</strong></td>
+                            <td class="last">:<em><?php echo $qdata["quantdesc"]; ?></em></td>
                         </tr>
                         <?php
                         $runningtotal += $qdata["price"];
                     }
                     ?>
-                    <tr >
-                        <td colspan="2" class="hr-solid-top"><strong>Total : <?php echo $cur['symbol'] . toDollarsAndCents($runningtotal); ?></strong></td>
-                    </tr>
+                         <tr>
+                            <td valign="top" class="last"> <strong> Total</strong></td>
+                            <td class="last">:<strong><?php echo $cur['symbol'] . toDollarsAndCents($runningtotal); ?></strong></td>
+                        </tr>
                     <?php
                 }
             }
             if ($id == false || mysql_num_rows($result) == 0) {
                 ?>
                 <tr>
-                    <td rowspan="2"><strong>No items on Cart</strong></td>
+                    <td colspan="2"> <strong> No items on Cart</strong></td>
                 </tr>
                 <?php
             }
