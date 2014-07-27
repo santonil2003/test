@@ -1,10 +1,10 @@
-<TABLE border=0 cellSpacing=0 cellPadding=0 width=890>
+<TABLE cellSpacing=0 cellPadding=0 width=890 border=0>
 <TBODY>
 <TR>
 <TD>
 <H3>Ordering Online</H3>
 <P>
-<TABLE border=0 cellSpacing=0 cellPadding=0 width=750>
+<TABLE cellSpacing=0 cellPadding=0 width=750 border=0>
 <TBODY>
 <TR>
 <TD vAlign=top width=135 align=center><IMG alt="Secure Orders" src="/temp/images/gen/secure_mbase.jpg" width=97 height=120> 
