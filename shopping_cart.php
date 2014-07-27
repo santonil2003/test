@@ -132,6 +132,9 @@ $bgcolor = "#5b7fbb";
                         <td class="maintext"> 
                             <div align="center"><a href="my_order.php"><img src="images/shopping/button_view_order.gif" alt="View Order" name="view_order" width="81" height="22" border="0"></a></div></td>
                     </tr>
+                    <?php 
+                    if($id) {
+                        ?>
                     <tr> 
                         <td width="10" class="maintext"><img src="images/shopping/spacer_trans.gif" width="10" height="10"></td>
                         <td class="maintext"> 
@@ -144,6 +147,9 @@ $bgcolor = "#5b7fbb";
 				</form>
                             </div></td>
                     </tr>
+                    <?php
+                    }
+                    ?>
                 </table>
 
             </div></td>
