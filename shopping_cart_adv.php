@@ -100,7 +100,7 @@ if($id){
             ?>
             <tr>
                 <td colspan="2" align="center">
-                    <form action="order_form_ps.php" method="post" name="toorderform">
+                    <form action="order_form_ps.php" method="post">
                         <input type="hidden" value="<?php echo $id; ?>" name="orderid">
                         <input type="hidden" value="" name="postageamount">
                         <input type="submit" value="Checkout" name="submit" class="round-bottom"/>
