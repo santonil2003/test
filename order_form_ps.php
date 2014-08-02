@@ -6,7 +6,6 @@ checkStalePage();
 
 include("header.php");
 
-display_errors(1);
 /* 
 if ($_COOKIE['currency']==1) //Australia
 {
