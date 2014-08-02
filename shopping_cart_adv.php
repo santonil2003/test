@@ -28,6 +28,10 @@ $bgcolor = "#5b7fbb";
 
             $('.cart-body').slideToggle('fast');
         });
+
+        $('#my-order').click(function() {
+            location.replace('my_order.php');
+        });
     });
 </script>
 <?php
@@ -46,7 +50,7 @@ if ($id) {
         <table border="0" width="100%">
             <tr>
                 <td align="left" valign="middle"><span class="sp-left"><img src="css/images/scart.png" height="28px"/></span></td>
-                <td align="center" valign="middle"><strong style="font-size:10px;">My Order (<?php echo ($id) ? mysql_num_rows($result) : 0; ?>)</strong></td>
+                <td align="center" valign="middle"><strong style="font-size:10px;" id="my-order">My Order (<?php echo ($id) ? mysql_num_rows($result) : 0; ?>)</strong></td>
                 <td align="right" valign="middle">
                     <span class="sp-right">
                         <img src="css/images/right.png" class="cart-arrow"/>
@@ -116,11 +120,11 @@ if ($id) {
                 }
             }
             ?>
-                    <tr>
-                        <td colspan="2" align="center" style="text-align: center;">
-                            &nbsp;
-                        </td>
-                    </tr>
+            <tr>
+                <td colspan="2" align="center" style="text-align: center;">
+                    &nbsp;
+                </td>
+            </tr>
         </table>
     </li>
 </ul>
