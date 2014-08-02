@@ -113,7 +113,7 @@ A.clicklink:visited:hover { color:#2c2c27; text-decoration:underline;}
 }
 
 
-.round-bottom{
+.round-bottom,.round-bottom:hover {
     border: none;
     background-color: #636466;
     color: #FFFFFF;
@@ -125,6 +125,7 @@ A.clicklink:visited:hover { color:#2c2c27; text-decoration:underline;}
     -webkit-border-radius: 10px;
     border-radius: 10px; /* future proofing */
     -khtml-border-radius: 10px; /* for old Konqueror browsers */
+    text-decoration: none;
 }
 
 .cart-wrapper{
