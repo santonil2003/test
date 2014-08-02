@@ -15,7 +15,7 @@ $bgcolor = "#5b7fbb";
 <script>
     $('document').ready(function() {
         var cart_open = false;
-        $('.cart-title').click(function() {
+        $('.cart-title .sp-right').click(function() {
 
             if (cart_open) {
                 $('.cart-arrow').attr('src', 'css/images/right.png');
