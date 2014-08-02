@@ -1,4 +1,4 @@
-<?
+<?php
 require_once("debug_log.php");
 
 include("useractions.php");
@@ -6,7 +6,7 @@ checkStalePage();
 
 include("header.php");
 
-
+display_errors(1);
 /* 
 if ($_COOKIE['currency']==1) //Australia
 {
@@ -151,6 +151,8 @@ $postageLevel = 2;
 	}
 	if($totalprice<$cur['minimumOrder']){
 		header("location:view_order.php");
+                echo '<p>Order total is less than minimum limit. Please click to </p>';
+                echo '<a href="Products" class="round-bottom">Continue Ordering</a>';
 		exit;
 	}
 }
