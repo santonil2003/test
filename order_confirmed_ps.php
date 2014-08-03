@@ -246,7 +246,7 @@ include("header.php");
                             <td align="right">&nbsp;</td>
                           </tr>
                           <tr valign="top" colspan="3"> 
-                            <td align="right"><a href="index.php"  onClick="javascript: alert('Thankyou, a confirmation email has been sent to you')"><img src="images/nav/n_continue_o.gif" alt="Continue" name="Image25" width="80" height="22" border="0"></a></td>
+                            <td align="right"><a href="index.php"><img src="images/nav/n_continue_o.gif" alt="Continue" name="Image25" width="80" height="22" border="0"></a></td>
                           </tr>
                         </table>
                       </td>

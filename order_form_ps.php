@@ -744,8 +744,7 @@ function validateVoucherDetails()
                                 <input type="hidden" name="orderid" value="<? echo $id;?>">
                               <!--  <input type="hidden" name="postageamount" value="<? //echo $postage?>">
 							    <input type="hidden" name="postageoption" value="<? //echo $postage_option?>">-->
-                                <!--<input type="hidden" name="submittype" value="unconfirmed">-->
-                                 <input type="hidden" name="submittype" value="confirmed">
+                                <input type="hidden" name="submittype" value="unconfirmed">
                                 <input type="hidden" name="vouchercode" value="">
                                 <input type="hidden" name="oldvouchercode" value="<?=str_replace(",", "", $_POST['vouchercode'])?>">
                                 <input type="hidden" name="voucher_valid" value="<?=$voucher_valid?>">
