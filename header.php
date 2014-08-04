@@ -486,7 +486,7 @@ $breadcrumb = false;
                             <?php include_once('shopping_cart_adv.php');?>
                         </div>
                     </div>
-                    <?
+                    <?php
                     $header_list = array();
                     if ($handle = opendir('images/heads/'))
                     {
