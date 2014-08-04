@@ -1,4 +1,5 @@
-<? session_start();
+<?php
+session_start();
 ini_set('display_errors','0');
 if(!isset($_COOKIE["currency"])){
 setcookie("currency", 1, 0, "/");
@@ -485,7 +486,7 @@ $breadcrumb = false;
                             <?php include_once('shopping_cart_adv.php');?>
                         </div>
                     </div>
-                    <?
+                    <?php
                     $header_list = array();
                     if ($handle = opendir('images/heads/'))
                     {
