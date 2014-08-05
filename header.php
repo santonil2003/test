@@ -483,9 +483,10 @@ $breadcrumb = false;
                 <td style="width:998;height:239;" class="parent-of-cart">
                     <div class="cart-wrapper">
                         <div class="floating-cart">
-                            <?php include_once('shopping_cart_adv.php');?>
+                            <?php include_once('shopping_cart_adv_1.php');?>
                         </div>
                     </div>
+                    
                     <?php
                     $header_list = array();
                     if ($handle = opendir('images/heads/'))

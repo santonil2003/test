@@ -189,5 +189,16 @@ A.clicklink:visited:hover { color:#2c2c27; text-decoration:underline;}
 }
 
 .cart-body tr td.last{
-     border-bottom:#f2f1f0 solid 1px;
+    border-bottom:#f2f1f0 solid 1px;
 }
+
+
+.adv-cart-body td{
+    color:#fff;
+    font-size: 10px;
+}
+.adv-cart-body td.last{
+    border-bottom:#95ACD3 solid 1px;
+
+}
+
