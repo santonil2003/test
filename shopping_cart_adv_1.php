@@ -22,7 +22,7 @@ if ($id) {
 ?>
 <div class="adv-cart-wrapper" style="display:none;">
     <div class="adv-cart-body">
-        <table border="0" cellpadding="0" cellspacing="0" width="99%" align="center">
+        <table border="0" cellpadding="0" cellspacing="0" width="140" align="center">
             <?php
             $runningtotal = 0;
             if ($id != false) {
@@ -90,6 +90,9 @@ if ($id) {
                     </td>
                 </tr>
             <?php } ?>
+            <tr>
+                <td colspan="2" align="center"></strong></td>
+            </tr>
         </table>
     </div>
 </div>
