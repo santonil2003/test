@@ -79,8 +79,17 @@ if ($id) {
                     </tr>
                     <?php
                 }
-            }
-            ?>
+            } else {
+                ?>
+                <tr>
+                    <td colspan="2" align="center"> <strong> No items on Cart</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center" style="text-align: center;">
+                        <a href="Products" class="round-bottom">Start Ordering</a>
+                    </td>
+                </tr>
+            <?php } ?>
         </table>
     </div>
 </div>
