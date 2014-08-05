@@ -255,7 +255,8 @@ $breadcrumb = false;
     <SCRIPT language=JavaScript type=text/JavaScript>
 
         $(document).ready(function() {
-            $('#loyalty').ajaxForm({beforeSubmit: validateForm, success: updateForm1});
+            //$('#loyalty').ajaxForm({beforeSubmit: validateForm, success: updateForm1});
+            
             if ($('#banner-fade').length > 0) {
                 $('#banner-fade').bjqs({
                     'height': 406,
