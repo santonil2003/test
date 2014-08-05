@@ -53,7 +53,11 @@ if(ns4)_d.write("<scr"+"ipt type=text/javascript src=js/mmenuns4.js><\/scr"+"ipt
 <table border="0" cellspacing="0" cellpadding="0" width="998" align="center">
 	<tr>
 		<td style="background-image: url('images/gen/header_home.gif'); width:998; height:239; " >
-		
+		    <div class="cart-wrapper">
+                        <div class="floating-cart">
+                            <?php include_once('shopping_cart_adv_1.php');?>
+                        </div>
+                    </div>
                     <?
 		   $header_list = array();
 		   if ($handle = opendir('images/heads/'))

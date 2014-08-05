@@ -255,7 +255,8 @@ $breadcrumb = false;
     <SCRIPT language=JavaScript type=text/JavaScript>
 
         $(document).ready(function() {
-            $('#loyalty').ajaxForm({beforeSubmit: validateForm, success: updateForm1});
+            //$('#loyalty').ajaxForm({beforeSubmit: validateForm, success: updateForm1});
+            
             if ($('#banner-fade').length > 0) {
                 $('#banner-fade').bjqs({
                     'height': 406,
@@ -483,9 +484,10 @@ $breadcrumb = false;
                 <td style="width:998;height:239;" class="parent-of-cart">
                     <div class="cart-wrapper">
                         <div class="floating-cart">
-                            <?php include_once('shopping_cart_adv.php');?>
+                            <?php include_once('shopping_cart_adv_1.php');?>
                         </div>
                     </div>
+                    
                     <?php
                     $header_list = array();
                     if ($handle = opendir('images/heads/'))
