@@ -1,0 +1,189 @@
+ul,li{list-style:none;}
+li{float:left;}
+strong{display:block;clear:both;}
+#starter-pack #designer_preview{
+    margin:0 auto;
+    height:121px;
+    width:400px;
+    position:relative;
+}
+#starter-pack .preview_image_set{       
+    position:absolute;
+    top:29px;
+    left:262px;
+    background-repeat: no-repeat;
+}
+#starter-pack .preview_phone{position:absolute;display:block;width:260px;text-align:center;font-size:18px;padding:0 0 0 10px;line-height:1;margin-top:10px;}
+#starter-pack .preview_text{position:absolute;display:block;width:260px;text-align:center;font-size:26px;padding:23px 0 0 10px;line-height:1;}
+
+#starter-pack #designer_options_picture ul li{
+    width:32px;
+    height:32px;
+    border:solid 2px #666;
+    padding:1px;
+    margin:2px;
+    cursor: pointer;
+}
+#starter-pack .font_colour_black,#starter-pack .font_colour_white{border:solid 1px #666;}
+#starter-pack .font_colour_black{width:20px;height:20px;background:#000000;display:inline-block;}
+#starter-pack .font_colour_white{width:20px;height:20px;background:#ffffff;display:inline-block;}
+
+#starter-pack #designer_options_picture ul li{
+    width:60px;
+    height:60px;
+    border:solid 2px #666;
+    padding:1px;
+    margin:2px;
+}
+
+#starter-pack .preview_image{
+    width:32px;
+    height:32px;
+}
+#starter-pack .preview_image_set{
+    width:60px;
+    height:60px;
+    display:inline-block;
+}
+
+#starter-pack #designer_options_colours ul li{float:none;height:50px;}
+#starter-pack #designer_options_colours ul li span{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    float:left;
+    margin:2px;
+    border:solid 2px #666;
+    cursor:pointer;
+}
+#starter-pack .selected{border:solid 2px #00B0E0 !important};
+
+
+
+#starter-pack #designer_options_identitags{
+    display:block;
+}
+#starter-pack #designer_options_identitags ul.tags{
+    width:450px;
+}
+
+#starter-pack .box{
+    position:relative;
+    clear:both;
+    margin-bottom:20px;
+}
+#starter-pack #designer_options_details strong{display:inline;clear:none;}
+#starter-pack #designer_options_details{text-align:center;}
+
+#starter-pack #designer_options_font{
+    float:left;
+    width:275px;
+}
+#starter-pack #designer_options_font li {
+    font-size:28px;
+    cursor: pointer;
+}
+
+#starter-pack #designer_options_font_colour{
+    float:left;
+    width:155px;
+}
+
+#starter-pack #designer_options_colours{
+    float:left;
+    width:350px;
+}
+
+#starter-pack #designer_options_label ul li{float:none;}
+
+#starter-pack #designer_options_identitags{
+    text-align:left;
+}
+
+#starter-pack #designer_options_identitags ul li{
+    cursor:pointer;
+}
+#starter-pack #designer_options_identitags input{
+    margin-left:50px;
+    font-weight:bold;
+}
+
+#starter-pack #designer_options_label{
+    position:absolute;
+    top:0;
+    right:0;
+    width:320px;
+}
+
+#starter-pack #designer_options_ironon_colour{
+    position:absolute;
+    top:200px;
+    right:0;
+    width:320px;
+}
+
+#starter-pack #designer_options_ironon_colour ul li span{width:20px;height:20px;display:inline-block;border:solid 2px #666; cursor:pointer;}
+
+button{
+    color:#ffffff;
+    background:#00B0E0;
+    border:solid 2px #000000;
+    padding:5px 10px;
+    margin:5px;
+}
+
+#starter-pack .error-msg{
+    border:red dashed 1px;
+}
+
+#starter-pack #designer_preview_text{
+    text-align:left;
+    position:absolute;
+    top:20px;
+    right:0px;
+    font-size:11px;
+    color:#3a768f;
+    width:190px;
+}
+
+
+#starter-pack .fixed_preview {
+    background-color: #FFFFFF;
+    border: 2px solid #EFEFEF;
+    margin: 0 auto 0 -2px;
+    overflow: hidden;
+    padding: 15px;
+    position: fixed;
+    z-index:999;
+    top: 0;
+    width: 770px;
+    -moz-box-shadow:    inset 0 0 10px #EFEFEF;
+    -webkit-box-shadow: inset 0 0 10px #EFEFEF;
+    box-shadow:         inset 0 0 10px #EFEFEF;
+}
+
+#starter-pack .designer-options{
+    height: 400px;
+    margin-top: 140px;
+    overflow-y: scroll;
+
+    -moz-box-shadow:    inset 0 0 10px #EFEFEF;
+    -webkit-box-shadow: inset 0 0 10px #EFEFEF;
+    box-shadow:         inset 0 0 10px #EFEFEF;
+}
+
+
+#starter-pack .designer_preview_all .preview_text{
+    left: 0;
+    top: 4px;
+}
+
+#starter-pack .designer_preview_all .preview_phone{
+    left: 0;
+    top: 50px;
+}
+
+.label-type ul li{
+    float: left;
+    text-align: left;
+}
