@@ -1,8 +1,8 @@
-<P align=right><A href="/Labels"><IMG style="WIDTH: 172px; HEIGHT: 41px" border=0 src="/images/bg/BACK.gif" width=0 height=0></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<A href="Products/Labels/Vinyls/Add_To_Order"><IMG border=0 src="http://identikid.com.au/images/bg/add-to-order-button.gif" width=182 height=36></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </P>
-<TABLE border=0 cellSpacing=0 cellPadding=0 width=890>
+<P align=right><A href="/Labels"><IMG style="HEIGHT: 41px; WIDTH: 172px" border=0 src="/images/bg/BACK.gif" width=0 height=0></A>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </P>
+<TABLE cellSpacing=0 cellPadding=0 width=890 border=0>
 <TBODY>
 <TR>
-<TD vAlign=top width=335 align=middle>
+<TD vAlign=top width=335 align=center>
 <P><BR><A href="images/products/img_vinyls_big.gif" rel=lightbox><IMG border=0 alt="identi Kid Products - Labels - Vinyls" src="/temp/images/products/img_vinyls.gif" width=335 height=366></A><BR></P></TD>
 <TD width=15>&nbsp;</TD>
 <TD vAlign=top width=540>
@@ -12,6 +12,6 @@
 <P>Perfect vinyl labels for all uses! 
 <P><STRONG>Where can you use our vinyls?</STRONG> Beach Gear - balls, buckets, spades, umberellas, floaties, flippers, Sporting Gear - Bats, Balls, Tennis Raquets, Hockey sticks, Knee and elbow pads, Toys - things getting dragged to school for news/show and tell, toys going to friends houses, the park etc, Bikes, scooters skateboards, School / Daycare / Kindy - lunch bottles, drinkbottles, toothbrush, cutlery, pencils, rulers, Picnic Gear/ Camping Gear, Family labels, Books, CDs' use your imagination! 
 <P>Use our fun vinyl labels on anything you can't afford to replace! 
-<P><FONT size=4><FONT size=3><STRONG>Pk</STRONG> </FONT><STRONG>60 for&nbsp;$25.00</STRONG></FONT> <STRONG>AUD . OTHER CURRENCIES DISPLAYED ON PAGE WHEN ORDERING</STRONG> 
+<P><A href="Products/Labels/Vinyls/Add_To_Order"></A><A href="Products/Labels/Vinyls/Add_To_Order"><IMG border=0 src="http://identikid.com.au/images/bg/n_add_to_order_1.gif" width=101 height=22></A><A href="Products/Labels/Vinyls/Add_To_Order"></A></P>
 <P>
 <P><A href="Products/Labels/Vinyls/Add_To_Order"></A>&nbsp;</P></TD></TR></TBODY></TABLE>
