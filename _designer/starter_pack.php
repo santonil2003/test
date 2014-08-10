@@ -447,7 +447,6 @@ g.setAttribute('type',"text");
 g.setAttribute('name',"identitagReserve");
 g.setAttribute('value',_reversePrint);
 
-alert(_reversePrint);
 
 var h = document.createElement("input"); //input element, text
 h.setAttribute('type',"hidden");
