@@ -2581,6 +2581,8 @@ AND a.id=" . $id;
                         <td class="maintext">Quantity:</td>
                         <td class="maintext"><?= $qdata["quantdesc"]; ?></td>
                     </tr>
+                  
+                    
                     <?php endif;?>
                                     <?
                                     if($qdata["typedetail"]==1){
@@ -2756,7 +2758,9 @@ AND a.id=" . $id;
                                     <td><? echo "<img src = 'http://www.identikid.com.au/images/identitags/".$thetext.".gif'>"?></td>
                                 </tr>
                                 <tr>
+                                    <td class="maintext">&nbsp;</td>
                                     <td class="maintext"><b>Print reverse:</b></td>
+                                    <td class="maintext">&nbsp;</td>
                                     <td class="maintext"><?= $qdata['text7'] == "1" ? "Yes" : "No" ?></td>
                                 </tr>
                                 <tr>
@@ -2811,7 +2815,9 @@ AND a.id=" . $id;
                                     <td><? echo "<img src = 'http://www.identikid.com.au/images/identitags/".$thetext.".gif'>"?></td>
                                 </tr>
                                 <tr>
+                                    <td class="maintext">&nbsp;</td>
                                     <td class="maintext"><b>Print reverse:</b></td>
+                                    <td class="maintext">&nbsp;</td>
                                     <td class="maintext"><?= $qdata['text7'] == "1" ? "Yes" : "No" ?></td>
                                 </tr>
 
