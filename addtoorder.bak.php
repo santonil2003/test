@@ -1033,9 +1033,9 @@ break;
 				.$text2."', '".$text3."', '".$_POST["text4"]."', '".$_POST["text5"]."', '".$_POST["text6"]."', '".$text7."', '".$colours."', '".$_POST["font"]."', '".$_POST["picon"]."', '".$_POST["gift"]."', '".$_POST["split"]."','".$_POST["font_colour"]."')";
 				//echo $query;
 			}else{
-				$query = "INSERT INTO basket_items (ordernumber, price, quantdesc, type, typedetail, pic, text1, text2, text3, text4, text5, colours, font, picon, gift, split)"
+				$query = "INSERT INTO basket_items (ordernumber, price, quantdesc, type, typedetail, pic, text1, text2, text3, text4, text5, colours, font, picon, gift, split, data_font_colour_id)"
 				." VALUES (".$id.", ".$_POST["price"].", '".$quantDesc."', ".$_POST["type"].", ".$typedetail.", ".$_POST["pic"].", '".$_POST["text1"]."', '"
-				.$text2."', '".$_POST["text3"]."', '".$_POST["text4"]."', '".$_POST["text5"]."', '".$colours."', '".$_POST["font"]."', '".$_POST["picon"]."', '".$_POST["gift"]."', '".$_POST["split"]."')";
+				.$text2."', '".$_POST["text3"]."', '".$_POST["text4"]."', '".$_POST["text5"]."', '".$colours."', '".$_POST["font"]."', '".$_POST["picon"]."', '".$_POST["gift"]."', '".$_POST["split"]."', '" . $_POST["font_colour"] . "')";
 		
 			}
                        // echo "<pre>";
