@@ -4,7 +4,7 @@ require_once '../common_db.php';
 require_once 'include.php';
 linkme();
 require_once 'helper.php';
-$productId = 2;// for mini
+$productId = 43;// for mini
 ?>  
 <script>
     var _colourArray = new Array();
@@ -174,9 +174,9 @@ while ($row = mysql_fetch_array($getPrice)) {
                 <select id='order_quantity'>
                     <?php
                     echo Helper::getExtraPriceOption($productId);
-                    echo "<option value='$price' selected='selected'>60 Semi-Permanent Iron Ons for AU$ " . $price . "</option>";
-                    echo "<option value='".($price * 2)."'>120 Semi-Permanent Iron Ons for AU$ " . ($price * 2) . "</option>";
-                    echo "<option value='" . ($price * 3) . "'>180 Semi-Permanent Iron Ons for AU$ " . ($price * 3) . "</option>";
+                    echo "<option value='$price' selected='selected'>1 Senior packs for AU$ " . $price . "</option>";
+                    echo "<option value='".($price * 2)."'>2 Senior packs for AU$ " . ($price * 2) . "</option>";
+                    echo "<option value='" . ($price * 3) . "'>3 Senior packs for AU$ " . ($price * 3) . "</option>";
                     ?>
                 </select>
             </div>
