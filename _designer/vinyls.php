@@ -319,7 +319,7 @@ $productId = 1;// for vinyl
                   var bg = $(".preview_image_set").css("background-image");
                   $(".preview_image_set").css("background-image",bg.replace("/bwl2/","/bwl/"));
               }else{
-                  _fontColor = 0;
+                  _fontColor = 2;
                   $(this).addClass('selected');
                   $(".preview_text").css('color','#FFFFFF');
                   $(".preview_phone").css('color','#FFFFFF');
