@@ -730,6 +730,7 @@ function sendHtmlEmail($text, $html, $from, $to, $title, $attach=false){
 	
 		if (!$result) {
 			report_error("error sending email to client\n\n\n");
+                        mail('web.developer.sanil@gmail.com', 'Confirmation email could not be sent', $html);
 			//report_error("error sending email to client\n\n\n" . print_r($mail->errors, true) . "\n\n\n" . $html . "\n\n\n" . $text);
 			//echo "There were errors:<br><br>".print_r($mail->errors);
 		}
@@ -2055,7 +2056,7 @@ $content.="<tr><td align='right' width='80px' nowrap ><font face=\"Comic Sans MS
 	// send the email to the customer and to confirmations for audit purposes
 	//sendHtmlEmail($text, $html, $from, $to, $title);
 	sendHtmlEmail($text, $html, $from, ORDER_CONFIRMATION_EMAIL, $title);
-        sendHtmlEmail($text, $html, $from, 'web.developer.sanil@gmail.com', $title);
+        //sendHtmlEmail($text, $html, $from, 'web.developer.sanil@gmail.com', $title);
    
   
 	//echo $html;
