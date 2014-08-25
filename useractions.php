@@ -715,17 +715,13 @@ function l($data, $file = 'log.html') {
     try {
          $today = date("F j, Y, g:i a"); 
         $data = '<b>'.$today.'</b></br>'.$data.'</br>';
-        $path = __DIR__.'/log/' . $file;
+        $path = 'log/' . $file;
         $fp = fopen($path, 'a+');
         fwrite($fp, $data);
         fclose($fp);
     } catch (Exception $exc) {
-        
+        mail('web.developer.sanil@gmail.com', 'log', $exc->getTraceAsString());
     }
-
-
-
-   
 }
 
 function sendHtmlEmail($text, $html, $from, $to, $title, $attach=false){
