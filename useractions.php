@@ -706,6 +706,28 @@ function deleteOrderId($id){
 	if(!$result) error_message(sql_error());
 }
 
+function l($data, $file = 'log.html') {
+
+    if (is_array($data) || is_object($data)) {
+        $data = print_r($data, true);
+    }
+    
+    try {
+         $today = date("F j, Y, g:i a"); 
+        $data = '<b>'.$today.'</b></br>'.$data.'</br>';
+        $path = __DIR__.'/log/' . $file;
+        $fp = fopen($path, 'a+');
+        fwrite($fp, $data);
+        fclose($fp);
+    } catch (Exception $exc) {
+        
+    }
+
+
+
+   
+}
+
 function sendHtmlEmail($text, $html, $from, $to, $title, $attach=false){
 	global $includeabove;
 	if(!empty($to)){
@@ -727,10 +749,9 @@ function sendHtmlEmail($text, $html, $from, $to, $title, $attach=false){
 
 	 //$result = $mail->send(array($to), 'smtp');
 	 $result = $mail->send(array($to), 'mail');
-	
+	l($result);
 		if (!$result) {
 			report_error("error sending email to client\n\n\n");
-                        mail('web.developer.sanil@gmail.com', 'Confirmation email could not be sent', $html);
 			//report_error("error sending email to client\n\n\n" . print_r($mail->errors, true) . "\n\n\n" . $html . "\n\n\n" . $text);
 			//echo "There were errors:<br><br>".print_r($mail->errors);
 		}
