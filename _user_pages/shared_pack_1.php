@@ -7,45 +7,21 @@
 <TBODY>
 <TR>
 <TD>
-<P align=center><A href="about:products/labels/vinyls"><IMG border=0 alt="identi Kid Products - Labels - Vinyls" src="/temp/images/products/prod_vinyls.gif" width=194 height=169></A><BR></P>
-<TABLE cellSpacing=0 cellPadding=0 width=194 border=0>
-<TBODY>
+<P align=center><A href="about:products/labels/vinyls"><IMG border=0 alt="identi Kid Products - Labels - Vinyls" src="/temp/images/products/prod_vinyls.gif" width=194 height=169></A></P>
+<P align=center><BR></P>
+<P align=center><A href="/products/labels/vinyls"><IMG border=0 alt="" src="/temp/images/nav/n_more_info.gif" width=83 height=22></A></P></TD>
+<TD>
+<P align=center><A href="about:products/labels/mini_vinyls"><IMG border=0 alt="identi Kid Products - Labels - Mini Vinyls" src="/temp/images/products/prod_mini_vinyls.gif" width=194 height=169></A></P><BR>
+<P align=center><A href="/products/labels/mini_vinyls"><IMG border=0 alt="" src="/temp/images/nav/n_more_info.gif" width=83 height=22></A></P></TD>
+<TD><IMG alt="" src="/temp/images/gen/spacer.gif" width=38 height=10><BR>
+<P align=center><A href="about:Products/Clothing_Labels/Permanent_Iron-Ons"><IMG style="HEIGHT: 178px; WIDTH: 194px" border=0 src="/images/products/prod_perm_ironons.gif" width=194 height=169></A></P>&nbsp;
+<P align=center><A href="/Products/Clothing_Labels/Permanent_Iron-Ons"><IMG border=0 alt="identiKid Products - Clothing Labels - Permanent Iron Ons" src="/temp/images/nav/n_more_info.gif" width=83 height=22></A></P>
+<P align=center><A href="about:Products/Clothing_Labels/Permanent_Iron-Ons"></A>&nbsp;</P></TD>
+<TD><A href="about:products/labels/diy_labels"></A>
+<P align=center><A href="about:Products/Clothing_Labels/Semi-Permanent_Iron-Ons"><IMG border=0 alt="identiKid Products - Clothing Labels - Semi-Permanent Iron Ons" src="/temp/images/products/prod_semi_perm_ironons.gif" width=194 height=169></A></P><BR>
+<P align=center><A href="/Products/Clothing_Labels/Semi-Permanent_Iron-Ons"><IMG border=0 alt="identiKid Products - Clothing Labels - Semi-Permanent Iron Ons" src="/temp/images/nav/n_more_info.gif" width=83 height=22></A></P></TD></TR>
 <TR>
-<TD><A href="about:products/labels/vinyls"><IMG border=0 alt="" src="/temp/images/nav/n_more_info.gif" width=83 height=22></A></TD>
-<TD><IMG alt="" src="/temp/images/gen/spacer.gif" width=10 height=1></TD>
-<TD><A href="about:products/labels/vinyls/add_to_order"><IMG border=0 alt="identi Kid Products - Add to Order" src="/temp/images/nav/n_add_to_order.gif" width=101 height=22></A></TD></TR></TBODY></TABLE></TD>
-<TD><IMG alt="" src="/temp/images/gen/spacer.gif" width=38 height=10><BR></TD>
-<TD><A href="about:products/labels/mini_vinyls"><IMG border=0 alt="identi Kid Products - Labels - Mini Vinyls" src="/temp/images/products/prod_mini_vinyls.gif" width=194 height=169></A><BR>
-<TABLE cellSpacing=0 cellPadding=0 width=194 border=0>
-<TBODY>
-<TR>
-<TD><A href="about:products/labels/mini_vinyls"><IMG border=0 alt="" src="/temp/images/nav/n_more_info.gif" width=83 height=22></A></TD>
-<TD><IMG alt="" src="/temp/images/gen/spacer.gif" width=10 height=1></TD>
-<TD><A href="about:products/labels/mini_vinyls/add_to_order"><IMG border=0 alt="identi Kid Products - Add to Order" src="/temp/images/nav/n_add_to_order.gif" width=101 height=22></A></TD></TR></TBODY></TABLE></TD>
-<TD><IMG alt="" src="/temp/images/gen/spacer.gif" width=38 height=10><BR><A href="about:Products/Clothing_Labels/Permanent_Iron-Ons"><IMG style="HEIGHT: 178px; WIDTH: 194px" border=0 src="/images/products/prod_perm_ironons.gif" width=194 height=169></A> 
-<TABLE cellSpacing=0 cellPadding=0 width=194 border=0>
-<TBODY>
-<TR>
-<TD><A href="about:Products/Clothing_Labels/Semi-Permanent_Iron-Ons"></A></TD>
-<TD><IMG alt="" src="/temp/images/gen/spacer.gif" width=10 height=1><BR>
-<TABLE cellSpacing=0 cellPadding=0 width=194 border=0>
-<TBODY>
-<TR>
-<TD><A href="about:Products/Clothing_Labels/Permanent_Iron-Ons"><IMG border=0 alt="identiKid Products - Clothing Labels - Permanent Iron Ons" src="/temp/images/nav/n_more_info.gif" width=83 height=22></A></TD>
-<TD><IMG alt="" src="/temp/images/gen/spacer.gif" width=10 height=1></TD>
-<TD><A href="about:Products/Clothing_Labels/Permanent_Iron-Ons/Add_To_Order"><IMG border=0 alt="identi Kid Products - Add to Order" src="/temp/images/nav/n_add_to_order.gif" width=101 height=22></A></TD></TR></TBODY></TABLE>&nbsp; </TD>
-<TD><A href="about:Products/Clothing_Labels/Semi-Permanent_Iron-Ons/Add_To_Order"></A></TD></TR></TBODY></TABLE></TD>
-<TD><A href="about:products/labels/pencil_labels"></A><BR></TD>
-<TD><IMG alt="" src="/temp/images/gen/spacer.gif" width=38 height=10><BR></TD>
-<TD><A href="about:products/labels/diy_labels"></A><A href="about:Products/Clothing_Labels/Semi-Permanent_Iron-Ons"><IMG border=0 alt="identiKid Products - Clothing Labels - Semi-Permanent Iron Ons" src="/temp/images/products/prod_semi_perm_ironons.gif" width=194 height=169></A><BR>
-<TABLE cellSpacing=0 cellPadding=0 width=194 border=0>
-<TBODY>
-<TR>
-<TD><A href="about:Products/Clothing_Labels/Semi-Permanent_Iron-Ons"><IMG border=0 alt="identiKid Products - Clothing Labels - Semi-Permanent Iron Ons" src="/temp/images/nav/n_more_info.gif" width=83 height=22></A><A href="about:products/labels/diy_labels"></A></TD>
-<TD><IMG alt="" src="/temp/images/gen/spacer.gif" width=10 height=1></TD>
-<TD><A href="about:Products/Clothing_Labels/Semi-Permanent_Iron-Ons/Add_To_Order"><IMG border=0 alt="identi Kid Products - Add to Order" src="/temp/images/nav/n_add_to_order.gif" width=101 height=22></A><A href="about:products/labels/diy_labels/add_to_order"></A></TD></TR></TBODY></TABLE></TD></TR>
-<TR>
-<TD colSpan=7><IMG alt="" src="/temp/images/gen/spacer.gif" width=1 height=30><BR></TD></TR></TBODY></TABLE>
+<TD colSpan=3><IMG alt="" src="/temp/images/gen/spacer.gif" width=1 height=30><BR></TD></TR></TBODY></TABLE>
 <P>&nbsp;</P>
 <P>&nbsp;</P>
 <P>&nbsp;</P>
