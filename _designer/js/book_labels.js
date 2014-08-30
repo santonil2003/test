@@ -123,8 +123,10 @@ $('document').ready(function() {
     $('#order_quantity').change(function() {
         //$('#quantdesc').val($(this).val());
         $('#quantdesc').val($(this).find(":selected").text());
-        var price = $(this).val();
-        $('#price').val(price);
+        var totalprice = $(this).val();
+        $('#price').val(totalprice);
+        chosenQuant = totalprice/_price;
+        $('#chosenQuant').val(chosenQuant-1); //subtracting 1 to make it compatible with insert code hint: addtoorder.php case 33
     });
 
 

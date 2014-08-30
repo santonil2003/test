@@ -26,19 +26,26 @@ while ($row = mysql_fetch_array($getPrice)) {
 ?>
 </script>
 <script src="js/book_labels.js"></script>
+<?php
+if ($_SERVER['HTTP_HOST'] == "www.anne.com") {
+    $action = '/addtoorder.local.php';
+} else {
+    $action = '/addtoorder.php';
+}
+?>
 
-<form action="/addtoorder.php" method="post" target="_top" id="books-label">
+<form action="<?php echo $action;?>" method="post" target="_top" id="books-label">
 
     <input type="hidden" name="background_colour" value="9" id="background_colour"/><!-- data_colour_id || colours = 9 and 10 -->
     <input type="hidden" name="font" value="3" id="font"/>
     <input type="hidden" name="font_colour" value="1" id="font_colour"/>
-    <input type="hidden" name="typedetail" value="0" id="typedetail"/>
-    <input type="hidden" name="pic" value="1" id="pic"/>
+    <input type="hidden" name="chosenQuant" value="0" id="chosenQuant"/>
+    <input type="hidden" name="chosenPic" value="1" id="pic"/>
     <input type="hidden" name="picon" value="1" id="picon"/>
-    <!--<input type="hidden" name="text1" value="" id="text1"/>-->
+    <input type="hidden" name="symbol" value="$"/>
 
 
-    <input type="hidden" name="identitag_code" value="" id="identitag_code"/>
+    <input type="hidden" name="html_form" value="1" id="html_form"/>
     <input type="hidden" name="identitagReserve" value="0" id="identitagReserve"/>
     <input type="hidden" name="ironon_colour" value="" id="ironon_colour"/>
 
@@ -139,7 +146,7 @@ while ($row = mysql_fetch_array($getPrice)) {
                         }
                         ?>
                         <li>
-                             <div id="designer_options_font_colour">
+                            <div id="designer_options_font_colour">
                                 <strong>Font Colour:</strong>
                                 <span class="font_colour_white"></span>
                             </div>
@@ -149,7 +156,7 @@ while ($row = mysql_fetch_array($getPrice)) {
                         ?>
                     </div>
 
-                   
+
                 </div>
             </div>
         </div>
