@@ -1,0 +1,312 @@
+#books-label ol,#books-label ul{padding:0;margin:0;}       
+
+#books-label ul,#books-label li{list-style:none;}
+/*li{float:left;}*/
+#books-label strong{display:block;clear:both;}
+
+#books-label .preview_image_set{
+    position:absolute;
+    top:12px;
+    left:10px;
+
+}
+
+#books-label #designer_options_picture ul li{
+    width:32px;
+    height:32px;
+    border:solid 2px #666;
+    padding:1px;
+    margin:2px;
+}
+#books-label .font_colour_black,#books-label .font_colour_white{border:solid 1px #666;}
+#books-label .font_colour_black{width:20px;height:20px;background:#000000;display:inline-block;}
+#books-label .font_colour_white{width:20px;height:20px;background:#ffffff;display:inline-block;}
+
+#books-label #designer_options_picture ul li{
+    width:60px;
+    height:60px;
+    border:solid 2px #666;
+    padding:1px;
+    margin:2px;
+}
+
+#books-label .preview_image{
+    width:60px;
+    height:60px;
+}
+#books-label .preview_image_set{
+    width:45px;
+    height:25px;
+    display:inline-block;
+}
+
+#books-label #designer_options_colours ul li{height:50px; cursor:pointer;}
+#books-label #designer_options_colours ul li span{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    float:left;
+    margin:2px;
+    border:solid 2px #666;
+}
+
+#books-label .selected{
+    border:solid 2px #00B0E0 !important
+}
+
+
+
+#books-label #designer_options_identitags{
+    display:block;
+    width:450px;
+}
+#books-label #designer_options_identitags ul .tags{
+    width:450px;
+}
+
+#books-label .box{
+    position:relative;
+    clear:both;
+    margin-bottom:20px;
+    margin: 0 auto;
+    width: 300px;
+}
+#books-label #designer_options_details strong{display:inline;clear:none;}
+#books-label #designer_options_details{text-align:center;}
+
+#books-label #designer_options_font{
+    /*float:left;*/
+    width:275px;
+    text-align:left;
+    margin-bottom:30px;
+}
+#books-label #designer_options_font li {
+    font-size:28px;
+    float:none;
+}
+
+#books-label #designer_options_font_colour{
+    /*float:left;*/
+    width:170px;
+    text-align:left;
+}
+#books-label #designer_options_font_colour{
+
+    margin-bottom:30px;
+}
+
+#books-label #designer_options_font_colour span {
+    cursor:pointer;
+}
+#books-label #designer_options_colours{
+    /*float:left;*/
+    text-align:left;
+}
+
+#books-label ul.color-selector{
+    /*width:600px;*/
+    margin-bottom: 10px;
+}
+
+#books-label ul.color-selector li{
+    width:160px;
+    float:left;
+}
+
+#books-label #designer_options_label ul li{float:none;}
+
+#books-label #designer_options_identitags{
+    text-align:left;
+}
+#books-label #designer_options_identitags input{
+    margin-left:50px;
+    font-weight:bold;
+}
+
+#books-label #designer_options_label{
+    position:absolute;
+    top:0;
+    right:0;
+    width:320px;
+}
+
+#books-label #designer_options_ironon_colour{
+    position:absolute;
+    top:200px;
+    right:0;
+    width:320px;
+}
+
+#books-label #designer_options_ironon_colour ul li span{
+    width:20px;
+    height:20px;
+    display:inline-block;
+    border:solid 2px #666;
+}
+
+#books-label  button{
+    color:#ffffff;
+    background:#00B0E0;
+    border:solid 2px #000000;
+    padding:5px 10px;
+    margin:5px;
+}
+
+#books-label #designer_preview {
+    position:relative;
+}
+
+
+#books-label .designer_preview_rainbow_a {
+    background: url("../images/book_labels/9.png") no-repeat scroll 30px 54px transparent;
+    height: 180px;
+    margin: 0 auto 25px;
+    overflow: hidden;
+    width: 429px;
+}
+
+#books-label .designer_preview_rainbow_a .preview_text{
+    display: block;
+    font-family: comic_sans_msregular;
+    font-size: 22px;
+    left: 85px;
+    line-height: 1;
+    position: absolute;
+    text-align: center;
+    top: 62px;
+    width: 262px;
+}
+
+
+#books-label .designer_preview_rainbow_b {
+    height: 180px;
+    margin: 0 auto 25px;
+    overflow: hidden;
+    width: 429px;
+    background: url("../images/book_labels/10.png") no-repeat scroll 30px 54px transparent;
+}
+
+#books-label .designer_preview_rainbow_b .preview_text{
+    display: block;
+    font-family: comic_sans_msregular;
+    font-size: 22px;
+    left: 85px;
+    line-height: 1;
+    position: absolute;
+    text-align: center;
+    top: 62px;
+    width: 262px;
+}
+
+#books-label .preview_image{
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    background-image: url("../images/bwl/1.png");
+    height: 60px;
+}
+
+#books-label .designer_preview_rainbow_b .preview_image, #books-label .designer_preview_rainbow_a .preview_image {
+    left: 50px;
+    top: 80px;
+
+}
+
+#books-label .individual_preivew {
+    height: 180px;
+    margin: 0 auto 25px;
+    overflow: hidden;
+    width: 438px;
+    background: url("../images/book_labels/9.png") no-repeat scroll 30px 54px transparent;
+}
+
+#books-label .individual_preivew .preview_text{
+    display: block;
+    font-family: comic_sans_msregular;
+    font-size: 22px;
+    line-height: 1;
+    position: absolute;
+    text-align: center;
+    top: 80px;
+    width: 300px;
+    left: 42px;
+}
+
+#books-label .individual_preivew .preview_image{
+    left: 32px;
+    top: 74px;
+}
+
+#books-label #designer_preview_text{
+    color: #3A768F;
+    font-size: 10px;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    top: 70px;
+    width: 175px;
+}
+
+#books-label .error-msg{
+    color: red;
+}
+
+#books-label .detial_text_label{
+    font-size: 18px;
+}
+
+#books-label .block-box {
+    text-align: center;
+    padding-left:14px;
+}
+
+#books-label #designer_options_picture ul {
+    margin: 0px;
+    padding: 0px;
+    display:block;
+}
+#books-label #designer_options_picture ul li {
+    float:left;
+    cursor:pointer;
+}
+
+#books-label #designer_options_font {
+    float:left;
+}
+
+#books-label .colour-selector{
+    float:left;
+}
+
+#books-label #designer_options_font li table tr td {
+    font-size:25px;
+    cursor:pointer;
+}
+
+.fixed_preview {
+    background-color: #FFFFFF;
+    border: 2px solid #EFEFEF;
+    margin: 0 auto 0 -2px;
+    overflow: hidden;
+    padding: 0px 15px;
+    position: fixed;
+    top: 0;
+    width: 770px;
+    -moz-box-shadow:    inset 0 0 10px #EFEFEF;
+    -webkit-box-shadow: inset 0 0 10px #EFEFEF;
+    box-shadow:         inset 0 0 10px #EFEFEF;
+}
+.designer-options{
+    height: 350px;
+    margin-top: 194px;
+    overflow-y: scroll;
+    -moz-box-shadow:    inset 0 0 10px #EFEFEF;
+    -webkit-box-shadow: inset 0 0 10px #EFEFEF;
+    box-shadow:         inset 0 0 10px #EFEFEF;
+}
+
+.split-lines{
+    font-size: 10px;
+}
+
+
