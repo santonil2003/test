@@ -32,7 +32,7 @@ while ($row = mysql_fetch_array($getPrice)) {
     <input type="hidden" name="background_colour" value="9" id="background_colour"/><!-- data_colour_id || colours = 9 and 10 -->
     <input type="hidden" name="font" value="3" id="font"/>
     <input type="hidden" name="font_colour" value="1" id="font_colour"/>
-    <!--<input type="hidden" name="split" value="1" id="split"/>-->
+    <input type="hidden" name="typedetail" value="0" id="typedetail"/>
     <input type="hidden" name="pic" value="1" id="pic"/>
     <input type="hidden" name="picon" value="1" id="picon"/>
     <!--<input type="hidden" name="text1" value="" id="text1"/>-->
