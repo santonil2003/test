@@ -52,7 +52,7 @@ if ($_SERVER['HTTP_HOST'] == "www.anne.com") {
     <input type="hidden" name="chosenLabel" value="1" id="chosenLabel"/>
     <input type="hidden" name="price" value="<?php echo $price; ?>" id="price"/>
     <input type="hidden" name="type" value="<?php echo $type; ?>" id="type"/>
-    <input type="hidden" name="quantdesc" value="60 Mini vinyl Labels for AU$ <?php echo $price; ?>" id="quantdesc"/>
+    <input type="hidden" name="quantdesc" value="60 Book Labels for AU$ <?php echo $price; ?>" id="quantdesc"/>
 
     <input type="hidden" name="submit" value="Submit" id=""/>
 
