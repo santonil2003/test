@@ -68,7 +68,7 @@ if ($_SERVER['HTTP_HOST'] == "www.anne.com") {
             <input type="hidden" name="chosenLabel" value="1" id="chosenLabel"/>
             <input type="hidden" name="price" value="<?php echo $price; ?>" id="price"/>
             <input type="hidden" name="type" value="<?php echo $type; ?>" id="type"/>
-            <input type="hidden" name="quantdesc" value="20 Dummy Dots for AU$ <?php echo $price;?>" id="quantdesc"/>
+            <input type="hidden" name="quantdesc" value="1 Dummy Dots for AU$ <?php echo $price;?>" id="quantdesc"/>
 
             <input type="hidden" name="submit" value="Submit"/>
 
@@ -96,7 +96,7 @@ if ($_SERVER['HTTP_HOST'] == "www.anne.com") {
                        
                         <p>
                             <strong>Initals :</strong> <input type="text" class="details_text_name" name="name"/> 
-                            <!--<strong>Line 2:</strong> <input type="text" class="details_text_phone" name="phone"/>-->
+                            <input type="hidden" class="details_text_phone" name="phone" value=""/>
                         </p>
                         <p class="error-msg"></p>
                     </div>
@@ -238,9 +238,9 @@ if ($_SERVER['HTTP_HOST'] == "www.anne.com") {
                         <select id='order_quantity'>
                             <?php
                             echo Helper::getExtraPriceOption($productId);
-                            echo "<option value='" . ($price * 1) . "' selected>20 Dummy Dots for AU$ " . $price . "</option>";
-                            echo "<option value='" . ($price * 2) . "'>40 Dummy Dots for AU$ " . ($price * 2) . "</option>";
-                            echo "<option value='" . ($price * 3) . "'>60 Dummy Dots for AU$ " . ($price * 3) . "</option>";
+                            echo "<option value='" . ($price * 1) . "' selected>1 Dummy Dots for AU$ " . $price . "</option>";
+                            echo "<option value='" . ($price * 2) . "'>2 Dummy Dots for AU$ " . ($price * 2) . "</option>";
+                            echo "<option value='" . ($price * 3) . "'>3 Dummy Dots for AU$ " . ($price * 3) . "</option>";
                             
                             ?>
                         </select>
