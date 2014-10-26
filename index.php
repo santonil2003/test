@@ -50,6 +50,14 @@ if(ns4)_d.write("<scr"+"ipt type=text/javascript src=js/mmenuns4.js><\/scr"+"ipt
 
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <table border="0" cellspacing="0" cellpadding="0" width="998" align="center">
 	<tr>
 		<td style="background-image: url('images/gen/header_home.gif'); width:998; height:239; " >
@@ -93,7 +101,11 @@ if(ns4)_d.write("<scr"+"ipt type=text/javascript src=js/mmenuns4.js><\/scr"+"ipt
 </td></tr>
 </table>
 <table border="0" cellspacing="0" cellpadding="0" align="center" width="998">
-
+	<tr>
+		<td>
+			<div class="fb-like-box" data-href="https://www.facebook.com/pages/Identikid/200451470001131" data-width="988px" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+		</td>
+	</tr>
 	<tr>
 		<td bgcolor="#ffffff"><img src="images/gen/spacer.gif" width="1" height="30" alt=""><br></td>
 	</tr>
