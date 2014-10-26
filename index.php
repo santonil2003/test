@@ -135,12 +135,12 @@
                             <span class="icon icon-google"></span>
                             <span class="share-count">+1</span>
                         </a>
-
-                        <!-- http://fancy.com/help/button -->
+                        
+                        <!-- 
                         <a target="_blank" href="http://www.thefancy.com/fancyit?ItemURL=http://www.identikid.com.au" class="share-fancy">
                             <span class="icon icon-fancy"></span>
                             <span class="share-title">Fancy</span>
-                        </a>
+                        </a>http://fancy.com/help/button -->
 
                     </div>
 
