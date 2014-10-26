@@ -1,0 +1,6 @@
+function r(data) {
+    console.log(data);
+}
+function reload() {
+    location.replace(document.URL);
+}

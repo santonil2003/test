@@ -1,0 +1,36 @@
+#main{
+    width:960px;
+    margin: 0 auto;
+}
+
+.navigation{
+    border-bottom: 1px solid #eee !important;
+    margin-bottom: 8px;
+}
+
+/* FLASH MSG CSS*/
+.notification-message {
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #999;
+    padding: 5px 5px 5px 10px;
+    margin:10px 0px;
+}
+
+.notification-error {
+    color: black;
+    background-color: rosybrown;
+}
+
+.notification-success {
+    color: black;
+    background-color: greenyellow;
+}
+
+.notification-warning {
+    color: black;
+    background-color: #CF0;
+}
+.notification-message span.notificaion-hide {
+    cursor: pointer;
+}

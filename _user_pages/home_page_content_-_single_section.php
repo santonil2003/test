@@ -1,4 +1,3 @@
-<H3 align=center><FONT size=2 face=Verdana><FONT size=4></FONT>&nbsp;</H3>
 <DIV id=banner-fade>
 <UL class=bjqs>
 <LI>
