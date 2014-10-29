@@ -101,6 +101,7 @@
         </table>
 
         <table border="0" cellspacing="0" cellpadding="0" align="center" width="998" bgcolor="#ffffff">
+            <?php if(1==2):?>
             <tr>
                 <td align="center" valign="middle">
                     <div class="social-sharing is-large" data-permalink="http://www.jqueryscript.net" style="margin-top: 8px;">
@@ -146,6 +147,7 @@
 
                 </td>
             </tr>
+        <?php endif;?>
             <tr><td>
                     <? include("_user_pages/home_page_content_-_single_section.php"); ?>
                 </td></tr>
