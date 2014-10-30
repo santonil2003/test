@@ -50,9 +50,12 @@
     <script type="text/javascript" src="js/menu_data.js"></script>
     <script type="text/javascript" src="js/ienoscript.js"></script>	
 
+    <script type="text/javascript">var switchTo5x=true;</script>
+    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+    <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
 
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/social-buttons.css">
+    <!--<link rel="stylesheet" href="css/social-buttons.css">-->
     <body>
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
@@ -210,7 +213,12 @@
                 <td colspan="3"><img src="images/gen/home_text_foot.gif" alt="" width="998" height="79" border="0"><br></td>
             </tr>
         </table>
-        <script src="js/social-buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "6d78669b-9bf7-4da9-96d9-562be04e90fe", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+        <script>
+            var options={ "publisher": "6d78669b-9bf7-4da9-96d9-562be04e90fe", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "googleplus", "pinterest"]}};
+            var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+        </script>
+        <!--<script src="js/social-buttons.js"></script>-->
         <script type="text/javascript">
 
             var _gaq = _gaq || [];
