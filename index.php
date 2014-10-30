@@ -198,21 +198,8 @@
             </tr>
         </table>
 
-        <table border="0" cellspacing="0" cellpadding="0" align="center" width="998">
-            <tr>
-                <td colspan="3"><img src="images/gen/home_text_top.gif" alt="" width="998" height="164" border="0"><br></td>
-            </tr>
-            <tr>
-                <td valign="bottom" background="images/gen/b_home_text_left.gif" width="209"><img src="images/gen/home_text_left.gif" width="209" height="617" alt=""></td>
-                <td width="568" bgcolor="#8bc63f" class="white">
-                    <? include("_user_pages/home_page_content_-_footer_keywords.php"); ?>	
-                </td>
-                <td valign="bottom" background="images/gen/b_home_text_right.gif" width="221"><img src="images/gen/home_text_right.gif" width="221" height="617" alt=""></td>
-            </tr>	
-            <tr>
-                <td colspan="3"><img src="images/gen/home_text_foot.gif" alt="" width="998" height="79" border="0"><br></td>
-            </tr>
-        </table>
+         <? include("_user_pages/home_page_content_-_footer_keywords.php"); ?>  
+       
         <script type="text/javascript">stLight.options({publisher: "6d78669b-9bf7-4da9-96d9-562be04e90fe", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
         <script>
             var options={ "publisher": "6d78669b-9bf7-4da9-96d9-562be04e90fe", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "googleplus", "pinterest"]}};

@@ -1,1 +1,0 @@
-<DIV style="BACKGROUND-COLOR: #8bc63f"><FONT style="BACKGROUND-COLOR: #ffffff" color=#ffffff></FONT>&nbsp;</DIV>
