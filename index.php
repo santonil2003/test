@@ -28,6 +28,10 @@
         <!-- Include the basic styles -->
         <link type="text/css" rel="Stylesheet" href="bjqs.css" />
 
+        <!--[if IE]>
+        <link rel="Stylesheet" type="text/css" href="css/ie.css" />
+<![endif]-->
+
         <script type="text/javascript">
             jQuery(document).ready(function($) {
                 $('#banner-fade').bjqs({
@@ -197,6 +201,12 @@
                 </td>
             </tr>
         </table>
+        
+        <!--<div id="chat-btn">chat</div>
+            <div id="chat" style="display:none;">
+                <iframe>
+                </iframe>
+            </div>-->
 
          <? include("_user_pages/home_page_content_-_footer_keywords.php"); ?>  
        
