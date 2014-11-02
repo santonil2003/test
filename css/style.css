@@ -202,3 +202,14 @@ A.clicklink:visited:hover { color:#2c2c27; text-decoration:underline;}
 
 }
 
+#sthoverbuttons{
+    top:0 !important;
+}
+
+#chat-btn{
+    position: fixed;
+    z-index: 100;
+    border: red solid 1px;
+    bottom: 0;
+    right: 0;
+}
