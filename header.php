@@ -58,6 +58,11 @@ $breadcrumb = false;
         <base href="http://<?php echo $_SERVER['HTTP_HOST']; ?>" />
         <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE"> 
 
+         <script type="text/javascript">var switchTo5x = true;</script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
+
+
         <script src="js/AC_OETags.js" language="javascript"></script>
         <script language="JavaScript" type="text/javascript">
             <!--

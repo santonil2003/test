@@ -1,7 +1,3 @@
-    <script type="text/javascript">var switchTo5x=true;</script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
-
             <!--[if IE]>
         <link rel="Stylesheet" type="text/css" href="css/ie.css" />
 <![endif]-->
@@ -233,8 +229,3 @@ if(isset($db))$db->closeDb();
 include("footer.php"); 
 //end footer
 ?>
-<script type="text/javascript">stLight.options({publisher: "6d78669b-9bf7-4da9-96d9-562be04e90fe", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-<script>
-var options={ "publisher": "6d78669b-9bf7-4da9-96d9-562be04e90fe", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "googleplus", "pinterest"]}};
-var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
-</script>
