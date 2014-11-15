@@ -1,13 +1,12 @@
 <H2 align=center><A href="%22/BAGS%22"><IMG border=0 src="/admin/%22/images/bg/BACK.gif%22" width=0 height=0 HEIGHT: 162px; 40px?></A></H2>
-<H2 align=center><FONT size=6>X L&nbsp;</FONT>&nbsp;DRAWSTRING KINDY/ LAUNDRY BAGS</H2>
-<P align=center>$39.00 </P>
-<P align=center>100% COTTON. XTRA LARGE HIGH QUALITY BAGS, Great for clothing storage and bedding for kindy......<FONT color=#505050>&nbsp;</FONT></P>
-<P align=center><FONT color=#505050>FITS ALL YOUR BEDDING FOR DAYCARE ( Pillow will fit inside bag) </FONT></P>
-<P align=center><FONT color=#505050><STRONG>FOR LIBRARY SIZE BAG CHOOSE SMALL DRAWSTRING </STRONG></FONT></P>
-<P align=center>LAUNDRY, &nbsp;SPORTS&nbsp;,WEEKENDER AND DAYCARE&nbsp;OR EVEN HAVE A&nbsp;SUMMER AND WINTER ONE FOR PACKING AWAY CLOTHES NOT IN USE.&nbsp;</P>
-<P align=center>THESE HANDY XL &nbsp;COTTON BAGS ARE GREAT FOR EVERYDAY USE, AND REALLY MAKE A&nbsp;CHILD FEEL SPECIAL.</P>
-<P align=center>GENEROUSLY SIZED FOR BEDDING/LAUNDRY USE 60 X 80CM. FULLY WASHABLE.</P>
-<P align=center>&nbsp;ALLOW 3-5 DAYS FOR DISPATCH</P>
+<H2 align=center><FONT size=6>X L&nbsp;</FONT>&nbsp;DRAWSTRING KINDY LINEN/ LAUNDRY BAGS&nbsp;&nbsp; $39.00 </H2>
+<P align=center><STRONG>100% COTTON</STRONG>. XTRA LARGE HIGH QUALITY BAGS, Great for clothing storage and bedding for kindy......<FONT color=#505050>&nbsp;</FONT></P>
+<P align=center><FONT size=2><FONT color=#505050>FITS ALL YOUR BEDDING FOR DAYCARE ( Pillow will fit inside bag) </FONT><FONT color=#505050><STRONG>FOR LIBRARY SIZE BAG CHOOSE SMALL DRAWSTRING </STRONG></FONT></FONT></P>
+<P align=center><FONT size=2>LAUNDRY, &nbsp;SPORTS&nbsp;,WEEKENDER AND DAYCARE&nbsp;OR EVEN HAVE A&nbsp;SUMMER AND WINTER ONE FOR PACKING AWAY CLOTHES NOT IN USE.&nbsp;</FONT><FONT size=2>THESE HANDY XL &nbsp;COTTON BAGS ARE GREAT FOR EVERYDAY USE, AND REALLY MAKE A&nbsp;CHILD FEEL SPECIAL. CHOOSE PLAIN OR TEXT ONLY FOR OLDER KIDS /BOARDING SCHOOL OR RESIDENTIAL CARE.&nbsp;&nbsp;&nbsp; </FONT><FONT size=2>YOU CAN ADD NAME...AND OTHER DETAIL UP 2 TWO LINES OF TEXT ON PLAIN BAGS.</FONT>...<FONT size=2>CUSTOMISING AVAILABLE FOR REQUEST AND PRICING </FONT><A href="mailto:info@identikid.com.au">info@identikid.com.au</A></P>
+<P align=center>GENEROUSLY SIZED FOR BEDDING/LAUNDRY USE <STRONG>60 X 80CM</STRONG>. FULLY WASHABLE.</P>
+<P align=center>SEE SHIPPING TAB&nbsp;FOR CURRENT TURNAROUND TIMES </P>
+<P align=center><STRONG>ORDER FULLY&nbsp;PLAIN , PLAIN WITH PRINT NO PIC OR CHOOSE DESIGNS BELOW...</STRONG></P>
+<P align=center><STRONG>GO TO BOTTOM OF PAGE FOR PLAIN BAGS OR TEXT ONLY DESIGN to order...</STRONG></P>
 <P align=center>
 <TABLE border=0>
 <TBODY>
@@ -177,11 +176,36 @@
 <TD>
 <P align=center><IMG src="http://identikid.com.au/images/bg/HorseLDS.png" width=269 height=285></P></TD></TR>
 <TR>
-<TD>
+<TD rowSpan=2>
 <P align=center>DOLPHIN</P>
 <P align=center><A href="javascript: addtooderPOPUP(productId='58', 'name', productDesign='Dolphin',  picture='bg/DolphinLDS.png', qty=['1','2','3','4'], material=['Cotton'], colour=['Denim']);"><IMG border=0 src="/images/bg/n_add_to_order.gif" width=101 height=22></A></P></TD>
-<TD>
+<TD rowSpan=2>
 <P align=center><IMG src="http://identikid.com.au/images/bg/DolphinLDS.png" width=269 height=285></P></TD>
-<TD></TD>
-<TD></TD></TR></TBODY></TABLE></P>
+<TD rowSpan=2>
+<P align=center><A href="javascript: addtooderPOPUP(productId='58', 'name', productDesign='BLANK',  picture='NIL', qty=['1','2','3','4'], material=['Cotton'], colour=['Denim,Black,Hot pink, Natural, Red']);"></A>&nbsp;</P></TD>
+<TD>
+<P align=center><STRONG>PLAIN BAG ORDER HERE</STRONG></P>
+<P align=center>Order a Plain Bag, order HERE...</P>
+<P align=center>CHOOSE PAY BY PHONE AND WE WILL</P>
+<P align=center>SEND LINK TO PAY ON...FOR PLAIN BAGS ONLY</P>
+<P align=center><STRONG>Plain bag Ready to decorate $19.00</STRONG></P>
+<P align=center><A href="javascript: addtooderPOPUP(productId='58', 'NIL', productDesign='Plain Bag',  picture='NIL', qty=['1','2','3','4'], material=['Cotton'], colour=['Black', 'Denim', 'Red', 'Natural', 'Hot Pink']);"><IMG border=0 src="/images/bg/n_add_to_order.gif" width=101 height=22></A></P>
+<P align=center>For Volume pricing/discounts</P>
+<P align=center>email <A href="mailto:info@identikid.com.au">info@identikid.com.au</A></P></TD></TR>
+<TR>
+<TD>
+<P align=center><STRONG></STRONG>&nbsp;</P>
+<P align=center><STRONG><FONT size=4>PLAIN BAG </FONT></STRONG></P>
+<P align=center><STRONG><FONT size=4>WITH TEXT ONLY OPTION</FONT></STRONG></P>
+<P align=center><STRONG><FONT size=2>WHITE ONLY TEXT OR COLOURED TEXT</FONT></STRONG></P>
+<P align=center><STRONG><FONT size=2>ON REQUEST BY EMAIL&nbsp;$39.00</FONT></STRONG></P>
+<P align=center>Order a Bag with <STRONG>TEXT </STRONG>Only</P>
+<P align=center><FONT size=2>IE NAME FIRST LINE</FONT></P>
+<P align=center><FONT size=2>PLUS 2 OTHER LINES OF TXT. USE ONE&nbsp;</FONT></P>
+<P align=center><FONT size=2>LINE OR UP TO 3 IF NEEDED</FONT>.</P>
+<P align=center><FONT size=2>ALLOW UP TO 3 LINES OF TEXT</FONT></P>
+<P align=center><FONT size=2>0R 60 LETTEROR 6&nbsp;WORD LIMIT</FONT></P>
+<P align=center><FONT size=2>&nbsp;20 LETTERS APPROX PER LINE</FONT></P>
+<P align=center><A title="Text only Printed SL laundry bag" href="javascript: addtooderPOPUP(productId='58', 'name', msg=['Message','6', productDesign='text only bag',  picture='nil', qty=['1','2','3','4'], material=['Cotton'], colour=['Black', 'Denim', 'Red', 'Natural', 'Hot Pink'] ,]);"><IMG border=0 src="/images/bg/n_add_to_order.gif" width=101 height=22></A></P>
+<P align=center>&nbsp;</P></TD></TR></TBODY></TABLE></P>
 <H1 align=center>&nbsp;</H1>
