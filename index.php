@@ -1,5 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>Kids Labels, Name Labels, Clothing labels, Name tags, Personalised Gifts, Fundraising, Special Family Gifts.
             identikids High Quality name labels and Unique Gift ideas for the whole family will put a smile on anyones face.identikid will make any childs World more personal and make them feel very special. Let us help you get organised.</title>
@@ -18,6 +18,10 @@
         <meta name="author" content="pete">
         <META NAME="publisher" CONTENT="identiKid">
         <META NAME="copyright" CONTENT="Copyright �2008 - identiKid">
+
+         <script type="text/javascript">var switchTo5x = true;</script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
 
         <!-- Include the jQuery library (local or CDN) -->
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -53,10 +57,6 @@
     </script>
     <script type="text/javascript" src="js/menu_data.js"></script>
     <script type="text/javascript" src="js/ienoscript.js"></script>	
-
-    <script type="text/javascript">var switchTo5x=true;</script>
-    <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
 
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <!--<link rel="stylesheet" href="css/social-buttons.css">-->
@@ -210,11 +210,7 @@
 
          <? include("_user_pages/home_page_content_-_footer_keywords.php"); ?>  
        
-        <script type="text/javascript">stLight.options({publisher: "6d78669b-9bf7-4da9-96d9-562be04e90fe", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
-        <script>
-            var options={ "publisher": "6d78669b-9bf7-4da9-96d9-562be04e90fe", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["facebook", "twitter", "googleplus", "pinterest"]}};
-            var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
-        </script>
+    
         <!--<script src="js/social-buttons.js"></script>-->
         <script type="text/javascript">
 
@@ -233,6 +229,12 @@
             })();
 
         </script>
+
+        <script type="text/javascript">stLight.options({publisher: "6d78669b-9bf7-4da9-96d9-562be04e90fe", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+<script>
+    var options = {"publisher": "6d78669b-9bf7-4da9-96d9-562be04e90fe", "position": "left", "ad": {"visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": {"items": ["facebook", "twitter", "pinterest", "googleplus"]}};
+    var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>
 
     </body>
 </html>

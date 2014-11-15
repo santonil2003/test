@@ -47,6 +47,11 @@
 
 </script>
 
+<script>
+    var options = {"publisher": "6d78669b-9bf7-4da9-96d9-562be04e90fe", "position": "left", "ad": {"visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": {"items": ["facebook", "twitter", "pinterest", "googleplus"]}};
+    var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>
+
 </body>
 </html>
 			
