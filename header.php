@@ -40,8 +40,8 @@ $breadcrumb = false;
 
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
     <head>
         <title>Identikid - <?= $page_title ?></title>
         <meta name="keyword" content="Labels, name tags, fund raising, label, clothing tag, personal labels, iron-on tags, school bag,  easy fundraising, pencil, labels, vinyl label, allergy, gift cards, identikid">
