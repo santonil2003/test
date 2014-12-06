@@ -9,3 +9,6 @@
 /php-my-admin/*
 /log/*
 /.git.bak
+admin/webdb/*
+webdb/*
+nbproject/*
