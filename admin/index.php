@@ -10,7 +10,11 @@ require_once("required.php");
 require_once("./security.php");
 linkme();
 
-include_once 'request-handler.php';
+try {
+    include_once 'request-handler.php';
+} catch (Exception $exc) {
+    echo $exc->getTraceAsString();
+}
 
 
 if(isset($_GET['logout']))
