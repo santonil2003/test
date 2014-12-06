@@ -20,3 +20,5 @@ switch ($action) {
         break;
 }
 
+echo $res;
+
