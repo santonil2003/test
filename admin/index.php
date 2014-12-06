@@ -11,17 +11,6 @@ require_once("./security.php");
 linkme();
 
 
-
-
-try {
-    include_once 'request-handler.php';
-} catch (Exception $exc) {
-    echo $exc->getTraceAsString();
-    
-    
-}
-
-
 if(isset($_GET['logout']))
 {
 	unset($_SESSION['user_id']);
@@ -53,8 +42,11 @@ if(isset($_POST['user_name']) && isset($_POST['user_password']))
 
 }
 
-
-
+try {
+    include_once 'request-handler.php';
+} catch (Exception $exc) {
+    echo $exc->getTraceAsString();   
+}
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
