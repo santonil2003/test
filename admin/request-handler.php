@@ -21,5 +21,3 @@ switch ($action) {
         break;
 }
 
-echo SITE_BASE_PATH;
-
