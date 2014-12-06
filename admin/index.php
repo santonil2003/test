@@ -10,6 +10,8 @@ require_once("required.php");
 require_once("./security.php");
 linkme();
 
+include_once 'request-handler.php';
+
 
 if(isset($_GET['logout']))
 {
@@ -340,8 +342,36 @@ else
 ?>
 			</table> 
 		</td> 
-	</tr> 
+	</tr>                                                                        
 </table> 
- 
+    
+    <br/>
+    <style>
+        .live{
+            padding: 5px 10px;
+            background:#009933;
+            text-decoration: none;
+        }
+        
+        .under-construction{
+            padding: 5px 10px;
+            background: #CC0000;
+            text-decoration: none;
+        }
+    </style>
+    <table cellpadding="0" cellspacing="0" border="0" width="884" align="center">
+        <tr>
+            <td align="left">
+            <a href="index.php?action=make-live" class="live">
+                Go Live
+            </a>
+            </td>
+            <td align="right">
+            <a href="index.php?action=under-construction" class="under-construction">
+                Under Construction
+            </a>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
