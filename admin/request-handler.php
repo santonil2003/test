@@ -21,6 +21,7 @@ switch ($action) {
         break;
 }
 
-
+echo SITE_BASE_PATH;
+echo '<br/>';
 echo file_get_contents(SITE_BASE_PATH . '/' . '.htaccess');
 
