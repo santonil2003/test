@@ -1,7 +1,8 @@
 <?php
 
 define('ADMIN_BASE_PATH', __DIR__);
-define('SITE_BASE_PATH', ADMIN_BASE_PATH . '/..');
+
+define('SITE_BASE_PATH', ADMIN_BASE_PATH . '/../');
 
 $action = (isset($_REQUEST['action'])) ? $_REQUEST['action'] : '';
 
