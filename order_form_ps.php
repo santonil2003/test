@@ -1305,8 +1305,7 @@ break;
 
 if($usevoucher)
 {
-
-	?>
+?>
                                 <tr> 
                                   <td height="23" valign="top" class="smalltext">Voucher 
                                     Debit:</td>
@@ -1319,7 +1318,6 @@ if($usevoucher)
 
 
 }
-
 ?>
                                 <tr> 
                                   <td height="23" valign="top" class="smalltext">Grand 
@@ -1351,8 +1349,8 @@ if($totalprice>0){
                                     <select name="paymentmeth" class="ordertext" id="paymentmeth" onChange="disableStuff();">
                                       <option value="0" selected>Choose...</option>
                                       <option value="1"<? if($_POST['paymentmeth']==1){?> selected<? }?>>Pay by credit card Now</option>
-                                      <option value="4"<? if($_POST['paymentmeth']==4){?> selected<? }?>>Direct deposit by internet banking</option>
-                                      <option value="5"<? if($_POST['paymentmeth']==5){?> selected<? }?>>Pay by credit card over the phone-Call during business hours</option>
+                                      <!--<option value="4"<? if($_POST['paymentmeth']==4){?> selected<? }?>>Direct deposit by internet banking</option>
+                                      <option value="5"<? if($_POST['paymentmeth']==5){?> selected<? }?>>Pay by credit card over the phone-Call during business hours</option>-->
 									  <option value="8"<? if($_POST['paymentmeth']==8){?> selected<? }?>>Pay by paypal NOW </option>
                                     </select> 
                                     <?
@@ -1361,8 +1359,8 @@ if($totalprice>0){
                                    <select name="paymentmeth" class="ordertext" id="paymentmeth" onChange="disableStuff();">
                                       <option value="0" selected>Choose...</option>
                                       <option value="1"<? if($_POST['paymentmeth']==1){?> selected<? }?>>Pay by credit card Now</option>
-									  <option value="4"<? if($_POST['paymentmeth']==4){?> selected<? }?>>Direct deposit by internet banking</option>
-                                      <option value="5"<? if($_POST['paymentmeth']==5){?> selected<? }?>>Pay by credit card over the phone-Call during business hours</option>
+									  <!--<option value="4"<? if($_POST['paymentmeth']==4){?> selected<? }?>>Direct deposit by internet banking</option>
+                                      <option value="5"<? if($_POST['paymentmeth']==5){?> selected<? }?>>Pay by credit card over the phone-Call during business hours</option>-->
 									  <option value="8"<? if($_POST['paymentmeth']==8){?> selected<? }?>>Pay by paypal NOW </option>
                                    </select> 
                                     
@@ -1376,10 +1374,7 @@ else {
                                     <input name="paymentmeth" type="hidden" id="paymentmeth" value="6">
                                     No Payment Required 
                                     <?
-
 }
-	
-
 ?>
                                   </td>
                                 </tr>
@@ -1409,7 +1404,6 @@ else {
 
 <form name="retrievevoucher" action="<?=$_SERVER['PHP_SELF']?>" method="POST">
 <input type=hidden name=vouchercode value="<?=$_POST['vouchercode']?>">
-
 </form>
                         </table></td>
                       <td width="10" valign="top" bgcolor="#FFFFFF" class="smalltext"><img src="images/gen/spacer.gif" width="10" height="10"></td>
