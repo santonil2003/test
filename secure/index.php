@@ -154,7 +154,8 @@ function submitCCDetails()
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $query_data);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_TIMEOUT, 60);
-		curl_setopt($ch, CURLOPT_SSLVERSION, 3);
+		//curl_setopt($ch, CURLOPT_SSLVERSION, 3);
+                curl_setopt($ch, CURLOPT_SSLVERSION, 1); //CURL_SSLVERSION_TLSv1 
 		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0); 
 		$output = curl_exec($ch);
 		/*
