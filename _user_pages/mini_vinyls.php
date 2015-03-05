@@ -1,15 +1,15 @@
-<P align=right><A href="/Labels"><IMG style="WIDTH: 171px; HEIGHT: 43px" border=0 src="/images/bg/BACK.gif" width=0 height=0></A></P>
-<TABLE border=0 cellSpacing=0 cellPadding=0 width=890>
-<TBODY>
-<TR>
-<TD vAlign=top width=335 align=center><BR><IMG border=0 alt="identi Kid Products - Labels - Mini Vinyls" src="/temp/images/products/img_mini_vinyls.gif" width=335 height=366><BR></TD>
-<TD width=35>&nbsp;</TD>
-<TD vAlign=top width=520>
-<P align=center><FONT size=4><STRONG>MINI VINYLS&nbsp;&nbsp; </STRONG></FONT></P>
-<P>&nbsp;</P>
-<P align=left>Our range of mini vinyl labels are the same great quality as large vinyls only smaller for those smaller 'hard to label' items. </P>
-<P align=left>These small vinyl labels are very popular as childrens pencil labels also. You can use them to label any items or stationery your kids take to school. 
-<P align=left><STRONG>They are also microwave and dishwasher safe and UV protected. </STRONG>
-<P align=left>The size of this mini-vinyl label allows for a picture &amp; name, but no phone number. Name on first line. Surname on bottom line
-<P align=left><STRONG>Pk 60 for $23.00 AUD. PRICING FOR OTHER CURRENCIES DISPLAYED ON PAGE WHEN ORDERING</STRONG></P>
-<P align=left><A href="Products/Labels/Mini_Vinyls/Add_To_Order"><IMG border=0 alt="identi Kid Products - Order Now" src="/temp/images/nav/n_order_now.gif" width=90 height=22></A> </P></TD></TR></TBODY></TABLE>
+<p align="right"><a href="/Labels"><img width="0" height="0" style="width: 171px; height: 43px;" src="/images/bg/BACK.gif" border="0"></a></p>
+<table width="890" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="335" align="center" valign="top"><br><img width="335" height="366" alt="identi Kid Products - Labels - Mini Vinyls" src="/temp/images/products/img_mini_vinyls.gif" border="0"><br></td>
+<td width="35">&nbsp;</td>
+<td width="520" valign="top">
+<p align="center"><font size="4"><strong>MINI VINYLS&nbsp;&nbsp; </strong></font></p>
+<p>&nbsp;</p>
+<p align="left">Our range of mini vinyl labels are the same great quality as large vinyls only smaller for those smaller 'hard to label' items. </p>
+<p align="left">These small vinyl labels are very popular as childrens pencil labels also. You can use them to label any items or stationery your kids take to school. 
+<p align="left"><strong>They are also microwave and dishwasher safe and UV protected. </strong>
+<p align="left">The size of this mini-vinyl label allows for a picture &amp; name, but no phone number. Name on first line. Surname on bottom line
+<p align="left"><strong><br></strong></p>
+<p align="left"><a href="Products/Labels/Mini_Vinyls/Add_To_Order"><img width="90" height="22" alt="identi Kid Products - Order Now" src="/temp/images/nav/n_order_now.gif" border="0"></a> </p></td></tr></tbody></table>
