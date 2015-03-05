@@ -1353,7 +1353,7 @@ if($totalprice>0){
                                       <option value="5"<? if($_POST['paymentmeth']==5){?> selected<? }?>>Pay by credit card over the phone-Call during business hours</option>-->
 									  <option value="8"<? if($_POST['paymentmeth']==8){?> selected<? }?>>Pay by paypal NOW </option>
                                     </select> 
-        <span style="font-size: 10px;"><i>Note:you can pay by paypal with a credit card . No paypal account required.</i></span>
+        <br/><span style="font-size: 10px;"><i>Note:you can pay by paypal with a credit card . No paypal account required.</i></span>
                                     <?
 	}else{
 		?>
