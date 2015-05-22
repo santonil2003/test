@@ -1,4 +1,7 @@
 <?php 
+/**
+ * git pull
+ */
 $path = direname(__DIR__); 
 
 chdir($path);
