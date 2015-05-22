@@ -13,3 +13,4 @@
 admin/webdb/*
 webdb/*
 nbproject/*
+/db/
