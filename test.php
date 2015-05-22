@@ -1,5 +1,7 @@
 <?php 
+$path = __DIR__; 
+chdir($path);
 
-phpinfo();
-
-?>
+shell_exec("git stash");
+echo shell_exec("git pull origin master");
+shell_exec("git stash pop");
