@@ -1,3 +1,13 @@
+<table width="100%" >
+    <tr align="center" >
+        <td align="center" >
+            <iframe src="/_designer/starter_pack.php" height="680" width="100%" frameBorder="0" id="iframe-vinyls-mini"></iframe>
+        </td>
+    </tr>
+</table>
+<?php 
+$flashMode = false;
+if($flashMode): ?>
 <table width="100%" ><tr align="center" ><td align="center" >
 
 <script language="JavaScript" type="text/javascript">
@@ -29,3 +39,4 @@ if (hasReqestedVersion) {
 </script>
 
 </td></tr></table>
+<?php endif;?>
