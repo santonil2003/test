@@ -56,8 +56,8 @@ while ($row = mysql_fetch_array($getPrice)) {
 
 
 
-    <div id="designer_container">
-        <div class="fixed_preview">
+    <div id="designer_container" style="width:960px;">
+        <div class="fixed_preview" style="width:930px;">
             <div id="designer_preview_text">
                 Format will be improved prior to Print.
                 This is just a idea of how the label font,colours and pic look.
@@ -81,9 +81,9 @@ while ($row = mysql_fetch_array($getPrice)) {
                 </p>
                 <p>
                     <div class="line-1">
-                        <strong>Line 1:</strong> <input type="text" class="details_text_name" name="text1"/>
+                        <strong>Line 1:</strong> <input type="text" class="details_text_name" name="text1" maxlength="25"/>
                         <span class="split-lines" style="display:none;"><input type="checkbox" name="split" value="1" id="split"/> Split into 2 lines</span>
-                        <strong>Line 2:</strong> <input type="text" class="details_text_phone line-2" name="text2"/></div>
+                        <strong>Line 2:</strong> <input type="text" class="details_text_phone line-2" name="text2" maxlength="25"/></div>
                 </p>
                 <p class="error-msg"></p>
             </div>
