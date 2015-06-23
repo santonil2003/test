@@ -29,11 +29,13 @@ strong{display:block;clear:both;}
 #starter-pack .font_colour_white{width:20px;height:20px;background:#ffffff;display:inline-block;}
 
 #starter-pack #designer_options_picture ul li{
-    width:60px;
-    height:60px;
+    width:40px;
+    height:40px;
     border:solid 2px #666;
     padding:1px;
     margin:2px;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
 }
 
 #starter-pack .preview_image{
