@@ -120,6 +120,7 @@ if(strpos($ver,'Chrome') || strpos($ver,'Firefox')){ ?>
            var temp_phone = '';
            
            $(".details_checkbox_phone").click(function(){
+               
                if($(this).prop("checked")){
                    $(".preview_phone").show();
                    $('.details_text_phone').val(temp_phone);
@@ -136,7 +137,7 @@ if(strpos($ver,'Chrome') || strpos($ver,'Firefox')){ ?>
                    $('.details_text_phone').val('');
                    _phone = '';
                    if(_font==3){
-                         $('.preview_text').css('top','10px');
+                         $('.preview_text').css('top','20px');
                         }else{
                             $('.preview_text').css('top','20px');
                         }

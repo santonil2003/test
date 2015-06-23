@@ -14,7 +14,15 @@ strong{display:block;clear:both;}
     background-repeat: no-repeat;
 }
 #starter-pack .preview_phone{position:absolute;display:block;width:260px;text-align:center;font-size:18px;padding:0 0 0 10px;line-height:1;margin-top:10px;}
-#starter-pack .preview_text{position:absolute;display:block;width:260px;text-align:center;font-size:26px;padding:23px 0 0 10px;line-height:1;}
+#starter-pack .preview_text{
+    display: block;
+    font-size: 25px;
+    line-height: 1;
+    padding: 25px 0 0 10px;
+    position: absolute;
+    text-align: center;
+    width: 260px;
+}
 
 #starter-pack #designer_options_picture ul li{
     width:32px;
