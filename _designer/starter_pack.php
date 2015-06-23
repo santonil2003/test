@@ -636,7 +636,7 @@ document.getElementsByTagName('form')[0].submit();
                             if($fontFile!='3'){
                                 echo "<li class='".$fontFile."' style='font-family:".$fontName.";'>Ginger Meggs</li>";
                             }else{
-                                echo "<li class='".$fontFile."' style='font-family:".$fontName.";line-height:0.5;'>Ginger Meggs</li>";
+                                echo "<li class='".$fontFile."' style='font-family:".$fontName.";'>Ginger Meggs</li>";
                             }
                             
                             
@@ -755,7 +755,7 @@ document.getElementsByTagName('form')[0].submit();
                     
                         foreach( $identitags as $ref => $picture ){
                             
-                            echo "<li class='".$ref."' style='background:url(http://identikid.com.au/".$picture.") no-repeat;width:75px;height:75px;border:solid 1px #ddd;'></li>";
+                            echo "<li class='".$ref."' style='background:url(http://identikid.com.au/".$picture.") no-repeat;width:50px;height:50px;background-size:45px 45px;border:solid 1px #ddd;'></li>";
                             
                         }
                     
