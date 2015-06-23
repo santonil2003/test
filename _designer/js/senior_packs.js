@@ -8,6 +8,8 @@ function myTrim(x) {
 
 var white_images_folder_path = 'bwl2';
 var black_images_folder_path = 'bwl';
+var pink_images_folder_path = 'pink';
+var blue_images_folder_path = 'blue';
 var line1 = "";
 var line2 = "";
 var pic = '1';
@@ -17,9 +19,9 @@ var split = false;
 imgfol = black_images_folder_path;
 
 
-$('document').ready(function() {
+$('document').ready(function () {
 
-    $('#designer_options_font ol li').click(function() {
+    $('#designer_options_font ol li').click(function () {
         $('#designer_options_font ol li').removeClass('selected');
         font = myTrim($(this).attr('class'));
         $('#font').val(font);
@@ -32,7 +34,7 @@ $('document').ready(function() {
 
     /* update text on key up*/
 
-    $('.details_text_name').keydown(function(event) {
+    $('.details_text_name').keydown(function (event) {
         if (event.keyCode == 32) {
             //$('p.error-msg').html('Space not allowed!');
             // event.preventDefault();
@@ -41,7 +43,7 @@ $('document').ready(function() {
         }
     });
 
-    $('.details_text_name').keyup(function() {
+    $('.details_text_name').keyup(function () {
         line1 = $(this).val();
 
         $('p.error-msg').html('');
@@ -60,7 +62,7 @@ $('document').ready(function() {
 
 
     /// line 2 keyp
-    $('.details_text_phone').keyup(function() {
+    $('.details_text_phone').keyup(function () {
 
 
         line2 = $(this).val();
@@ -80,7 +82,7 @@ $('document').ready(function() {
     });
 
 
-    $('#order_quantity').change(function() {
+    $('#order_quantity').change(function () {
         //$('#quantdesc').val($(this).val());
         $('#quantdesc').val($(this).find(":selected").text());
         var price = $(this).val();
@@ -93,18 +95,18 @@ $('document').ready(function() {
         $('#pic').val(pic);
     }
 
-    $("#designer_options_picture ul li").click(function() {
+    $("#designer_options_picture ul li").click(function () {
         pic = $(this).attr('class');
         update_preview_image(pic, imgfol);
     });
 
     // line 2 check box
-    $('.details_checkbox_phone').click(function() {
+    $('.details_checkbox_phone').click(function () {
         ischecked = $('.details_checkbox_phone').is(':checked');
         if (ischecked) {
             $('.line-2').attr('disabled', false);
-            $('#split').attr('disabled','disabled');
-            $('#split').attr('title','Split not allowed');
+            $('#split').attr('disabled', 'disabled');
+            $('#split').attr('title', 'Split not allowed');
             $('.line-2').attr('title', '');
 
             $('.preview_phone').show().val(line2);
@@ -114,8 +116,8 @@ $('document').ready(function() {
         } else {
             $('.line-2').attr('disabled', 'disabled');
             $('.line-2').attr('title', 'Click Line 2 check box to add Line 2');
-            $('#split').attr('title','');
-            $('#split').attr('disabled',false);
+            $('#split').attr('title', '');
+            $('#split').attr('disabled', false);
             line2 = $('.preview_phone').val();
 
             if (split) {
@@ -128,7 +130,7 @@ $('document').ready(function() {
     });
 
     // pic check box
-    $('.details_checkbox_pic').click(function() {
+    $('.details_checkbox_pic').click(function () {
         ischecked = $('.details_checkbox_pic').is(':checked');
         if (ischecked) {
             $('#pic').val(pic);
@@ -144,18 +146,35 @@ $('document').ready(function() {
     // make font selected
     $('li.3').trigger('click');
 
-    $('#senior-packs input').click(function() {
+    $('#senior-packs input').click(function () {
         $(this).removeClass('required-field');
     });
 
-    $('#senior-packs #designer_options_font_colour span').click(function() {
-        var font_colour = '#'+$(this).attr('data');
-        $('#senior-packs .preview_text').css('color',font_colour);
+    $('#senior-packs #designer_options_font_colour span').click(function () {
+        var font_colour = '#' + $(this).attr('data');
+        $('#senior-packs .preview_text, #senior-packs .preview_phone').css('color', font_colour);
+
+        switch (font_colour) {
+            case '#029ae1':// blue:
+                imgfol = blue_images_folder_path;
+                break;
+            case '#ff007c': //pink
+                imgfol = pink_images_folder_path;
+                break;
+            case '#000000':
+            default:
+                imgfol = black_images_folder_path;
+                break;
+        }
+
+        var curpic = $('#pic').val();
+        update_preview_image(curpic, imgfol);
+
     });
 
 
 
-    $('#senior-packs').submit(function(e) {
+    $('#senior-packs').submit(function (e) {
         $('.details_text_name').removeClass('required-field');
         $('.details_text_phone').removeClass('required-field');
 
