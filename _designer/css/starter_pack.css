@@ -82,8 +82,12 @@ strong{display:block;clear:both;}
     width:275px;
 }
 #starter-pack #designer_options_font li {
-    font-size:28px;
+    font-size:20px;
     cursor: pointer;
+    line-height: 20px;
+    padding: 4px !important;
+    margin-bottom: 4px;
+    
 }
 
 #starter-pack #designer_options_font_colour{
@@ -165,7 +169,7 @@ button{
 }
 
 #starter-pack .designer-options{
-    height: 800px;
+    height: 950px;
     margin-top: 140px;
     overflow-y: scroll;
 
