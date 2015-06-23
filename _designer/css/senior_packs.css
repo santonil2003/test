@@ -33,11 +33,13 @@
 #senior-packs .font_colour_white{background:#ffffff;}
 
 #senior-packs #designer_options_picture ul li{
-    width:60px;
-    height:60px;
+    width:40px;
+    height:40px;
     border:solid 2px #666;
     padding:1px;
     margin:2px;
+    background-size:38px 38px;
+    background-repeat: no-repeat;
 }
 
 #senior-packs .preview_image{
@@ -175,6 +177,11 @@
     margin: 0 auto 25px;
     overflow: hidden;
     width: 275px;
+
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* future proofing */
+    -khtml-border-radius: 10px; /* for old Konqueror browsers */
 }
 
 #senior-packs .individual_preivew .preview_text{
@@ -204,6 +211,8 @@
 #senior-packs .individual_preivew .preview_image{
     right: 0px;
     top: 10px;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
 }
 
 #senior-packs #designer_preview_text{
@@ -266,7 +275,7 @@
     box-shadow:         inset 0 0 10px #EFEFEF;
 }
 .designer-options{
-    height: 350px;
+    height: 500px;
     margin-top: 98px;
     overflow-y: scroll;
     -moz-box-shadow:    inset 0 0 10px #EFEFEF;
