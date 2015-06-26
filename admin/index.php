@@ -240,13 +240,14 @@ if(check_access(7, true))
 										</tr>
 	<?
 }
-
+if(1==2){
 ?>
 										<tr class="maintext"> 
 											<td bgcolor="#F3F3F3"><font color="#000000" size="2"><strong><a href="http://www.identikid.com.au/logos.htm" class="type1">identiKid Logos</a></strong></font></td> 
 											<td><font color="#000000" size="2">identiKid Logos</font></td> 
 										</tr>
 <?
+}
 if(check_access(12, true))
 {
 	?>
