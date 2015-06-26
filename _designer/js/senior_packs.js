@@ -7,9 +7,9 @@ function myTrim(x) {
 }
 
 var white_images_folder_path = 'bwl2';
-var black_images_folder_path = 'bwl';
-var pink_images_folder_path = 'pink';
-var blue_images_folder_path = 'blue';
+var black_images_folder_path = 'black_60';
+var pink_images_folder_path = 'pink_60';
+var blue_images_folder_path = 'blue_60';
 var line1 = "";
 var line2 = "";
 var pic = '1';
