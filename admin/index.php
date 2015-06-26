@@ -96,7 +96,7 @@ if(check_access(1, true))
 	</tr> 
 	<?
 }
-if(check_access(9, true))
+if(check_access(9, true) && (1==2))
 {
 	?>
 	<tr class="maintext"> 
@@ -108,7 +108,7 @@ if(check_access(9, true))
 	<?
 }
 
-if(check_access(9, true))
+if(check_access(9, true) && (1==2))
 {
 	?>
 	<tr class="maintext"> 
@@ -118,7 +118,7 @@ if(check_access(9, true))
 	<?
 }
 
-if(check_access(10, true))
+if(check_access(10, true) && (1==2))
 {
 	?>
 	<tr class="maintext"> 
@@ -190,7 +190,7 @@ if(check_access(4, true))
 	<?
 }
 
-if(check_access(11, true))
+if(check_access(11, true) && (1==2))
 {
 	?>
 	<tr class="maintext"> 
