@@ -113,7 +113,7 @@ while ($row = mysql_fetch_array($getPrice)) {
                             if (in_array($ref, $skip)) {
                                 continue;
                             }
-                            echo "<li class='" . $ref . "' rel='" . $picture . "' style='background-image:url(http://identikid.com.au/_designer/" . str_replace("bw", "bwl", $picture) . ")'></li>";
+                            echo "<li class='" . $ref . "' rel='" . $picture . "' style='background-image:url(http://identikid.com.au/_designer/" . str_replace("bw", "black_38", $picture) . ")'></li>";
                         }
 
                         echo "</ul>";
