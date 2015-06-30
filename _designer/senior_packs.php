@@ -59,9 +59,7 @@ while ($row = mysql_fetch_array($getPrice)) {
     <div id="designer_container">
         <div class="fixed_preview">
             <div id="designer_preview_text">
-                Format will be improved prior to Print.
-                This is just a idea of how the label font,colours and pic look.
-                Actual label size L 50mm H 9mm
+                Format will always be improved prior to print if needed. This display font, pic and colour choice for view. Label pack consists of 120 irons, shoe labels and pencil/toiletry labels perfect for stick on labelling stuff.
             </div>
 
             <div id="designer_preview" class="individual_preivew">
