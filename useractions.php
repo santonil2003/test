@@ -746,21 +746,24 @@ function sendHtmlEmail($text, $html, $from, $to, $title, $attach=false){
     $mail->addAddress($to);
     //Set the subject line
     $mail->Subject = $title;
-   
+    $mail->msgHTML($html);
     //Replace the plain text body with one created manually
     $mail->AltBody = $text;
     if(!empty($attach)){
         $attachments = split(',', $attach);
         foreach($attachments as $attachment) {
-               
-               $mail->addAttachment($attachment,basename($attachment));
+               $mail->addAttachment($attachment);
 	}
     } 
     
-     $mail->msgHTML($html+ ' <hr>'+$attachments);
+   
     if (!$mail->send()) {
         l($mail->ErrorInfo,'email-sending-log.txt');
     }
+    
+    echo '<pre>';
+    print_r($attach);
+    exit;
 
 }
 
