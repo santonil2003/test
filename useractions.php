@@ -8,6 +8,13 @@ $useractions = "loaded";
 	require_once("_common/_database.php");
 	require_once("_common/_constants.php");
 	include_once("email/htmlMimeMail.php");
+        
+        require_once("emailClass/PHPMailer.php");
+	require_once("emailClass/SMTP.php");
+	include_once("emailClass/POP3.php");
+        
+        
+        
 	linkme();
 /* }else{
 	include_once("common_db.php");
@@ -723,8 +730,38 @@ function l($data, $file = 'log.html') {
         mail('web.developer.sanil@gmail.com', 'log', $exc->getTraceAsString());
     }
 }
-
 function sendHtmlEmail($text, $html, $from, $to, $title, $attach=false){
+    $mail = new PHPMailer;
+    $mail->isSMTP();
+    $mail->SMTPDebug = 0;
+    $mail->Host = 'smtp.gmail.com';
+    $mail->Port = 587;
+    $mail->SMTPSecure = 'tls';
+    $mail->SMTPAuth = true;
+    $mail->Username = "info@identikid.com.au";
+    $mail->Password = "flappers66";
+    $mail->setFrom($from, 'Identikid');
+    $mail->addReplyTo($from, 'Identikid Info');
+    //Set who the message is to be sent to
+    $mail->addAddress($to);
+    //Set the subject line
+    $mail->Subject = $title;
+    $mail->msgHTML($html);
+    //Replace the plain text body with one created manually
+    $mail->AltBody = $text;
+    if(!empty($attach)){
+        $attachments = split(',', $attach);
+        foreach($attachments as $attachment) {
+               $mail->addAttachment($attachment);
+	}
+    } 
+    if (!$mail->send()) {
+        l($mail->ErrorInfo,'email-sending-log.txt');
+    }
+
+}
+
+function sendHtmlEmail1($text, $html, $from, $to, $title, $attach=false){
 	global $includeabove;
 	if(!empty($to)){
 		if($include){
