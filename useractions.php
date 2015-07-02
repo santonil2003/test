@@ -760,11 +760,6 @@ function sendHtmlEmail($text, $html, $from, $to, $title, $attach=false){
     if (!$mail->send()) {
         l($mail->ErrorInfo,'email-sending-log.txt');
     }
-    
-    echo '<pre>';
-    print_r($attach);
-    exit;
-
 }
 
 function sendHtmlEmail1($text, $html, $from, $to, $title, $attach=false){
