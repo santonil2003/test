@@ -1,4 +1,6 @@
 <table width="100%" ><tr align="center" ><td align="center" >
+<iframe src="/_designer/senior_packs.php" height="800" width="100%" frameBorder="0"></iframe>
+<?php if(1==2) : ?>
 
 <script language="JavaScript" type="text/javascript">
 <!--
@@ -26,5 +28,5 @@ if (hasReqestedVersion) {
 }
 // -->
 </script>
-
+<?php endif;?>
 </td></tr></table>

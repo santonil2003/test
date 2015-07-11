@@ -157,13 +157,16 @@ $('document').ready(function () {
         switch (font_colour) {
             case '#029ae1':// blue:
                 imgfol = blue_images_folder_path;
+                $('#colour').val('Baby Blue');
                 break;
             case '#ff007c': //pink
                 imgfol = pink_images_folder_path;
+                $('#colour').val('Hot Pink');
                 break;
             case '#000000':
             default:
                 imgfol = black_images_folder_path;
+                $('#colour').val('Black');
                 break;
         }
 
