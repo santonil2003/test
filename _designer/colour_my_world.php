@@ -632,7 +632,7 @@ padding:0;
                             if(in_array($ref, $skip)){
                                 continue;
                             }
-                            echo "<li class='".$ref."' rel='".$picture."' style='background-image:url(http://identikid.com.au/_designer/".str_replace("bw","bwl",$picture).")'></li>";
+                            echo "<li class='".$ref."' rel='".$picture."'><img width='40' src='http://identikid.com.au/_designer/".str_replace("bw","bwl",$picture)."'/></li>";
                             
                         }
                     
@@ -644,6 +644,9 @@ padding:0;
             </div>
             
             <div class="box">
+                <table width="90%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <Td>
             <div id="designer_options_font">
                 
                 <strong>Font:</strong>
@@ -666,25 +669,22 @@ padding:0;
                     
                         foreach( $fonts as $fontName=>$fontFile ){
                             if($fontFile!='3'){
-                                echo "<li class='".$fontFile."' style='font-family:".$fontName.";'>Ginger Meggs</li>";
+                                echo "<li class='".$fontFile."' style='font-family:".$fontName."; padding:5px;margin:5px;'>Ginger Meggs</li>";
                             }else{
-                                echo "<li class='".$fontFile."' style='font-family:".$fontName.";line-height:0.5;'>Ginger Meggs</li>";
+                                echo "<li class='".$fontFile."' style='font-family:".$fontName.";line-height:0.5;padding:5px;margin:5px;'>Ginger Meggs</li>";
                             }
-                            
-                            
                         }
                     
                     echo "</ol>";
                 ?>
-                
             </div>
-            
+                        </td><td>
             <div id="designer_options_font_colour">
                 <strong>Font Colour:</strong>
                 <span class="font_colour_black"></span>
                 <span class="font_colour_white"></span>
             </div>
-            
+                        </td><td>
             <div id="designer_options_colours">
                 <strong>Choose a colour set:</strong>
                 <?php
@@ -727,7 +727,9 @@ padding:0;
                     echo "</ul>";
                     ?>
             </div>
-            
+            </td>
+                    </tr>
+                </table>
             
             </div>
             
@@ -818,7 +820,7 @@ padding:0;
                     
                         foreach( $identitags as $ref => $picture ){
                             
-                            echo "<li class='".$ref."' style='background:url(http://identikid.com.au/".$picture.") no-repeat;width:75px;height:75px;border:solid 1px #ddd;'></li>";
+                            echo "<li class='".$ref."' style='width:40px;height:40px;border:solid 1px #ddd;'><img src='http://identikid.com.au/".$picture."' width='40'/></li>";
                             
                         }
                     
@@ -828,6 +830,7 @@ padding:0;
                 ?>
             </div>
 </div>
+                </br> </br>
             <div class='box' style='text-align:center;'>
             <div id="designer_options_reverse_print">
                   <input type='checkbox' id="reverse_print" /> Text printed on reverse of tag? (add AU$4.00 to order)
