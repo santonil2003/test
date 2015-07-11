@@ -4,7 +4,7 @@ require_once '../common_db.php';
 require_once 'include.php';
 linkme();
 require_once 'helper.php';
-$productId = 43;// for mini
+$productId = 43; // for mini
 ?>  
 <script>
     var _colourArray = new Array();
@@ -32,10 +32,10 @@ while ($row = mysql_fetch_array($getPrice)) {
     <input type="hidden" name="background_colour" value="9" id="background_colour"/>
     <input type="hidden" name="font" value="3" id="font"/>
     <input type="hidden" name="font_colour" value="1" id="font_colour"/>
-    <!--<input type="hidden" name="split" value="1" id="split"/>-->
+    <!--<input type="hidden" name="splitIt" value="1" id="splitIt"/>-->
     <input type="hidden" name="pic" value="1" id="pic"/>
     <input type="hidden" name="picon" value="1" id="picon"/>
-    <!--<input type="hidden" name="text1" value="" id="text1"/>-->
+    <input type="hidden" name="colour" value="Black" id="colour"/>
 
 
     <input type="hidden" name="identitag_code" value="" id="identitag_code"/>
@@ -45,14 +45,9 @@ while ($row = mysql_fetch_array($getPrice)) {
     <input type="hidden" name="chosenLabel" value="1" id="chosenLabel"/>
     <input type="hidden" name="price" value="<?php echo $price; ?>" id="price"/>
     <input type="hidden" name="type" value="<?php echo $type; ?>" id="type"/>
-    <input type="hidden" name="quantdesc" value="60 Mini vinyl Labels for AU$ <?php echo $price;?>" id="quantdesc"/>
+    <input type="hidden" name="quantdesc" value="1 Seniors Pack for AU$ <?php echo $price; ?>" id="quantdesc"/>
 
     <input type="hidden" name="submit" value="Submit" id=""/>
-
-
-
-
-
 
 
 
@@ -74,14 +69,14 @@ while ($row = mysql_fetch_array($getPrice)) {
 
                 <p><strong>Include: </strong>
                     <span><input type="checkbox" checked="checked" name="details_checkbox_name" class="details_checkbox_name" disabled="disabled"/> Line 1</span>
-                    <span><input type="checkbox" checked="checked" name="details_checkbox_phone" class="details_checkbox_phone" title="Check to enable line 2"/> Line 2</span>
+                    <span><input type="checkbox" checked="checked" name="split" value="1" class="details_checkbox_phone" title="Check to enable line 2"/> Line 2</span>
                     <span><input type="checkbox" checked="checked" name="details_checkbox_pic" class="details_checkbox_pic" title="Check to enable picture"/> Pic</span>
                 </p>
                 <p>
-                    <div class="line-1">
-                        <strong>Line 1:</strong> <input type="text" class="details_text_name" name="text1"/>
-                        <span class="split-lines" style="display:none;"><input type="checkbox" name="split" value="1" id="split"/> Split into 2 lines</span>
-                        <strong>Line 2:</strong> <input type="text" class="details_text_phone line-2" name="text2"/></div>
+                <div class="line-1">
+                    <strong>Line 1:</strong> <input type="text" class="details_text_name" name="text1"/>
+                    <!--<span class="split-lines" style="display:none;"><input type="checkbox" name="split" value="1" id="split"/> Split into 2 lines</span>-->
+                    <strong>Line 2:</strong> <input type="text" class="details_text_phone line-2" name="text2"/></div>
                 </p>
                 <p class="error-msg"></p>
             </div>
@@ -136,18 +131,13 @@ while ($row = mysql_fetch_array($getPrice)) {
                         }
                     }
 
+                    $avilableFonts = array(1, 3);
                     echo "<ol>";
-
                     foreach ($fonts as $fontName => $fontFile) {
-                        if ($fontFile == '3') {
-                            echo "<li class='" . $fontFile . "' style='font-size:24px;font-family:" . $fontName . ";' data='" . $fontName . "'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle'>Ginger Meggs</td></tr></table></li>";
-                        } else if ($fontFile == '2') {
-                            echo "<li class='" . $fontFile . "' style='font-family:" . $fontName . ";' data='" . $fontName . "'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle'>Ginger Meggs</td></tr></table></li>";
-                        } else if ($fontFile == '5') {
-                            echo "<li class='" . $fontFile . "' style='font-family:" . $fontName . ";' data='" . $fontName . "'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle' style='font-weight:bold;'>Ginger Meggs</td></tr></table></li>";
-                        } else {
-                            echo "<li class='" . $fontFile . "' style='font-family:" . $fontName . ";' data='" . $fontName . "'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle'>Ginger Meggs</td></tr></table></li>";
+                        if (!in_array($fontFile, $avilableFonts)) {
+                            continue;
                         }
+                        echo "<li class='" . $fontFile . "' style='font-family:" . $fontName . ";' data='" . $fontName . "'><table border='0' height='60' width='100%'><tr><td align='center' valign='middle'>Ginger Meggs</td></tr></table></li>";
                     }
 
                     echo "</ol>";
@@ -172,9 +162,9 @@ while ($row = mysql_fetch_array($getPrice)) {
                 <select id='order_quantity'>
                     <?php
                     echo Helper::getExtraPriceOption($productId);
-                    echo "<option value='$price' selected='selected'>1 Senior packs for AU$ " . $price . "</option>";
-                    echo "<option value='".($price * 2)."'>2 Senior packs for AU$ " . ($price * 2) . "</option>";
-                    echo "<option value='" . ($price * 3) . "'>3 Senior packs for AU$ " . ($price * 3) . "</option>";
+                    echo "<option value='$price' selected='selected'>1 Seniors Pack for AU$ " . $price . "</option>";
+                    echo "<option value='" . ($price * 2) . "'>2 Seniors Pack for AU$ " . ($price * 2) . "</option>";
+                    echo "<option value='" . ($price * 3) . "'>3 Seniors Pack for AU$ " . ($price * 3) . "</option>";
                     ?>
                 </select>
             </div>
