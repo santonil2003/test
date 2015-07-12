@@ -149,3 +149,22 @@
  #semi-permanet-irons-ons .designer-options{
     margin-top: 25px !important;
 }
+
+
+/* starter-pack */
+#starter-pack #designer_container .fixed_preview {
+    border: none !important;
+}
+
+#starter-pack .designer-options{
+    margin-top: 14px !important;
+}
+
+/* senior-packs*/
+#senior-packs #designer_container .fixed_preview {
+    border: none !important;
+}
+
+#senior-packs .designer-options{
+    margin-top: 14px !important;
+}
