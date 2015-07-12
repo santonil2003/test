@@ -1,7 +1,7 @@
 <table width="100%">
     <tr align="center" >
         <td align="center" >
-            <iframe src="/_designer/starter_pack.php" height="1200" width="100%" frameBorder="0" id="iframe-vinyls-mini"></iframe>
+            <iframe src="/_designer/starter_pack.php" height="1400" width="100%" frameBorder="0" id="iframe-vinyls-mini"></iframe>
         </td>
     </tr>
 </table>
