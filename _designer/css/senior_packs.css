@@ -172,11 +172,12 @@
 
 
 #senior-packs .individual_preivew {
-    border: 1px solid #000000;
+    background-image: url("../images/round-corner.png");
+    /*border: 1px solid #000000;*/
     height: 80px;
     margin: 0 auto 25px;
     overflow: hidden;
-    width: 275px;
+    width: 280px;
 
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -192,7 +193,8 @@
     position: absolute;
     text-align: center;
     top: 15px;
-    width: 216px;
+    width: 210px;
+    overflow: hidden;
     left: 0px;
 }
 
@@ -204,7 +206,8 @@
     position: absolute;
     text-align: center;
     top: 42px;
-    width: 215px;
+    width: 210px;
+    overflow: hidden;
     left: 0px;
 }
 
