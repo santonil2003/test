@@ -645,7 +645,7 @@ document.getElementsByTagName('form')[0].submit();
                             if(in_array($ref, $skip)){
                                 continue;
                             }
-                            echo "<li class='".$ref."' rel='".$picture."' style='background-image:url(http://identikid.com.au/_designer/".str_replace("bw","bwl",$picture).")'></li>";
+                            echo "<li class='".$ref."' rel='".$picture."'><img src='http://identikid.com.au/_designer/".str_replace("bw","bwl",$picture)."' width='40'/></li>";
                             
                         }
                     
