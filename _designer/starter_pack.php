@@ -601,7 +601,7 @@ document.getElementsByTagName('form')[0].submit();
                             if(in_array($ref, $skip)){
                                 continue;
                             }
-                            echo "<li class='".$ref."' rel='".$picture."' style='background-image:url(http://identikid.com.au/_designer/".str_replace("bw","bwl",$picture).")'></li>";
+                            echo "<li class='".$ref."' rel='".$picture."'><img src='http://identikid.com.au/_designer/".str_replace("bw","bwl",$picture)."' width='40'/></li>";
                             
                         }
                     
@@ -756,7 +756,7 @@ document.getElementsByTagName('form')[0].submit();
                     
                         foreach( $identitags as $ref => $picture ){
                             
-                            echo "<li class='".$ref."' style='background:url(http://identikid.com.au/".$picture.") no-repeat;width:50px;height:50px;background-size:45px 45px;border:solid 1px #ddd;'></li>";
+                            echo "<li class='".$ref."' style='width:40px;height:40px;border:solid 1px #ddd;'><img src='http://identikid.com.au/".$picture."' width='40'/></li>";
                             
                         }
                     
