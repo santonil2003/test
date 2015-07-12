@@ -160,6 +160,10 @@
     margin-top: 14px !important;
 }
 
+#starter-pack #designer_preview_text {
+    width:180px;
+}
+
 /* senior-packs*/
 #senior-packs #designer_container .fixed_preview {
     border: none !important;
