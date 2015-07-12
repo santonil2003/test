@@ -601,7 +601,7 @@ document.getElementsByTagName('form')[0].submit();
                             if(in_array($ref, $skip)){
                                 continue;
                             }
-                            echo "<li class='".$ref."' rel='".$picture."'><img src='http://identikid.com.au/_designer/".str_replace("bw","bwl",$picture)."' width='40'/></li>";
+                            echo "<li class='".$ref."'><img src='http://identikid.com.au/_designer/".str_replace("bw","bwl",$picture)."' width='40'/></li>";
                             
                         }
                     
@@ -613,6 +613,9 @@ document.getElementsByTagName('form')[0].submit();
             </div>
             
             <div class="box">
+            <table width="100%" border="0">
+            <tr>
+            <td>
             <div id="designer_options_font">
                 
                 <strong>Font:</strong>
@@ -635,9 +638,9 @@ document.getElementsByTagName('form')[0].submit();
                     
                         foreach( $fonts as $fontName=>$fontFile ){
                             if($fontFile!='3'){
-                                echo "<li class='".$fontFile."' style='font-family:".$fontName.";'>Ginger Meggs</li>";
+                                echo "<li class='".$fontFile."' style='font-family:".$fontName.";clear:both; width:160px;'>Ginger Meggs</li>";
                             }else{
-                                echo "<li class='".$fontFile."' style='font-family:".$fontName.";'>Ginger Meggs</li>";
+                                echo "<li class='".$fontFile."' style='font-family:".$fontName.";clear:both;width:160px;'>Ginger Meggs</li>";
                             }
                             
                             
@@ -647,12 +650,16 @@ document.getElementsByTagName('form')[0].submit();
                 ?>
                 
             </div>
+            </td>
+            <td>
             
             <div id="designer_options_font_colour">
                 <strong>Font Colour:</strong>
                 <span class="font_colour_black"></span>
                 <span class="font_colour_white"></span>
             </div>
+            </td>
+            <td>
             
             <div id="designer_options_colours">
                 <strong>Choose a colour set:</strong>
@@ -678,25 +685,28 @@ document.getElementsByTagName('form')[0].submit();
                             $colourName = str_replace(" ", "_", $colourName);
                             
                             echo "<li class='".$colourName."'><div style='float:left;'>";
+
                             if($colourName=='Individual'){
                                 echo "Individual (choose a colour by clicking on it)";
                             }else{
                                echo str_replace("_"," ",$colourName); 
                             }
                                     $id = uniqid();
-                                    echo "</div><input style='clear:both;float:left' type='radio' name='colour[]' value='".$colourName."' class='".$colourName."' id='$id'>";
+                                    echo "</div></br><div style='overflow:hidden;'><input style='clear:both;float:left' type='radio' name='colour[]' value='".$colourName."' class='".$colourName."' id='$id'>";
                                 $colours = explode(",",$colourSet);
                                 foreach($colours as $colour){
                                     echo "<span style='background:".$colour."' class='".$colour."' onclick=checkradio('$id')></span>";
                                 }
-                            echo "</li>";
+                            echo "</div></li>";
                             
                         }
                     
                     echo "</ul>";
                     ?>
             </div>
-            
+            </td>
+            </tr>
+            </table>
             
             </div>
             
