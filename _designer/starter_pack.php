@@ -548,8 +548,8 @@ document.getElementsByTagName('form')[0].submit();
 </style>
 <![endif]-->
         <div id="starter-pack">
-        <div id="designer_container" style="width:960px;">
-             <div class="fixed_preview" style="width:930px;">
+        <div id="designer_container">
+             <div class="fixed_preview">
             <div id="designer_preview_text">
                 Format will be improved prior to Print.
                 This is just a idea of how the label font, colours and pic look together.
