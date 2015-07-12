@@ -193,7 +193,8 @@
     position: absolute;
     text-align: center;
     top: 15px;
-    width: 216px;
+    width: 210px;
+    overflow: hidden;
     left: 0px;
 }
 
@@ -205,7 +206,8 @@
     position: absolute;
     text-align: center;
     top: 42px;
-    width: 215px;
+    width: 210px;
+    overflow: hidden;
     left: 0px;
 }
 
