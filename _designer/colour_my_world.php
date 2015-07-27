@@ -669,11 +669,11 @@ padding:0;
                     
                         foreach( $fonts as $fontName=>$fontFile ){
                             if($fontFile!='3'){
-                                echo "<li class='".$fontFile."' style='font-family:".$fontName."; padding:5px;margin:5px; font-size: 28px;'>
-									<table width='180'><tr valign='middle'><td align='center'>Ginger Meggs</td></tr></table></li>";
+                                echo "<li class='".$fontFile."' style='font-family:".$fontName."; padding:5px;margin:5px;'>
+									<table width='200'><tr valign='middle'><td align='center' style='font-size:28px;'>Ginger Meggs</td></tr></table></li>";
                             }else{
-    echo "<li class='".$fontFile."' style='font-family:".$fontName.";padding:4px 0 4px; margin:0px; font-size:22px;'>
-		<table width='180'><tr valign='middle'><td align='center'>Ginger Meggs.</td></tr></table></li>";
+    echo "<li class='".$fontFile."' style='font-family:".$fontName.";padding:4px 0 4px; margin:0px;'>
+		<table width='200'><tr valign='middle'><td align='center' style='font-size:23px;'>Ginger Meggs.</td></tr></table></li>";
                             }
                         }
                     
