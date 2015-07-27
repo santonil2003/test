@@ -669,9 +669,10 @@ padding:0;
                     
                         foreach( $fonts as $fontName=>$fontFile ){
                             if($fontFile!='3'){
-                                echo "<li class='".$fontFile."' style='font-family:".$fontName."; padding:5px;margin:5px;'>Ginger Meggs</li>";
+                                echo "<li class='".$fontFile."' style='font-family:".$fontName."; padding:5px;margin:5px;'>
+									<table width='180'><tr valign='middle'><td align='center'>Ginger Meggs</td></tr></table></li>";
                             }else{
-                                echo "<li class='".$fontFile."' style='font-family:".$fontName.";line-height:0.5;padding:5px;margin:5px;'>Ginger Meggs</li>";
+                                echo "<li class='".$fontFile."' style='font-family:".$fontName.";line-height:0.5;padding:5px;margin:5px;'><table width='180'><tr valign='middle'><td align='center'>Ginger Meggs</td></tr></table></li>";
                             }
                         }
                     
