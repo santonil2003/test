@@ -89,7 +89,7 @@ $productId = 21;// for mini
         $(".1","#designer_options_font").css('padding','5px 0 5px 0');
         $(".4","#designer_options_font").css('padding','5px 0 5px 0');
         
-        $(".3","#designer_options_font").css('padding-bottom','20px');
+     //   $(".3","#designer_options_font").css('padding-bottom','20px');
         
         
              
@@ -672,7 +672,8 @@ padding:0;
                                 echo "<li class='".$fontFile."' style='font-family:".$fontName."; padding:5px;margin:5px;'>
 									<table width='180'><tr valign='middle'><td align='center'>Ginger Meggs</td></tr></table></li>";
                             }else{
-                                echo "<li class='".$fontFile."' style='font-family:".$fontName.";line-height:0.5;padding:5px;margin:5px;'><table width='180'><tr valign='middle'><td align='center'>Ginger Meggs</td></tr></table></li>";
+    echo "<li class='".$fontFile."' style='font-family:".$fontName.";padding:4px 0 4px; margin:0px; font-size:20px;'>
+		<table width='180'><tr valign='middle'><td align='center'>Ginger Meggs.</td></tr></table></li>";
                             }
                         }
                     
