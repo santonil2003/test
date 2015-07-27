@@ -673,7 +673,7 @@ padding:0;
 									<table width='200'><tr valign='middle'><td align='center' style='font-size:28px;'>Ginger Meggs</td></tr></table></li>";
                             }else{
     echo "<li class='".$fontFile."' style='font-family:".$fontName.";padding:4px 0 4px; margin:0px;'>
-		<table width='200'><tr valign='middle'><td align='center' style='font-size:23px;'>Ginger Meggs.</td></tr></table></li>";
+		<table width='200'><tr valign='middle'><td align='center' style='font-size:23px;'>Ginger Meggs</td></tr></table></li>";
                             }
                         }
                     
