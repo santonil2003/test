@@ -141,7 +141,7 @@ if(check_access(2, true))
 {
 	?>
 	<tr class="maintext"> 
-		<td bgcolor="#F3F3F3"><font color="#000000" size="2"><strong><a href="index.php?download=1" class="type1">Download customer</a></strong></font></td> 
+		<td bgcolor="#F3F3F3"><font color="#000000" size="2"><strong><a href="index.php?download=1" class="type1">Download customer details</a></strong></font></td> 
 		<td><font color="#000000" size="2">calculate all commissions for a given period, or produce commission summary for individual</font> <font color="#000000" size="2">fundraisers </font></td> 
 	</tr> 
 	<?
