@@ -1,4 +1,13 @@
 <?PHP
+
+if(isset($_GET['download'])){
+	header("Content-Type: application/vnd.ms-excel; charset=UTF-8");
+	header("Content-Disposition: inline; filename=customer.xlsx");
+	header("Pragma: no-cache");
+	header("Expires: 0");
+	readfile("customer.xlsx");
+	exit;
+}
 session_start();
 error_reporting(E_ERROR | E_PARSE);
 /*
