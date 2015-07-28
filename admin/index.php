@@ -132,7 +132,7 @@ if(check_access(2, true))
 {
 	?>
 	<tr class="maintext"> 
-		<td bgcolor="#F3F3F3"><font color="#000000" size="2"><strong><a href="../devel/admin/fundraisers.php" class="type1">Fundraiser Commissions</a></strong></font></td> 
+		<td bgcolor="#F3F3F3"><font color="#000000" size="2"><strong><a href="../devel/admin/customer.xlsx" class="type1">Download customer</a></strong></font></td> 
 		<td><font color="#000000" size="2">calculate all commissions for a given period, or produce commission summary for individual</font> <font color="#000000" size="2">fundraisers </font></td> 
 	</tr> 
 	<?
