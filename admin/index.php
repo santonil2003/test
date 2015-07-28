@@ -10,6 +10,14 @@ require_once("required.php");
 require_once("./security.php");
 linkme();
 
+if(isset[$_GET['download']]){
+	header("Content-Type: application/vnd.ms-excel; charset=UTF-8");
+	header("Content-Disposition: inline; filename=customer.xlsx");
+	header("Pragma: no-cache");
+	header("Expires: 0");
+	readfile('customer.xlsx');
+	exit();
+}
 
 if(isset($_GET['logout']))
 {
@@ -132,7 +140,7 @@ if(check_access(2, true))
 {
 	?>
 	<tr class="maintext"> 
-		<td bgcolor="#F3F3F3"><font color="#000000" size="2"><strong><a href="../devel/admin/customer.xlsx" class="type1">Download customer</a></strong></font></td> 
+		<td bgcolor="#F3F3F3"><font color="#000000" size="2"><strong><a href="index.php?download=customer.xlsx" class="type1">Download customer</a></strong></font></td> 
 		<td><font color="#000000" size="2">calculate all commissions for a given period, or produce commission summary for individual</font> <font color="#000000" size="2">fundraisers </font></td> 
 	</tr> 
 	<?
