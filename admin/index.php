@@ -1,11 +1,20 @@
 <?PHP
 
 if(isset($_GET['download'])){
+	/*
 	header("Content-Type: application/vnd.ms-excel; charset=UTF-8");
 	header("Content-Disposition: inline; filename=customer.xlsx");
 	header("Pragma: no-cache");
 	header("Expires: 0");
 	readfile("customer.xlsx");
+	*/
+	$filename = "customer.xlsx";
+
+	header('Content-type: application/octet-stream');
+	header('Content-Disposition: attachment; filename="' . $filename . '"');
+	header('Content-Transfer-Encoding: binary');
+	header('Expires: 0');
+	header('Pragma: no-cache');
 	exit;
 }
 session_start();
