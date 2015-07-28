@@ -15,6 +15,7 @@ if(isset($_GET['download'])){
 	header('Content-Transfer-Encoding: binary');
 	header('Expires: 0');
 	header('Pragma: no-cache');
+	readfile($filename);
 	exit;
 }
 session_start();
