@@ -26,7 +26,7 @@ Class Helper {
         $html = '';
         
         foreach ($options as $option) {
-            $html.="<option value='" . $option['price'] . "'>" . $option['items_per_unit'] . " " . $option['productName'] . " for " . $currency['symbol'] . " " . $option['price'] . "</option>";
+            $html.="<option value='" . $option['price'] . "' type='".$productId."' gota='".$option['items_per_unit']."'>" . $option['items_per_unit'] . " " . $option['productName'] . " for " . $currency['symbol'] . " " . $option['price'] . "</option>";
         }
         
         return $html;

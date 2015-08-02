@@ -1,17 +1,10 @@
 <?php
-
-$dbhost='localhost';
-$dbuser='identiki';
-$dbpass='id4$cTe';
-$dbname='identikid';
-
-
-
-mysql_connect($dbhost,$dbuser,$dbpass);
-mysql_select_db($dbname);
-
-
-
+require_once '../common_db.php';
+require_once 'include.php';
+linkme();
+require_once 'helper.php';
+$productId = 22;// qty 5 zip tag
+$productId1 = 23; // qty 10 zip dots
 ?>
 
 
@@ -29,25 +22,17 @@ mysql_select_db($dbname);
                     }        
            ?>
            var _type = 22; //23 is 5 pack options
-           _price = '9';
-          
+          var _identiTAG = null;
+           var _quantity = $("#order_quantity option:selected").text();
+           var _price = $("#order_quantity").val();
            
-           
-            var _identiTAG = null;
-        
-           var _quantity = null;
-           
-         
            
            //init
          
            
           
            $("li","#designer_options_identitags").click(function(){
-              //$("#selected_identitag").val($(this).prop("class"));
-              //_identiTAG = $(this).prop("class");
               var img = $(this).prop("class");
-             // _identiTAG = img;
               $(".preview_image_set").prop("src","/_designer/images/ziptags/"+img.toLowerCase()+".png");
           
           if(img.toLowerCase()=='z7'){
@@ -65,50 +50,16 @@ mysql_select_db($dbname);
     });
            
           
-           
-           //Quantity
-        
-           $("#order_quantity").val('1');
-           _quantity = $(this).find(":selected").text();
-           
            $("#order_quantity").change(function(){
-                _quantity = $(this).find(":selected").text();
-                var multiply = $(this).find(":selected").val();
-                if( multiply=='1' ){
-                    _price = '9';
-                    _type = 22;
-                }else{
-                    _price = '10'; 
-                    _type = 23;
-                }
-                
+                _price = $(this).val();
+                _type = $('option:selected', this).attr('type');
+                _quantity = $("#order_quantity option:selected").text();
                 
            });
            
            $("#submit").click(function(){
                
-               
-             /* alert(  _type+"\n"+
-                      _price+"\n"+
-                      _bwImage+"\n"+
-                        _showName+"\n"+
-                        _showPhone+"\n"+
-                        _showImage+"\n"+
-                        _name+"\n"+
-                        _phone+"\n"+
-                        _font+"\n"+
-                        _fontColor+"\n"+
-                        _colorPack+"\n"+
-                        _label+"\n"+
-                        _iron_colour+"\n"+
-                        _identiTAG+"\n"+
-                        _reversePrint+"\n"+
-                        _quantity+"\n" ); */
-        if(_type!=null && 
-                      _price!=null && 
-                      
-                        _identiTAG!=null && 
-                        _quantity!=null){
+        if(_type!=null &&  _price!=null &&  _identiTAG!=null && _quantity!=null){
 
 var f = document.createElement("form");
 f.setAttribute('method',"post");
@@ -462,18 +413,13 @@ padding:0;
 
             <div id="designer_options_quantity">
                 <strong>Quantity:</strong>
-                <?php
-                    //pull product quantity details here
-                    
-                    echo "<select id='order_quantity'>";
-                    
-                    
-                        echo "<option value='1'>3 for AU$9</option>";
-                        echo "<option value='2'>5 for AU$10</option>";
-                       
-                    
-                    echo "</select>";
-                ?>
+                <select id='order_quantity'>
+                            <?php
+                            echo Helper::getExtraPriceOption($productId);
+                            echo Helper::getExtraPriceOption($productId1);                            
+                            ?>
+                </select>
+      
             </div>
             
             
