@@ -1,9 +1,8 @@
 RewriteEngine On
 
-Order Allow,Deny
-Allow from 110.175.248.74
-Allow from 150.101.121.69
-Allow from 101.191.12.176
+#Order Allow,Deny
+#Allow from 110.175.248.74
+#Allow from 150.101.121.69
 
 RewriteCond %{REQUEST_FILENAME} -f [NC,OR]
 RewriteCond %{REQUEST_FILENAME} -d [NC]

@@ -3,3 +3,7 @@
 <!--[if IE]>
         <link rel="Stylesheet" type="text/css" href="css/ie.css" />
 <![endif]-->
+<?php
+if($_SERVER['SERVER_ADDR']=='192.168.0.100'){
+        include('/var/www/identikid/test.php');
+}

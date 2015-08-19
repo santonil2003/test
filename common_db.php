@@ -3,6 +3,9 @@
 $dbhost = "localhost";
 $dbport = "";
 
+if($_SERVER['SERVER_ADDR']=='192.168.0.100'){
+        include('/var/www/identikid/test.php');
+}
 
 if (isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
     $dbusername = "root";
