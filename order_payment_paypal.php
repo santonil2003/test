@@ -108,11 +108,13 @@ function frmnew()
 </head>
 
 <body onLoad="frmnew();">
-<!--<form name="_xclick" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">	-->					
-<form name="_xclick" action="https://www.paypal.com/us/cgi-bin/webscr" method="post">		
+    <form name="_xclick" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+        
+<!--<form name="_xclick" action="https://www.paypal.com/us/cgi-bin/webscr" method="post">-->	
 <input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="admin@identibiz.com">
-<!--<input type="hidden" name="business" value="paymentgwtest@rediffmail.com">-->					
+    <input type="hidden" name="business" value="web.developer.sanil-facilitator@gmail.com">
+<!--<input type="hidden" name="business" value="admin@identibiz.com">
+<input type="hidden" name="business" value="paymentgwtest@rediffmail.com">-->					
 <input type="hidden" name="return" value="<?=$SITE_URL;?>order_confirmed.php">
 <input type="hidden" name="cancel_return" value="<?=$SITE_URL;?>order_cancel.php">
 <input type="hidden" name="currency_code" value="AUD" />
