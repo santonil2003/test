@@ -1,0 +1,1 @@
+<P><IMG src="http://identikid.com.au/images/bg/DUMMY%20DOT%20WORD.gif"></P>
