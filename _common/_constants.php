@@ -18,8 +18,14 @@ define('DOC_NUM_PER_PAGE', 10);
 //file path constants
 define('TEMP_DIR', '');
 
+if($_SERVER['SERVER_ADDR']=='192.168.0.100'){
+         include('/var/www/identikid/test.php');
+}
+
 if (isset($_SERVER['SERVER_ADDR']) && $_SERVER['SERVER_ADDR'] == '127.0.0.1') {
-    define('SITE_DIR', '/var/www/identikid/' . TEMP_DIR);
+    if(!defined('SITE_DIR')){
+        define('SITE_DIR', '/var/www/identikid/' . TEMP_DIR);
+    }
     define('SITE_URL', '');
 } else {
     define('SITE_DIR', '/var/www/html/' . TEMP_DIR);
@@ -161,4 +167,3 @@ $_CURRENCIES = array("1" => array("desc" => "Australian Dollars", "currency" => 
 
 
 require_once(COMMON . "global.php");
-?>
