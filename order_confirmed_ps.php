@@ -115,7 +115,7 @@ include("header.php");
                                     <td colspan="2">
                                         <?php 
                                         $_GET['page'] = $_REQUEST['page'] = 481;
-                                        include 'content.php';
+                                        include 'content_only.php';
                                         ?>
                                         
                                     </td>
