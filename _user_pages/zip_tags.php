@@ -1,20 +1,20 @@
-<TABLE border=0 cellSpacing=0 cellPadding=0 width=890>
+<TABLE cellSpacing=0 cellPadding=0 width=890 border=0>
 <TBODY>
 <TR>
-<TD vAlign=top width=255 align=middle>
+<TD vAlign=top width=255 align=center>
 <P><IMG border=0 alt="identi Kid Products - Tags - Zip Tags" src="/temp/images/products/img_ziptags.gif" width=255 height=363></A><BR></P></TD>
 <TD width=35>&nbsp;</TD>
 <TD vAlign=top width=600>
 <P><FONT size=4><STRONG>ZIPTAGS </STRONG></FONT></P>
 <P>THESE ARE A MINI TAG FOR SMALLER BAGS/ZIPS ETC</P>
 <P>Available in packs of 3 or 5. Attach these cute PVC tags to your zippers. Great for clothing, pencil cases, keys and bags. *Comes with attachment. You can purchase zipidido dots to fit perfectly on the back of these, The dots&nbsp;are sold seperately on the&nbsp;zipidido dots page.&nbsp; </P>
-<P><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 tags&nbsp;FOR $9.00&nbsp; AUD</STRONG></P>
-<P><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 tags&nbsp;FOR $12.00 AUD</P>
+<P><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 tags&nbsp;FOR $9.00&nbsp; AUD</STRONG></P>
+<P><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 tags&nbsp;FOR $12.00 AUD</P>
 <H3 align=center><FONT size=3>PRICING FOR OTHER CURRENCIES DISPLAYED ON PAGE WHEN ORDERING</FONT></H3></STRONG>
-<P><STRONG>dots sold seperately (see zipidido dots)<BR></P></STRONG>
-<P><STRONG>Choose from the fun designs below:</STRONG> 
+<P><STRONG>dots sold seperately (see zipidido dots) team the up for all those hard to label items<BR></P></STRONG>
+<P><STRONG>Choose from the fun designs below:</STRONG>&nbsp; Click order now to order...
 <P>
-<TABLE border=0 cellSpacing=0 cellPadding=0>
+<TABLE cellSpacing=0 cellPadding=0 border=0>
 <TBODY>
 <TR>
 <TD><A href="images/products/prod_ziptags_a_big.gif" rel=lightbox><IMG border=0 alt="" src="/temp/images/products/prod_ziptags_a_sml.gif" width=49 height=85></A></TD>
@@ -29,7 +29,7 @@
 <TD><A href="images/products/prod_ziptags_f_big.gif" rel=lightbox><IMG border=0 alt="" src="/temp/images/products/prod_ziptags_f_sml.gif" width=46 height=85></A></TD>
 <TD><A href="images/products/prod_ziptags_f1_big.gif" rel=lightbox><IMG border=0 alt="" src="/temp/images/products/prod_ziptags_f1_sml.gif" width=51 height=85></A></TD>
 <TD><A href="images/products/prod_ziptags_g_big.gif" rel=lightbox><IMG border=0 alt="" src="/temp/images/products/prod_ziptags_g_sml.gif" width=59 height=85></A></TD></TR></TBODY></TABLE>
-<TABLE border=0 cellSpacing=0 cellPadding=0>
+<TABLE cellSpacing=0 cellPadding=0 border=0>
 <TBODY>
 <TR>
 <TD><A href="images/products/prod_ziptags_g1_big.gif" rel=lightbox><IMG border=0 alt="" src="/temp/images/products/prod_ziptags_g1_sml.gif" width=47 height=90></A></TD>
@@ -44,7 +44,7 @@
 <TD><A href="images/products/prod_ziptags_n_big.gif" rel=lightbox><IMG border=0 alt="" src="/temp/images/products/prod_ziptags_n_sml.gif" width=46 height=90></A></TD>
 <TD><A href="images/products/prod_ziptags_o_big.gif" rel=lightbox><IMG border=0 alt="" src="/temp/images/products/prod_ziptags_o_sml.gif" width=47 height=90></A></TD>
 <TD><A href="images/products/prod_ziptags_p_big.gif" rel=lightbox><IMG border=0 alt="" src="/temp/images/products/prod_ziptags_p_sml.gif" width=53 height=90></A></TD></TR></TBODY></TABLE>
-<TABLE border=0 cellSpacing=0 cellPadding=0>
+<TABLE cellSpacing=0 cellPadding=0 border=0>
 <TBODY>
 <TR>
 <TD><A href="images/products/prod_ziptags_q_big.gif" rel=lightbox><IMG border=0 alt="" src="/temp/images/products/prod_ziptags_q_sml.gif" width=52 height=84></A></TD>

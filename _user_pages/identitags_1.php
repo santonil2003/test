@@ -12,7 +12,7 @@
 <H3 align=center>$5.00&nbsp;EACH OR 2 FOR 9.00</H3>
 <H3 align=center>3 FOR $15.00 OR 4 FOR $18.00 AUD. </H3>
 <P align=center>Make schoolbags easy to find! Fantastic big, bold full colour bagtags. </P>
-<P align=center>Just thread through zip ring and go. Ideal for labelling or writing on. Made from ultra tough PVC for hard wear and tear. Blank backs to label or write on or we can Add A Name to the Back for an extra $4. Please add name on next page</P>
+<P align=center>Just thread through zip ring and go. Ideal for labelling or writing on. Made from ultra tough PVC for hard wear and tear. Blank backs to label or write on or we can <STRONG>Add A Name to the Back for an extra $4</STRONG>. Please add name on next page</P>
 <P align=center><A href="Products/Tags/IdentiTAGS/Add_To_Order"><IMG border=0 alt="identi Kid Products - Order Now" src="/temp/images/nav/n_order_now.gif" width=90 height=22></A> </P>
 <P align=center>&nbsp;</P></TD></TR></TBODY></TABLE></DIV>
 <P align=center>
