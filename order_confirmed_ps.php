@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 include("useractions.php");
 include("vieworderlist.php");
@@ -109,6 +109,16 @@ include("header.php");
                                   <td width="4%"><img src="images/gen/spacer.gif" width="25" height="10"></td>
                                   <td width="96%" class="maintext"><p>Your invoice 
                                       number is <strong><? echo 1000+$id;?>.</strong></p></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td colspan="2">
+                                        <?php 
+                                        $_GET['page'] = $_REQUEST['page'] = 481;
+                                        include 'content.php';
+                                        ?>
+                                        
+                                    </td>
                                 </tr>
                                 <tr> 
                                   <td width="4%"><img src="images/gen/spacer.gif" width="25" height="10"></td>
