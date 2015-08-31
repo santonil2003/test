@@ -120,20 +120,24 @@ include("header.php");
                                         
                                     </td>
                                 </tr>
+                                
+                                <!--
                                 <tr> 
                                   <td width="4%"><img src="images/gen/spacer.gif" width="25" height="10"></td>
                                   <td width="96%" class="maintext"><p><Br />Your order will be dispatched from NSW within 5 business days from date of payment received. Allow regular postage transit time to your state/area with Australia Post unless using the express option.</strong></p></td>
                                 </tr>
-
+-->
 
 
                               </table></td>
                           </tr>
+                          <!--
                           <tr> 
                             <td><img src="images/gen/spacer.gif" width="1" height="10"></td>
                           </tr>
                           <tr> 
-                            <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <td>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                 <tr> 
                                   <td width="4%"><img src="images/gen/spacer.gif" width="25" height="10"></td>
                                   <td width="96%" class="maintext"><table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -248,10 +252,13 @@ include("header.php");
                                       </tr>
                                     </table></td>
                                 </tr>
-                              </table></td>
+                                </table>
+                                  
+                            </td>
                             <td>&nbsp;</td>
                             <td>&nbsp;</td>
                           </tr>
+                          -->
                           <tr valign="top" colspan="3"> 
                             <td align="right">&nbsp;</td>
                           </tr>
