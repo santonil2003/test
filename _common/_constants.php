@@ -147,7 +147,8 @@ $_EPAY['url'] = "https://earth.australis.net.au/epay/servlet/CardClearingServlet
 // design
 //$_EPAY['SC_Merch'] = "identikid-test";
 // live merchant ID
-$_EPAY['SC_Merch'] = "identikid";
+//$_EPAY['SC_Merch'] = "identikid";
+$_EPAY['SC_Merch'] = "BBL3335577";
 
 $_EPAY['SC_Order'] = "ls" . time();
 $_EPAY['ACTION'] = "S";
