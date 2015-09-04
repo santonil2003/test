@@ -168,6 +168,7 @@
             <tr>
                 <td bgcolor="#ffffff"><img src="images/gen/spacer.gif" width="1" height="30" alt=""><br></td>
             </tr>
+            <!--
             <tr>
                 <td><img src="images/gen/footer.gif" alt="" width="998" height="51" border="0" usemap="#map"><br>
                     <map name="map">
@@ -179,7 +180,7 @@
                     </map>
 
                 </td>
-            </tr>
+            </tr>-->
             <tr>
                 <td align="center" bgcolor="#5b7fbb">
                     <img src="images/gen/spacer.gif" width="1" height="4" alt=""><br>

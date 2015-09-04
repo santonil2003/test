@@ -6,6 +6,7 @@
 	</tr>
 </table>
 <table border="0" cellspacing="0" cellpadding="0" align="center" width="998">
+    <!--
 	<tr>
 		<td><img src="images/gen/footer.gif" alt="" width="998" height="51" border="0" usemap="#map"><br>
 		<map name="map">
@@ -15,7 +16,7 @@
 <area shape="rect" coords="754,0,852,51" href="Shipping" />
 </map>
 </td>
-	</tr>
+	</tr>-->
 	<tr>
 		<td align="center" bgcolor="#5b7fbb">
 		<img src="images/gen/spacer.gif" width="1" height="4" alt=""><br>
