@@ -23,8 +23,8 @@
 			<table border="0" cellspacing="0" cellpadding="0" width="690">
 				<tr>
 					<td class="footer">
-					<a href="index.php">Home</a>&nbsp;|&nbsp;<a href="Products">Products</a>&nbsp;|&nbsp;<a href="Home/Order_Form">Order Form</a>&nbsp;|&nbsp;<a href="Home/How_To_Order">How to Order</a>&nbsp;|&nbsp;<a href="my_order.php">My Order</a>&nbsp;|&nbsp;<a href="Home/Fonts_&_Pics">Font &amp; Pics</a>&nbsp;|&nbsp;<a href="Fundraisers">Fundraisers</a>&nbsp;|&nbsp;<a href="Home/About_Us">About Us</a><br>
-					<a href="Contact_Us">Contact Us</a>&nbsp;|&nbsp;<a href="Home/Send_to_a_Friend">Send to a Friend</a>&nbsp;|&nbsp;<a href="Feedback">Feedback</a>&nbsp;|&nbsp;<a href="Home/Links">Links</a>&nbsp;|&nbsp;<a href="Home/Competition">Competition</a>&nbsp;|&nbsp;<a href="Home/Privacy_Policy">Privacy Policy</a>&nbsp;|&nbsp;<a href="Home/Site_Map">Sitemap</a><br>
+					<a href="index.php">Home</a>&nbsp;|&nbsp;<a href="Products">Products</a>&nbsp;|&nbsp;<a href="Home/Order_Form">Order Form</a>&nbsp;|&nbsp;<a href="my_order.php">My Order</a>&nbsp;|&nbsp;<a href="Home/Fonts_&_Pics">Font &amp; Pics</a>&nbsp;|&nbsp;<a href="Fundraisers">Fundraisers</a>&nbsp;<br>
+					<a href="Contact_Us">Contact Us</a>&nbsp;|&nbsp;<a href="Home/Send_to_a_Friend">Send to a Friend</a>&nbsp;|&nbsp;<a href="Feedback">Feedback</a>&nbsp;|&nbsp;<a href="Home/Links">Links</a>&nbsp;|&nbsp;<a href="Home/Competition">Competition</a>&nbsp;|&nbsp;<a href="Home/Privacy_Policy">Privacy Policy</a>&nbsp;<br>
 					<img src="images/gen/spacer.gif" width="1" height="5" alt=""><br>
 					</td>
 				</tr>
