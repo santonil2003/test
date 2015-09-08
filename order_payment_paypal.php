@@ -36,7 +36,7 @@ $postage_option = $_SESSION["post_option"];
 $postage = $_SESSION["postageamount"];
 
 if($id==false){
-	header("location:products_home.php");
+	header("location:index.php");
 	exit;
 }
 
