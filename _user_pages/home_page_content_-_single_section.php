@@ -11,6 +11,11 @@
 <TBODY>
 <TR>
 <TD colSpan=3>
+<P align=center><FONT size=5><A href="http://identikid.com.au/Christmas_Sacks"><IMG border=0 src="http://identikid.com.au/images/bg/santa-sacka-slider.png" width=740 height=406></A></FONT></P></TD></TR>
+<TR>
+<TD colSpan=3></TD></TR>
+<TR>
+<TD colSpan=3>
 <P align=center><FONT size=5>FAST TURNAROUND ON ORDERS PLACED ONLINE</FONT></P></TD></TR>
 <TR>
 <TD>
