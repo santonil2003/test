@@ -90,6 +90,17 @@ else if($_COOKIE["currency"]==2 || $_COOKIE['currency']==3 || $_COOKIE['currency
 }
 
 
+	$currencies = array("1" => array("desc" => "Australian Dollars", "currency" => "AU\$", "code" => "AUD"),
+											"2" => array("desc" => "United States Dollars", "currency" => "US\$", "code" => "USD"),
+											"3" => array("desc" => "Euros", "currency" => "EU\$", "code" => "EUR"),
+											"5" => array("desc" => "New Zealand", "currency" => "NZ\$", "code" => "NZD"),
+	);
+        
+$currency_code = isset($currencies[$_COOKIE["currency"]]['code']) ? $currencies[$_COOKIE["currency"]]['code'] : 'AUD';
+
+
+ $_AUTotal = number_format($_AUTotal, 2, '.', '');
+
 
 
 //print_r($_SESSION);
@@ -114,10 +125,10 @@ function frmnew()
 <input type="hidden" name="cmd" value="_xclick">
     <input type="hidden" name="business" value="identikid0@gmail.com">
 <!--<input type="hidden" name="business" value="admin@identibiz.com">
-<input type="hidden" name="business" value="web.developer.sanil-facilitator@gmail.com">-->					
+<input type="hidden" name="business" value="web.developer.sanil-facilitator@gmail.com">-->				
 <input type="hidden" name="return" value="<?=$SITE_URL;?>order_confirmed.php">
 <input type="hidden" name="cancel_return" value="<?=$SITE_URL;?>order_cancel.php">
-<input type="hidden" name="currency_code" value="AUD" />
+<input type="hidden" name="currency_code" value="<?=$currency_code?>" />
 <input type="hidden" name="item_name" value="IdentiKid Products">
 <input type="hidden" name="amount" value="<?=$_AUTotal;?>">
 <!--<input type="hidden" name="amount" value="0.01">-->
