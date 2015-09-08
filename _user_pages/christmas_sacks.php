@@ -1,10 +1,11 @@
 <H1 align=center>MAKE THEM FEEL REALLY SPECIAL THIS XMAS</H1>
+<P align=center><FONT color=#ff0000 size=5>ORDER NOW FOR DELIVERY BY END OCTOBER.</FONT></P>
 <H3 align=center>$39.00&nbsp; each plus postage&nbsp;</H3>
 <H3 align=center>Generously sized High Quality cotton drawstring Bag 60cm x 80cm. Individually Printed.</H3>
 <P align=center><FONT size=5 face=Tahoma>MAKE THEM FEEL REALLY SPECIAL THIS X</FONT><FONT size=5 face=Tahoma>MAS WITH A </FONT></P>
-<P align=center><FONT size=5 face=Tahoma>PERSONALISED XMAS SACK...</FONT></P>
+<P align=center><FONT size=5 face=Tahoma>PERSONALISED XMAS SACK...<FONT color=#ff0000>60cm x 80cm XL bag</FONT></FONT></P>
 <P align=center><STRONG><FONT face=Tahoma></FONT></STRONG><FONT size=4 face=Tahoma>12&nbsp;designs below to choose from</FONT></P>
-<P align=center><FONT face=Tahoma>Generously sized, Re-usable Quality cotton canvas drawstring Bag 60cm x 80cm. Individually Printed.</FONT></P>
+<P align=center><FONT face=Tahoma>Generously sized, Re-usable Quality cotton canvas drawstring Bag . Individually Printed.</FONT></P>
 <P align=center>&nbsp;</P>
 <P align=center><FONT color=#ff0000 size=4 face=Tahoma><STRONG></STRONG></FONT></P>
 <H1>
@@ -124,7 +125,7 @@
 <TD>
 <P><A href="javascript: addtooderPOPUP(productId='58', 'name', productDesign='surfin santa',picture='bg/surfin-santa.gif', qty=['1','2','3','4'], material=['Cotton Canvas'], colour=['Natural'],finePrint='BAG COLOUR REMAINS SAME AS SHOWN WITH DESIGN.');"><FONT face=Tahoma><IMG border=0 src="/images/bg/n_add_to_order_1.gif" width=101 height=22></FONT></A></P></TD></TR></TBODY></TABLE></P></TD>
 <TD>
-<P><FONT face=Tahoma><IMG src="/images/bg/Surfin-Santa.gif" width=320 height=355></FONT></P></TD>
+<P align=center><FONT face=Tahoma><IMG style="HEIGHT: 361px; WIDTH: 315px" src="http://identikid.com.au/images/bg/surfin-santa.gif" width=481 height=529></FONT></P></TD>
 <TD>
 <P align=center><FONT face=Tahoma></FONT></P>
 <P align=center>
