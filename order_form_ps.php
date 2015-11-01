@@ -1348,7 +1348,7 @@ if($totalprice>0){
 	if($_COOKIE["currency"]==1){?>
                                     <select name="paymentmeth" class="ordertext" id="paymentmeth" onChange="disableStuff();">
                                       <option value="0" selected>Choose...</option>
-                                      <!-- <option value="1"<? if($_POST['paymentmeth']==1){?> selected<? }?>>Pay by credit card Now</option>-->
+                                      <option value="1"<? if($_POST['paymentmeth']==1){?> selected<? }?>>Pay by credit card Now</option>
                                      <option value="4"<? if($_POST['paymentmeth']==4){?> selected<? }?>>Direct deposit by internet banking</option>
                                      <!-- <option value="5"<? if($_POST['paymentmeth']==5){?> selected<? }?>>Pay by credit card over the phone-Call during business hours</option>-->
 									  <option value="8"<? if($_POST['paymentmeth']==8){?> selected<? }?>>Pay by paypal NOW </option>

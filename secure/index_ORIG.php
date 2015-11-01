@@ -1,5 +1,6 @@
 <?PHP
 
+require_once("../debug_log.php");
 
 /**************
 *
@@ -7,7 +8,7 @@
 *
 **************/ 
 
-require_once "../constants.php";
+require_once "../_common/_constants.php";
 $includeabove = true;
 require_once "../useractions.php";
 require_once "./secure_functions.php";
@@ -48,12 +49,8 @@ if(isset($_POST['TEST_AMOUNT']) && !empty($_POST['TEST_AMOUNT'])){
 // TESTING
 // $_SESSION['paymentAmount'] = 50;
 //print_r($_SESSION);
-
-
-
-
-
-
+$order_id = checkOrderId(false)+1000;
+debug_log_add("secure/index.php", $_REQUEST['section'] . " - " . $order_id);
 
 //<pre>
 //=print_r($_SERVER);
@@ -113,6 +110,24 @@ function submitCCDetails()
 		$insert_id = mysql_insert_id();
 		$OI = $_SESSION['invoiceNumber'];
 
+//======================================================================================
+//
+// TEST CODE For Debugging issues via CC Payment workflow
+// Best to comment this out when not testing - JUST IN CASE!
+//
+//======================================================================================
+		// Extract CC Name - if it is ECHIDNA TEST then use the test gateway
+		$ccn = $_POST['Cust_Name'];
+		if ("ECHIDNA TEST" == $ccn)
+		{
+			 //$_EPAY['SC_Merch'] = "identikid-test";
+		}
+		else
+		{
+			//$_EPAY['SC_Merch'] = "identikid";
+		}
+//======================================================================================
+		
 		$query_data  = "Cust_Card={$_POST['Cust_Card']}";
 		$query_data .= "&Cust_Card_MM={$_POST['Cust_Card_MM']}";
 		$query_data .= "&Cust_Card_YY={$_POST['Cust_Card_YY']}";
@@ -139,8 +154,16 @@ function submitCCDetails()
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $query_data);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_TIMEOUT, 60);
-		curl_setopt($ch, CURLOPT_SSLVERSION, 3);
+		//curl_setopt($ch, CURLOPT_SSLVERSION, 3);
+                curl_setopt($ch, CURLOPT_SSLVERSION, CURL_SSLVERSION_TLSv1);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0); 
 		$output = curl_exec($ch);
+		/*
+		echo '<pre>';
+		print_r(curl_getinfo($ch));
+		echo '</pre>';
+		echo 'Errors: ' . curl_errno($ch) . ' ' . curl_error($ch) . '<br><br>';
+		*/
 		curl_close($ch);
 
 
@@ -436,18 +459,18 @@ function getCCDetails()
                             <tr> 
                               <td valign="top" class="maintext">Name on Card:</td>
 															<td><img src="../images/spacer_trans.gif" width="10" height="10"></td>
-                              <td valign="top" class="maintext"> <input name="Cust_Name" type="text" class="formtext" id="Cust_Name" size="40" value="<?=$_POST['Cust_Name']?>"></td>
+                              <td valign="top" class="maintext"> <input name="Cust_Name" type="text" class="formtext" id="Cust_Name" style="width:300px;"  value="<?=$_POST['Cust_Name']?>"></td>
                             </tr>
                             <tr> 
                               <td valign="top" class="maintext">Credit Card Number:</td>
 															<td><img src="../images/spacer_trans.gif" width="10" height="10"></td>
-                              <td valign="top" class="maintext"> <input name="cc1" type="text" class="formtext" id="cc1" size="4" maxlength="4" value="<?=$_POST['cc1']?>"> 
+                              <td valign="top" class="maintext"> <input name="cc1" type="text" class="formtext" id="cc1" style="width:61px;"  maxlength="4" value="<?=$_POST['cc1']?>"> 
                                 <img src="../images/spacer_trans.gif" width="10" height="10"> 
-                                <input name="cc2" type="text" class="formtext" id="cc2" size="4" maxlength="4" value="<?=$_POST['cc2']?>"> 
+                                <input name="cc2" type="text" class="formtext" id="cc2" style="width:61px;"  maxlength="4" value="<?=$_POST['cc2']?>"> 
                                 <img src="../images/spacer_trans.gif" width="10" height="10"> 
-                                <input name="cc3" type="text" class="formtext" id="cc3" size="4" maxlength="4" value="<?=$_POST['cc3']?>"> 
+                                <input name="cc3" type="text" class="formtext" id="cc3" style="width:61px;"  maxlength="4" value="<?=$_POST['cc3']?>"> 
                                 <img src="../images/spacer_trans.gif" width="10" height="10"> 
-                                <input name="cc4" type="text" class="formtext" id="cc4" size="4" maxlength="4" value="<?=$_POST['cc4']?>"></td>
+                                <input name="cc4" type="text" class="formtext" id="cc4" style="width:61px;"  maxlength="4" value="<?=$_POST['cc4']?>"></td>
                             </tr>
                             <tr> 
                               <td valign="top" class="maintext">Expiry Date:</td>
@@ -516,7 +539,7 @@ function verify_referer(){
 	*	verify's form referer is valid.
 	***/
 
-	$REFERER = substr($_SERVER['HTTP_REFERER'], 0, strrpos($_SERVER['HTTP_REFERER'], "?"));
+	$REFERER = substr($_SERVER['HTTP_REFERstyle="width:60px;" ER'], 0, strrpos($_SERVER['HTTP_REFERER'], "?"));
 	if ($_SERVER['HTTPS']=="on"){
 		// secure server is on.
 
