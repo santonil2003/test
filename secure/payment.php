@@ -6,7 +6,7 @@ class payment {
 
     CONST ACCESS_CODE = 'A7CB0A09'; //Put your access code here
     CONST MERCHANT = 'BBL3335577'; //Add your merchant number here
-    CONST RETURN_URL = 'http://dev.identikid.com.au/secure/payment_callback.php';
+    CONST RETURN_URL = 'http://www.identikid.com.au/secure/payment_callback.php';
     CONST MERCHANT_NAME = 'Identikid';
     CONST SECURE_SECRET = "DDE28EF69AE3E7214E080E54F809C2E2";
     CONST TOKEN_NOT_MATCHED = 'Token not matched';
@@ -14,7 +14,7 @@ class payment {
     CONST PAYMENT_FAILED = 'payment failed';
 
     /**
-     * print getVal
+     * print getValhttp://www.identikid.com.au/
      * @param type $array
      * @param type $key
      * @param type $default
