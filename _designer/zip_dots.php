@@ -47,13 +47,13 @@ while ($row = mysql_fetch_array($getPrice)) {
 
         <form action="/addtoorder.php" method="post" target="_top" id="shoe-dots">
 
-            <input type="hidden" name="background_colour" value="1" id="background_colour"/>
+            <input type="hidden" name="background_colour" value="8" id="background_colour"/>
             <input type="hidden" name="font" value="3" id="font"/>
             <input type="hidden" name="font_colour" value="1" id="font_colour"/>
             <input type="hidden" name="split" value="1" id="split"/>
             <input type="hidden" name="pic" value="1" id="pic"/>
             <input type="hidden" name="picon" value="1" id="picon"/>
-            <!--<input type="hidden" name="text1" value="" id="text1"/>-->
+            <!--<input type="hidden" name="data_colour_id" value="8" id=""/>-->
 
 
             <input type="hidden" name="identitag_code" value="" id="identitag_code"/>
