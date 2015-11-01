@@ -150,20 +150,7 @@ function showResults(){
 			<p>There was a problem with your payment, the system received the following response message back from the Payment Gateway.</p>
 			<pre><?PHP
 
-			if($row['RC']=="")
-			{
-			  print $row['MT'];
-			}
-			else {
-				print $row['RT'];
-			}
-			$RC = returnErrorCode($row['RC']);
-			if(!empty($RC)){
-				print "
-
-{$RC}";
-
-			}
+ print 'Transaction '.$row['MT'].', with response code '.$row['SC'];
 			?></pre>
 			<p>Your Credit Card has <strong>NOT</strong> been debited.</p>
 			<p>If you believe this error was a mistake, please contact <a href="mailto:info@identikid.com.au">IdentiKid</a> and quote your receipt number.</p>
