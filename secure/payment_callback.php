@@ -1,4 +1,6 @@
 <?php
+//error_reporting(-1);
+//ini_set('display_errors', 'On');
 @session_start();
 require_once("../debug_log.php");
 require_once "../_common/_constants.php";
@@ -36,7 +38,7 @@ $Card = $payment->getValue($_REQUEST,'vpc_Card');
 $AcqResponseCode = $payment->getValue($_REQUEST,'vpc_AcqResponseCode');
 
 
-$summary = json_encode($_REQUEST);
+$summary = serialize($_REQUEST);
 
 //insert id from secure.index
 
