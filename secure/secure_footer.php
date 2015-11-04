@@ -8,7 +8,6 @@
 							</tr> 
 						</table> 
 					</td> 
-<!--
 					<td valign="top" bgcolor="FF9900"> 
 						<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
 							<tr> 
@@ -16,16 +15,13 @@
 							</tr>
 						</table> 
 					</td> 
--->
 
 				</tr> 
-<!--
 				<tr> 
 					<td height="30" colspan="3" valign="top"> 
-						<?php include "../footer.php" ?> 
+						<?php // include "../footer.php" ?> 
 					</td> 
 				</tr> 
--->
 
 			</table> 
 
