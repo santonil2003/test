@@ -678,7 +678,7 @@ print "</pre>";
 
 
 
-								$name.="<br><i><font color=\"#006600\">(order approved by {$merchant}".$amount_display."), ".$TX."</font></i>";
+								$name.="<br><i><font color=\"#006600\">(order approved by {$merchant}".$amount_display."), ".$TI."</font></i>";
 							}
 						}else if($paymentmeth==1 && $cdata["approved"]==2){
 							$name = "order unfinished";
