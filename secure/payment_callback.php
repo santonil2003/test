@@ -55,7 +55,7 @@ if (empty($insert_id)) {
 
 // case 2
 // came back from payment gateway
-$string = "update cc_transactions set CR='AUD', SC='{$ResponseCode}',MR = '{$mr}',MT='{$Message}',RT='{$clientIp}', AM='{$Amount}',summary = '{$summary}' where id='{$insert_id}'";
+$string = "update cc_transactions set CR='AUD', SC='{$ResponseCode}', TI='{$TransactionNo}', MR = '{$mr}',MT='{$Message}',RT='{$clientIp}', AM='{$Amount}',summary = '{$summary}' where id='{$insert_id}'";
 $result = mysql_query($string);
 
 // case 3

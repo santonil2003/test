@@ -397,7 +397,7 @@ function selectAll() {
           <td class="admintext" valign="middle" align="center"><b>&nbsp;Action&nbsp;</b></td>
           <td><img src="../images/spacer_trans.gif" height="1" width="1" border="0"></td>
         </tr>
-        <?
+        <?php
 		    $totalrecords = 0;
 			$normalRecords =0;
 			$archivedRecords = 0;
@@ -612,7 +612,18 @@ function selectAll() {
 							$voucher_amount_raw = 0;
 						}
 
-
+$TI = '';
+$transactionNoQuery = "	select TI 
+					from {$ccTransactionsTable} 
+					where OI='" .($qdata["id"]+1000)."' 
+					order by id desc limit 1";
+                                        
+$resultCcTransactions = mysql_query($transactionNoQuery) or die ("SQL Error: ".mysql_error());
+if(mysql_num_rows($resultCcTransactions)==1){
+    list($TI)=mysql_fetch_row($resultCcTransactions);
+    
+    $TI = 'Transactions : '.$TI;
+}
 // get CC amount & return code
 $amount_paid = -999.99;
 $RC_output=$AMOUNT="";
@@ -667,7 +678,7 @@ print "</pre>";
 
 
 
-								$name.="<br><i><font color=\"#006600\">(order approved by {$merchant}".$amount_display.")</font></i>";
+								$name.="<br><i><font color=\"#006600\">(order approved by {$merchant}".$amount_display."), ".$TX."</font></i>";
 							}
 						}else if($paymentmeth==1 && $cdata["approved"]==2){
 							$name = "order unfinished";
