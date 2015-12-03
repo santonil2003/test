@@ -622,7 +622,7 @@ $resultCcTransactions = mysql_query($transactionNoQuery) or die ("SQL Error: ".m
 if(mysql_num_rows($resultCcTransactions)==1){
     list($TI)=mysql_fetch_row($resultCcTransactions);
     
-    $TI = 'Transactions : '.$TI;
+    $TI = 'Transaction Number : '.$TI;
 }
 // get CC amount & return code
 $amount_paid = -999.99;
