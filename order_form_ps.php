@@ -1277,7 +1277,7 @@ if(false){
                                   <!--<input type="text" name="postageoption" value="<? echo $postage_option;?>" readonly="">-->
                                   <select name="postageoption" id="postageoptionSel" style="width:185px;" onchange="return update_Postage();"  >
                                     <option value="Normal">Normal Post</option>
-                                    <!--<option value="Express">Express Post</option>-->
+                                    <option value="Express">Express Post</option>
                                   </select>
                                   </td>
                                 </tr>
