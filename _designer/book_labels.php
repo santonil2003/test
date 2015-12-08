@@ -167,9 +167,9 @@ if ($_SERVER['HTTP_HOST'] == "www.anne.com") {
                 <select id='order_quantity'>
                     <?php
                     echo Helper::getExtraPriceOption($productId);
-                    echo "<option value='$price' selected>60 Book Labels for AU$ " . $price . "</option>";
-                    echo "<option value='" . ($price * 2) . "'>120 Book Labels for AU$ " . ($price * 2) . "</option>";
-                    echo "<option value='" . ($price * 3) . "'>180 Book Labels for AU$ " . ($price * 3) . "</option>";
+                    echo "<option value='$price' selected>$price Book Labels for AU$ " . $price . "</option>";
+                    echo "<option value='" . ($price * 2) . "'>" . ($price * 2) . " Book Labels for AU$ " . ($price * 2) . "</option>";
+                    echo "<option value='" . ($price * 3) . "'>" . ($price * 3) . " Book Labels for AU$ " . ($price * 3) . "</option>";
                     ?>
                 </select>
             </div>
