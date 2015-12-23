@@ -11,9 +11,15 @@
 <TBODY>
 <TR>
 <TD colSpan=3>
-<P align=center><FONT size=5><A href="http://identikid.com.au/Christmas_Sacks"><IMG border=0 src="http://identikid.com.au/images/bg/santa-sacka-slider.png" width=740 height=406></A></FONT></P></TD></TR>
+<P align=center><FONT size=5>BACK TO SCHOOL 2016 - ORDERS DISPATCHED IN 3-5 BUSINESS DAYS</FONT></P>
+<P align=center><FONT size=5></FONT>&nbsp;</P></TD></TR>
 <TR>
-<TD colSpan=3></TD></TR>
+<TD colSpan=3>
+<P align=center><FONT color=#ff2b00 size=4>ORDER ONLINE ONLY DURING JANUARY WITH NORMAL POST OR EXPRESS POST </FONT></P>
+<P align=center><FONT color=#ff2b00 size=4>CLOSED FROM 20TH DEC TO JAN 4TH. ORDERS POSTED FROM THE 4TH JANUARY.&nbsp; </FONT></P>
+<P align=center><FONT color=#ff2b00><FONT size=4>NO CUSTOMER SERVICE </FONT><FONT size=4>DURING CLOSURE PERIOD , </FONT></FONT></P>
+<P align=center><FONT color=#ff2b00><FONT size=4>ANY ENQUIRIES WILL BE FOLLOWED UP FROM THE 4TH JANUARY</FONT>.</FONT></P>
+<P align=center>&nbsp;</P></TD></TR>
 <TR>
 <TD colSpan=3>
 <P align=center><FONT size=5>FAST TURNAROUND ON ORDERS PLACED ONLINE</FONT></P></TD></TR>

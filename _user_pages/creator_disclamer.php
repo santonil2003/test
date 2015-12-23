@@ -1,4 +1,4 @@
-<P align=center><STRONG>SEE <A href="http://identikid.com.au/Home/Shipping_information">SHIPPING</A> FOR CURRENT TURNAROUND TIMES. ALLOW 5-7 BUSINESS DAYS CURRENTLY.</STRONG></P>
-<P align=center><STRONG>...ORDERS MUST BE PLACED&nbsp;ON THE INTERNET FOR A SPEEDY DISPATCH.</STRONG></P>
-<P align=center><STRONG>Please Choose either Direct DEBIT or paypal.</STRONG></P>
+<P align=center><STRONG>SEE <A href="http://identikid.com.au/Home/Shipping_information">SHIPPING</A> FOR CURRENT TURNAROUND TIMES.&nbsp;DISPATCHED IN &nbsp;3-5 &nbsp;BUSINESS DAYS CURRENTLY.</STRONG></P>
+<P align=center><STRONG>...ORDERS MUST BE PLACED&nbsp;ONLINE FOR A SPEEDY DISPATCH.</STRONG></P>
+<P align=center><STRONG>PLEASE ALLOW NORMAL AUST POST TIMES TO YOUR REGION . CHOICE OF EXPRESS POSTAGE OR REGULAR POSTAGE TO EXPEDIATE DELIVERY.</STRONG></P>
 <P align=center><STRONG></STRONG>&nbsp;</P>
