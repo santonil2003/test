@@ -302,7 +302,7 @@ $getFreeGift = false; // removed at identikids request 28.01.2005
 								<tr> 
                                   <td width="6%" valign="top" class="maintext"><img src="images/gen/spacer.gif" width="25" height="10"></td>
                                   <td valign="top" class="maintext"><p>
-                                  Please refer to the <a href="Shipping">Shipping Page</a> for postage infomation<br><br>
+                                  Please refer to the <a href="Home/Shipping_information">Shipping Page</a> for postage infomation<br><br>
                                   </p>
                                   </td>
                                 </tr>
