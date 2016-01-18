@@ -63,7 +63,7 @@ while ($row = mysql_fetch_array($getPrice)) {
             <input type="hidden" name="chosenLabel" value="1" id="chosenLabel"/>
             <input type="hidden" name="price" value="<?php echo $price; ?>" id="price"/>
             <input type="hidden" name="type" value="<?php echo $type; ?>" id="type"/>
-            <input type="hidden" name="quantdesc" value="20 Shoe Dots for AU$ <?php echo $price;?>" id="quantdesc"/>
+            <input type="hidden" name="quantdesc" value="10 ZipDeDo for AU$ <?php echo $price;?>" id="quantdesc"/>
 
             <input type="hidden" name="submit" value="Submit"/>
 
@@ -181,7 +181,7 @@ while ($row = mysql_fetch_array($getPrice)) {
                     <span class="scroll-down">Scroll to view all available options</span>
                     <div id="designer_options_quantity">
                         <strong>Quantity:</strong>
-                        <select id='order_quantity'>
+                        <select id='order_quantity' onchange="updateType(this.value)">
                             <?php
                             echo Helper::getExtraPriceOption($productId);
                             echo Helper::getExtraPriceOption($productId1);                            
@@ -197,6 +197,16 @@ while ($row = mysql_fetch_array($getPrice)) {
             </div>
         </form>
         <script type="text/javascript">
+// update product id based on amount
+	    function updateType(amt){
+	   	if(amt==10){
+			_type = 28;
+	         } else {
+			_type = 29;
+		 }
+
+		$('#type').val(_type);
+	    }
 
             var $preview_text = $('.preview_text').hide();
             var $preview_phone = $('.preview_phone').hide();
