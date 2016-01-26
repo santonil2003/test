@@ -213,6 +213,15 @@ while ($row = mysql_fetch_array($getPrice)) {
 
             $preview_text.show().arctext({radius: 66});
             $preview_phone.show().arctext({radius: 66, dir: -1});
+            
+            var w = $('.fixed_preview').width();
+            var d = $(window).width();
+            
+            console.log(w+','+d);
+            
+            if(d<w){
+                $('.fixed_preview').width(d);
+            }
         </script>
     </body>
 </html>
