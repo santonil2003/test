@@ -225,10 +225,10 @@ while ($row = mysql_fetch_array($getPrice)) {
             }
 
             $("input[type=text]").on('blur', function () {
-                if (d < w) {
+           
                     $('.fixed_preview').width(d);
                     $('#designer_container').width(d);
-                }
+                
             });
         </script>
     </body>
