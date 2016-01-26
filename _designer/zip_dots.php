@@ -3,7 +3,7 @@ require_once '../common_db.php';
 require_once 'include.php';
 linkme();
 require_once 'helper.php';
-$productId = 28;// qty 10 zip dots
+$productId = 28; // qty 10 zip dots
 $productId1 = 29; // qty 20 zip dots
 ?>
 <!DOCTYPE html>
@@ -63,7 +63,7 @@ while ($row = mysql_fetch_array($getPrice)) {
             <input type="hidden" name="chosenLabel" value="1" id="chosenLabel"/>
             <input type="hidden" name="price" value="<?php echo $price; ?>" id="price"/>
             <input type="hidden" name="type" value="<?php echo $type; ?>" id="type"/>
-            <input type="hidden" name="quantdesc" value="10 ZipDeDo for AU$ <?php echo $price;?>" id="quantdesc"/>
+            <input type="hidden" name="quantdesc" value="10 ZipDeDo for AU$ <?php echo $price; ?>" id="quantdesc"/>
 
             <input type="hidden" name="submit" value="Submit"/>
 
@@ -125,7 +125,7 @@ while ($row = mysql_fetch_array($getPrice)) {
                                     if (in_array($ref, $skip)) {
                                         continue;
                                     }
-                                    echo "<li class='" . $ref . "' rel='" . $picture . "'><img width='40' src='http://identikid.com.au/_designer/".str_replace("bw", "bwl", $picture)."'/></li>";
+                                    echo "<li class='" . $ref . "' rel='" . $picture . "'><img width='40' src='http://identikid.com.au/_designer/" . str_replace("bw", "bwl", $picture) . "'/></li>";
                                 }
 
                                 echo "</ul>";
@@ -134,7 +134,7 @@ while ($row = mysql_fetch_array($getPrice)) {
                             </div>
                         </div>
                     </div>
-                    
+
                     <br/>
                     <div class="block-box">
                         <div id="designer_options_font">
@@ -184,7 +184,7 @@ while ($row = mysql_fetch_array($getPrice)) {
                         <select id='order_quantity' onchange="updateType(this.value)">
                             <?php
                             echo Helper::getExtraPriceOption($productId);
-                            echo Helper::getExtraPriceOption($productId1);                            
+                            echo Helper::getExtraPriceOption($productId1);
                             ?>
                         </select>
                     </div>
@@ -198,31 +198,38 @@ while ($row = mysql_fetch_array($getPrice)) {
         </form>
         <script type="text/javascript">
 // update product id based on amount
-	    function updateType(amt){
-	   	if(amt==10){
-			_type = 28;
-	         } else {
-			_type = 29;
-		 }
+            function updateType(amt) {
+                if (amt == 10) {
+                    _type = 28;
+                } else {
+                    _type = 29;
+                }
 
-		$('#type').val(_type);
-	    }
+                $('#type').val(_type);
+            }
 
             var $preview_text = $('.preview_text').hide();
             var $preview_phone = $('.preview_phone').hide();
 
             $preview_text.show().arctext({radius: 66});
             $preview_phone.show().arctext({radius: 66, dir: -1});
-            
+
             var w = $('.fixed_preview').width();
             var d = $(window).width();
-            
-            console.log(w+','+d);
-            
-            if(d<w){
+
+            console.log(w + ',' + d);
+
+            if (d < w) {
                 $('.fixed_preview').width(d);
                 $('#designer_container').width(d);
             }
+
+            $("input[type=text]").on('blur', function () {
+                if (d < w) {
+                    $('.fixed_preview').width(d);
+                    $('#designer_container').width(d);
+                }
+            });
         </script>
     </body>
 </html>
