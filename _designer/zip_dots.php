@@ -221,6 +221,7 @@ while ($row = mysql_fetch_array($getPrice)) {
             
             if(d<w){
                 $('.fixed_preview').width(d);
+                $('#designer_container').width(d);
             }
         </script>
     </body>
