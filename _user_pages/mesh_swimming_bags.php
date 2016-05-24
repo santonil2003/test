@@ -1,9 +1,9 @@
 <H5 align=right><FONT size=4><A href="/BAGS"><IMG border=0 src="/images/bg/BACK.gif" width=157 height=41></A></FONT></H5><FONT size=4>
 <H2 align=center>Personalised Swimming Mesh Bags</H2>
-<P align=center>$39.00</P>
+<P align=center><FONT color=#ff0000 size=5>$39.00&nbsp;</FONT> </P>
 <P align=center>High Quality Polyester Mesh.</P></FONT>
 <P align=center><FONT size=4>CHOOSE YOUR DESIGN AND ADD NAME&nbsp;</FONT><FONT size=4>&nbsp;</FONT><FONT size=4>MATERIAL IN <STRONG>BLACK</STRONG> ONLY.</FONT></P>
-<P align=center><FONT size=4>SIZE APPROX 35CM WIDE X 40CM HIGH. ALLOW 3-5 DAYS FOR DISPATCH</FONT></P>
+<P align=center><FONT size=4>SIZE APPROX 35CM WIDE X 40CM HIGH. ALLOW 7-10 DAYS FOR DISPATCH</FONT></P>
 <P align=center><FONT color=#0000ff><FONT size=4 face=Verdana>&nbsp;DESIGNS BELOW&nbsp;SHOWS&nbsp;LOWER PRINTED AREA OF THE BAG&nbsp;AT BASE OF BAG</FONT></FONT></P>
 <P align=center><FONT color=#0000ff><FONT size=4 face=Verdana>(MESH AREA IS LEFT BLANK)&nbsp;FITS MOST SWIMMING GEAR AND TOWEL.</FONT>&nbsp;</FONT></P>
 <P align=center>

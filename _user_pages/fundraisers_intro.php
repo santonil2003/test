@@ -1,1 +1,1 @@
-<P>&nbsp;</P>
+<P>We are currently taking a break from Fundraising. We apologise for any inconvenience this may cause.</P>

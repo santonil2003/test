@@ -1,25 +1,22 @@
 <DIV id=banner-fade>
 <UL class=bjqs>
 <LI>
-<DIV align=center><IMG style="HEIGHT: 406px; WIDTH: 727px" src="/one.png" width=739 height=406></DIV></LI>
+<DIV align=center><IMG style="WIDTH: 727px; HEIGHT: 406px" src="/one.png" width=739 height=406></DIV></LI>
 <LI>
-<DIV align=center><IMG style="HEIGHT: 406px; WIDTH: 710px" src="/two.png" width=739 height=406></DIV></LI>
+<DIV align=center><IMG style="WIDTH: 710px; HEIGHT: 406px" src="/two.png" width=739 height=406></DIV></LI>
 <LI>
-<DIV align=center><IMG style="HEIGHT: 406px; WIDTH: 724px" src="/three.png" width=739 height=406></DIV></LI></UL></DIV>
+<DIV align=center><IMG style="WIDTH: 724px; HEIGHT: 406px" src="/three.png" width=739 height=406></DIV></LI></UL></DIV>
 <P align=center>
-<TABLE align=center border=0>
+<TABLE border=0 align=center>
 <TBODY>
 <TR>
 <TD colSpan=3>
-<P align=center><FONT size=5>BACK TO SCHOOL 2016 - ORDERS DISPATCHED IN 3-5 BUSINESS DAYS</FONT></P>
-<P align=center><FONT size=5></FONT>&nbsp;</P></TD></TR>
+<P align=center><FONT color=#ff0000 size=5><STRONG></STRONG></FONT>&nbsp;</P></TD></TR>
 <TR>
 <TD colSpan=3>
-<P align=center><FONT color=#ff2b00 size=4>ORDER ONLINE ONLY DURING JANUARY WITH NORMAL POST OR EXPRESS POST </FONT></P>
-<P align=center><FONT color=#ff2b00 size=4>CLOSED FROM 20TH DEC TO JAN 4TH. ORDERS POSTED FROM THE 4TH JANUARY.&nbsp; </FONT></P>
-<P align=center><FONT color=#ff2b00><FONT size=4>NO CUSTOMER SERVICE </FONT><FONT size=4>DURING CLOSURE PERIOD , </FONT></FONT></P>
-<P align=center><FONT color=#ff2b00><FONT size=4>ANY ENQUIRIES WILL BE FOLLOWED UP FROM THE 4TH JANUARY</FONT>.</FONT></P>
-<P align=center>&nbsp;</P></TD></TR>
+<P align=center>
+<P align=center><FONT color=#ff2b00></FONT></P>
+<P></P></TD></TR>
 <TR>
 <TD colSpan=3>
 <P align=center><FONT size=5>FAST TURNAROUND ON ORDERS PLACED ONLINE</FONT></P></TD></TR>
@@ -31,13 +28,13 @@
 <P align=center><IMG border=0 src="http://identikid.com.au/images/bg/J.gif" width=289 height=330></P></TD></TR></TBODY></TABLE></P>
 <H2 align=center>&nbsp;</H2>
 <H2>
-<TABLE style="HEIGHT: 627px; WIDTH: 855px" height=627 cellSpacing=0 cellPadding=0 width=855 align=center border=0>
+<TABLE style="WIDTH: 855px; HEIGHT: 627px" border=0 cellSpacing=0 cellPadding=0 width=855 align=center height=627>
 <TBODY>
 <TR>
 <TD vAlign=bottom align=center>
 <P align=center><FONT color=#2b00ff size=4 face=Verdana><FONT color=#2b00ff size=4 face=Verdana></FONT></FONT></P>
 <P align=center><FONT color=#2b00ff size=4 face=Verdana><FONT color=#2b00ff size=4 face=Verdana><A href="/Small_Cotton_Drawstring_Bags"></A><A href="http://identikid.com.au/Small_Cotton_Drawstring_Bags"></A></FONT></FONT></P><FONT color=#2b00ff size=4 face=Verdana><FONT color=#2b00ff size=4 face=Verdana>
-<P align=center><A href="http://identikid.com.au/Small_Cotton_Drawstring_Bags"><IMG style="HEIGHT: 268px; WIDTH: 294px" border=0 src="http://identikid.com.au/images/bg/DinoSDS_4.png" width=0 height=0></A></P>
+<P align=center><A href="http://identikid.com.au/Small_Cotton_Drawstring_Bags"><IMG style="WIDTH: 294px; HEIGHT: 268px" border=0 src="http://identikid.com.au/images/bg/DinoSDS_4.png" width=0 height=0></A></P>
 <P align=center><A href="/Small_Cotton_Drawstring_Bags"><FONT color=#2b00ff size=4 face=Verdana><FONT color=#2b00ff size=4 face=Verdana>Cotton Drawstring(library)</FONT></FONT> </A></P><A href="/Small_Cotton_Drawstring_Bags"></A></FONT>
 <P align=center><FONT color=#2b00ff size=4 face=Verdana><A href="/Small_Cotton_Drawstring_Bags"></A></FONT></P></FONT></TD>
 <TD vAlign=bottom colSpan=2 align=center><A href="http://identikid.com.au/Shoulder_Bags"><IMG border=0 src="http://identikid.com.au/images/bg/WEBSITE-IMAGE_1.png" width=362 height=278></A><A href="/Shoulder_Bags">&nbsp; 
@@ -60,12 +57,15 @@
 <P align=center><A href="http://identikid.com.au/LARGE_DRAWSTRING_BAGS"><FONT color=#0000ff size=4 face=Verdana>XL Sturdy Laundry / kindy Bags</FONT></A></P></TD>
 <TD vAlign=middle colSpan=2 align=center>
 <P align=center><FONT color=#ff0000><FONT size=5><FONT color=#000000><FONT size=3><FONT color=#0000ff size=4 face=Verdana><A href="/Mesh_Swimming_Bags"></A></FONT></FONT></FONT></FONT></FONT></P><FONT color=#ff0000><FONT size=5><FONT color=#000000><FONT size=3><FONT color=#0000ff size=4 face=Verdana>
-<P align=center><FONT color=#ff0000><FONT size=5><FONT color=#000000><FONT size=3><FONT color=#0000ff size=4 face=Verdana><A href="http://identikid.com.au/Mesh_Swimming_Bags"><IMG style="HEIGHT: 285px; WIDTH: 284px" border=0 src="http://identikid.com.au/images/bg/SkullMB_1.png" width=0 height=0></A></FONT></FONT></FONT></FONT></FONT></P></FONT></FONT></FONT></FONT></FONT>
-<P align=center><FONT color=#ff0000><FONT size=5><FONT color=#000000><FONT size=3><FONT color=#0000ff size=4 face=Verdana><FONT color=#ff0000><FONT size=5><FONT color=#000000><FONT size=3><FONT color=#0000ff size=4 face=Verdana><A href="http://identikid.com.au/Mesh_Swimming_Bags"><FONT color=#ff0000><FONT size=5><FONT color=#000000><FONT size=3><FONT color=#0000ff size=4 face=Verdana>Mesh Swimming Bag/Sports Bag</FONT></FONT></FONT></FONT></FONT></A></FONT></FONT></FONT></FONT></FONT></FONT> </FONT></FONT></FONT></FONT></P></TD></TR></TBODY></TABLE></H2>
+<P align=center><FONT color=#ff0000><FONT size=5><FONT color=#000000><FONT size=3><FONT color=#0000ff size=4 face=Verdana><A href="http://identikid.com.au/Mesh_Swimming_Bags"><IMG style="WIDTH: 284px; HEIGHT: 285px" border=0 src="http://identikid.com.au/images/bg/SkullMB_1.png" width=0 height=0></A></FONT></FONT></FONT></FONT></FONT></P></FONT></FONT></FONT></FONT></FONT>
+<P align=center><FONT color=#ff0000><FONT size=5><FONT color=#000000><FONT size=3><FONT color=#0000ff size=4 face=Verdana><FONT color=#ff0000><FONT size=5><FONT color=#000000><FONT size=3><FONT color=#0000ff size=4 face=Verdana><A href="http://identikid.com.au/Mesh_Swimming_Bags"><FONT color=#ff0000><FONT size=5><FONT color=#000000><FONT size=3><FONT color=#0000ff size=4 face=Verdana>Mesh Swimming Bag/Sports Bag</FONT></FONT></FONT></FONT></FONT></A></FONT></FONT></FONT></FONT></FONT></FONT> </FONT></FONT></FONT></FONT></P>
+<P align=center><FONT color=#ff0000>ON SALE</FONT></P></TD></TR></TBODY></TABLE></H2>
 <H2 align=center><A href="http://identikid.com.au/Colour_My_World_Pack"></A>&nbsp;</H2>
+<H1 align=center><FONT size=3>Let identikid Name Labels and Kids Personalised School Gear make 'back to school' fun&nbsp;&amp; easy. </FONT></H1>
+<H1 align=center><FONT size=3>identKid is a family owned and runned business that have been selling name labels to Mum's, Dad's, Grandparents, Aunties, Uncles &amp; Friends for well over 10 years.&nbsp;Our repeat business is our best asset....Using the best quality materials available to deliver the best products!</FONT></H1>
+<H1 align=center><FONT size=3>Our Name Labels, Clothing Labels , Shoe Labels, Pencil Labels make labelling simple &amp; fun. Put their name and design choice on a Pencil Case, Back pack, Library Bag, Mesh Sports Bag so there will be no more lost property!</FONT></H1>
+<H1 align=center><FONT size=3>Check out our value for money Labelling Packs!!! They&nbsp;will take the stress out of getting organised with a variety of products to cover labelling 'everything' - Check out our 'Colour my World Pack' your one stop labelling pack, our most popular item!</FONT></H1>
+<H1 align=center><FONT size=3>Whether it be.... first day of daycare, preschool, kindy, high school or moving into a nursing home........</FONT></H1>
+<H1 align=center><FONT size=3>WE HAVE IT ALL!</FONT></H1>
 <H2 align=center>
-<H3 align=center>Let identikid Name labels and kids personalised School Gear make back to School Fun and Easy. identikids Name labels have been used and trusted by Mums for over 10 years and our repeat business is our best asset....Using the best quality materials available to deliver the best products...</H3>
-<H3 align=center>Our Name labels, Clothing labels , Shoe labels, Pencil labels make labelling simple. Put their name and design choice on a Pencil Case, Back pack, library Bag, Mesh Sports Bag so they dont lose another item.</H3>
-<H3 align=center>Check out our Value labelling packs will take the stress out of getting organised with a variety of product to cover labelling everything- Check out our Colour my World pack your one stop labelling pack , our most popular item.</H3>
-<P align=center><FONT size=3>Kids labels, Name labels, Shoe labels, Clothing labels, iron on labels, School labels, Stickon labels, labels for kids, Personalised labels, labels for School, Kids name labels....we have it all...</FONT></P>
-<P>&nbsp;</P></H2>
+<P><FONT size=3></FONT>&nbsp;</P></H2>
